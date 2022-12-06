@@ -40,7 +40,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-for file in "$DOTFILES/zsh/**/*.zsh"; do
+for file in $DOTFILES/zsh/**/*; do
   [ -f $file ] && source $file
 done
 
