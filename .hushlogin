@@ -1,0 +1,12 @@
+###################################################################################################
+# Immediately after logging a user in, login displays the system copyright notice,                #
+# the date and time the user last logged in, the message of the day as well as other              #
+# information.                                                                                    #
+# If the file .hushlogin exists in the user's home directory, all of these messages are           #
+# suppressed.                                                                                     #
+#                                                                                                 #
+# This includes the system copyright notice, the date and time of the last login, the message of  #
+# the day or any other that may appear on login                                                   #
+#                                                                                                 #
+# see `man login`                                                                                 #
+###################################################################################################
