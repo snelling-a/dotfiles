@@ -7,7 +7,7 @@ ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red')
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
 # ZSH_THEME="minima"
 
 zstyle ':omz:update' mode reminder  # just remind me to update when it's time
@@ -48,9 +48,10 @@ done
 
 export LANG=en_US.UTF-8
 
-# ARCH_BOOST_DIR=$HOME/Library/Application Support/Arc/boosts
+# ARC_BOOST_DIR=$HOME/Library/Application Support/Arc/boosts
 
 alias vimrc="$EDITOR ~/.vimrc"
+alias dots="cd $DOTFILES"
 
 DISABLE_AUTO_TITLE="true"
 
@@ -62,4 +63,4 @@ export PATH="/usr/local/opt/curl/bin:$PATH"
 # use gsed as sed
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
-[ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
+[ -f $HOME/.zshrc_local ] && source $HOME/.zshrc_local

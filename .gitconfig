@@ -103,6 +103,6 @@
 [user]
   name = snelling-a
   email = 72226000+snelling-a@users.noreply.github.com
-[includeIf "gitdir:~/git/"]
+[includeIf "gitdir:~/work/"]
   path = ./.gitconfig_local
 
