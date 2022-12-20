@@ -40,6 +40,8 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
+
 for file in $DOTFILES/zsh/**/*; do
   [ -f $file ] && source $file
 done
