@@ -1,5 +1,8 @@
 add_newline = true
 
+format = """$directory $character"""
+right_format = """$all"""
+
 [battery]
 unknown_symbol = ""
 
@@ -21,15 +24,16 @@ style = 'bold green'
 
 [character]
 success_symbol = '[](bold green)'
-error_symbol = "[](bold red)"
+error_symbol = "[](bold red)"
 
 [git_commit]
 commit_hash_length = 5
 disabled = false
 
-
 [git_metrics]
 disabled = false
+format = '\[([+$added]($added_style) )([-$deleted]($deleted_style))\]'
+only_nonzero_diffs = false
 
 [localip]
 disabled = false
@@ -86,8 +90,9 @@ format = '\[[$symbol($version)]($style)\]'
 
 [directory]
 home_symbol = "ﰣ"
-repo_root_style = ""
+repo_root_format = '\[[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style)\]'
 read_only = " "
+format = '\[[$path]($style)[$read_only]($read_only_style)\]'
 
 [docker_context]
 symbol = " "
@@ -301,7 +306,8 @@ format = '\[[$symbol$environment]($style)\]'
 
 [sudo]
 disabled = false
-format = '\[[as $symbol]\]'
+symbol = ""
+format = '\[[$symbol]($style)\]'
 
 [swift]
 disabled = true
