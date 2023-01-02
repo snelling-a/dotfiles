@@ -57,8 +57,6 @@ alias dots="cd $DOTFILES"
 
 DISABLE_AUTO_TITLE="true"
 
-export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
-
 # use curl from homebrew
 export PATH="/usr/local/opt/curl/bin:$PATH"
 
