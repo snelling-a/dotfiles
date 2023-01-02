@@ -57,9 +57,6 @@ alias dots="cd $DOTFILES"
 
 DISABLE_AUTO_TITLE="true"
 
-# use curl from homebrew
-export PATH="/usr/local/opt/curl/bin:$PATH"
-
 # use gsed as sed
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
