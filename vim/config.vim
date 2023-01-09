@@ -25,6 +25,7 @@ set noshowmode     " Don't show the mode since status line shows it
 set nowrap         " Line wrapping off
 set number         " Line numbers on
 set relativenumber " Relative numbers on
+set regexpengine=1 " this should make vim a bit faster, if does not work, set to 1
 set ruler          " Ruler on
 set shortmess+=c   " don't give |ins-completion-menu| messages
 set signcolumn=number " Ensures no flickering for coc-git
@@ -46,8 +47,6 @@ endif
 filetype plugin indent on
 set autoread           " Automatically reload changes if detected
 set autowrite          " Writes on move/shell commands
-set splitbelow
-set splitright
 set confirm            " Enable error files & error jumping
 set fileformats=unix,mac
 set formatoptions=crql
@@ -58,8 +57,11 @@ set iskeyword+=\$,-    " Add extra characters that are valid parts of variables
 set nobackup
 set nocompatible       " be iMproved
 set nostartofline      " Don't go to the start of the line after some commands
+set noswapfile
 set nowritebackup
 set scrolloff=3        " Keep three lines below the last line when scrolling
+set splitbelow
+set splitright
 set switchbuf=useopen  " Switch to an existing buffer if one exists
 set timeoutlen=400     " Time to wait for a command (after leader for example)
 set ttimeout

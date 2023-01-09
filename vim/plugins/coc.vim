@@ -7,6 +7,16 @@ if exists('g:plug_installing_plugins')
     Plug 'pedrohdz/vim-yaml-folds'
     Plug 'tmux-plugins/vim-tmux'
 
+    " markdown
+    Plug 'godlygeek/tabular'
+    Plug 'preservim/vim-markdown'
+
+    " JAVASCRIPT
+    Plug 'pangloss/vim-javascript'
+    Plug 'maxmellon/vim-jsx-pretty'
+    " TYPESCRIPT
+    Plug 'HerringtonDarkholme/yats.vim'
+
     finish
 
 endif
@@ -14,7 +24,9 @@ endif
 let g:coc_config_home = $VIMDIR
 
 highlight CocErrorHighlight   cterm=undercurl ctermfg=9 gui=undercurl guifg=#ff0000
-highlight CocWarningHighlight term=undercurl cterm=undercurl gui=undercurl guisp=#ebdbb2
+highlight CocWarningHighlight term=undercurl cterm=undercurl gui=undercurl ctermfg=130 guifg=#ff922b
+highlight CocInfoHighlight    cterm=undercurl ctermfg=11 ctermbg=234 guifg=#fab005 guibg=#1c1c1c
+highlight CocHintHighlight    cterm=undercurl ctermfg=12 guifg=#15aabf guifg=#fab005 guibg=#1c1c1c
 
 let g:coc_global_extensions = [
             \'coc-css',
@@ -49,6 +61,9 @@ inoremap <silent><expr> <TAB>
             \ CheckBackspace() ? "\<Tab>" :
             \ coc#refresh()
 inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
+" hide float
+nnoremap <silent> <leader><space> <Plug>(coc-float-hide)
 
 " Make <CR> to accept selected completion item or notify coc.nvim to format
 " <C-g>u breaks current undo, please make your own choice
@@ -160,3 +175,32 @@ nnoremap <silent><nowait> <space>k :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p :<C-u>CocListResume<CR>
 " Show marketplace
 nnoremap <silent><nowait> <space>m :<C-u>CocList marketplace<CR>
+
+" JAVASCRIPT/TYPESCRIPT
+augroup js_ts
+    autocmd!
+    autocmd FileType javascript,typescript,javascriptreact,typescriptreact setlocal foldmethod=indent conceallevel=1
+augroup END
+
+let g:javascript_conceal_function             = "ƒ"
+let g:javascript_conceal_null                 = "ø"
+let g:javascript_conceal_this                 = "@"
+let g:javascript_conceal_return               = "⇚"
+let g:javascript_conceal_undefined            = "¿"
+let g:javascript_conceal_NaN                  = "ℕ"
+let g:javascript_conceal_prototype            = "¶"
+let g:javascript_conceal_static               = "•"
+let g:javascript_conceal_super                = "Ω"
+let g:javascript_conceal_arrow_function       = "⇒"
+let g:javascript_conceal_noarg_arrow_function = "🞅"
+let g:javascript_conceal_underscore_arrow_function = "🞅"
+
+let g:typescript_conceal_function             = "ƒ"
+let g:typescript_conceal_null                 = "ø"
+let g:typescript_conceal_undefined            = "¿"
+let g:typescript_conceal_this                 = "@"
+let g:typescript_conceal_return               = "⇚"
+let g:typescript_conceal_prototype            = "¶"
+let g:typescript_conceal_super                = "Ω"
+
+let g:vim_jsx_pretty_colorful_config = 1 " default 0

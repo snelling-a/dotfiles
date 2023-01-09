@@ -6,7 +6,7 @@ nnoremap k mz:m-2<CR>`z==
 vnoremap ^[j :m'>+<CR>gv=`<my`>mzgv`yo`z
 vnoremap ^[k :m'<-2<CR>gv=`>my`<mzgv`yo`z
 
-" " DON'T USE THE ARROW KEYS
+"! DON'T USE THE ARROW KEYS !"
 nnoremap <up>    :echo 'NO! USE K!'<CR>
 vnoremap <up>    :echo 'NO! USE K!'<CR>
 nnoremap <down>  :echo 'NO! USE J!'<CR>
@@ -74,4 +74,5 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" clear highlighting
 nnoremap <leader>/ :noh<CR>

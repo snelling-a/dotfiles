@@ -10,14 +10,6 @@ autocmd filetype html setlocal tabstop=2 shiftwidth=2 expandtab
 " sort JSON
 command SortJSON %!jq -S .
 
-" if vim version is equal to or greater than 7.3 enable undofile.
-" this allows you to undo changes to a file even after saving it.
-if version >= 703
-  set undodir=$VIMDIR/.undo/
-  set undofile
-  set undoreload=10000
-endif
-
 " you can split a window into sections by typing `:split` or `:vsplit`.
 " display cursorline and cursorcolumn only in active window.
 augroup cursor_off
