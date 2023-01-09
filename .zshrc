@@ -22,20 +22,20 @@ export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 autoload -U compinit; compinit
 
 plugins=(
-  aliases
-  brew
-  git
-  history
-  history-substring-search
-  macos
-  node
-  npm
-  nvm
-  you-should-use
-  z
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-  snelling-a
+    aliases
+    brew
+    git
+    history
+    history-substring-search
+    macos
+    node
+    npm
+    nvm
+    you-should-use
+    z
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    snelling-a
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -43,7 +43,7 @@ source $ZSH/oh-my-zsh.sh
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 
 for file in $DOTFILES/zsh/**/*; do
-  [ -f $file ] && source $file
+    [ -f $file ] && source $file
 done
 
 # User configuration

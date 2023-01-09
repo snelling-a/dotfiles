@@ -1,10 +1,13 @@
+"$schema" = "https://starship.rs/config-schema.json"
+
 add_newline = true
 
 format = """$directory $character"""
 right_format = """$all"""
 
 [battery]
-unknown_symbol = ""
+unknown_symbol = ''
+format = '\[[$symbol$percentage]($style)\]'
 
 [[battery.display]]
 threshold = 10
@@ -24,10 +27,10 @@ style = 'bold green'
 
 [character]
 success_symbol = '[](bold green)'
-error_symbol = "[](bold red)"
+error_symbol = '[](bold red)'
 
 [git_branch]
-symbol = " "
+symbol = ' '
 format = '\[[$symbol$branch]($style)\]'
 
 [git_commit]
@@ -48,7 +51,7 @@ disabled = false
 
 [aws]
 disabled = true
-symbol = "  "
+symbol = '  '
 format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
 
 [bun]
@@ -56,11 +59,11 @@ format = '\[[$symbol($version)]($style)\]'
 
 [buf]
 disabled = true
-symbol = " "
+symbol = ' '
 
 [c]
 disabled = true
-symbol = " "
+symbol = ' '
 format = '\[[$symbol($version(-$name))]($style)\]'
 
 [cmake]
@@ -68,7 +71,6 @@ disabled = true
 format = '\[[$symbol($version)]($style)\]'
 
 [cmd_duration]
-# format = '\[[⏱ $duration]($style)\]'
 format = '\[[羽 $duration]($style)\]'
 
 [cobol]
@@ -77,7 +79,7 @@ format = '\[[$symbol($version)]($style)\]'
 
 [conda]
 disabled = true
-symbol = " "
+symbol = ' '
 format = '\[[$symbol$environment]($style)\]'
 
 [crystal]
@@ -90,20 +92,20 @@ format = '\[[$symbol($version)]($style)\]'
 
 [dart]
 disabled = true
-symbol = " "
+symbol = ' '
 format = '\[[$symbol($version)]($style)\]'
 
 [deno]
 format = '\[[$symbol($version)]($style)\]'
 
 [directory]
-home_symbol = "ﰣ"
+home_symbol = 'ﰣ'
 repo_root_format = '\[[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style)\]'
-read_only = " "
+read_only = ' '
 format = '\[[$path]($style)[$read_only]($read_only_style)\]'
 
 [docker_context]
-symbol = " "
+symbol = ' '
 format = '\[[$symbol$context]($style)\]'
 
 [dotnet]
@@ -112,12 +114,12 @@ format = '\[[$symbol($version)(🎯 $tfm)]($style)\]'
 
 [elixir]
 disabled = true
-symbol = " "
+symbol = ' '
 format = '\[[$symbol($version \(OTP $otp_version\))]($style)\]'
 
 [elm]
 disabled = true
-symbol = " "
+symbol = ' '
 format = '\[[$symbol($version \(OTP $otp_version\))]($style)\]'
 
 [erlang]
@@ -142,24 +144,24 @@ format = '\[[$symbol($version)]($style)\]'
 
 [haxe]
 disabled = true
-symbol = "⌘ "
+symbol = '⌘ '
 format = '\[[$symbol($version)]($style)\]'
 
 [helm]
 format = '\[[$symbol($version)]($style)\]'
 
 [hg_branch]
-symbol = " "
+symbol = ' '
 format = '\[[$symbol$branch]($style)\]'
 
 [java]
 disabled = true
-symbol = " "
+symbol = ' '
 format = '\[[$symbol($version)]($style)\]'
 
 [julia]
 disabled = true
-symbol = " "
+symbol = ' '
 format = '\[[$symbol($version)]($style)\]'
 
 [kotlin]
@@ -170,30 +172,30 @@ format = '\[[$symbol($version)]($style)\]'
 format = '\[[$symbol$context( \($namespace\))]($style)\]'
 
 [lua]
-symbol = " "
+symbol = ' '
 format = '\[[$symbol($version)]($style)\]'
 
 [memory_usage]
-symbol = " "
+symbol = ' '
 format = '\[$symbol[$ram( | $swap)]($style)\]'
 
 [meson]
 disabled = true
-symbol = "喝 "
+symbol = '喝 '
 format = '\[[$symbol$project]($style)\]'
 
 [nim]
 disabled = true
-symbol = " "
+symbol = ' '
 format = '\[[$symbol($version)]($style)\]'
 
 [nix_shell]
 disabled = true
-symbol = " "
+symbol = ' '
 format = '\[[$symbol$state( \($name\))]($style)\]'
 
 [nodejs]
-symbol = " "
+symbol = ' '
 format = '\[[$symbol($version)]($style)\]'
 
 [ocaml]
@@ -212,45 +214,45 @@ format = '\[[$symbol$cloud(\($project\))]($style)\]'
 format = '[$symbol]($style)'
 
 [os.symbols]
-Alpine = " "
-Amazon = " "
-Android = " "
-Arch = " "
-CentOS = " "
-Debian = " "
-DragonFly = " "
-Emscripten = " "
-EndeavourOS = " "
-Fedora = " "
-FreeBSD = " "
-Garuda = "﯑ "
-Gentoo = " "
-HardenedBSD = "ﲊ "
-Illumos = " "
-Linux = " "
-Macos = " "
-Manjaro = " "
-Mariner = " "
-MidnightBSD = " "
-Mint = " "
-NetBSD = " "
-NixOS = " "
-OpenBSD = " "
-openSUSE = " "
-OracleLinux = " "
-Pop = " "
-Raspbian = " "
-Redhat = " "
-RedHatEnterprise = " "
-Redox = " "
-Solus = "ﴱ "
-SUSE = " "
-Ubuntu = " "
-Unknown = " "
-Windows = " "
+Alpine = ' '
+Amazon = ' '
+Android = ' '
+Arch = ' '
+CentOS = ' '
+Debian = ' '
+DragonFly = ' '
+Emscripten = ' '
+EndeavourOS = ' '
+Fedora = ' '
+FreeBSD = ' '
+Garuda = '﯑ '
+Gentoo = ' '
+HardenedBSD = 'ﲊ '
+Illumos = ' '
+Linux = ' '
+Macos = ' '
+Manjaro = ' '
+Mariner = ' '
+MidnightBSD = ' '
+Mint = ' '
+NetBSD = ' '
+NixOS = ' '
+OpenBSD = ' '
+openSUSE = ' '
+OracleLinux = ' '
+Pop = ' '
+Raspbian = ' '
+Redhat = ' '
+RedHatEnterprise = ' '
+Redox = ' '
+Solus = 'ﴱ '
+SUSE = ' '
+Ubuntu = ' '
+Unknown = ' '
+Windows = ' '
 
 [package]
-symbol = " "
+symbol = ' '
 format = '\[[$symbol$version]($style)\]'
 
 [perl]
@@ -269,7 +271,7 @@ disabled = true
 format = '\[[$symbol($version)]($style)\]'
 
 [python]
-symbol = " "
+symbol = ' '
 format = '\[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'
 
 [raku]
@@ -282,30 +284,30 @@ format = '\[[$symbol($version)]($style)\]'
 
 [rlang]
 disabled = true
-symbol = "ﳒ "
+symbol = 'ﳒ '
 
 [ruby]
 disabled = true
-symbol = " "
+symbol = ' '
 format = '\[[$symbol($version)]($style)\]'
 
 [rust]
-symbol = " "
+symbol = ' '
 format = '\[[$symbol($version)]($style)\]'
 
 [scala]
 disabled = true
-symbol = " "
+symbol = ' '
 format = '\[[$symbol($version)]($style)\]'
 
 [spack]
 disabled = true
-symbol = "🅢 "
+symbol = '🅢 '
 format = '\[[$symbol$environment]($style)\]'
 
 [sudo]
 disabled = false
-symbol = ""
+symbol = ''
 format = '\[[$symbol]($style)\]'
 
 [swift]
