@@ -1,4 +1,5 @@
 alias settings="$EDITOR ~/.zshrc"
+
 alias reload="source ~/.zshrc"
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root line)
@@ -55,8 +56,6 @@ export LANG=en_US.UTF-8
 alias dots="cd $DOTFILES"
 alias vim="nvim"
 alias code="codium"
-export TREE='exa --icons --tree --all --group-directories-first --ignore-glob=".git"'
-alias tree="$TREE"
 
 DISABLE_AUTO_TITLE="true"
 
