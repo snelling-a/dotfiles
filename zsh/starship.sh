@@ -1,2 +1,3 @@
-eval "$(starship init zsh)"
+#!/bin/bash
 
+eval "$(starship init zsh)"

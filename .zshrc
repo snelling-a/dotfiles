@@ -52,8 +52,11 @@ export LANG=en_US.UTF-8
 
 # ARC_BOOST_DIR=$HOME/Library/Application Support/Arc/boosts
 
-alias vimrc="$EDITOR ~/.vimrc"
 alias dots="cd $DOTFILES"
+alias vim="nvim"
+alias code="codium"
+export TREE='exa --icons --tree --all --group-directories-first --ignore-glob=".git"'
+alias tree="$TREE"
 
 DISABLE_AUTO_TITLE="true"
 

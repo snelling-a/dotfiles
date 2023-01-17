@@ -4,7 +4,7 @@ export DOTFILES=$HOME/dotfiles
 export VIMDIR=$DOTFILES/vim
 export WORK=$HOME/work
 
-export VISUAL=vim
+export VISUAL=nvim
 export EDITOR="$VISUAL"
 
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
