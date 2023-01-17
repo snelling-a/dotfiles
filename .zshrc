@@ -59,6 +59,8 @@ alias code="codium"
 
 DISABLE_AUTO_TITLE="true"
 
+export MANPAGER='nvim +Man!'
+
 # use gsed as sed
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
