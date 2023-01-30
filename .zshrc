@@ -56,12 +56,19 @@ export LANG=en_US.UTF-8
 alias dots="cd $DOTFILES"
 alias vim="nvim"
 alias code="codium"
+export MANPAGER='nvim +Man!'
+export PATH="/usr/local/bin/nvim:$PATH"
 
 DISABLE_AUTO_TITLE="true"
+alias rm="trash -v"
+alias "rm -rf"="rm"
+alias empty="trash --empty -y" # 'y' skips confirmation step
 
-export MANPAGER='nvim +Man!'
+alias diff="delta"
+export DELTA_FEATURES='+side-by-side'
 
 # use gsed as sed
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
+export PATH="$(yarn global bin):$PATH"
 [ -f $HOME/.zshrc_local ] && source $HOME/.zshrc_local

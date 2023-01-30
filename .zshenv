@@ -10,3 +10,4 @@ export EDITOR="$VISUAL"
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 
 [[ -f .zshenv_local ]] && source .zshenv_local
+. "$HOME/.cargo/env"
