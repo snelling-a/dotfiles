@@ -43,3 +43,4 @@ vim_tags*
 .env
 .envrc
 
+*[Ss]ession*.vim
