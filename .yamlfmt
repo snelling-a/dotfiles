@@ -1,0 +1,8 @@
+---
+# vim:ft=yaml
+formatter:
+  include_document_start: true
+  retain_line_breaks: false
+  type: basic
+include:
+  - '*.{yaml,yml}'
