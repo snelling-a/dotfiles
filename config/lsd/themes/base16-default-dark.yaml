@@ -1,0 +1,25 @@
+---
+date:
+  day-old: 3
+  hour-old: 2
+  older: 4
+group: 2
+inode:
+  invalid: 4
+  valid: 13
+links:
+  invalid: 8
+  valid: 12
+permission:
+  exec: 9
+  exec-sticky: 13
+  no-access: 7
+  read: 2
+  write: 11
+size:
+  large: 1
+  medium: 7
+  none: 0
+  small: 8
+tree-edge: 4
+user: 9
