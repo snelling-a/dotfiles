@@ -1,8 +1,8 @@
-#!/usr/bin/env
+#!/bin/sh
 
-function print_path (){
+print_path (){
     tr : '\n' <<<"$PATH" | sort
 }
 
 # pull gitignore template
-function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/ "$@" ;}
+gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/ "$@" ;}
