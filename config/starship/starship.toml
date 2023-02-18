@@ -40,11 +40,25 @@ format = '\[[$hash$tag]($style)\]'
 
 [git_metrics]
 disabled = false
-format = '\[([+$added]($added_style) )([-$deleted]($deleted_style))\]'
+format = '\[([+$added]($added_style))([-$deleted]($deleted_style))\]'
 only_nonzero_diffs = false
+
+[git_state]
+disabled = false
+format = '\[[$state( $progress_current/$progress_total)]($style)\]'
 
 [git_status]
 format = '([\[$all_status$ahead_behind\]]($style))'
+ahead = ''
+behind = ''
+deleted = ''
+diverged = '󰹹'
+modified = '󱈸'
+renamed = ''
+staged = ''
+stashed = ''
+untracked = ''
+up_to_date = ''
 
 [localip]
 disabled = false
