@@ -1,6 +1,8 @@
 ---
 # vim:ft=yaml
 extends: default
+ignore:
+  - .github/workflows/
 locale: 'en_US.UTF-8'
 rules:
   comments:

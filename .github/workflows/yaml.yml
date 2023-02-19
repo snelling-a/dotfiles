@@ -1,0 +1,28 @@
+---
+on: [push]
+jobs:
+  YAML-FORMAT:
+    name: YAML Format
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Go
+        uses: actions/setup-go@v3
+        with:
+          go-version: 1.19
+      - name: Install yamlfmt
+        run: go install github.com/google/yamlfmt/cmd/yamlfmt@latest
+      - name: Run yamlfmt
+        run: yamlfmt -lint
+  YAML-LINT:
+    name: YAML Lint
+    needs: [YAML-FORMAT]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: 'actions/setup-python@v2'
+        with:
+          python-version: '3.8'
+      - name: yamllint
+        run: |
+          pip install yamllint==1.27.1 --use-pep517
+          yamllint .
