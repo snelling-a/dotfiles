@@ -14,9 +14,16 @@
     "Cblue",
     "Cgreen",
     "Creset",
+    "fcoc",
+    "fshow",
+    "fstash",
+    "hscroll",
+    "mbranch",
+    "mtag",
     "pgrp",
     "revargs",
-    "Sott"
+    "Sott",
+    "xclip"
   ],
   "language": "en",
   "version": "0.2",
@@ -35,5 +42,6 @@
     "vimcmd",
     "yamlfmt",
     "yammllint"
+    "elif"
   ]
 }
