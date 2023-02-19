@@ -1,0 +1,22 @@
+---
+# vim:ft=yaml
+extends: default
+ignore:
+  - .github/workflows/
+locale: 'en_US.UTF-8'
+rules:
+  comments:
+    min-spaces-from-content: 1
+  indentation:
+    check-multi-line-strings: true
+    spaces: 2
+  key-ordering: enable
+  new-line-at-end-of-file: enable
+  quoted-strings:
+    quote-type: single
+    required: false
+yaml-files:
+  - '*.yaml'
+  - '*.yml'
+  - '.yamllint'
+  - '.yamlfmt'

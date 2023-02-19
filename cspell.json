@@ -32,6 +32,7 @@
     "alacritty",
     "autosetuprebase",
     "cmdlineargs",
+    "elif",
     "Iosevka",
     "localip",
     "nvim",
@@ -42,6 +43,5 @@
     "vimcmd",
     "yamlfmt",
     "yammllint"
-    "elif"
   ]
 }
