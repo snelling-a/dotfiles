@@ -1,0 +1,107 @@
+# vim:ft=gitconfig
+
+[alias]
+  # Show verbose output about tags, branches or remotes
+    tags     = tag -l
+    branches = branch -a
+    remotes  = remote -v
+  # Credit an author on the latest commit
+    credit   = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
+  # Interactive rebase with the given number of latest commits
+    reb      = "!r() { git rebase -i HEAD~$1; }; r"
+  # Find commits by source code
+    fc       = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f"
+  # Find commits by commit message
+    fm       = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
+  # Remove branches that have already been merged with master
+    dm       = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+
+    standup = log --since='yesterday' --author='Andrew Snelling'
+
+[apply]
+    whitespace                    = fix
+[commit]
+    template                      = ~/.config/git/gitcommit
+    verbose                       = true
+[color]
+    ui                            = auto
+    diff                          = true
+[color "branch"]
+    current                       = yellow reverse
+    local                         = yellow
+    remote                        = green
+[color "diff"]
+    meta                          = yellow bold
+    frag                          = magenta bold
+    old                           = red bold
+    new                           = green bold
+[color "diff-highlight"]
+    oldNormal                     = "red bold"
+    oldHighlight                  = "red bold 52"
+    newNormal                     = "green bold"
+    newHighlight                  = "green bold 22"
+[color "status"]
+    added                         = green
+    changed                       = red
+    untracked                     = cyan
+[core]
+    excludesfile                  = ~/.config/git/gitignore_global
+    editor                        = nvim
+    pager                         = delta
+[delta]
+    features                      = unobtrusive-line-numbers decorations
+    hyperlinks                    = true
+    line-numbers                  = true
+    map-styles                    = bold purple => syntax magenta, bold cyan => syntax blue
+    navigate                      = true
+    side-by-side                  = true
+    syntax-theme                  = base16
+[delta "blame"]
+    blame-code-style              = syntax
+    blame-format                  = {author:<15.14}
+    blame-separator-style         = red
+[delta "decorations"]
+    commit-decoration-style       = bold yellow box ul
+    commit-style                  = raw
+    file-style                    = bold yellow ul
+    hunk-header-decoration-style  = blue box
+    hunk-header-file-style        = red
+    hunk-header-line-number-style = "#067a00"
+    hunk-header-style             = file line-number syntax
+[delta "interactive"]
+    keep-plus-minus-markers       = false
+[diff]
+    colorMoved                    = default
+    submodule                     = log
+[difftool "nvimdiff"]
+    cmd                           = "nvim -d \"$LOCAL\" \"$REMOTE\""
+[difftool]
+    prompt                        = false
+[help]
+    autocorrect                   = prompt
+[init]
+    defaultBranch                 = main
+[interactive]
+    diffFilter                    = delta --color-only --features=interactive
+[merge]
+    conflictstyle                 = diff3
+[pager]
+    status                        = true
+[pull]
+    rebase                        = true
+[push]
+    default                       = current
+[rebase]
+    autoSquash                    = true
+    autoStash                     = true
+    instructionFormat             = format:%s (%cr) <%an> %G?
+[status]
+    short                         = true
+    branch                        = true
+    aheadBehind                   = true
+    showStash                     = true
+[user]
+    name                          = snelling-a
+    email                         = 72226000+snelling-a@users.noreply.github.com
+[includeIf "gitdir:~/work/"]
+    path                          = ./gitconfig_local

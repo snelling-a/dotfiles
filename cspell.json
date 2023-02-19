@@ -1,0 +1,47 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "allowCompoundWords": true,
+  "dictionaries": [
+    "fonts",
+    "softwareTerms"
+  ],
+  "enableGlobDot": true,
+  "enabled": true,
+  "ignorePaths": [
+    "./config/nvim/"
+  ],
+  "ignoreWords": [
+    "Cblue",
+    "Cgreen",
+    "Creset",
+    "fcoc",
+    "fshow",
+    "fstash",
+    "hscroll",
+    "mbranch",
+    "mtag",
+    "pgrp",
+    "revargs",
+    "Sott",
+    "xclip"
+  ],
+  "language": "en",
+  "version": "0.2",
+  "words": [
+    "Acked",
+    "alacritty",
+    "autosetuprebase",
+    "cmdlineargs",
+    "Iosevka",
+    "localip",
+    "nvim",
+    "nvimdiff",
+    "strftime",
+    "tigrc",
+    "unstaged",
+    "vimcmd",
+    "yamlfmt",
+    "yammllint"
+    "elif"
+  ]
+}
