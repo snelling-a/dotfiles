@@ -15,11 +15,14 @@ done
 
 export LANG=en_US.UTF-8
 
+stty sane
+set -o vi
+bindkey -v
 
 alias vim="nvim"
 alias code="codium"
+
 export MANPAGER='nvim +Man!'
-export PATH="/usr/local/bin/nvim:$PATH"
 
 alias rm="trash -v"
 alias "rm -rf"="rm"
@@ -28,11 +31,6 @@ alias empty="trash --ey" # 'y' skips confirmation step
 alias diff="delta"
 export DELTA_FEATURES='+side-by-side'
 
-# use gsed as sed
-export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-alias sed="gsed"
-
-export PATH="$(yarn global bin):$PATH"
 [ -f $HOME/.zshrc_local ] && source $HOME/.zshrc_local
 
 source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
@@ -49,8 +47,6 @@ source $DOTFILES/zsh/
 
 . $(brew --prefix)/etc/profile.d/z.sh
 
-export PATH="/usr/local/bin/luacheck:$PATH"
-export PATH="/usr/local/bin/stylua:$PATH"
 
 alias dots="cd $DOTFILES"
 alias work="cd $WORK"
