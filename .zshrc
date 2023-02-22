@@ -1,74 +1,52 @@
-alias settings="$EDITOR ~/.zshrc"
-
 alias reload="source ~/.zshrc"
-
+alias settings="$EDITOR ~/.zshrc && source ~/.zshrc"
+#
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root line)
 ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red')
 
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
-# ZSH_THEME="robbyrussell"
-# ZSH_THEME="minima"
+autoload -Uz compinit
+compinit
 
-zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-
-ENABLE_CORRECTION="true"
-# export ZSH_DISABLE_COMPFIX="true"
-export ZSH_COMPDUMP_DEFAULT_DIR=$ZSH/cache/
-export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
-
-# COMPLETION_WAITING_DOTS="true"
-
-autoload -U compinit; compinit
-
-plugins=(
-    aliases
-    brew
-    git
-    history
-    history-substring-search
-    macos
-    node
-    npm
-    nvm
-    you-should-use
-    z
-    zsh-autosuggestions
-    zsh-syntax-highlighting
-    snelling-a
-)
-
-source $ZSH/oh-my-zsh.sh
-
-export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
-
-for file in $DOTFILES/zsh/**/*; do
+for file in $DOTFILES/zsh/**/*.*sh; do
     [ -f $file ] && source $file
 done
 
-# User configuration
-
 export LANG=en_US.UTF-8
 
-# ARC_BOOST_DIR=$HOME/Library/Application Support/Arc/boosts
+stty sane
+set -o vi
+bindkey -v
 
-alias dots="cd $DOTFILES"
 alias vim="nvim"
 alias code="codium"
-export MANPAGER='nvim +Man!'
-export PATH="/usr/local/bin/nvim:$PATH"
 
-DISABLE_AUTO_TITLE="true"
+export MANPAGER='nvim +Man!'
+
 alias rm="trash -v"
 alias "rm -rf"="rm"
-alias empty="trash --empty -y" # 'y' skips confirmation step
+alias empty="trash --ey" # 'y' skips confirmation step
 
 alias diff="delta"
 export DELTA_FEATURES='+side-by-side'
 
-# use gsed as sed
-export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-
-export PATH="$(yarn global bin):$PATH"
 [ -f $HOME/.zshrc_local ] && source $HOME/.zshrc_local
+
+source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+source $(brew --prefix)/share/zsh-you-should-use/you-should-use.plugin.zsh
+source $(brew --prefix)/share/zsh-autopair/autopair.zsh
+
+source $DOTFILES/zsh/
+
+. $(brew --prefix)/etc/profile.d/z.sh
+
+
+alias dots="cd $DOTFILES"
+alias work="cd $WORK"

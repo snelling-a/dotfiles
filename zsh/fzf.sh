@@ -1,3 +1,5 @@
+#!/bin/bash
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export FZF_DEFAULT_COMMAND='fd --type f --follow --hidden'
@@ -7,34 +9,27 @@ export FZF_DEFAULT_OPTS="--height=80% --layout=reverse --info=inline --border --
 # full command on preview
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
 
-function cd() {
-    if [[ "$#" != 0 ]]; then
-        builtin cd "$@";
-        return
-    fi
-    while true; do
-        local lsd=$(echo ".." && ls -p | grep '/$' | sed 's;/$;;')
-        local dir="$(printf '%s\n' "${lsd[@]}" |
-            fzf --reverse --preview '
-                __cd_nxt="$(echo {})";
-                __cd_path="$(echo $(pwd)/${__cd_nxt} | sed "s;//;/;")";
-                echo $__cd_path;
-                echo;
-                ls -p --color=always "${__cd_path}";
-        ')"
-        [[ ${#dir} != 0 ]] || return 0
-        builtin cd "$dir" &> /dev/null
-    done
-}
+_gen_fzf_default_opts() {
+	local color00='#181818'
+	local color01='#282828'
+	local color02='#383838'
+	local color03='#585858'
+	local color04='#b8b8b8'
+	local color05='#d8d8d8'
+	local color06='#e8e8e8'
+	local color07='#f8f8f8'
+	local color08='#ab4642'
+	local color09='#dc9656'
+	local color0A='#f7ca88'
+	local color0B='#a1b56c'
+	local color0C='#86c1b9'
+	local color0D='#7cafc2'
+	local color0E='#ba8baf'
+	local color0F='#a16946'
 
-# using ripgrep combined with preview
-# find-in-file - usage: fif <searchTerm>
-fif() {
-    if [ ! "$#" -gt 0 ]; then echo "Need a string to search for!"; return 1; fi
-    rg --color=always --line-number --no-heading --smart-case "${*:-}" |
-    fzf --ansi \
-        --color "hl:-1:underline,hl+:-1:underline:reverse" \
-        --delimiter : \
-        --preview 'bat --color=always {1} --highlight-line {2}' \
-        --preview-window 'up,60%,border-bottom,+{2}+3/3,~3'
+	export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+        --color=bg+:$color01,bg:$color00,spinner:$color0C,hl:$color0D \
+        --color=fg:$color04,header:$color0D,info:$color0A,pointer:$color0C \
+        --color=marker:$color0C,fg+:$color06,prompt:$color0A,hl+:$color0D"
 }
+_gen_fzf_default_opts
