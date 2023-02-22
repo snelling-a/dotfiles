@@ -38,3 +38,19 @@ export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
 export PATH="$(yarn global bin):$PATH"
 [ -f $HOME/.zshrc_local ] && source $HOME/.zshrc_local
+source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+source $(brew --prefix)/share/zsh-you-should-use/you-should-use.plugin.zsh
+source $(brew --prefix)/share/zsh-autopair/autopair.zsh
+
+source $DOTFILES/zsh/
+
+. $(brew --prefix)/etc/profile.d/z.sh
+
+export PATH="/usr/local/bin/luacheck:$PATH"
+export PATH="/usr/local/bin/stylua:$PATH"
