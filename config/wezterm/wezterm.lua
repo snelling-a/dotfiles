@@ -2,6 +2,7 @@ local constants = require("const")
 local font = require("font")
 local keys = require("keys")
 
+require("tabs")
 
 local hyperlink_rules = {
 	{ regex = "\\b\\w+://[\\w.-]+:[0-9]{2,15}\\S*\\b", format = "$0" },
