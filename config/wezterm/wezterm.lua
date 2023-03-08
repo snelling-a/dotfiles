@@ -1,3 +1,4 @@
+local constants = require("const")
 local font = require("font")
 local keys = require("keys")
 
@@ -13,6 +14,8 @@ return {
 	adjust_window_size_when_changing_font_size = false,
 	audible_bell = "Disabled",
 	automatically_reload_config = true,
+	color_scheme = constants.color_scheme,
+	colors = constants.default_colors,
 	disable_default_key_bindings = keys.disable_default_key_bindings,
 	font = font.font,
 	font_rules = font.font_rules,
