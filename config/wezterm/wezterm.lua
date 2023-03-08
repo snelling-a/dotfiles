@@ -1,3 +1,5 @@
+local font = require("font")
+
 local hyperlink_rules = {
 	{ regex = "\\b\\w+://[\\w.-]+:[0-9]{2,15}\\S*\\b", format = "$0" },
 	{ regex = "\\b\\w+://[\\w.-]+\\.[a-z]{2,15}\\S*\\b", format = "$0" },
@@ -9,6 +11,9 @@ return {
 	adjust_window_size_when_changing_font_size = false,
 	audible_bell = "Disabled",
 	automatically_reload_config = true,
+	font = font.font,
+	font_rules = font.font_rules,
+	font_size = font.font_size,
 	hyperlink_rules = hyperlink_rules,
 	underline_position = -8,
 	use_fancy_tab_bar = false,
