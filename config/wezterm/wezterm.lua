@@ -2,6 +2,7 @@ local constants = require("const")
 local font = require("font")
 local keys = require("keys")
 
+require("events")
 require("right-status")
 require("tabs")
 
