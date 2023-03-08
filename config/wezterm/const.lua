@@ -46,9 +46,20 @@ local process_icons = {
 	["zsh"] = { { Foreground = { Color = colors.red } }, { Text = icons.dev_terminal } },
 }
 
+local heart_icons = { full = icons.mdi_heart, half_full = icons.mdi_heart_half_full, empty = icons.mdi_heart_outline }
+
+local battery_icons = {
+	charging = icons.fa_bolt,
+	discharging = icons.mdi_battery,
+	unknown = icons.mdi_battery_unknown,
+	full = icons.mdi_battery_charging_100,
+}
+
 return {
+	battery_icons = battery_icons,
 	color_scheme = color_scheme,
 	colors = colors,
 	default_colors = default_colors,
+	heart_icons = heart_icons,
 	process_icons = process_icons,
 }

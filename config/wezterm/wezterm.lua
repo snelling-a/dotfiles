@@ -2,6 +2,7 @@ local constants = require("const")
 local font = require("font")
 local keys = require("keys")
 
+require("right-status")
 require("tabs")
 
 local hyperlink_rules = {
