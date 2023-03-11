@@ -4,6 +4,11 @@ local color_scheme = "Default Dark (base16)"
 local default_colors = wezterm.color.get_builtin_schemes()[color_scheme]
 local icons = wezterm.nerdfonts
 
+local Constants = {
+	color_scheme = color_scheme,
+	default_colors = default_colors,
+}
+
 local colors = {
 	background = default_colors.background, -- #181818
 	black = default_colors.ansi[1], --#181818
@@ -26,8 +31,9 @@ local colors = {
 	red = default_colors.ansi[2], --#ab4642
 	yellow = default_colors.ansi[4], --#f7ca88
 }
+Constants.colors = colors
 
-local process_icons = {
+Constants.process_icons = {
 	["bash"] = { { Foreground = { Color = colors.light_black } }, { Text = icons.cod_terminal_bash } },
 	["btm"] = { { Foreground = { Color = colors.magenta } }, { Text = icons.mdi_chart_donut_variant } },
 	["cargo"] = { { Foreground = { Color = colors.red } }, { Text = icons.dev_rust } },
@@ -46,20 +52,14 @@ local process_icons = {
 	["zsh"] = { { Foreground = { Color = colors.red } }, { Text = icons.dev_terminal } },
 }
 
-local heart_icons = { full = icons.mdi_heart, half_full = icons.mdi_heart_half_full, empty = icons.mdi_heart_outline }
+Constants.heart_icons =
+	{ full = icons.mdi_heart, half_full = icons.mdi_heart_half_full, empty = icons.mdi_heart_outline }
 
-local battery_icons = {
+Constants.battery_icons = {
 	charging = icons.fa_bolt,
 	discharging = icons.mdi_battery,
 	unknown = icons.mdi_battery_unknown,
 	full = icons.mdi_battery_charging_100,
 }
 
-return {
-	battery_icons = battery_icons,
-	color_scheme = color_scheme,
-	colors = colors,
-	default_colors = default_colors,
-	heart_icons = heart_icons,
-	process_icons = process_icons,
-}
+return Constants
