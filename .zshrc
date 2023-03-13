@@ -23,7 +23,7 @@ export MANPAGER='nvim +Man!'
 
 alias rm="trash -v"
 alias "rm -rf"="rm"
-alias empty="trash --ey" # 'y' skips confirmation step
+alias empty="trash -ey" # 'y' skips confirmation step
 
 alias diff="delta"
 export DELTA_FEATURES='+side-by-side'
