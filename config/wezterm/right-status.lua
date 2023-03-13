@@ -25,7 +25,7 @@ local function make_heart_string(number)
 	return wezterm.format({
 		{ Foreground = { Color = colors.red } },
 		{ Text = string.format("%s%s", full_hearts, half_heart) },
-		{ Foreground = { Color = colors.foreground } },
+		{ Foreground = { Color = colors.bright_black } },
 		{ Text = empty_hearts },
 	})
 end
