@@ -73,10 +73,11 @@
 [diff]
     colorMoved                    = default
     submodule                     = log
-[difftool "nvimdiff"]
-    cmd                           = "nvim -d \"$LOCAL\" \"$REMOTE\""
+    tool                          = nvimdiff
 [difftool]
     prompt                        = false
+[difftool "nvimdiff"]
+    cmd                           = "nvim -d \"$LOCAL\" \"$REMOTE\""
 [help]
     autocorrect                   = prompt
 [init]
@@ -85,6 +86,10 @@
     diffFilter                    = delta --color-only --features=interactive
 [merge]
     conflictstyle                 = diff3
+    tool                          = nvimmerge
+[mergetool "nvimmerge"]
+    cmd                           = "nvim -d \"$LOCAL\" \"$REMOTE\" \"$MERGED\" -c '$wincmd w' -c 'wincmd J'"
+  trustexitcode                   = true
 [pager]
     status                        = true
 [pull]
