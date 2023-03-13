@@ -11,9 +11,13 @@ jobs:
         with:
           go-version: 1.19
       - name: Install yamlfmt
-        run: go install github.com/google/yamlfmt/cmd/yamlfmt@latest
+        run: |
+          echo "Installing yamlfmt..."
+          go install github.com/google/yamlfmt/cmd/yamlfmt@latest
       - name: Run yamlfmt
-        run: yamlfmt -lint
+        run: |
+          echo "Formatting with yamlfmt"
+          yamlfmt -lint
   YAML-LINT:
     name: YAML Lint
     needs: [YAML-FORMAT]
@@ -24,5 +28,9 @@ jobs:
           python-version: '3.8'
       - name: yamllint
         run: |
+          echo "Installing yamllint..."
           pip install yamllint==1.27.1 --use-pep517
+      - name: Run yamllint
+        run: |
+          echo "Linting with yamllint..."
           yamllint .
