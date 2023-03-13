@@ -27,7 +27,7 @@ return {
 	key_tables = keys.key_tables,
 	keys = keys.keys,
 	leader = keys.leader,
-	underline_position = -8,
+	underline_position = -2,
 	use_fancy_tab_bar = false,
 	window_decorations = "RESIZE",
 	window_padding = { bottom = 0, left = 0, right = 0, top = 0 },
