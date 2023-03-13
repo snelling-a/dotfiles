@@ -1,30 +1,13 @@
 # vim:ft=config
 
-set blame-view                  = id:yes \
-        color file-name:auto author:full date:default \
-        format                  = "%Y-%m-%d" line-number:yes \
-        interval                = 1 text
+set blame-view                  = id:yes,color file-name:auto author:full date:default,format="%Y-%m-%d" line-number:yes,interval=1 text
 set grep-view                   = file-name:no line-number:yes,interval=1 text
-set main-view                   = line-number:no \
-        interval                = 5 id:no date:default \
-        format                  = "%Y-%m-%d" author:full commit-title:yes \
-        graph \
-        refs \
-        overflow                = no
-set reflog-view                 = line-number:no \
-        interval                = 5 id:yes date:no \
-        format                  = "%Y-%m-%d" author:no commit-title:yes \
-        refs \
-        overflow                = no
-set refs-view                   = line-number:no id:no date:default \
-        format                  = "%Y-%m-%d" author:full ref commit-title
-set stash-view                  = line-number:no \
-        interval                = 5 id:no date:default \
-        format                  = "%Y-%m-%d" author:full commit-title
+set main-view                   = line-number:no,interval=5 id:no date:default,format="%Y-%m-%d" author:full commit-title:yes,graph,refs,overflow=no
+set reflog-view                 = line-number:no,interval=5 id:yes date:no,format="%Y-%m-%d" author:no commit-title:yes,refs,overflow=no
+set refs-view                   = line-number:no id:no date:default,format="%Y-%m-%d" author:full ref commit-title
+set stash-view                  = line-number:no,interval=5 id:no date:default,format="%Y-%m-%d" author:full commit-title
 set status-view                 = line-number:no,interval=5 status:short file-name
-set tree-view                   = line-number:no \
-        interval                = 5 mode author:full file-size date:default \
-        format                  = "%Y-%m-%d" id:no file-name
+set tree-view                   = line-number:no,interval=5 mode author:full file-size date:default,format="%Y-%m-%d" id:no file-name
 
 set pager-view                  = line-number:no,interval=5 text
 set stage-view                  = line-number:no,interval=5 text
@@ -46,13 +29,19 @@ set status-show-untracked-dirs  = yes
 set status-show-untracked-files = yes
 set ignore-space                = no
 set show-notes                  = yes
+set diff-context                = 3
+set diff-options                = -C
+set diff-highlight              = true
 
+set blame-options               = -C -C -C
+set log-options                 = --pretty=raw
+set main-options                = -n 1000
 set mailmap                     = yes
 
 set start-on-head               = no
 set refresh-mode                = auto
 set refresh-interval            = 10
-set ignore-case                 = no
+set ignore-case                 = smart-case
 
 set wrap-search                 = yes
 set focus-child                 = yes
@@ -71,43 +60,6 @@ set mouse-wheel-cursor          = no
 set pgrp                        = no
 set pager-autoscroll            = no
 
-# User-defined commands
-# ---------------------
-# These commands allow to run shell commands directly from within Tig.
-# Unless otherwise specified, commands are run in the foreground with
-# their console output shown (as if '!' was specified). When multiple
-# command options are specified their behavior are combined, e.g. "?<git
-# commit" will prompt the user whether to execute the command and will
-# exit Tig after completion.
-#
-#   !   Run the command in the foreground with output shown.
-#   @   Run the command in the background with no output.
-#   ?   Prompt the user before executing the command.
-#   +   Run the command synchronously, and echo the first line of output to the status bar.
-#   <   Exit Tig after executing the command.
-#   >   Re-open Tig instantly in the last displayed view after executing the command.
-#
-# User-defined commands can optionally refer to Tig's internal state
-# using the following variable names, which are substituted before
-# commands are run:
-#
-#   %(head)     The current ref ID. Defaults to HEAD
-#   %(commit)       The current commit ID.
-#   %(blob)     The current blob ID.
-#   %(branch)       The current branch name.
-#   %(remote)       The current remote name.
-#   %(tag)      The current tag name.
-#   %(stash)        The current stash name.
-#   %(directory)    The current directory path in the tree view;
-#           empty for the root directory.
-#   %(file)     The currently selected file.
-#   %(ref)      The reference given to blame or HEAD if undefined.
-#   %(revargs)      The revision arguments passed on the command line.
-#   %(fileargs)     The file arguments passed on the command line.
-#   %(cmdlineargs)  All other options passed on the command line.
-#   %(diffargs)     The diff options from `diff-options` or `TIG_DIFF_OPTS`
-#   %(prompt)       Prompt for the argument value.
-
 bind main    C        ?git cherry-pick %(commit)
 bind status  C        !git commit
 bind stash   A        ?git stash apply %(stash)
@@ -118,10 +70,6 @@ bind refs    !        ?git branch -D %(branch)
 bind reflog  C        ?git checkout %(branch)
 bind reflog  !        ?git reset --hard %(commit)
 
-# Normal commands
-# ---------------
-
-# View switching
 bind generic m        view-main
 bind generic d        view-diff
 bind generic l        view-log
@@ -133,51 +81,48 @@ bind generic r        view-refs
 bind generic p        view-pager
 bind generic h        view-help
 bind generic s        view-status
-bind generic S        view-status              
+bind generic S        view-status
 bind generic c        view-stage
 bind generic y        view-stash
 bind generic g        view-grep
 
-bind generic <Enter>  enter                      
-bind generic <Lt>     back                       
-bind generic <Down>   next                       
+bind generic <Enter>  enter
+bind generic <Lt>     back
+bind generic <Down>   next
 bind generic <C-N>    next
 bind generic J        next
-bind generic <Up>     previous                   
+bind generic <Up>     previous
 bind generic <C-P>    previous
 bind generic K        previous
-bind generic ,        parent                     
-bind generic <Tab>    view-next                  
-bind generic R        refresh                    
+bind generic ,        parent
+bind generic <Tab>    view-next
+bind generic R        refresh
 bind generic <F5>     refresh
-bind generic O        maximize                   
-bind generic q        view-close                 
-bind generic Q        quit                       
-bind generic <C-C>    quit                       
+bind generic O        maximize
+bind generic q        view-close
+bind generic Q        quit
+bind generic <C-C>    quit
 
-# View specific
-bind status  u        status-update              
-bind status  !        status-revert              
-bind status  M        status-merge               
-bind stage   u        status-update              
-bind stage   1        stage-update-line          
-bind stage   2        stage-update-part          
-bind stage   !        status-revert              
-bind stage   \        stage-split-chunk          
-bind stage   @        :/^@@                      
-bind stage   [        :toggle diff-context -1    
-bind stage   ]        :toggle diff-context +1    
-bind diff    @        :/^@@                      
-bind diff    [        :toggle diff-context -1    
-bind diff    ]        :toggle diff-context +1    
-bind pager   @        :/^@@                      
-bind main    H        :goto HEAD                 
-bind main    G        :toggle commit-title-graph 
-bind main    F        :toggle commit-title-refs  
-bind reflog  F        :toggle commit-title-refs  
-# bind status   ??? :toggle status      # Show short or long status labels
+bind status  u        status-update
+bind status  !        status-revert
+bind status  M        status-merge
+bind stage   u        status-update
+bind stage   1        stage-update-line
+bind stage   2        stage-update-part
+bind stage   !        status-revert
+bind stage   \        stage-split-chunk
+bind stage   @        :/^@@
+bind stage   [        :toggle diff-context -1
+bind stage   ]        :toggle diff-context +1
+bind diff    @        :/^@@
+bind diff    [        :toggle diff-context -1
+bind diff    ]        :toggle diff-context +1
+bind pager   @        :/^@@
+bind main    H        :goto HEAD
+bind main    G        :toggle commit-title-graph
+bind main    F        :toggle commit-title-refs
+bind reflog  F        :toggle commit-title-refs
 
-# Cursor navigation
 bind generic j        move-down
 bind generic k        move-up
 bind generic <C-D>    move-half-page-down
@@ -189,7 +134,6 @@ bind generic -        move-page-up
 bind generic <Home>   move-first-line
 bind generic <End>    move-last-line
 
-# Scrolling
 bind generic |        scroll-first-col
 bind generic <Left>   scroll-left
 bind generic <Right>  scroll-right
@@ -199,15 +143,13 @@ bind generic <Del>    scroll-line-down
 bind generic <C-E>    scroll-line-down
 bind generic <SBack>  scroll-page-up
 bind generic <SFwd>   scroll-page-down
-# bind generic  ??? scroll-half-page-up
-# bind generic  ??? scroll-half-page-down
+bind generic <C-U>    scroll-half-page-up
+bind generic <C-D>    scroll-half-page-down
 
-# Searching
 bind generic /        search
 bind generic ?        search-back
 bind generic n        find-next
 bind generic N        find-prev
-# Navigation keys used while searching
 bind search  <Down>   find-next
 bind search  <C-N>    find-next
 bind search  <C-J>    find-next
@@ -216,56 +158,27 @@ bind search  <C-P>    find-prev
 bind search  <C-K>    find-prev
 bind search  <C-C>    view-close
 
-# Option manipulation
-bind generic o        options                    
-# Bindings for toggling settings
-bind generic I        :toggle sort-order        
-bind generic i        :toggle sort-field        
-bind generic <Hash>   :toggle line-number       
-bind generic D        :toggle date              
-bind generic A        :toggle author            
-bind generic ~        :toggle line-graphics      
-bind generic F        :toggle file-name          
-bind generic W        :toggle ignore-space       
-bind generic X        :toggle id                 
+bind generic o        options
+bind generic I        :toggle sort-order
+bind generic i        :toggle sort-field
+bind generic <Hash>   :toggle line-number
+bind generic D        :toggle date
+bind generic A        :toggle author
+
+bind generic ~        :toggle line-graphics
+bind generic F        :toggle file-name
+bind generic W        :toggle ignore-space
+bind generic X        :toggle id
 bind generic $        :toggle commit-title-overflow
-bind generic %        :toggle file-filter        
-bind generic ^        :toggle rev-filter         
-# bind generic  ??? :toggle file-size   # Toggle file size format
-# bind generic  ??? :toggle status      # Toggle status display
-# bind generic  ??? :toggle status-show-untracked-dirs
-# bind generic  ??? :toggle vertical-split  # Toggle vertical split
-# bind generic  ??? :toggle word-diff   # Toggle word diff
-# bind generic  ??? :toggle commit-title-display
-# bind generic  ??? :toggle show-changes    # Toggle local changes display in the main view
-# bind generic  ??? :toggle ignore-case # Toggle ignoring case when searching
-# bind generic  ??? :toggle commit-order    # Toggle commit ordering
 
-# Misc
-bind generic e        edit                       
-bind generic :        prompt                     
-bind generic <C-L>    screen-redraw              
-bind generic z        stop-loading               
-bind generic v        show-version               
+bind generic %        :toggle file-filter
+bind generic ^        :toggle rev-filter
 
-# Colors
-# ------
-
-# The colors in the UI can be customized. In addition to the colors used
-# for the UI you can also define new colors to use in the pager, blob,
-# diff, and stage views by placing the text to match for in quotes.
-#
-# Prefix the name of a view to set a color only for that view, e.g.
-#
-#   color grep.file         blue    default
-#
-# As an example, this setting will to color Signed-off-by lines with a
-# yellow foreground color and use the default background color.
-#
-#   color "    Signed-off-by"   yellow  default
-#
-# Note the four leading spaces in the string to match. This is because
-# Git automatically indents commit messages by four spaces.
+bind generic e        edit
+bind generic :        prompt
+bind generic <C-L>    screen-redraw
+bind generic z        stop-loading
+bind generic v        show-version
 
 color "---"                         blue    default
 color "diff --"                     yellow  default
@@ -375,8 +288,6 @@ color palette-13                    red     default bold
 color graph-commit                  blue    default
 color search-result                 black   yellow
 
-# Mappings for colors read from git configuration.
-# Set to "no" to disable.
 set git-colors = \
     branch.current=main-head \
     branch.local=main-ref \
