@@ -1,0 +1,31 @@
+---
+on: [push]
+jobs:
+  STYLUA:
+    name: StyLua
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run Stylua check
+        uses: JohnnyMorganz/stylua-action@v1.1.1
+        with:
+          args: --check .
+          token: ${{ secrets.GITHUB_TOKEN }}
+          version: 0.16.1
+  LUACHECK:
+    name: Luacheck
+    needs: [STYLUA]
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Prepare
+        run: |
+          echo "Installing luacheck"
+          sudo apt update
+          sudo apt install luarocks
+          sudo luarocks install luacheck
+      - name: Lint
+        run: |
+          echo "Linting with luacheck"
+          luacheck .

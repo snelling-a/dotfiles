@@ -11,13 +11,13 @@ PATH="/usr/local/bin/stylua:$PATH"
 
 . "$HOME/.cargo/env"
 
-PATH=/home/$USER/.fnm:$PATH
-eval "$(fnm env --use-on-cd)"
-
-PATH="$(yarn bin):$PATH"
+# PATH="$(yarn bin):$PATH"
 
 PATH="/usr/local/opt/curl/bin:$PATH"
 
 PATH=/usr/local/bin:$PATH
+PATH=/usr/bin/python3:$PATH
 
 export PATH
+
+eval "$(fnm env --use-on-cd)"

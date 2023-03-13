@@ -1,4 +1,8 @@
 *local/
+
 config/gh/hosts.yml
 config/git/gitconfig_local
+
 vim/.undo/*
+
+zsh/completions

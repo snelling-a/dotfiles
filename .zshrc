@@ -1,13 +1,10 @@
 alias reload="source ~/.zshrc"
 alias settings="$EDITOR ~/.zshrc && source ~/.zshrc"
-#
+
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root line)
 ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red')
 
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
-
-autoload -Uz compinit
-compinit
 
 for file in $DOTFILES/zsh/**/*.*sh; do
     [ -f $file ] && source $file
@@ -26,7 +23,7 @@ export MANPAGER='nvim +Man!'
 
 alias rm="trash -v"
 alias "rm -rf"="rm"
-alias empty="trash --ey" # 'y' skips confirmation step
+alias empty="trash -ey" # 'y' skips confirmation step
 
 alias diff="delta"
 export DELTA_FEATURES='+side-by-side'
@@ -43,10 +40,14 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-you-should-use/you-should-use.plugin.zsh
 source $(brew --prefix)/share/zsh-autopair/autopair.zsh
 
-source $DOTFILES/zsh/
-
 . $(brew --prefix)/etc/profile.d/z.sh
 
+fpath=($DOTFILES/zsh/completions $fpath)
+
+autoload -Uz compinit
+compinit
+
+export TERM=wezterm
 
 alias dots="cd $DOTFILES"
 alias work="cd $WORK"
