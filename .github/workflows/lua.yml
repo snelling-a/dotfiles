@@ -17,9 +17,8 @@ jobs:
     needs: [STYLUA]
     runs-on: ubuntu-20.04
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Prepare
+      - uses: actions/checkout@v2
+      - name: Install luacheck
         run: |
           echo "Installing luacheck"
           sudo apt update

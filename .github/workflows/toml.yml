@@ -1,0 +1,13 @@
+---
+on: [push]
+jobs:
+  TAPLO:
+    name: Taplo lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions-rs/install@v0.1
+        with:
+          crate: taplo-cli
+          version: latest
+      - run: taplo fmt --check
