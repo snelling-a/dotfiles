@@ -96,6 +96,6 @@
     "yammllint",
     "zstyle",
     "dccache",
-    "nvimmerge"
+    "nvimmerge",
   ]
 }

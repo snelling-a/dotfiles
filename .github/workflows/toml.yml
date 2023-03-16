@@ -10,4 +10,6 @@ jobs:
         with:
           crate: taplo-cli
           version: latest
-      - run: taplo fmt --check
+      - run: |
+          echo "Linting with Taplo"
+          taplo fmt --check
