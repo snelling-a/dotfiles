@@ -17,7 +17,7 @@ end
 
 wezterm.on("format-tab-title", function(tab, tabs, _panes, _config, _hover, _max_width)
 	local tab_index = tab.tab_index + 1
-	local index_string = tab_index
+	local index_string = tostring(tab_index)
 	if #tabs > 1 then
 		index_string = string.format("[%d/%d] ", tab_index, #tabs)
 	end
