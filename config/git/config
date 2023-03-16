@@ -1,112 +1,136 @@
 # vim:ft=gitconfig
 
 [alias]
-  # Show verbose output about tags, branches or remotes
-    tags     = tag -l
     branches = branch -a
+    count    = shortlog --summary --numbered
+    cp       = cherrypick
+    fc       = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f" # Find commits by source code
+    fm       = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f" # Find commits by commit message
+    rb       = rebase --interactive --autosquash
     remotes  = remote -v
-  # Credit an author on the latest commit
-    credit   = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
-  # Interactive rebase with the given number of latest commits
-    reb      = "!r() { git rebase -i HEAD~$1; }; r"
-  # Find commits by source code
-    fc       = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f"
-  # Find commits by commit message
-    fm       = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
-  # Remove branches that have already been merged with master
-    dm       = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
-
-    standup = log --since='yesterday' --author='Andrew Snelling'
+    sta      = "!f() { git stash push --all --include-untracked --message=$1; }; f" # Stash everything
+    standup  = log --since='yesterday' --author='Andrew Snelling'
+    tags     = tag -l # Show verbose output about tags, branches or remotes
+    undo     = reset --soft HEAD^1
 
 [apply]
-    whitespace                    = fix
+    whitespace = fix
+
 [commit]
-    template                      = ~/.config/git/gitcommit
-    verbose                       = true
+    template = ~/.config/git/gitcommit
+    verbose  = true
+
 [color]
-    ui                            = auto
-    diff                          = true
+    ui   = auto
+    diff = true
+
 [color "branch"]
-    current                       = yellow reverse
-    local                         = yellow
-    remote                        = green
+    current = "#f7ca88 reverse"
+    local   = "#f7ca88"
+    remote  = "#a1b56c"
+
 [color "diff"]
-    meta                          = yellow bold
-    frag                          = magenta bold
-    old                           = red bold
-    new                           = green bold
+    meta = "#f7ca88 bold"
+    frag = "#ba8baf bold"
+    old  = "#ab4642 bold"
+    new  = "#a1b56c bold"
+
 [color "diff-highlight"]
-    oldNormal                     = "red bold"
-    oldHighlight                  = "red bold 52"
-    newNormal                     = "green bold"
-    newHighlight                  = "green bold 22"
+    oldNormal    = "#ab4642 bold"
+    oldHighlight = "#ab4642 bold 52"
+    newNormal    = "#a1b56c bold"
+    newHighlight = "#a1b56c bold 22"
+
 [color "status"]
-    added                         = green
-    changed                       = red
-    untracked                     = cyan
+    added     = "#a1b56c"
+    changed   = "#ab4642"
+    untracked = "#86c1b9"
+
 [core]
-    excludesfile                  = ~/.config/git/gitignore_global
-    editor                        = nvim
-    pager                         = delta
+    excludesfile = ~/.config/git/gitignore_global
+    editor       = nvim
+    pager        = delta
+
 [delta]
-    features                      = unobtrusive-line-numbers decorations
-    hyperlinks                    = true
-    line-numbers                  = true
-    map-styles                    = bold purple => syntax magenta, bold cyan => syntax blue
-    navigate                      = true
-    side-by-side                  = true
-    syntax-theme                  = base16
+    features     = unobtrusive-line-numbers decorations
+    hyperlinks   = true
+    line-numbers = true
+    map-styles   = "bold #a16946" => "syntax #ba8baf", "bold #86c1b9" => "syntax #7cafc2"
+    navigate     = true
+    side-by-side = true
+    syntax-theme = base16
+
 [delta "blame"]
-    blame-code-style              = syntax
-    blame-format                  = {author:<15.14}
-    blame-separator-style         = red
+    blame-code-style      = syntax
+    blame-format          = {author:<15.14}
+    blame-separator-style = "#ab4642"
+
 [delta "decorations"]
-    commit-decoration-style       = bold yellow box ul
+    commit-decoration-style       = "bold #f7ca88 box ul"
     commit-style                  = raw
-    file-style                    = bold yellow ul
-    hunk-header-decoration-style  = blue box
-    hunk-header-file-style        = red
-    hunk-header-line-number-style = "#067a00"
+    file-style                    = "bold #f7ca88 ul"
+    hunk-header-decoration-style  = "#7cafc2 box"
+    hunk-header-file-style        = "#ab4642"
+    hunk-header-line-number-style = "#a1b56c"
     hunk-header-style             = file line-number syntax
+
 [delta "interactive"]
-    keep-plus-minus-markers       = false
+    keep-plus-minus-markers = false
+
 [diff]
-    colorMoved                    = default
-    submodule                     = log
-    tool                          = nvimdiff
+    colorMoved = default
+    submodule  = log
+    tool       = nvimdiff
+
 [difftool]
-    prompt                        = false
+    prompt = false
+
 [difftool "nvimdiff"]
-    cmd                           = "nvim -d \"$LOCAL\" \"$REMOTE\""
+    cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+
+[ghq]
+    root = ~/dev
+
 [help]
-    autocorrect                   = prompt
+    autocorrect = prompt
+
 [init]
-    defaultBranch                 = main
+    defaultBranch = main
+
 [interactive]
-    diffFilter                    = delta --color-only --features=interactive
+    diffFilter = delta --color-only --features=interactive
+
 [merge]
-    conflictstyle                 = diff3
-    tool                          = nvimmerge
+    conflictstyle = diff3
+    tool          = nvimmerge
+
 [mergetool "nvimmerge"]
-    cmd                           = "nvim -d \"$LOCAL\" \"$REMOTE\" \"$MERGED\" -c '$wincmd w' -c 'wincmd J'"
-  trustexitcode                   = true
+    cmd           = "nvim -d \"$LOCAL\" \"$REMOTE\" \"$MERGED\" -c '$wincmd w' -c 'wincmd J'"
+    trustexitcode = true
+
 [pager]
-    status                        = true
+    status = true
+
 [pull]
-    rebase                        = true
+    rebase = true
+
 [push]
-    default                       = current
+    default = current
+
 [rebase]
-    autoSquash                    = true
-    autoStash                     = true
-    instructionFormat             = format:%s (%cr) <%an> %G?
+    autoSquash        = true
+    autoStash         = true
+    instructionFormat = format:%s (%cr) <%an> %G?
+
 [status]
-    short                         = true
-    branch                        = true
-    aheadBehind                   = true
-    showStash                     = true
+    short       = true
+    branch      = true
+    aheadBehind = true
+    showStash   = true
+
 [user]
-    name                          = snelling-a
-    email                         = 72226000+snelling-a@users.noreply.github.com
+    name  = snelling-a
+    email = 72226000+snelling-a@users.noreply.github.com
+
 [includeIf "gitdir:~/work/"]
-    path                          = ./gitconfig_local
+    path = ./gitconfig_local
