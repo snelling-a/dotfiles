@@ -19,4 +19,3 @@ exe "source " . expand(g:vimdir) . "/functions.vim"
 
 exe "source " . expand(g:vimdir) . "/config.vim"
 
-exe "source " . expand(g:vimdir) . "/vim-plug.vim"
