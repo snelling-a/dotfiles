@@ -11,14 +11,20 @@ cursor:
     blinking: Always
 font:
   bold:
-    style: Bold
+    style: Semibold
+  bold_italic:
+    style: Semibold Oblique
   draw_bold_text_with_bright_colors: true
+  glyph_offset:
+    y: 2
   italic:
-    family: Iosevka Nerd Font Mono
-    style: Italic
+    style: Light Oblique
   normal:
     family: Iosevka Nerd Font Mono
-  size: 16.0
+    style: Light
+  offset:
+    y: 6
+  size: 17
 import:
   - ~/.config/alacritty/base16_default_dark.yml
   - ~/.config/alacritty/keybindings.yml
