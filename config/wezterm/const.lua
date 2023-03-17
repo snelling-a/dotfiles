@@ -47,6 +47,7 @@ Constants.process_icons = {
 	["nvim"] = { { Foreground = { Color = colors.green } }, { Text = icons.custom_vim } },
 	["ruby"] = { { Foreground = { Color = colors.red } }, { Text = icons.dev_ruby } },
 	["tig"] = { { Foreground = { Color = colors.red } }, { Text = icons.dev_git } },
+	["tmux"] = { { Foreground = { Color = colors.bright_green } }, { Text = icons.cod_terminal_tmux } },
 	["vim"] = { { Foreground = { Color = colors.green } }, { Text = icons.dev_vim } },
 	["wget"] = { { Foreground = { Color = colors.cyan } }, { Text = icons.mdi_arrow_down_box } },
 	["zsh"] = { { Foreground = { Color = colors.red } }, { Text = icons.dev_terminal } },
