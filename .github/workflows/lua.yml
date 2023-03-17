@@ -7,11 +7,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Run Stylua check
-        uses: JohnnyMorganz/stylua-action@v2.0.0
+        uses: JohnnyMorganz/stylua-action@v1.1.1
         with:
           args: --check .
           token: ${{ secrets.GITHUB_TOKEN }}
-          version: 0.17.0
+          version: 0.16.1
   LUACHECK:
     name: Luacheck
     needs: [STYLUA]
@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install luacheck
         run: |
-          echo "Installing luacheck..."
+          echo "Installing luacheck"
           sudo apt update
           sudo apt install luarocks
           sudo luarocks install luacheck

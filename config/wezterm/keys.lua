@@ -64,6 +64,7 @@ Keys.keys = {
 
 	-- KEY TABLES
 	{ key = "r", mods = "LEADER", action = act.ActivateKeyTable({ name = "resize_pane", one_shot = false }) },
+
 	table.unpack(tab_keys),
 }
 

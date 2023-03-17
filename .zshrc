@@ -20,7 +20,6 @@ alias vim="nvim"
 alias code="codium"
 
 export MANPAGER='nvim +Man!'
-export MANWIDTH=999
 
 alias rm="trash -v"
 alias "rm -rf"="rm"
