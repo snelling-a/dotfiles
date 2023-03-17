@@ -1,7 +1,7 @@
 ---
 on: [push]
 jobs:
-  YAMLFMT:
+  YAML-FORMAT:
     name: YAML Format
     runs-on: ubuntu-latest
     steps:
@@ -18,9 +18,9 @@ jobs:
         run: |
           echo "Formatting with yamlfmt"
           yamlfmt -lint
-  YAMLLINT:
+  YAML-LINT:
     name: YAML Lint
-    needs: [YAMLFMT]
+    needs: [YAML-FORMAT]
     runs-on: ubuntu-latest
     steps:
       - uses: 'actions/setup-python@v2'
@@ -32,5 +32,5 @@ jobs:
           pip install yamllint==1.27.1 --use-pep517
       - name: Run yamllint
         run: |
-          echo "Linting with yamllint"
-          yamllint . --format github
+          echo "Linting with yamllint..."
+          yamllint .

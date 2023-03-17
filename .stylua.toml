@@ -1,4 +1,5 @@
 collapse_simple_statement = "FunctionOnly"
 
-[sort_requires]
-  enabled = true
+# https://github.com/JohnnyMorganz/StyLua/issues/654
+# [sort_requires]
+#   enabled = true

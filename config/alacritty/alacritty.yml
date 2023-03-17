@@ -11,20 +11,14 @@ cursor:
     blinking: Always
 font:
   bold:
-    style: Semibold
-  bold_italic:
-    style: Semibold Oblique
+    style: Bold
   draw_bold_text_with_bright_colors: true
-  glyph_offset:
-    y: 2
   italic:
-    style: Light Oblique
+    family: Iosevka Nerd Font Mono
+    style: Italic
   normal:
     family: Iosevka Nerd Font Mono
-    style: Light
-  offset:
-    y: 6
-  size: 17
+  size: 16.0
 import:
   - ~/.config/alacritty/base16_default_dark.yml
   - ~/.config/alacritty/keybindings.yml
@@ -33,10 +27,10 @@ selection:
   save_to_clipboard: true
 shell:
   args:
-    - --login
-  #     - -c
-  #     - 'tmux attach || tmux'
-  program: /bin/bash
+    - -l
+    - -c
+    - 'tmux attach || tmux'
+  program: /bin/zsh
 window:
   decorations: none
   dynamic_padding: true

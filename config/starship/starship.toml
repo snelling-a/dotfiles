@@ -3,43 +3,7 @@
 add_newline         = false
 continuation_prompt = '[▶▶](bright-black)'
 format              = """$sudo$status$directory$character"""
-# right_format        = """$all"""
-
-right_format = """
-$localip\
-$shlv
-$kubernetes\
-$git_branch\
-$git_commit\
-$git_state\
-$git_metrics\
-$git_status\
-$hg_branch\
-$docker_context\
-$package\
-$c\
-$cmake\
-$cobol\
-$deno\
-$elm\
-$golang\
-$helm\
-$lua\
-$nodejs\
-$php\
-$pulumi\
-$python\
-$ruby\
-$rust\
-$zig\
-$memory_usage\
-$env_var\
-$cmd_duration\
-$line_break\
-$jobs\
-$battery\
-$container\
-"""
+right_format        = """$all"""
 
 [battery]
   format         = '\[[$symbol$percentage]($style)\]'
@@ -162,12 +126,12 @@ $container\
 
 [elixir]
   disabled = true
-  format   = '\[[$symbol($version \(OTP $otp_version\))]($style)\]'
+  format   = '\[[$symbol($version \(otp $otp_version\))]($style)\]'
   symbol   = ' '
 
 [elm]
   disabled = true
-  format   = '\[[$symbol($version \(OTP $otp_version\))]($style)\]'
+  format   = '\[[$symbol($version \(otp $otp_version\))]($style)\]'
   symbol   = ' '
 
 [erlang]
@@ -264,42 +228,42 @@ $container\
   format   = '\[[$symbol]($style)\]'
 
   [os.symbols]
-    Alpine           = ''
-    Amazon           = ''
-    Android          = ''
-    Arch             = ''
-    CentOS           = ''
-    Debian           = ''
-    DragonFly        = ''
-    Emscripten       = ''
-    EndeavourOS      = ''
-    Fedora           = ''
-    FreeBSD          = ''
-    Garuda           = '﯑'
-    Gentoo           = ''
-    HardenedBSD      = 'ﲊ'
-    Illumos          = ''
-    Linux            = ''
-    Macos            = '󰀵'
-    Manjaro          = ''
-    Mariner          = ''
-    MidnightBSD      = ''
-    Mint             = ''
-    NetBSD           = ''
-    NixOS            = ''
-    OpenBSD          = ''
-    OracleLinux      = ''
-    Pop              = ''
-    Raspbian         = ''
-    RedHatEnterprise = ''
-    Redhat           = ''
-    Redox            = ''
-    SUSE             = ''
-    Solus            = 'ﴱ'
-    Ubuntu           = ''
-    Unknown          = ''
-    Windows          = ''
-    openSUSE         = ''
+    alpine           = ''
+    amazon           = ''
+    android          = ''
+    arch             = ''
+    centos           = ''
+    debian           = ''
+    dragonfly        = ''
+    emscripten       = ''
+    endeavouros      = ''
+    fedora           = ''
+    freebsd          = ''
+    garuda           = '﯑'
+    gentoo           = ''
+    hardenedbsd      = 'ﲊ'
+    illumos          = ''
+    linux            = ''
+    macos            = '󰀵'
+    manjaro          = ''
+    mariner          = ''
+    midnightbsd      = ''
+    mint             = ''
+    netbsd           = ''
+    nixos            = ''
+    openbsd          = ''
+    opensuse         = ''
+    oraclelinux      = ''
+    pop              = ''
+    raspbian         = ''
+    redhat           = ''
+    redhatenterprise = ''
+    redox            = ''
+    solus            = 'ﴱ'
+    suse             = ''
+    ubuntu           = ''
+    unknown          = ''
+    windows          = ''
 
 [package]
   format = '\[[$symbol$version]($style)\]'
