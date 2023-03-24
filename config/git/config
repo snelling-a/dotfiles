@@ -47,6 +47,7 @@
     untracked = "#86c1b9"
 
 [core]
+	hooksPath    = ~/.config/git/hooks
     excludesfile = ~/.config/git/gitignore_global
     editor       = nvim
     pager        = delta

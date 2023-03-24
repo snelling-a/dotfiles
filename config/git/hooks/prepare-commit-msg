@@ -1,0 +1,27 @@
+#!/bin/bash
+# Append Jira tag if branch is connected to a Jira issue
+
+# COMMIT_MSG_FILE=$1
+COMMIT_SOURCE=$2
+# SHA1=$3
+
+# get current branch
+branchName=$(git rev-parse --abbrev-ref HEAD)
+
+# check that branch has jira id and title; i.e. "feature/ABC-123-description"
+jiraId=$(echo "$branchName" | sed -nr 's,[a-z]*/?([A-Z0-9]+-[0-9]+)-.+,\1,p')
+
+if [[ -n $jiraId ]]; then
+	printf "\n󰌃 Prepending Jira issue id to commit message...\n\n"
+
+	# check  if commit was initiated with editor/template
+	if [[ "$COMMIT_SOURCE" == "template" ]]; then
+		command="0,/^$/{s/^$/$jiraId: /}"
+	else
+		# ...or with -m flag
+		command="1s/^/$jiraId: /"
+	fi
+
+	# if command is set, prepend jira issue id to the commit message
+	[[ -n $command ]] && sed -i.bak -e "$command" "$1"
+fi
