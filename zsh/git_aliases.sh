@@ -17,6 +17,7 @@ git_main_branch() {
 
 alias gcm='git checkout $(git_main_branch)'
 alias grbm='git rebase $(git_main_branch) --interactive --autosquash'
+alias gst='lazygit'
 
 function grename() {
 	if [[ -z "$1" || -z "$2" ]]; then
