@@ -60,6 +60,9 @@ set mouse-wheel-cursor          = no
 set pgrp                        = no
 set pager-autoscroll            = no
 
+bind main w !git diff %(commit)^!
+bind diff w !git diff %(commit)^!
+
 bind main    C        ?git cherry-pick %(commit)
 bind status  C        !git commit
 bind stash   A        ?git stash apply %(stash)
