@@ -13,13 +13,13 @@
 	cp = cherrypick
 	d = diff
 	dev = "!f() { ghq get $1; }; f"
-	fc = "!f() { git log --pretty=format:'%C(yellow)%h %Cblue%ad %Creset%s%Cgreen [%cn] %Cred%d' --decorate --date=short -S$1; }; f" # Find commits by source code
-	fm = "!f() { git log --pretty=format:'%C(yellow)%h %Cblue%ad %Creset%s%Cgreen [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f" # Find commits by commit message
+	fc = "!f() { git log --pretty=custom --date=short -S$1; }; f" # Find commits by source code
+	fm = "!f() { git log --pretty=custom --date=short --grep=$1; }; f" # Find commits by commit message
 	l = pull
-	ls = log --decorate --graph --pretty=relative
-	lsa = log --stat --pretty=date
-	lsla = log --pretty=relative --graph --all
-	lss = log --stat --pretty=relative
+	ls = log --graph --pretty=custom
+	lsa = log --graph --pretty=custom --all
+    lsla = log --pretty=custom --stat --graph --all
+	lss = log --stat --pretty=custom --date=short
 	nb = checkout -b
 	oops = commit --amend --no-edit
 	p = push
@@ -159,3 +159,6 @@
 [user]
 	email = 72226000+snelling-a@users.noreply.github.com
 	name = snelling-a
+[pretty]
+    # add --date=short for relative date
+    custom = %Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset
