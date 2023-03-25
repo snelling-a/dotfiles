@@ -1,17 +1,41 @@
 # vim:ft=gitconfig
 
 [alias]
-    branches = branch -a
-    count    = shortlog --summary --numbered
-    cp       = cherrypick
-    fc       = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f" # Find commits by source code
-    fm       = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f" # Find commits by commit message
-    rb       = rebase --interactive --autosquash
-    remotes  = remote -v
-    sta      = "!f() { git stash push --all --include-untracked --message=$1; }; f" # Stash everything
-    standup  = log --since='yesterday' --author='Andrew Snelling'
-    tags     = tag -l # Show verbose output about tags, branches or remotes
-    undo     = reset --soft HEAD^1
+	a        = add
+	aa       = add --all
+	bd       = branch --delete
+	branches = branch -a
+	c        = commit
+	cb       = checkout -b
+	cl       = clone --recurse-submodulesal
+	co       = checkout
+	count    = shortlog --summary --numbered
+	cp       = cherrypick
+	d        = diff
+	dev      = "!f() { ghq get $1; }; f"
+	fc       = "!f() { git log --pretty=format:'%C(yellow)%h %Cblue%ad %Creset%s%Cgreen [%cn] %Cred%d' --decorate --date=short -S$1; }; f" # Find commits by source code
+	fm       = "!f() { git log --pretty=format:'%C(yellow)%h %Cblue%ad %Creset%s%Cgreen [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f" # Find commits by commit message
+	l        = pull
+	ls       = log --decorate --graph --pretty=relative
+	lsa      = log --stat --pretty=date
+	lsla     = log --pretty=relative --graph --all
+	lss      = log --stat --pretty=relative
+	nb       = checkout -b
+	oops     = commit --amend --no-edit
+	p        = push
+	pf       = push --force-with-lease
+	pristine = reset --hard && git clean --force -dx
+	rb       = rebase --interactive --autosquash
+	rba      = rebase --abort
+	rbc      = rebase --continue
+	rbi      = rebase --interactive
+	remotes  = remote -v
+	st       = status
+	st       = status
+	sta      = "!f() { git stash push --all --include-untracked --message=$1; }; f" # Stash everything
+	standup  = log --since='yesterday' --author='Andrew Snelling'
+	tags     = tag -l # Show verbose output about tags, branches or remotes
+	undo     = reset --soft HEAD^1
 
 [apply]
     whitespace = fix
