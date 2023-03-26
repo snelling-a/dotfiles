@@ -3,6 +3,7 @@
 extends: default
 ignore:
   - /.github/workflows/
+  - /config/lazygit/state.yml
 locale: 'en_US.UTF-8'
 rules:
   comments:

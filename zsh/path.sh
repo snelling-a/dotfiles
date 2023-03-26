@@ -21,6 +21,7 @@ PATH="/usr/local/opt/curl/bin:$PATH"
 PATH=/usr/local/bin:$PATH
 PATH=/usr/bin/python3:$PATH
 
+PATH="$DOTFILES/scripts:$PATH"
 export PATH
 
 eval "$(fnm env --use-on-cd)"
