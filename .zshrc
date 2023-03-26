@@ -40,7 +40,6 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-you-should-use/you-should-use.plugin.zsh
 source $(brew --prefix)/share/zsh-autopair/autopair.zsh
 
-. $(brew --prefix)/etc/profile.d/z.sh
 
 fpath=($DOTFILES/zsh/completions $fpath)
 
