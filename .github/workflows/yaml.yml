@@ -2,7 +2,7 @@
 on: [push]
 jobs:
   YAMLLINT:
-    name: YAML Lint
+    name: YAML
     runs-on: ubuntu-latest
     steps:
       - uses: 'actions/setup-python@v2'
