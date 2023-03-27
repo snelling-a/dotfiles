@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # curl is keg-only, which means it was not symlinked into /usr/local,
 # because macOS already provides this software and installing another version in
@@ -10,6 +10,3 @@ export CPPFLAGS="-I/usr/local/opt/curl/include"
 
 # For pkg-config to find curl you may need to set:
 export PKG_CONFIG_PATH="/usr/local/opt/curl/lib/pkgconfig"
-
-# zsh completions have been installed to:
-#   /usr/local/opt/curl/share/zsh/site-functions

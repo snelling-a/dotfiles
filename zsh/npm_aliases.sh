@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 alias nukenode="rm -rf node_modules && rm package-lock.json && npm install"
 

@@ -20,6 +20,7 @@ alias vim="nvim"
 alias code="codium"
 
 export MANPAGER='nvim +Man!'
+export MANWIDTH=999
 
 alias rm="trash -v"
 alias "rm -rf"="rm"
@@ -40,13 +41,15 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-you-should-use/you-should-use.plugin.zsh
 source $(brew --prefix)/share/zsh-autopair/autopair.zsh
 
-
 fpath=($DOTFILES/zsh/completions $fpath)
 
 autoload -Uz compinit
 compinit
 
-export TERM=wezterm
+if [[ $TERM == *-256color ]]; then
+    export TERM=wezterm
+fi
 
 alias dots="cd $DOTFILES"
+alias notes="cd $NOTES"
 alias work="cd $WORK"

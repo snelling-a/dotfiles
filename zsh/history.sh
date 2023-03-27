@@ -1,9 +1,10 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 export HIST_DIR="$HOME/.history"
 mkdir -p "$HIST_DIR"
 
-HISTFILE="$HIST_DIR"/.$(basename "$0").history
+shell=$(echo "$SHELL" | cut -d'/' -f 3)
+HISTFILE="$HIST_DIR/.$shell.history"
 
 export HISTSIZE=1000000
 export SAVEHIST=$HISTSIZE
