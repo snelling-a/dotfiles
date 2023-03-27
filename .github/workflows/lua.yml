@@ -1,20 +1,8 @@
 ---
 on: [push]
 jobs:
-  STYLUA:
-    name: StyLua
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Run Stylua check
-        uses: JohnnyMorganz/stylua-action@v2.0.0
-        with:
-          args: --check .
-          token: ${{ secrets.GITHUB_TOKEN }}
-          version: 0.17.0
   LUACHECK:
     name: Luacheck
-    needs: [STYLUA]
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2

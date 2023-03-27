@@ -1,0 +1,17 @@
+---
+on: [push]
+jobs:
+  SHELLCHECK:
+    name: Shellcheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Shellcheck
+        run: |
+          echo "Installing shellcheck..."
+          sudo apt update
+          sudo apt install shellcheck
+      - name: Run Shellcheck
+        run: |
+          echo "Linting with shellcheck"
+          shellcheck ./**/*.sh
