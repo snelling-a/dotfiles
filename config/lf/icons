@@ -1,23 +1,4 @@
-# vim:ft=conf
-
-# These examples require Nerd Fonts or a compatible font to be used.
-# See https://www.nerdfonts.com for more information.
-
-# default values from lf (with matching order)
-# ln      l       # LINK
-# or      l       # ORPHAN
-# tw      t       # STICKY_OTHER_WRITABLE
-# ow      d       # OTHER_WRITABLE
-# st      t       # STICKY
-# di      d       # DIR
-# pi      p       # FIFO
-# so      s       # SOCK
-# bd      b       # BLK
-# cd      c       # CHR
-# su      u       # SETUID
-# sg      g       # SETGID
-# ex      x       # EXEC
-# fi      -       # FILE
+# vim:filetype=conf
 
 # file types (with matching order)
 ln             # LINK
