@@ -196,17 +196,6 @@ fi             # FILE
 *Makefile               
 *CMakeLists.txt         
 
-# file patterns (vim-devicons) (patterns not supported in lf)
-# .*jquery.*\.js$         
-# .*angular.*\.js$        
-# .*backbone.*\.js$       
-# .*require.*\.js$        
-# .*materialize.*\.js$    
-# .*materialize.*\.css$   
-# .*mootools.*\.js$       
-# .*vimrc.*               
-# Vagrantfile$            
-
 # file patterns (file name adaptations)
 *jquery.min.js          
 *angular.min.js         
@@ -318,22 +307,22 @@ Vagrantfile             
 *.ogx   
 
 # audio formats (extensions from dircolors defaults)
-*.aac   
-*.au    
-*.flac  
-*.m4a   
-*.mid   
-*.midi  
-*.mka   
-*.mp3   
-*.mpc   
-*.ogg   
-*.ra    
-*.wav   
-*.oga   
-*.opus  
-*.spx   
-*.xspf  
+*.aac   
+*.au    
+*.flac  
+*.m4a   
+*.mid   
+*.midi  
+*.mka   
+*.mp3   
+*.mpc   
+*.ogg   
+*.ra    
+*.wav   
+*.oga   
+*.opus  
+*.spx   
+*.xspf  
 
 # other formats
 *.pdf   
