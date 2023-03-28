@@ -1,5 +1,5 @@
 ---
-# vim:ft=yaml
+# vim:filetype=yaml
 formatter:
   include_document_start: true
   retain_line_breaks: false

@@ -1,5 +1,5 @@
 ---
-# vim:ft=yaml
+# vim:filetype=yaml
 extends: default
 ignore:
   - /.github/workflows/

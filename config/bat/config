@@ -1,8 +1,6 @@
-# Set the theme to "TwoDark"
+--italic-text=always
+--map-syntax ".*ignore:Git Ignore"
+--paging=always
+--style=full
 --theme="base16"
-
-# Show line numbers, Git modifications and file header (but no grid)
---style="numbers,changes,header"
-
-# Use "gitignore" highlighting for ".ignore" files
---map-syntax .ignore:.gitignore
+--decorations=always
