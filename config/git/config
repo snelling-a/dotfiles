@@ -18,7 +18,7 @@
 	l = pull
 	ls = log --graph --pretty=custom
 	lsa = log --graph --pretty=custom --all
-    lsla = log --pretty=custom --stat --graph --all
+	lsla = log --pretty=custom --stat --graph --all
 	lss = log --stat --pretty=custom --date=short
 	nb = checkout -b
 	oops = commit --amend --no-edit
@@ -119,9 +119,6 @@
 [help]
 	autocorrect = prompt
 
-[includeIf "gitdir:~/work/"]
-	path = ./gitconfig_local
-
 [init]
 	defaultBranch = main
 
@@ -138,6 +135,9 @@
 
 [pager]
 	status = true
+
+[pretty]
+	custom = %Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset
 
 [pull]
 	rebase = true
@@ -159,6 +159,7 @@
 [user]
 	email = 72226000+snelling-a@users.noreply.github.com
 	name = snelling-a
-[pretty]
-    # add --date=short for relative date
-    custom = %Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset
+
+[includeIf "gitdir:~/work/"]
+	path = ./gitconfig_local
+
