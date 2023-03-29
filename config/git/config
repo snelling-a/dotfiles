@@ -8,6 +8,7 @@
 	c = commit
 	cb = checkout -b
 	cl = clone --recurse-submodulesal
+    cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 -r git branch -d"
 	co = checkout
 	count = shortlog --summary --numbered
 	cp = cherrypick
