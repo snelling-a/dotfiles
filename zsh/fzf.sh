@@ -2,7 +2,7 @@
 
 [ -f "$HOME/.fzf.zsh" ] && source "$HOME/.fzf.zsh"
 
-export FZF_DEFAULT_COMMAND='fd --type f --follow --hidden'
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
 export FZF_DEFAULT_OPTS="--height=80% \
     --layout=reverse \

@@ -1,5 +1,4 @@
 ---
-alt_send_esc: true
 bell:
   animation: EaseOutExpo
   color: '#000000'
@@ -9,6 +8,8 @@ cursor:
   blink_timeout: 0
   style:
     blinking: Always
+env:
+  TERM: xterm-256color
 font:
   bold:
     style: Semibold
@@ -33,10 +34,11 @@ selection:
   save_to_clipboard: true
 shell:
   args:
-    - -l
+    - --login
     - -c
     - 'tmux attach || tmux'
-  program: /bin/zsh
+  program: /bin/bash
 window:
   decorations: none
   dynamic_padding: true
+  option_as_alt: Both

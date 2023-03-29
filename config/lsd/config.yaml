@@ -12,7 +12,7 @@ color:
   when: auto
 date: date
 dereference: false
-header: true
+header: false
 hyperlink: never
 icons:
   separator: ' '

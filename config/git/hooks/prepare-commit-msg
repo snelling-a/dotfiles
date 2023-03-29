@@ -6,20 +6,23 @@ COMMIT_SOURCE=$2
 # SHA1=$3
 
 # get current branch
-branchName=$(git rev-parse --abbrev-ref HEAD)
+branch_name=$(git rev-parse --abbrev-ref HEAD)
 
 # check that branch has jira id and title; i.e. "feature/ABC-123-description"
-jiraId=$(echo "$branchName" | sed -nr 's,[a-z]*/?([A-Z0-9]+-[0-9]+)-.+,\1,p')
+jira_tag_id=$(echo "$branch_name" | sed -nr 's,[a-z]*/?([A-Z0-9]+-[0-9]+)-.+,\1,p')
 
-if [[ -n $jiraId ]]; then
+if [[ -n "$jira_tag_id" ]]; then
+	# exit if jira_tag_id is found already in the commit message
+	grep -q "^$jira_tag_id:" "$1" && exit 0
+
 	printf "\n󰌃 Prepending Jira issue id to commit message...\n\n"
 
 	# check  if commit was initiated with editor/template
 	if [[ "$COMMIT_SOURCE" == "template" ]]; then
-		command="0,/^$/{s/^$/$jiraId: /}"
+		command="0,/^$/{s/^$/$jira_tag_id: /}"
 	else
 		# ...or with -m flag
-		command="1s/^/$jiraId: /"
+		command="1s/^/$jira_tag_id: /"
 	fi
 
 	# if command is set, prepend jira issue id to the commit message

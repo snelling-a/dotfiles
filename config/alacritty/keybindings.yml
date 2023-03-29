@@ -1,238 +1,237 @@
 ---
-# yamllint disable rule:key-ordering
 key_bindings:
-  - key: A
+  - chars: '\ea'
+    key: A
     mods: Alt
-    chars: '\ea'
-  - key: A
+  - chars: '\eA'
+    key: A
     mods: Alt|Shift
-    chars: '\eA'
-  - key: B
+  - chars: '\eb'
+    key: B
     mods: Alt
-    chars: '\eb'
-  - key: B
+  - chars: '\eB'
+    key: B
     mods: Alt|Shift
-    chars: '\eB'
-  - key: Backslash
+  - chars: '\e\\'
+    key: Backslash
     mods: Alt
-    chars: '\e\\'
-  - key: Backslash
+  - chars: '\e|'
+    key: Backslash
     mods: Alt|Shift
-    chars: '\e|'
-  - key: C
+  - chars: '\ec'
+    key: C
     mods: Alt
-    chars: '\ec'
-  - key: C
+  - chars: '\eC'
+    key: C
     mods: Alt|Shift
-    chars: '\eC'
-  - key: Comma
+  - chars: '\e<'
+    key: Comma
     mods: Alt|Shift
-    chars: '\e<'
-  - key: D
+  - chars: '\ed'
+    key: D
     mods: Alt
-    chars: '\ed'
-  - key: D
+  - chars: '\eD'
+    key: D
     mods: Alt|Shift
-    chars: '\eD'
-  - key: E
+  - chars: '\ee'
+    key: E
     mods: Alt
-    chars: '\ee'
-  - key: E
+  - chars: '\eE'
+    key: E
     mods: Alt|Shift
-    chars: '\eE'
-  - key: F
+  - chars: '\ef'
+    key: F
     mods: Alt
-    chars: '\ef'
-  - key: F
+  - chars: '\eF'
+    key: F
     mods: Alt|Shift
-    chars: '\eF'
-  - key: G
+  - chars: '\eg'
+    key: G
     mods: Alt
-    chars: '\eg'
-  - key: G
+  - chars: '\eG'
+    key: G
     mods: Alt|Shift
-    chars: '\eG'
-  - key: Grave
+  - chars: '\e`'
+    key: Grave
     mods: Alt
-    chars: '\e`'
-  - key: Grave
+  - chars: '\e~'
+    key: Grave
     mods: Alt|Shift
-    chars: '\e~'
-  - key: H
+  - chars: '\eh'
+    key: H
     mods: Alt
-    chars: '\eh'
-  - key: H
+  - chars: '\eH'
+    key: H
     mods: Alt|Shift
-    chars: '\eH'
-  - key: I
+  - chars: '\ei'
+    key: I
     mods: Alt
-    chars: '\ei'
-  - key: I
+  - chars: '\eI'
+    key: I
     mods: Alt|Shift
-    chars: '\eI'
-  - key: J
+  - chars: '\ej'
+    key: J
     mods: Alt
-    chars: '\ej'
-  - key: J
+  - chars: '\eJ'
+    key: J
     mods: Alt|Shift
-    chars: '\eJ'
-  - key: K
+  - chars: '\ek'
+    key: K
     mods: Alt
-    chars: '\ek'
-  - key: K
+  - chars: '\eK'
+    key: K
     mods: Alt|Shift
-    chars: '\eK'
-  - key: K
-    mods: Command
-    command:
-      program: /usr/local/bin/tmux
+  - command:
       args:
         - send-keys
         - -R
         - C-l
         - ;
         - clear-history
-  - key: Key0
+      program: /usr/local/bin/tmux
+    key: K
+    mods: Command
+  - chars: '\e0'
+    key: Key0
     mods: Alt
-    chars: '\e0'
-  - key: Key1
+  - chars: '\e1'
+    key: Key1
     mods: Alt
-    chars: '\e1'
-  - key: Key2
+  - chars: '\e2'
+    key: Key2
     mods: Alt
-    chars: '\e2'
-  - key: Key3
+  - chars: '\e3'
+    key: Key3
     mods: Alt
-    chars: '\e3'
-  - key: Key3
+  - chars: '\e#'
+    key: Key3
     mods: Alt|Shift
-    chars: '\e#'
-  - key: Key4
+  - chars: '\e4'
+    key: Key4
     mods: Alt
-    chars: '\e4'
-  - key: Key5
+  - chars: '\e5'
+    key: Key5
     mods: Alt
-    chars: '\e5'
-  - key: Key5
+  - chars: '\e%'
+    key: Key5
     mods: Alt|Shift
-    chars: '\e%'
-  - key: Key6
+  - chars: '\e6'
+    key: Key6
     mods: Alt
-    chars: '\e6'
-  - key: Key6
+  - chars: '\e^'
+    key: Key6
     mods: Alt|Shift
-    chars: '\e^'
-  - key: Key7
+  - chars: '\e7'
+    key: Key7
     mods: Alt
-    chars: '\e7'
-  - key: Key8
+  - chars: '\e8'
+    key: Key8
     mods: Alt
-    chars: '\e8'
-  - key: Key8
+  - chars: '\e*'
+    key: Key8
     mods: Alt|Shift
-    chars: '\e*'
-  - key: Key9
+  - chars: '\e9'
+    key: Key9
     mods: Alt
-    chars: '\e9'
-  - key: L
+  - chars: '\el'
+    key: L
     mods: Alt
-    chars: '\el'
-  - key: L
+  - chars: '\eL'
+    key: L
     mods: Alt|Shift
-    chars: '\eL'
-  - key: M
+  - chars: '\em'
+    key: M
     mods: Alt
-    chars: '\em'
-  - key: M
+  - chars: '\eM'
+    key: M
     mods: Alt|Shift
-    chars: '\eM'
-  - key: Minus
+  - chars: '\e_'
+    key: Minus
     mods: Alt|Shift
-    chars: '\e_'
-  - key: N
+  - chars: '\en'
+    key: N
     mods: Alt
-    chars: '\en'
-  - key: N
+  - chars: '\eN'
+    key: N
     mods: Alt|Shift
-    chars: '\eN'
-  - key: O
+  - chars: '\eo'
+    key: O
     mods: Alt
-    chars: '\eo'
-  - key: O
+  - chars: '\eO'
+    key: O
     mods: Alt|Shift
-    chars: '\eO'
-  - key: P
+  - chars: '\ep'
+    key: P
     mods: Alt
-    chars: '\ep'
-  - key: P
+  - chars: '\eP'
+    key: P
     mods: Alt|Shift
-    chars: '\eP'
-  - key: Period
+  - chars: '\e.'
+    key: Period
     mods: Alt
-    chars: '\e.'
-  - key: Period
+  - chars: '\e>'
+    key: Period
     mods: Alt|Shift
-    chars: '\e>'
-  - key: Q
+  - chars: '\eq'
+    key: Q
     mods: Alt
-    chars: '\eq'
-  - key: Q
+  - chars: '\eQ'
+    key: Q
     mods: Alt|Shift
-    chars: '\eQ'
-  - key: R
+  - chars: '\er'
+    key: R
     mods: Alt
-    chars: '\er'
-  - key: R
+  - chars: '\eR'
+    key: R
     mods: Alt|Shift
-    chars: '\eR'
-  - key: S
+  - chars: '\es'
+    key: S
     mods: Alt
-    chars: '\es'
-  - key: S
+  - chars: '\eS'
+    key: S
     mods: Alt|Shift
-    chars: '\eS'
-  - key: Space
+  - chars: '\0'
+    key: Space
     mods: Control
-    chars: '\0'
-  - key: T
+  - chars: '\et'
+    key: T
     mods: Alt
-    chars: '\et'
-  - key: T
+  - chars: '\eT'
+    key: T
     mods: Alt|Shift
-    chars: '\eT'
-  - key: U
+  - chars: '\eu'
+    key: U
     mods: Alt
-    chars: '\eu'
-  - key: U
+  - chars: '\eU'
+    key: U
     mods: Alt|Shift
-    chars: '\eU'
-  - key: V
+  - chars: '\ev'
+    key: V
     mods: Alt
-    chars: '\ev'
-  - key: V
+  - chars: '\eV'
+    key: V
     mods: Alt|Shift
-    chars: '\eV'
-  - key: W
+  - chars: '\ew'
+    key: W
     mods: Alt
-    chars: '\ew'
-  - key: W
+  - chars: '\eW'
+    key: W
     mods: Alt|Shift
-    chars: '\eW'
-  - key: X
+  - chars: '\ex'
+    key: X
     mods: Alt
-    chars: '\ex'
-  - key: X
+  - chars: '\eX'
+    key: X
     mods: Alt|Shift
-    chars: '\eX'
-  - key: Y
+  - chars: '\ey'
+    key: Y
     mods: Alt
-    chars: '\ey'
-  - key: Y
+  - chars: '\eY'
+    key: Y
     mods: Alt|Shift
-    chars: '\eY'
-  - key: Z
+  - chars: '\ez'
+    key: Z
     mods: Alt
-    chars: '\ez'
-  - key: Z
+  - chars: '\eZ'
+    key: Z
     mods: Alt|Shift
-    chars: '\eZ'

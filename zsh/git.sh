@@ -1,13 +1,5 @@
 #!/usr/bin/env bash
 
-git_log() {
-	git log --perl-regexp --author='^((?!Jenkins (User)*|dependabot\[bot\]).*)$' --grep='^((?!Bump.*))' --pretty=format:'%h %Cblue%ar %Cgreen%an%Creset %s' -- "$1"
-}
-
-get_commit() {
-	git log "$1" --stat -- "$2"
-}
-
 git_main_branch() {
 	command git rev-parse --git-dir &>/dev/null || return
 	local ref
