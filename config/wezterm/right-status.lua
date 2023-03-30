@@ -41,7 +41,7 @@ local function get_charging_status(state)
 		charging_status, charging_status_color = battery_icons.discharging, colors.bright_black
 	end
 
-	return wezterm.format({ { Foreground = { Color = charging_status_color } }, { Text = charging_status } })
+	return wezterm.format({ { Foreground = { Color = charging_status_color } }, { Text = pad_right(charging_status) } })
 end
 
 local function get_battery_number(number)
