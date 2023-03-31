@@ -27,6 +27,7 @@ return {
 	key_tables = keys.key_tables,
 	keys = keys.keys,
 	leader = keys.leader,
+	macos_window_background_blur = 100,
 	text_blink_ease_in = "Constant",
 	text_blink_ease_out = "Constant",
 	text_blink_rapid_ease_in = "Constant",
@@ -34,6 +35,8 @@ return {
 	text_blink_rate = 0,
 	underline_position = -2,
 	use_fancy_tab_bar = false,
+	window_background_opacity = 0.5,
 	window_decorations = "RESIZE",
+	window_frame = { border_bottom_height = 0, border_left_width = 0, border_right_width = 0, border_top_height = 0 },
 	window_padding = { bottom = 0, left = 0, right = 0, top = 0 },
 }
