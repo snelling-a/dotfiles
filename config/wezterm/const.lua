@@ -31,6 +31,7 @@ local colors = {
 	red = default_colors.ansi[2], --#ab4642
 	yellow = default_colors.ansi[4], --#f7ca88
 }
+
 Constants.colors = colors
 
 Constants.process_icons = {

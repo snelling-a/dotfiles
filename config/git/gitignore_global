@@ -1,3 +1,5 @@
+# vim:filetype=gitignore
+
 # Folder view configuration files
 .DS_Store
 .dccache
@@ -44,3 +46,5 @@ vim_tags*
 .envrc
 
 *[Ss]ession*.vim
+
+postman.js
