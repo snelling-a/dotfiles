@@ -8,7 +8,7 @@
 	c = commit
 	cb = checkout -b
 	cl = clone --recurse-submodulesal
-    cleanup = "!git branch --merged | grep  -v '\\*\\|main\\|master\\|develop' | xargs -n 1 -r git branch -d"
+	cleanup = "!git branch --merged | grep -v '\\*\\|main\\|master\\|develop' | xargs -n 1 -r git branch -d"
 	co = checkout
 	count = shortlog --summary --numbered
 	cp = cherrypick
@@ -25,6 +25,7 @@
 	oops = commit --amend --no-edit
 	p = push
 	pf = push --force-with-lease
+	pop = stash pop
 	pristine = reset --hard && git clean --force -dx
 	rb = rebase --interactive --autosquash
 	rba = rebase --abort
