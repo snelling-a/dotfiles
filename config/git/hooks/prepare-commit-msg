@@ -1,9 +1,12 @@
 #!/bin/bash
 # Append Jira tag if branch is connected to a Jira issue
 
-# COMMIT_MSG_FILE=$1
+COMMIT_MSG_FILE=$1
 COMMIT_SOURCE=$2
 # SHA1=$3
+
+# exit if commit is a fixup
+grep -q 'fixup' "$COMMIT_MSG_FILE" && exit 0
 
 # get current branch
 branch_name=$(git rev-parse --abbrev-ref HEAD)
@@ -13,7 +16,7 @@ jira_tag_id=$(echo "$branch_name" | sed -nr 's,[a-z]*/?([A-Z0-9]+-[0-9]+)-.+,\1,
 
 if [[ -n "$jira_tag_id" ]]; then
 	# exit if jira_tag_id is found already in the commit message
-	grep -q "^$jira_tag_id:" "$1" && exit 0
+	grep -q "^$jira_tag_id:" "$COMMIT_MSG_FILE" && exit 0
 
 	printf "\n󰌃 Prepending Jira issue id to commit message...\n\n"
 
@@ -26,5 +29,5 @@ if [[ -n "$jira_tag_id" ]]; then
 	fi
 
 	# if command is set, prepend jira issue id to the commit message
-	[[ -n $command ]] && sed -i.bak -e "$command" "$1"
+	[[ -n $command ]] && sed -i.bak -e "$command" "$COMMIT_MSG_FILE"
 fi
