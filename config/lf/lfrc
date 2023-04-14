@@ -1,5 +1,3 @@
-# vim:ft=conf
-
 set dircounts
 set dirfirst
 set drawbox
