@@ -42,6 +42,12 @@
 [apply]
 	whitespace = fix
 
+[blame]
+	coloring = repeatedLines
+	markIgnoredLines = true
+	markUnblamableLines = true
+	date = human
+
 [color "branch"]
 	current = "#f7ca88 reverse"
 	local = "#f7ca88"
@@ -164,4 +170,3 @@
 
 [includeIf "gitdir:~/work/"]
 	path = ./gitconfig_local
-
