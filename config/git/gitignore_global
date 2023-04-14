@@ -45,6 +45,10 @@ vim_tags*
 .env
 .envrc
 
+# vim sessions
 *[Ss]ession*.vim
 
+# editing postman scripts is much nicer in vim
 postman.js
+
+*.orig
