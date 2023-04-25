@@ -208,6 +208,7 @@
     "setuid",
     "setulc",
     "setw",
+    "shellenv",
     "shlv",
     "showuntrackedfiles",
     "smul",
