@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+eval "$(brew shellenv)"
+
 PATH="/usr/local/bin/nvim:$PATH"
 
 # use gsed as sed
@@ -22,6 +24,8 @@ PATH=/usr/local/bin:$PATH
 PATH=/usr/bin/python3:$PATH
 
 PATH="$DOTFILES/scripts:$PATH"
+
 export PATH
 
+# this needs to be evaluated after PATH is set
 eval "$(fnm env --use-on-cd)"
