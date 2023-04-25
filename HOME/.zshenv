@@ -4,6 +4,7 @@ export DOTFILES="$HOME/dotfiles"
 export VIMDIR="$DOTFILES/vim"
 export WORK="$HOME/work"
 export NOTES="$HOME/notes"
+export AWKPATH="$DOTFILES/awk/"
 
 export VISUAL=nvim
 export EDITOR="$VISUAL"

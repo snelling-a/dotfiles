@@ -13,8 +13,8 @@ done
 export LANG=en_US.UTF-8
 
 stty sane
-set -o vi
-bindkey -v
+# set -o vi
+# bindkey -v
 
 alias vim="nvim"
 alias code="codium"
@@ -53,3 +53,6 @@ fi
 alias dots="cd $DOTFILES"
 alias notes="cd $NOTES"
 alias work="cd $WORK"
+alias dockerclean="docker system prune -af --volumes"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
