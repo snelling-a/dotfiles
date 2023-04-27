@@ -44,10 +44,13 @@ brew "lf"
 brew "lsd"
 brew "lua-language-server"
 brew "luarocks"
+brew "python@3.11"
 brew "mercurial"
 brew "microplane"
 brew "neofetch", args: ["HEAD"]
 brew "neovim", args: ["HEAD"]
+brew "python-gdbm@3.11"
+brew "python-tk@3.11"
 brew "ripgrep", args: ["HEAD"]
 brew "ripgrep-all", link: false
 brew "ruby-install"
