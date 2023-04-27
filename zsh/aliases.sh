@@ -13,3 +13,5 @@ alias .5='cd ../../../../..'
 alias ~='cd ~'
 
 alias h='history'
+
+alias vim_stable="NVIM_APPNAME=neovim nvim"
