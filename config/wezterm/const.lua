@@ -44,6 +44,7 @@ Constants.process_icons = {
 	["git"] = { { Foreground = { Color = colors.red } }, { Text = icons.dev_git } },
 	["go"] = { { Foreground = { Color = colors.cyan } }, { Text = icons.dev_go } },
 	["lazygit"] = { { Foreground = { Color = colors.red } }, { Text = icons.dev_git } },
+	["lf"] = { { Foreground = { Color = colors.blue } }, { Text = icons.mdi_file_tree } },
 	["lua"] = { { Foreground = { Color = colors.blue } }, { Text = icons.seti_lua } },
 	["node"] = { { Foreground = { Color = colors.green } }, { Text = icons.mdi_nodejs } },
 	["nvim"] = { { Foreground = { Color = colors.green } }, { Text = icons.custom_vim } },
