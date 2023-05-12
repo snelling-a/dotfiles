@@ -37,3 +37,15 @@ alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree --all'
 alias lt1='ls --tree --depth=1'
+
+alias sed="gsed"
+alias awk="gawk"
+
+alias glow='glow --config "$XDG_CONFIG_HOME/glow/glow.yml"'
+
+alias ctags="$HOMEBREW_PREFIX/bin/ctags"
+
+cargoup() {
+	# shellcheck disable=2046 # does not work if it is double quoted
+	cargo install $(cargo install --list | grep -E '^[a-z0-9_-]+ v[0-9.]+:$' | cut -f1 -d' ')
+}
