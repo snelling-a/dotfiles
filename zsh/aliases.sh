@@ -29,3 +29,11 @@ alias notes="cd $NOTES"
 alias work="cd $WORK"
 alias dockerclean="docker system prune -af --volumes"
 alias diff="delta"
+
+alias ls='lsd'
+
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree --all'
+alias lt1='ls --tree --depth=1'
