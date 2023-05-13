@@ -1,20 +1,5 @@
 #!/bin/zsh
 
-alias brew_list="brew info --json=v2 --installed | jq -r '.formulae[]|select(any(.installed[]; .installed_on_request)).full_name'"
-
-alias wez_update="brew upgrade --cask wezterm-nightly --no-quarantine --greedy-latest"
-alias nvim_update="brew upgrade neovim --fetch-HEAD"
-
-alias brewup="brew update \
-    && brew upgrade \
-    && wez_update \
-    && nvim_update \
-    && brew bundle dump --force \
-    && brew cleanup"
-
-export HOMEBREW_BUNDLE_FILE=$DOTFILES/homebrew/Brewfile
-export HOMEBREW_NO_ANALYTICS=1
-
 brewit() {
     # Fully manage brew installation and suppression, and then some.
     # needs zsh, jq, bat
