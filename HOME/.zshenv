@@ -8,8 +8,6 @@ export AWKPATH="$DOTFILES/awk/"
 
 export VISUAL=nvim
 export EDITOR="$VISUAL"
-# this needs to be set in order for packer to install luarocks dependencies
-export MACOSX_DEPLOYMENT_TARGET=10.15
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/ripgrep/.ripgreprc"
