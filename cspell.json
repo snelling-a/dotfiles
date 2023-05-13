@@ -20,6 +20,7 @@
   "language": "en",
   "version": "0.2",
   "words": [
+    "AWKPATH",
     "acked",
     "alacritty",
     "approximatively",
@@ -38,6 +39,7 @@
     "bufwritepre",
     "busa",
     "calt",
+    "cargoup",
     "cgreen",
     "chruby",
     "cindent",
@@ -57,6 +59,7 @@
     "creset",
     "crql",
     "cssc",
+    "ctags",
     "cterm",
     "ctermbg",
     "ctermfg",
@@ -85,6 +88,7 @@
     "formatexpr",
     "fpath",
     "fshow",
+    "fsouza",
     "fstash",
     "funcobj",
     "gaip",
@@ -184,6 +188,7 @@
     "ource",
     "pedrohdz",
     "pgrp",
+    "prettierd",
     "prin",
     "promptfmt",
     "psnames",
@@ -269,8 +274,6 @@
     "yoffset",
     "zoxide",
     "zstyle",
-    "fsouza",
-    "prettierd",
     "ירושלים"
   ]
 }
