@@ -39,7 +39,7 @@ $container\
 
 [battery]
   format         = '\[[$symbol$percentage]($style)\]'
-  unknown_symbol = ''
+  unknown_symbol = '󰂑'
   [[battery.display]]
     style     = 'bold red'
     threshold = 10
@@ -50,7 +50,7 @@ $container\
 [directory]
   format           = '\[[$path]($style)[$read_only]($read_only_style)\]'
   home_symbol      = '󰜥'
-  read_only        = ''
+  read_only        = ' '
   repo_root_format = '\[[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style)\]'
 
 [character]
@@ -121,7 +121,7 @@ $container\
   format   = '\[[$symbol($version)]($style)\]'
 
 [cmd_duration]
-  format = '\[[羽 $duration]($style)\]'
+  format = '\[[󰔛 $duration]($style)\]'
 
 [cobol]
   disabled = true
@@ -222,17 +222,17 @@ $container\
 [memory_usage]
   disabled = false
   format   = '\[$symbol[$ram( | $swap)]($style)\]'
-  symbol   = ' '
+  symbol   = '󰍛 '
 
 [meson]
   disabled = true
   format   = '\[[$symbol$project]($style)\]'
-  symbol   = '喝 '
+  symbol   = '󰔷 '
 
 [nim]
   disabled = true
   format   = '\[[$symbol($version)]($style)\]'
-  symbol   = ' '
+  symbol   = '󰆥 '
 
 [nix_shell]
   disabled = true
@@ -271,10 +271,10 @@ $container\
     EndeavourOS      = ''
     Fedora           = ''
     FreeBSD          = ''
-    Garuda           = '﯑'
+    Garuda           = '󰛓'
     Gentoo           = ''
-    HardenedBSD      = 'ﲊ'
-    Illumos          = ''
+    HardenedBSD      = '󰞌'
+    Illumos          = '󰈸'
     Linux            = ''
     Macos            = '󰀵'
     Manjaro          = ''
@@ -283,23 +283,23 @@ $container\
     Mint             = ''
     NetBSD           = ''
     NixOS            = ''
-    OpenBSD          = ''
-    OracleLinux      = ''
+    OpenBSD          = '󰈺'
+    OracleLinux      = '󰌷'
     Pop              = ''
     Raspbian         = ''
     RedHatEnterprise = ''
     Redhat           = ''
     Redox            = ''
     SUSE             = ''
-    Solus            = 'ﴱ'
+    Solus            = '󰠳'
     Ubuntu           = ''
     Unknown          = ''
-    Windows          = ''
+    Windows          = '󰍲'
     openSUSE         = ''
 
 [package]
   format = '\[[$symbol$version]($style)\]'
-  symbol = ' '
+  symbol = ' '
 
 [perl]
   disabled = true
@@ -330,7 +330,7 @@ $container\
 
 [rlang]
   disabled = true
-  symbol   = 'ﳒ '
+  symbol   = '󰟔 '
 
 [ruby]
   disabled = true
