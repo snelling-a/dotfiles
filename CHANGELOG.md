@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.0.1](https://github.com/snelling-a/dotfiles/compare/v1.0.0...v1.0.1) (2023-05-14)
+
+
+### Bug Fixes
+
+* **ci:** add permissions to workflow ([0e87ef7](https://github.com/snelling-a/dotfiles/commit/0e87ef7eb7101a4d062a098c8e4b3c87011b2467))
+
+
+### Miscellaneous
+
+* **spell:** update cspell.json ([b80fed7](https://github.com/snelling-a/dotfiles/commit/b80fed7ece0422c3b922ccf81242946cffdadc7b))
+
 ## 1.0.0 (2023-05-14)
 
 
