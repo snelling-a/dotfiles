@@ -6,10 +6,8 @@ PATH="/usr/local/bin/nvim:$PATH"
 
 # use gsed as sed
 PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-alias sed="gsed"
 
 PATH="/usr/local/opt/gawk/libexec/gnubin:$PATH"
-alias awk="gawk"
 
 PATH="/usr/local/bin/luacheck:$PATH"
 PATH="/usr/local/bin/stylua:$PATH"
@@ -24,6 +22,8 @@ PATH=/usr/local/bin:$PATH
 PATH=/usr/bin/python3:$PATH
 
 PATH="$DOTFILES/scripts:$PATH"
+
+PATH="$HOME/go/bin:$PATH"
 
 export PATH
 
