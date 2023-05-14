@@ -2,6 +2,7 @@
 git:
   allBranchesLogCmd: 'git lsa'
   branchLogCmd: 'git lsla'
+  overrideGpg: true
   paging:
     colorArg: always
     pager: delta --dark --paging=never --true-color=never
@@ -30,5 +31,3 @@ keybinding:
     remove: 'd'
     select: '<space>'
 notARepository: 'quit'
-os:
-  editCommandTemplate: '{{editor}} +{{line}} -- {{filename}}'
