@@ -1,18 +1,18 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
+
 local Keys = {}
+
 local tab_keys = {}
+
 for i = 1, 8 do
 	table.insert(tab_keys, {
 		key = tostring(i),
 		mods = "SUPER",
 		action = act.ActivateTab(i - 1),
 	})
-	table.insert(tab_keys, {
-		key = "F" .. tostring(i),
-		action = act.ActivateTab(i - 1),
-	})
 end
+
 Keys.keys = {
 	{ key = "+", mods = "SUPER|SHIFT", action = act.IncreaseFontSize },
 	{ key = "-", mods = "SUPER|SHIFT", action = act.DecreaseFontSize },
@@ -46,11 +46,12 @@ Keys.keys = {
 			act.SendKey({ key = "L", mods = "CTRL" }),
 		}),
 	},
-	{ key = "l", mods = "ALT", action = act.ShowLauncher },
-	{ key = "l", mods = "ALT|SHIFT", action = act.ShowDebugOverlay },
+	{ key = "l", mods = "SUPER", action = act.ShowLauncher },
+	{ key = "l", mods = "SUPER|SHIFT", action = act.ShowDebugOverlay },
 	{ key = "l", mods = "LEADER", action = act.ActivatePaneDirection("Right") },
 	{ key = "l", mods = "LEADER|SHIFT", action = act.AdjustPaneSize({ "Right", 5 }) },
 	{ key = "m", mods = "CMD", action = act.DisableDefaultAssignment },
+	{ key = "n", mods = "SUPER", action = act.SpawnWindow },
 	{ key = "q", mods = "LEADER", action = act.PaneSelect({ mode = "SwapWithActive" }) },
 	{ key = "q", mods = "SUPER", action = act.QuitApplication },
 	{ key = "s", mods = "LEADER", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
