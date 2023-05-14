@@ -1,3 +1,9 @@
+#!/usr/bin/env bash
+# shellcheck disable=1083,1009,1072,1073
+
+set shell sh
+set shellopts '-eu'
+
 set dircounts
 set dirfirst
 set drawbox
@@ -8,86 +14,88 @@ set ifs "\n"
 set incfilter
 set incsearch
 set number on
+set preview
 set previewer ~/.config/lf/pv.sh
 set ratios '1:2:2'
 set relativenumber
 set scrolloff 10
-set shell sh
-set shellopts '-eu'
-set smartcase
-set timefmt 'Mon _2 Jan'
 
-map <delete> trash
-map <enter> cd
-map i $~/.config/lf/pv.sh $f | less -R
-map O $mimeopen --ask $f
-map o &mimeopen $f
-map X !$f
-map x $$f
-
-cmd open &{{
-    case $(file --mime-type -Lb $f) in
-        text/*) lf -remote "send $id \$$EDITOR \$fx";;
-        *) for f in $fx; do $OPENER $f > /dev/null 2> /dev/null & done;;
-    esac
+cmd open ${{
+open $fx;
 }}
-
-cmd trash %set -f; mv $fx ~/.trash
 
 cmd extract ${{
-    set -f
-    case $f in
-        *.tar.bz|*.tar.bz2|*.tbz|*.tbz2) tar xjvf $f;;
-        *.tar.gz|*.tgz) tar xzvf $f;;
-        *.tar.xz|*.txz) tar xJvf $f;;
-        *.zip) unzip $f;;
-        *.rar) unrar x $f;;
-        *.7z) 7z x $f;;
-    esac
+set -f
+case $f in
+	*.tar.bz|*.tar.bz2|*.tbz|*.tbz2) tar xjvf $f;;
+	*.tar.gz|*.tgz) tar xzvf $f;;
+	*.tar.xz|*.txz) tar xJvf $f;;
+	*.zip) unzip $f;;
+	*.rar) unrar x $f;;
+	*.7z) 7z x $f;;
+esac
 }}
 
+# compress current file or selected files with tar and gunzip
 cmd tar ${{
-    set -f
-    mkdir $1
-    cp -r $fx $1
-    tar czf $1.tar.gz $1
-    rm -rf $1
+set -f
+mkdir $1
+cp -r $fx $1
+tar czf $1.tar.gz $1
+rm -rf $1
 }}
 
+# compress current file or selected files with zip
 cmd zip ${{
-    set -f
-    mkdir $1
-    cp -r $fx $1
-    zip -r $1.zip $1
-    rm -rf $1
+set -f
+mkdir $1
+cp -r $fx $1
+zip -r $1.zip $1
+rm -rf $1
 }}
 
-cmd z %lf -remote "send $id cd '$(zoxide query $1)'"
-
-cmd zi ${{
-    res="$(zoxide query -i "$1")"
-    lf -remote "send $id cd \"$res\""
+cmd openShell ${{
+$SHELL
 }}
 
-cmd recol %{{
-    if [ $lf_width -le 80 ]; then
-        lf -remote "send $id set ratios 1:2"
-    elif [ $lf_width -le 160 ]; then
-        lf -remote "send $id set ratios 1:2:3"
-    else
-        lf -remote "send $id set ratios 1:2:3:5"
-    fi
+cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
+
+cmd delete ${{
+set -f
+printf "$fx\n"
+printf "delete?[y/n]"
+read ans
+[ $ans = "y" ] && trash $fx
 }}
 
- cmd on-cd &{{
-    # display git repository status in your prompt
-    source /usr/share/git/completion/git-prompt.sh
-    GIT_PS1_SHOWDIRTYSTATE=auto
-    GIT_PS1_SHOWSTASHSTATE=auto
-    GIT_PS1_SHOWUNTRACKEDFILES=auto
-    GIT_PS1_SHOWUPSTREAM=auto
-    git=$(__git_ps1 " (%s)") || true
-    fmt="\033[32;1m%u@%h\033[0m:\033[34;1m%d\033[0m\033[1m%f$git\033[0m"
-    lf -remote "send $id set promptfmt \"$fmt\""
- }}
+cmd mkdir %mkdir $1
+cmd mkfile ${{
+touch $1
+}}
 
+map c
+map d
+map M
+map p
+map w
+map y
+
+map <backspace2> set hidden!
+map <enter> shell
+map a push :rename<space>$f<space>
+map cmp tar
+map cw push :rename<space>
+map dD delete
+map dd push :cut<enter>
+map ext extract
+map Md push :mkdir<space>
+map Mf push :mkfile<space>
+map O $mimeopen --ask $f
+map o & mimeopen $f
+map S openShell
+map X !$f
+map x $$f
+map yd !printf $PWD | pbcopy
+map yn !printf $f | xargs basename | pbcopy
+map yp !printf $f | pbcopy
+map yy push :copy<enter>
