@@ -20,7 +20,7 @@ link_file() {
 
 link_dir() {
 	dir=$(realpath "$1")
-	target="${2:=HOME/.config}"
+	target=${2:-$XDG_CONFIG_HOME}/$(basename "$1")
 
 	ln -fnsv "$dir" "$target"
 }
@@ -55,10 +55,10 @@ check_for_backups() {
 	fi
 }
 
-source_shell() {
-	if [ -f "$HOME/.zshrc" ]; then
+source_aliases() {
+	if [ -f "$HOME/.zshenv" ]; then
 		source "$HOME/.zshenv"
-		source "$HOME/.zshrc"
+		source "$DOTFILES/zsh/aliases.sh"
 	fi
 	if [ -f "$HOME/.bashrc" ]; then
 		source "$HOME/.bashrc"
@@ -77,11 +77,17 @@ brew_install() {
 
 generate_completions() {
 	competion_dir="$DOTFILES/zsh/completions"
+	if [ ! -d "$competion_dir" ]; then
+		mkdir "$competion_dir"
+	fi
+
 	wezterm shell-completion --shell zsh >"$competion_dir/_wezterm"
 
 	bw completion --shell=zsh >"$competion_dir/_bw"
 
 	curl https://raw.githubusercontent.com/gokcehan/lf/master/etc/lf.zsh -o "$competion_dir/_lf"
+
+	glow completion zsh >"$competion_dir/zsh/completions/_glow"
 }
 
 clone_notes() {
@@ -97,11 +103,11 @@ create_symlinks
 
 link_config_directories
 
-source_shell
+source_aliases
 
 brew_install
 
-gerenate_completions
+generate_completions
 
 clone_notes
 
