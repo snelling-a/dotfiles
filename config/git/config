@@ -21,6 +21,7 @@
 	lsa = log --graph --pretty=custom --all
 	lsla = log --pretty=custom --stat --graph --all
 	lss = log --stat --pretty=custom --date=short
+    mt = mergetool
 	nb = checkout -b
 	oops = commit --amend --no-edit
 	p = push
