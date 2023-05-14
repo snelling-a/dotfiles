@@ -6,10 +6,8 @@ PATH="/usr/local/bin/nvim:$PATH"
 
 # use gsed as sed
 PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-alias sed="gsed"
 
 PATH="/usr/local/opt/gawk/libexec/gnubin:$PATH"
-alias awk="gawk"
 
 PATH="/usr/local/bin/luacheck:$PATH"
 PATH="/usr/local/bin/stylua:$PATH"
