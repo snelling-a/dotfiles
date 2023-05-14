@@ -1,5 +1,5 @@
 #!/bin/bash
-# Append Jira tag if branch is connected to a Jira issue
+# Append Jira tag or conventional commit type if branch has one in it
 
 COMMIT_MSG_FILE=$1
 COMMIT_SOURCE=$2
@@ -51,18 +51,22 @@ conventional_commit_types=(
 # check if branch has conventional commit type before /
 branch_slug=$(echo "$branch_name" | sed -nr 's,([a-z]+)/?.+,\1,p')
 
-# check if branch_slug is in conventional_commit_types
-[[ "${conventional_commit_types[*]}" =~ $branch_slug ]] && conventional_commit_type=$branch_slug
+# check if branch_slug is in conventional_commit_types array
+if [[ " ${conventional_commit_types[*]} " == *" $branch_slug "* ]]; then
+	conventional_commit_type=$branch_slug
+fi
 
 if [[ -n "$conventional_commit_type" ]]; then
 	# exit if conventional_commit_type is found already in the commit message
-    grep -q "^$conventional_commit_type(\(\w*\))?:" "$COMMIT_MSG_FILE" && exit 0
+	for type in "${conventional_commit_types[@]}"; do
+		grep -q "^$type\((\w\+)\)\?:" "$COMMIT_MSG_FILE" && exit 0
+	done
 
 	printf "\n Prepending conventional commit type to commit message...\n\n"
 
-	# check  if commit was initiated with editor/template
+	# check if commit was initiated with editor/template
 	if [[ "$COMMIT_SOURCE" == "template" ]]; then
-		command="0,/^$/{s/^$/$conventional_commit_type(): /}"
+		command="0,/^$/{s/^$/$conventional_commit_type: /}"
 	else
 		# ...or with -m flag
 		command="1s/^/$conventional_commit_type: /"
