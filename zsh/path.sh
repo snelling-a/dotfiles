@@ -23,6 +23,8 @@ PATH=/usr/bin/python3:$PATH
 
 PATH="$DOTFILES/scripts:$PATH"
 
+PATH="$HOME/go/bin:$PATH"
+
 export PATH
 
 # this needs to be evaluated after PATH is set
