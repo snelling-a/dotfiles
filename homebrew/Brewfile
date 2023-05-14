@@ -33,6 +33,7 @@ brew "gh"
 brew "ghq", args: ["HEAD"]
 brew "git"
 brew "git-delta"
+brew "glow"
 brew "gnu-sed"
 brew "go"
 brew "harfbuzz"
