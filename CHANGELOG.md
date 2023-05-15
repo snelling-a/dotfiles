@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/snelling-a/dotfiles/compare/v1.0.1...v1.0.2) (2023-05-15)
+
+
+### Bug Fixes
+
+* **ci:** secrets ([66034db](https://github.com/snelling-a/dotfiles/commit/66034db152ff51d0ae73b4bbe165baf06be47315))
+
 ## [1.0.1](https://github.com/snelling-a/dotfiles/compare/v1.0.0...v1.0.1) (2023-05-14)
 
 
