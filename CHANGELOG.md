@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/snelling-a/dotfiles/compare/v1.0.2...v1.1.0) (2023-05-16)
+
+
+### Features
+
+* **term:** show cwd in tab ([c8fdb7c](https://github.com/snelling-a/dotfiles/commit/c8fdb7ca9758cbff46ab562967a54552bf1af967))
+
 ## [1.0.2](https://github.com/snelling-a/dotfiles/compare/v1.0.1...v1.0.2) (2023-05-15)
 
 
