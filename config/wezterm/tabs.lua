@@ -4,10 +4,8 @@ local colors = require("const").colors
 
 local function basename(s) return string.gsub(s, "(.*[/\\])(.*)", "%2") end
 
-local function get_process(title)
-	if title == "" then
-		title = "zsh"
-	end
+local function get_process(t)
+	local title = t or "zsh"
 
 	return wezterm.format(
 		process_icons[title]
@@ -15,12 +13,15 @@ local function get_process(title)
 	)
 end
 
-wezterm.on("format-tab-title", function(tab, tabs, _panes, _config, _hover, _max_width)
+local function get_current_working_dir(tab)
+	local current_dir = tab.active_pane.current_working_dir
+	local HOME_DIR = string.format("file://%s", os.getenv("HOME"))
+
+	return current_dir == HOME_DIR and "  ~" or string.format(" %s", string.gsub(current_dir, "(.*[/\\])(.*)", "%2"))
+end
+
+wezterm.on("format-tab-title", function(tab, _tabs, _panes, _config, _hover, _max_width)
 	local tab_index = tab.tab_index + 1
-	local index_string = tostring(tab_index)
-	if #tabs > 1 then
-		index_string = string.format("[%d/%d] ", tab_index, #tabs)
-	end
 
 	local title = basename(tab.active_pane.foreground_process_name)
 
@@ -28,18 +29,16 @@ wezterm.on("format-tab-title", function(tab, tabs, _panes, _config, _hover, _max
 		return tab_index .. " " .. "Copy mode..."
 	end
 
-	local zoomed = ""
-	if tab.active_pane.is_zoomed then
-		zoomed = "󰍉"
-	end
+	local zoomed = tab.active_pane.is_zoomed and "󰍉" or ""
 
 	return wezterm.format({
-		{ Attribute = { Intensity = "Bold" } },
-		{ Text = string.format(" %s", index_string) },
-		"ResetAttributes",
-		{ Text = get_process(title) },
-		{ Text = string.format(" %s%s", title, zoomed) },
+		{ Text = " " .. zoomed },
 		{ Foreground = { Color = colors.foreground } },
+		{ Text = get_current_working_dir(tab) },
+		"ResetAttributes",
+		{ Text = " " .. get_process(title) },
 		{ Text = " ▕" },
 	})
 end)
+
+return {}
