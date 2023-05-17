@@ -92,6 +92,7 @@ map Md push :mkdir<space>
 map Mf push :mkfile<space>
 map O $mimeopen --ask $f
 map o & mimeopen $f
+map pp push :paste<enter>
 map S openShell
 map X !$f
 map x $$f
@@ -99,3 +100,4 @@ map yd !printf $PWD | pbcopy
 map yn !printf $f | xargs basename | pbcopy
 map yp !printf $f | pbcopy
 map yy push :copy<enter>
+map i $~/.config/lf/pv.sh $f | less -R

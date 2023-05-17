@@ -34,5 +34,5 @@ case "$1" in
 	;;
 *.wav | *.mp3 | *.m4a | *.wma | *.ape | *.ac3 | *.og[agx] | *.spx | *.opus | *.as[fx] | *.flac) ;;
 *.avi | *.mp4 | *.wmv | *.dat | *.3gp | *.ogv | *.mkv | *.mpg | *.mpeg | *.vob | *.fl[icv] | *.m2v | *.mov | *.webm | *.ts | *.mts | *.m4v | *.r[am] | *.qt | *.divx) ;;
-*) bat --color=always --style=numbers --pager=never --wrap=never "$1" ;;
+*) bat --color=always --style=full --decorations=always "$1" ;;
 esac
