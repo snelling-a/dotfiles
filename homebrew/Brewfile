@@ -6,13 +6,12 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "snyk/tap"
 brew "act"
-brew "openssl@1.1"
-brew "node", link: false
-brew "alexjs"
 brew "automake"
 brew "bash"
 brew "bat"
+brew "openssl@1.1"
 brew "bison"
+brew "node", link: false
 brew "bitwarden-cli"
 brew "bottom", args: ["HEAD"]
 brew "gettext"
@@ -70,6 +69,7 @@ brew "tmux"
 brew "trash"
 brew "tree"
 brew "universal-ctags"
+brew "vale"
 brew "vifm"
 brew "vim", args: ["HEAD"]
 brew "vint"
