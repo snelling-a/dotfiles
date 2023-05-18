@@ -26,6 +26,7 @@ Keys.keys = {
 	{ key = "Tab", mods = "CTRL|SHIFT", action = act.ActivateTabRelative(-1) },
 	{ key = "UpArrow", mods = "LEADER", action = act.AdjustPaneSize({ "Up", 5 }) },
 	{ key = "[", mods = "LEADER", action = act.ActivateCopyMode },
+	{ key = "a", mods = "CTRL|SHIFT", action = act.EmitEvent("toggle-leader") },
 	{ key = "b", mods = "CTRL|SHIFT", action = act.EmitEvent("toggle-opacity") },
 	{ key = "c", mods = "LEADER", action = act.SpawnTab("CurrentPaneDomain") },
 	{ key = "c", mods = "SUPER", action = act.CopyTo("Clipboard") },
