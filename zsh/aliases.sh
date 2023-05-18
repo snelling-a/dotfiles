@@ -60,6 +60,7 @@ alias brewup="brew update \
     && wez_update \
     && nvim_update \
     && brew bundle dump --force \
+    && brew bundle \
     && brew cleanup"
 
 export HOMEBREW_BUNDLE_FILE=$DOTFILES/homebrew/Brewfile
