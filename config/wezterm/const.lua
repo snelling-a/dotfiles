@@ -66,4 +66,7 @@ Constants.battery_icons = {
 	full = icons.mdi_battery_charging_100,
 }
 
+Constants.override_icons =
+	{ blur = icons.mdi_blur, leader = icons.mdi_apple_keyboard_command, ligature = icons.fae_equal_bigger }
+
 return Constants

@@ -1,19 +1,19 @@
 local wezterm = require("wezterm")
-local heart_icons = require("const").heart_icons
 local colors = require("const").colors
-local battery_icons = require("const").battery_icons
+local icons = require("const")
 
 local function pad_right(string) return string.format("%s ", string) end
 
 local function make_heart_string(number)
 	local percent = number * 10
 	local diff = 10 - percent
-	local full_hearts, empty_hearts, half_heart = pad_right(heart_icons.full), pad_right(heart_icons.empty), ""
+	local full_hearts, empty_hearts, half_heart =
+		pad_right(icons.heart_icons.full), pad_right(icons.heart_icons.empty), ""
 
 	if math.floor(percent) % 10 == 5 or math.ceil(percent) % 10 == 5 then
 		full_hearts = string.rep(full_hearts, math.floor(percent))
 		empty_hearts = string.rep(empty_hearts, math.floor(diff))
-		half_heart = pad_right(heart_icons.half_full)
+		half_heart = pad_right(icons.heart_icons.half_full)
 	elseif percent % 10 > 5 then
 		full_hearts = string.rep(full_hearts, math.ceil(percent))
 		empty_hearts = string.rep(empty_hearts, math.floor(diff))
@@ -31,14 +31,14 @@ local function make_heart_string(number)
 end
 
 local function get_charging_status(state)
-	local charging_status, charging_status_color = battery_icons.unknown, colors.red
+	local charging_status, charging_status_color = icons.battery_icons.unknown, colors.red
 
 	if state == "Full" then
-		charging_status, charging_status_color = battery_icons.full, colors.green
+		charging_status, charging_status_color = icons.battery_icons.full, colors.green
 	elseif state == "Charging" then
-		charging_status, charging_status_color = battery_icons.charging, colors.yellow
+		charging_status, charging_status_color = icons.battery_icons.charging, colors.yellow
 	elseif state == "Discharging" then
-		charging_status, charging_status_color = battery_icons.discharging, colors.bright_black
+		charging_status, charging_status_color = icons.battery_icons.discharging, colors.bright_black
 	end
 
 	return wezterm.format({ { Foreground = { Color = charging_status_color } }, { Text = pad_right(charging_status) } })
@@ -48,6 +48,19 @@ local function get_battery_number(number)
 	local text = tostring(math.floor(number * 100)) .. "%"
 
 	return wezterm.format({ { Attribute = { Intensity = "Bold" } }, { Text = text } })
+end
+
+local function get_overrides(window)
+	local overrides = window:get_config_overrides() or {}
+	local ligature, leader = overrides.harfbuzz_features, overrides.leader
+
+	local lig_sign = ligature and pad_right(icons.override_icons.ligature) or ""
+	local lead_sign = leader and pad_right(icons.override_icons.leader) or ""
+
+	return wezterm.format({
+		{ Text = lig_sign },
+		{ Text = lead_sign },
+	})
 end
 
 wezterm.on("update-right-status", function(window)
@@ -66,6 +79,7 @@ wezterm.on("update-right-status", function(window)
 	end
 
 	window:set_right_status(wezterm.format({
+		{ Text = get_overrides(window) },
 		{ Text = pad_right(charging_status) },
 		{ Text = hearts },
 		{ Text = battery_number },
