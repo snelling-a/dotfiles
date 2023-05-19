@@ -21,7 +21,10 @@ set relativenumber
 set scrolloff 10
 
 cmd open ${{
-open $fx;
+    case $(file --mime-type -Lb $f) in
+        text/*) nvim $fx;;
+        *) for f in $fx; do xdg-open $f > /dev/null 2> /dev/null & done;;
+    esac
 }}
 
 cmd extract ${{
@@ -69,8 +72,43 @@ read ans
 }}
 
 cmd mkdir %mkdir $1
+
 cmd mkfile ${{
 touch $1
+}}
+
+cmd z ${{
+	result="$(zoxide query --exclude $PWD $@)"
+	lf -remote "send $id cd $result"
+}}
+
+cmd zi ${{
+	result="$(zoxide query -i)"
+	lf -remote "send $id cd $result"
+}}
+
+cmd fzf_jump ${{
+    res="$(fd | fzf --reverse --header='Jump to location' | sed 's/\\/\\\\/g;s/"/\\"/g')"
+    if [ -d "$res" ] ; then
+        cmd="cd"
+    elif [ -f "$res" ] ; then
+        cmd="select"
+    else
+        exit 0
+    fi
+    lf -remote "send $id $cmd \"$res\""
+}}
+
+cmd fzf_search ${{
+    res="$( \
+        RG_PREFIX="rg --column --line-number --no-heading --color=always \
+            --smart-case "
+        FZF_DEFAULT_COMMAND="$RG_PREFIX ''" \
+            fzf --bind "change:reload:$RG_PREFIX {q} || true" \
+            --ansi --layout=reverse --header 'Search in files' \
+            | cut -d':' -f1
+    )"
+    [ ! -z "$res" ] && lf -remote "send $id select \"$res\""
 }}
 
 map c
@@ -81,23 +119,26 @@ map w
 map y
 
 map <backspace2> set hidden!
-map <enter> shell
+map <c-p> :fzf_jump
+map <enter> open
+map Md push :mkdir<space>
+map Mf push :mkfile<space>
+map O $mimeopen --ask $f
+map S openShell
+map X !$f
 map a push :rename<space>$f<space>
 map cmp tar
 map cw push :rename<space>
 map dD delete
 map dd push :cut<enter>
 map ext extract
-map Md push :mkdir<space>
-map Mf push :mkfile<space>
-map O $mimeopen --ask $f
+map f $nvim $(fzf)
+map i $~/.config/lf/pv.sh $f | less -R
 map o & mimeopen $f
 map pp push :paste<enter>
-map S openShell
-map X !$f
 map x $$f
 map yd !printf $PWD | pbcopy
 map yn !printf $f | xargs basename | pbcopy
 map yp !printf $f | pbcopy
 map yy push :copy<enter>
-map i $~/.config/lf/pv.sh $f | less -R
+map <c-r> :fzf_search
