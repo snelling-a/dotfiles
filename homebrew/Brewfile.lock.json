@@ -14,7 +14,7 @@
         "revision": "3bbe4e7139ed910e75029bf0fa31c44291d5a0ea"
       },
       "homebrew/cask-versions": {
-        "revision": "017d23741d563146f74098eee81399dda7817be6"
+        "revision": "8bab0c94a3437de15b44e9ff316ba010f83b1dae"
       },
       "homebrew/core": {
         "revision": "deecd6afc1ed2ce43805fc31cc1d0d2724ba624d"
@@ -2166,7 +2166,7 @@
         }
       },
       "neovim": {
-        "version": "HEAD-c9f47fc",
+        "version": "HEAD-24b60b0",
         "bottle": {
           "rebuild": 1,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -3733,7 +3733,7 @@
         }
       },
       "arc": {
-        "version": "0.103.1,38943",
+        "version": "0.104.0,38955",
         "options": {
           "full_name": "arc"
         }
@@ -3751,7 +3751,7 @@
         }
       },
       "cursor": {
-        "version": "0.2.11",
+        "version": "0.2.16",
         "options": {
           "full_name": "cursor"
         }
@@ -3823,7 +3823,7 @@
         }
       },
       "raycast": {
-        "version": "1.51.2",
+        "version": "1.51.3",
         "options": {
           "full_name": "raycast"
         }
@@ -3881,7 +3881,7 @@
   "system": {
     "macos": {
       "ventura": {
-        "HOMEBREW_VERSION": "4.0.18-64-g946478a",
+        "HOMEBREW_VERSION": "4.0.18-85-g16b2a14",
         "HOMEBREW_PREFIX": "/usr/local",
         "Homebrew/homebrew-core": "api",
         "CLT": "",
