@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.2.0](https://github.com/snelling-a/dotfiles/compare/v1.1.0...v1.2.0) (2023-05-19)
+
+
+### Features
+
+* **brew:** regnenerate lock file when updated ([111c827](https://github.com/snelling-a/dotfiles/commit/111c827a6a65bc0c7ffbc327d13eadc9706991fb))
+* **lf:** improve mapping/preview ([9ddf620](https://github.com/snelling-a/dotfiles/commit/9ddf6200902c19d66c5420f8fd5a3da389738b55))
+* **term:** toggle wezterm leader ([b4b0df9](https://github.com/snelling-a/dotfiles/commit/b4b0df9bc3769fcda50dae2f43c557708ee321ad))
+* **term:** toggled feature indicators in status ([05fe73e](https://github.com/snelling-a/dotfiles/commit/05fe73eb645bd630a8cd0c0560f766d5a13dbf04))
+
+
+### Bug Fixes
+
+* **term:** fix opacity toggle ([cc6c97d](https://github.com/snelling-a/dotfiles/commit/cc6c97d2ab7db0e6ccb54710dabfdf7d47848ac0))
+
+
+### Miscellaneous
+
+* **brew:** update brewfile ([dec54f4](https://github.com/snelling-a/dotfiles/commit/dec54f44a77c011ec64cf8f81159be1450ea058d))
+* **brew:** update packages ([a89a08e](https://github.com/snelling-a/dotfiles/commit/a89a08ee681225d1188cdf23dbb770c3f3b5e89f))
+* **spell:** update cspell.json ([794aaca](https://github.com/snelling-a/dotfiles/commit/794aaca05fa87387ef710f5f99e7a9a1a0a50995))
+
 ## [1.1.0](https://github.com/snelling-a/dotfiles/compare/v1.0.2...v1.1.0) (2023-05-16)
 
 
