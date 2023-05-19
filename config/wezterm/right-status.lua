@@ -52,12 +52,14 @@ end
 
 local function get_overrides(window)
 	local overrides = window:get_config_overrides() or {}
-	local ligature, leader = overrides.harfbuzz_features, overrides.leader
+	local ligature, leader, blur = overrides.harfbuzz_features, overrides.leader, overrides.window_background_opacity
 
-	local lig_sign = ligature and pad_right(icons.override_icons.ligature) or ""
 	local lead_sign = leader and pad_right(icons.override_icons.leader) or ""
+	local lig_sign = ligature and pad_right(icons.override_icons.ligature) or ""
+	local blur_sign = blur and pad_right(icons.override_icons.blur) or ""
 
 	return wezterm.format({
+		{ Text = blur_sign },
 		{ Text = lig_sign },
 		{ Text = lead_sign },
 	})
