@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.3.0](https://github.com/snelling-a/dotfiles/compare/v1.2.0...v1.3.0) (2023-05-19)
+
+
+### Features
+
+* **lf:** open/search ([7a84997](https://github.com/snelling-a/dotfiles/commit/7a849976e1332c24d02552758de8f1dfa170ddf5))
+* **term:** toggle features 2 ([4867435](https://github.com/snelling-a/dotfiles/commit/4867435ba71da09faf3043cc9d8a6cb1d0ddaf57))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([5a7cfb7](https://github.com/snelling-a/dotfiles/commit/5a7cfb7c7c340b80a02f3851cc82b21c521651e5))
+
 ## [1.2.0](https://github.com/snelling-a/dotfiles/compare/v1.1.0...v1.2.0) (2023-05-19)
 
 
