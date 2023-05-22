@@ -56,17 +56,15 @@ Constants.process_icons = {
 	["zsh"] = { { Foreground = { Color = colors.red } }, { Text = icons.dev_terminal } },
 }
 
-Constants.heart_icons =
-	{ full = icons.mdi_heart, half_full = icons.mdi_heart_half_full, empty = icons.mdi_heart_outline }
+Constants.heart_icons = { full = icons.oct_heart_fill, half_full = "󰛞 ", empty = icons.cod_heart }
 
 Constants.battery_icons = {
 	charging = icons.fa_bolt,
-	discharging = icons.mdi_battery,
-	unknown = icons.mdi_battery_unknown,
-	full = icons.mdi_battery_charging_100,
+	discharging = "󰁹",
+	unknown = "󰂑",
+	full = "󰂅 ",
 }
 
-Constants.override_icons =
-	{ blur = icons.mdi_blur, leader = icons.mdi_apple_keyboard_command, ligature = icons.fae_equal_bigger }
+Constants.override_icons = { blur = "󰂷 ", leader = "󰘳 ", ligature = icons.fae_equal_bigger }
 
 return Constants

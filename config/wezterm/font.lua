@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 
 local font = "Iosevka Term SS15"
-local icon_font = { family = "Symbols Nerd Font Mono", scale = 0.85 }
+local icon_font = { family = "Symbols Nerd Font Mono" }
 
 return {
 	font = wezterm.font_with_fallback({

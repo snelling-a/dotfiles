@@ -13,7 +13,7 @@ local function make_heart_string(number)
 	if math.floor(percent) % 10 == 5 or math.ceil(percent) % 10 == 5 then
 		full_hearts = string.rep(full_hearts, math.floor(percent))
 		empty_hearts = string.rep(empty_hearts, math.floor(diff))
-		half_heart = pad_right(icons.heart_icons.half_full)
+		half_heart = icons.heart_icons.half_full
 	elseif percent % 10 > 5 then
 		full_hearts = string.rep(full_hearts, math.ceil(percent))
 		empty_hearts = string.rep(empty_hearts, math.floor(diff))
