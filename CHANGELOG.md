@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.3.1](https://github.com/snelling-a/dotfiles/compare/v1.3.0...v1.3.1) (2023-05-23)
+
+
+### Bug Fixes
+
+* **cargo:** add --force flag ([e26911b](https://github.com/snelling-a/dotfiles/commit/e26911b76c6fde94a2630a5f4b14337494f9404e))
+* **term:** nerdfont v3 update ([b9efc62](https://github.com/snelling-a/dotfiles/commit/b9efc62b81ec0ff0fdd2aee13884a46a08b94274))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([f063fb3](https://github.com/snelling-a/dotfiles/commit/f063fb30c262759c44fb9aa36645d94e6b63f797))
+* update packages ([4440b2f](https://github.com/snelling-a/dotfiles/commit/4440b2f2753c6962c78da45df30704f7a0925152))
+
 ## [1.3.0](https://github.com/snelling-a/dotfiles/compare/v1.2.0...v1.3.0) (2023-05-19)
 
 
