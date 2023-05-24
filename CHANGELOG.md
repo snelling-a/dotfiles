@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.4.0](https://github.com/snelling-a/dotfiles/compare/v1.3.1...v1.4.0) (2023-05-24)
+
+
+### Features
+
+* **nvim:** update to v4 ([72ab4f8](https://github.com/snelling-a/dotfiles/commit/72ab4f83240ba2166b93222e12c0d0dba06212a7))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([88e007c](https://github.com/snelling-a/dotfiles/commit/88e007c24dbf17167109996fafe442cfe233e05d))
+* **spell:** update cspell.json ([919e707](https://github.com/snelling-a/dotfiles/commit/919e7071605a5253c60f56f184ab77b729d359d3))
+
 ## [1.3.1](https://github.com/snelling-a/dotfiles/compare/v1.3.0...v1.3.1) (2023-05-23)
 
 
