@@ -32,11 +32,11 @@ wezterm.on("format-tab-title", function(tab, _tabs, _panes, _config, _hover, _ma
 	local zoomed = tab.active_pane.is_zoomed and "󰍉" or ""
 
 	return wezterm.format({
-		{ Text = " " .. zoomed },
+		{ Text = " " .. get_process(title) },
 		{ Foreground = { Color = colors.foreground } },
 		{ Text = get_current_working_dir(tab) },
 		"ResetAttributes",
-		{ Text = " " .. get_process(title) },
+		{ Text = " " .. zoomed },
 		{ Text = " ▕" },
 	})
 end)
