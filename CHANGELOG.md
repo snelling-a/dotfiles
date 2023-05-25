@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.5.0](https://github.com/snelling-a/dotfiles/compare/v1.4.0...v1.5.0) (2023-05-25)
+
+
+### Features
+
+* **term:** swap process and zoomed icon in tabs ([6b541ad](https://github.com/snelling-a/dotfiles/commit/6b541ad0f09af536e0f9cbe46b831ac2e663e651))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([0256eb7](https://github.com/snelling-a/dotfiles/commit/0256eb7d69e8e11c15600d74a9c21e044d5a49e9))
+
 ## [1.4.0](https://github.com/snelling-a/dotfiles/compare/v1.3.1...v1.4.0) (2023-05-24)
 
 
