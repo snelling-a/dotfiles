@@ -1,8 +1,8 @@
-local wezterm = require("wezterm")
-local colors = require("const").colors
+local const = require("const")
 local icons = require("const")
+local wezterm = require("wezterm")
 
-local function pad_right(string) return string.format("%s ", string) end
+local pad_right = const.pad_right
 
 local function make_heart_string(number)
 	local percent = number * 10
@@ -23,22 +23,22 @@ local function make_heart_string(number)
 	end
 
 	return wezterm.format({
-		{ Foreground = { Color = colors.red } },
+		{ Foreground = { Color = const.colors.red } },
 		{ Text = string.format("%s%s", full_hearts, half_heart) },
-		{ Foreground = { Color = colors.bright_black } },
+		{ Foreground = { Color = const.colors.bright_black } },
 		{ Text = empty_hearts },
 	})
 end
 
 local function get_charging_status(state)
-	local charging_status, charging_status_color = icons.battery_icons.unknown, colors.red
+	local charging_status, charging_status_color = icons.battery_icons.unknown, const.colors.red
 
 	if state == "Full" then
-		charging_status, charging_status_color = icons.battery_icons.full, colors.green
+		charging_status, charging_status_color = icons.battery_icons.full, const.colors.green
 	elseif state == "Charging" then
-		charging_status, charging_status_color = icons.battery_icons.charging, colors.yellow
+		charging_status, charging_status_color = icons.battery_icons.charging, const.colors.yellow
 	elseif state == "Discharging" then
-		charging_status, charging_status_color = icons.battery_icons.discharging, colors.bright_black
+		charging_status, charging_status_color = icons.battery_icons.discharging, const.colors.bright_black
 	end
 
 	return wezterm.format({ { Foreground = { Color = charging_status_color } }, { Text = pad_right(charging_status) } })

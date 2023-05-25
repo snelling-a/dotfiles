@@ -9,6 +9,8 @@ local Constants = {
 	default_colors = default_colors,
 }
 
+function Constants.pad_right(string) return string.format("%s ", string) end
+
 local colors = {
 	background = default_colors.background, -- #181818
 	black = default_colors.ansi[1], --#181818
