@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.5.1](https://github.com/snelling-a/dotfiles/compare/v1.5.0...v1.5.1) (2023-05-26)
+
+
+### Miscellaneous
+
+* **brew:** update packages ([87893e5](https://github.com/snelling-a/dotfiles/commit/87893e5a6d5b2e59f9d19fb36d7720d392581e1a))
+* **brew:** update packages ([64e23d0](https://github.com/snelling-a/dotfiles/commit/64e23d013f2853e7411ee095f0bceb1c6a75980b))
+
 ## [1.5.0](https://github.com/snelling-a/dotfiles/compare/v1.4.0...v1.5.0) (2023-05-25)
 
 
