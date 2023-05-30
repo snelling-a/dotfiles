@@ -32,6 +32,7 @@ brew "figlet"
 brew "fnm", args: ["HEAD"]
 brew "fzf", args: ["HEAD"]
 brew "gawk"
+brew "gcc"
 brew "gdbm"
 brew "gh"
 brew "ghq", args: ["HEAD"]
@@ -40,15 +41,19 @@ brew "git-delta"
 brew "gitlint"
 brew "glow"
 brew "gnu-sed"
+brew "gnupg"
 brew "go"
 brew "helm"
 brew "jq"
 brew "kubernetes-cli"
 brew "lazygit", args: ["HEAD"]
 brew "lf"
+brew "llvm"
 brew "lsd"
 brew "lua-language-server"
 brew "luarocks"
+brew "make"
+brew "marksman"
 brew "mercurial"
 brew "microplane"
 brew "neofetch", args: ["HEAD"]

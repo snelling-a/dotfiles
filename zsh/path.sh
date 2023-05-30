@@ -4,10 +4,10 @@ eval "$(brew shellenv)"
 
 PATH="/usr/local/bin/nvim:$PATH"
 
-# use gsed as sed
+# use gnu tools
 PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-
 PATH="/usr/local/opt/gawk/libexec/gnubin:$PATH"
+PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 
 PATH="/usr/local/bin/luacheck:$PATH"
 PATH="/usr/local/bin/stylua:$PATH"
