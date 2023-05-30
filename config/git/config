@@ -21,7 +21,7 @@
 	lsa = log --graph --pretty=custom --all
 	lsla = log --pretty=custom --stat --graph --all
 	lss = log --stat --pretty=custom --date=short
-    mt = mergetool
+	mt = mergetool
 	nb = checkout -b
 	oops = commit --amend --no-edit
 	p = push
@@ -76,7 +76,7 @@
 	ui = auto
 
 [commit]
-    gpgSign = true
+	gpgSign = true
 	template = ~/.config/git/gitcommit
 	verbose = true
 
@@ -85,6 +85,9 @@
 	excludesfile = ~/.config/git/gitignore_global
 	hooksPath = ~/.config/git/hooks
 	pager = delta
+
+[credential]
+	helper = osxkeychain
 
 [delta "blame"]
 	blame-code-style = syntax
