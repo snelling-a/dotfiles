@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/snelling-a/dotfiles/compare/v1.5.2...v1.6.0) (2023-05-30)
+
+
+### Features
+
+* gcc/llvm ([7c253dc](https://github.com/snelling-a/dotfiles/commit/7c253dcfdc2c7c9b2b44ee7822d4b797df1d1e9a))
+
 ## [1.5.2](https://github.com/snelling-a/dotfiles/compare/v1.5.1...v1.5.2) (2023-05-29)
 
 
