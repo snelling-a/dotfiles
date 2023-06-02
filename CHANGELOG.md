@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.1](https://github.com/snelling-a/dotfiles/compare/v1.6.0...v1.6.1) (2023-06-02)
+
+
+### Miscellaneous
+
+* release 1.6.1 ([36ca03c](https://github.com/snelling-a/dotfiles/commit/36ca03cdc18f09aa2875a3cad764e37aa2b60975))
+
 ## [1.6.0](https://github.com/snelling-a/dotfiles/compare/v1.5.2...v1.6.0) (2023-06-02)
 
 
