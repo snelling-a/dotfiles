@@ -4109,6 +4109,12 @@
         "options": {
           "full_name": "neovide"
         }
+      },
+      "nextcloud": {
+        "version": "3.8.2",
+        "options": {
+          "full_name": "nextcloud"
+        }
       }
     }
   },
