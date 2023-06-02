@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.6.0](https://github.com/snelling-a/dotfiles/compare/v1.5.2...v1.6.0) (2023-06-02)
+
+
+### Features
+
+* gcc/llvm ([7c253dc](https://github.com/snelling-a/dotfiles/commit/7c253dcfdc2c7c9b2b44ee7822d4b797df1d1e9a))
+* **git:** gpgsign ([5f80596](https://github.com/snelling-a/dotfiles/commit/5f805969eaf413e29dcd01f02ebaa565b01a00c3))
+* improve brewup ([f56e403](https://github.com/snelling-a/dotfiles/commit/f56e403534328433f4e5fa3fe2fe3aa4e67ca5de))
+* nextcloud ([ab72c18](https://github.com/snelling-a/dotfiles/commit/ab72c18a1037ada799873c4ca842ec9874e5a42b))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([a9eae88](https://github.com/snelling-a/dotfiles/commit/a9eae88e2c071e059e32230dc4282d0dfae38f5c))
+* release 1.6.0 ([646b7b2](https://github.com/snelling-a/dotfiles/commit/646b7b2109208ed59b13bbc4315ede7dbbf24f3b))
+
 ## [1.5.2](https://github.com/snelling-a/dotfiles/compare/v1.5.1...v1.5.2) (2023-05-29)
 
 
