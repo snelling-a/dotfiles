@@ -59,7 +59,9 @@ brewup() {
 	sudo echo "Updating all the things..."
 	cd "$DOTFILES" || exit
 	echo "Updating homebrew packages..."
-	brew update && brew upgrade --greedy --no-quarantine &
+	brew update && brew upgrade &
+	wait
+	brew upgrade --greedy --no-quarantine &
 	wait
 	echo "Updating Wezterm nightly..."
 	wez_update &
