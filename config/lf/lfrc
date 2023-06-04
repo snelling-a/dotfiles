@@ -13,7 +13,7 @@ set icons
 set ifs "\n"
 set incfilter
 set incsearch
-set number on
+set number
 set preview
 set previewer ~/.config/lf/previewer.sh
 set ratios '1:2:2'
