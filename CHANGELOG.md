@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.7.0](https://github.com/snelling-a/dotfiles/compare/v1.6.1...v1.7.0) (2023-06-04)
+
+
+### Features
+
+* images in the terminal ([fff6340](https://github.com/snelling-a/dotfiles/commit/fff63404939c5f81fda2cade757660f292e65788))
+
+
+### Bug Fixes
+
+* **lf:** correctly define number ([bd3d81a](https://github.com/snelling-a/dotfiles/commit/bd3d81a1ebdd7b4a5fd4f6ee57d359e431e7f3e8))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([459382f](https://github.com/snelling-a/dotfiles/commit/459382f8143ea224d0f921edf6c22fab045a1d17))
+
 ## [1.6.1](https://github.com/snelling-a/dotfiles/compare/v1.6.0...v1.6.1) (2023-06-02)
 
 
