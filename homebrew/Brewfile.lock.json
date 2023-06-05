@@ -2166,7 +2166,7 @@
         }
       },
       "neovim": {
-        "version": "HEAD-fdc8e96",
+        "version": "HEAD-cc41697",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -4078,7 +4078,7 @@
         }
       },
       "cursor": {
-        "version": "0.2.24",
+        "version": "0.2.25",
         "options": {
           "full_name": "cursor"
         }
