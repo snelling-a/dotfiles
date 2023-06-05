@@ -3996,50 +3996,6 @@
           }
         }
       },
-      "sk": {
-        "version": "0.10.4",
-        "bottle": {
-          "rebuild": 0,
-          "root_url": "https://ghcr.io/v2/homebrew/core",
-          "files": {
-            "arm64_ventura": {
-              "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/sk/blobs/sha256:e28dbbdb5930443d04b934d8966af2dec58f037f859432f7a412c52568990e1d",
-              "sha256": "e28dbbdb5930443d04b934d8966af2dec58f037f859432f7a412c52568990e1d"
-            },
-            "arm64_monterey": {
-              "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/sk/blobs/sha256:a96933375963dac24744a541d7835a9694bf9050481e8d302b9f22187a0e8184",
-              "sha256": "a96933375963dac24744a541d7835a9694bf9050481e8d302b9f22187a0e8184"
-            },
-            "arm64_big_sur": {
-              "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/sk/blobs/sha256:e7b9c3bc71263bd5f16a6cdf08cb36e1076ea698f5b26fcac5fa8fe1c82032c1",
-              "sha256": "e7b9c3bc71263bd5f16a6cdf08cb36e1076ea698f5b26fcac5fa8fe1c82032c1"
-            },
-            "ventura": {
-              "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/sk/blobs/sha256:afaa23049ae7c7268e5bc86bdba95abe0d99dfe83057c4614ce95ae7ac580830",
-              "sha256": "afaa23049ae7c7268e5bc86bdba95abe0d99dfe83057c4614ce95ae7ac580830"
-            },
-            "monterey": {
-              "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/sk/blobs/sha256:de7b821fe89afa96598770fdd98d7b55a78b57be6867284f6e4aa41db9469331",
-              "sha256": "de7b821fe89afa96598770fdd98d7b55a78b57be6867284f6e4aa41db9469331"
-            },
-            "big_sur": {
-              "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/sk/blobs/sha256:ab8e698b22382f4faed083f426fb8aa1fa0e0393c7e43169deba03021fa502ea",
-              "sha256": "ab8e698b22382f4faed083f426fb8aa1fa0e0393c7e43169deba03021fa502ea"
-            },
-            "x86_64_linux": {
-              "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/sk/blobs/sha256:9dee90b1f10ffc8ab60ed7549c0c5fb16afda00b94de1a34eee59ffd21205412",
-              "sha256": "9dee90b1f10ffc8ab60ed7549c0c5fb16afda00b94de1a34eee59ffd21205412"
-            }
-          }
-        }
-      },
       "viu": {
         "version": "1.4.0",
         "bottle": {
