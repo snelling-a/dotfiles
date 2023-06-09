@@ -64,6 +64,6 @@ case "$1" in
 	view_image "$1" || view_binary
 	;;
 *.wav | *.mp3 | *.m4a | *.wma | *.ape | *.ac3 | *.og[agx] | *.spx | *.opus | *.as[fx] | *.flac) not_implemented ;;
-*.avi | *.mp4 | *.wmv | *.dat | *.3gp | *.ogv | *.mkv | *.mpg | *.mpeg | *.vob | *.fl[icv] | *.m2v | *.mov | *.webm | *.ts | *.mts | *.m4v | *.r[am] | *.qt | *.divx) not_implemented ;;
+*.avi | *.mp4 | *.wmv | *.dat | *.3gp | *.ogv | *.mkv | *.mpg | *.mpeg | *.vob | *.fl[icv] | *.m2v | *.mov | *.webm | *.mts | *.m4v | *.r[am] | *.qt | *.divx) not_implemented ;;
 *) view_sourcecode "$1" ;;
 esac
