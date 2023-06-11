@@ -4296,6 +4296,11 @@
         "options": {
           "full_name": "nextcloud"
         }
+      "zed": {
+        "version": "0.89.2",
+        "options": {
+          "full_name": "zed"
+        }
       }
     }
   },
