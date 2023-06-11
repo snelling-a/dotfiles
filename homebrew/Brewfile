@@ -60,6 +60,7 @@ brew "mercurial"
 brew "microplane"
 brew "neofetch", args: ["HEAD"]
 brew "neovim", args: ["HEAD"]
+brew "odt2txt"
 brew "pandoc"
 brew "python-gdbm@3.11"
 brew "python-tk@3.11"

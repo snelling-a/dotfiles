@@ -1,16 +1,22 @@
 #!/usr/bin/env bash
 
-# Calculate where the image should be placed on the screen.
-num=$(printf "%0.f\n" "$(echo "$(tput cols) / 2" | bc)")
-WIDTH=$(printf "%0.f\n" "$(echo "$(tput cols) - $num - 1" | bc)")
-HEIGHT=$(printf "%0.f\n" "$(echo "$(tput lines) - 2" | bc)")
+set -eu
+
+FILE="${1}"
+WIDTH="${2:-$(tput cols)}"
+HEIGHT="${3:-$(tput lines)}"
+
+WIDTH="$((WIDTH - 3))"
+HEIGHT="$((HEIGHT - 3))"
+
+[ -L "${FILE}" ] && FILE="$(readlink "$FILE")"
 
 view_sqlite() {
 	echo -e "# \e[1;37mTABLES\e[0m\n"
 	sqlite3 "$FILE" ".tables"
 	echo -e "\n# \e[1;37mSCHEMA\e[0m\n"
 	sqlite3 "$FILE" ".schema"
-
+	return $?
 }
 
 view_image() {
@@ -28,10 +34,19 @@ view_binary() {
 
 	hexyl -n "$len" --border none "$FILE" ||
 		hexdump -n "$len" -C "$FILE"
+
+	return $?
 }
 
 view_sourcecode() {
-	bat --color=always --style=full --decorations=always "$1" || cat "$1"
+	local input="${1:-$FILE}"
+
+	BAT_CONFIG_PATH='' bat "${input}" \
+		--theme=base16 --color=always --paging=never --tabs=2 --wrap=auto \
+		--style=plain --terminal-width "${WIDTH}" --line-range :"${HEIGHT}" ||
+		cat "${input}"
+
+	return $?
 }
 
 view_opendocument() {
@@ -43,27 +58,62 @@ view_opendocument() {
 		glow -s dark -w "${WIDTH}" \
 			<(pandoc "${FILE}" --to=markdown || odt2txt "${FILE}")
 	fi
+	return $?
 }
 
 not_implemented() {
 	echo "not implemented"
 }
 
-case "$1" in
-*.tgz | *.tar.gz) tar tzf "$1" ;;
-*.tar.bz2 | *.tbz2) tar tjf "$1" ;;
-*.tar.txz | *.txz) xz --list "$1" ;;
-*.tar) tar tf "$1" ;;
-*.zip | *.jar | *.war | *.ear | *.oxt) unzip -l "$1" ;;
-*.rar) not_implemented ;;
-*.7z) not_implemented ;;
-*.[1-8]) man "$1" | col -b ;;
-*.o,*.torrent,*.iso,*odt,*.ods,*.odp,*.sxw,*.doc) file -i "$1" ;;
-*.csv) cmd <"$1" | sed s/,/\\n/g ;;
-*.bmp | *.jpg | *.jpeg | *.png | *.xpm)
-	view_image "$1" || view_binary
-	;;
-*.wav | *.mp3 | *.m4a | *.wma | *.ape | *.ac3 | *.og[agx] | *.spx | *.opus | *.as[fx] | *.flac) not_implemented ;;
-*.avi | *.mp4 | *.wmv | *.dat | *.3gp | *.ogv | *.mkv | *.mpg | *.mpeg | *.vob | *.fl[icv] | *.m2v | *.mov | *.webm | *.mts | *.m4v | *.r[am] | *.qt | *.divx) not_implemented ;;
-*) view_sourcecode "$1" ;;
-esac
+main() {
+	# Display title and border
+	local filename="${FILE/$PWD\//}"
+	printf "\e[38;5;243m%*s\e[0m\n" $(((${#filename} + WIDTH) / 2)) "$filename"
+	printf "\e[38;5;238m%${WIDTH}s\e[0m\n" | tr ' ' '-'
+
+	case "${FILE}" in
+	*.tar | *.tgz | *.xz)
+		tar tvf "${FILE}"
+		return $?
+		;;
+	*.deb)
+		ar -tv "${FILE}"
+		return $?
+		;;
+	*.zip)
+		unzip -l "${FILE}"
+		return $?
+		;;
+	*.rar)
+		not_implemented
+		return $?
+		;;
+	*.7z | *.dmg | *.gz) not_implemented ;;
+	*.bzip | *.bzip2 | *.bp | *.bz2) not_implemented ;;
+
+	*.jpg | *.JPG | *.png | *.PNG) view_image "$FILE" || view_binary ;;
+	*.json) jq -C . "${FILE}" && return $? ;;
+	*.md) glow -s dark -w "${WIDTH}" "${FILE}" && return $? ;;
+	*.plist) plutil -p "${FILE}" && return $? ;;
+	*.txt) view_sourcecode "$FILE" && return $? ;;
+	esac
+
+	case "$(file -b --mime-type "${FILE}")" in
+	image/*) view_image || view_binary ;;
+	application/pdf) view_binary ;;
+	application/gzip | application-x-xz) tar tvf "${FILE}" ;;
+	application/x-sqlite*) view_binary ;;
+	application/x-terminfo | text/x-bytecode.python) view_binary ;;
+	application/vnd.*-officedocument* | application/vnd.*.opendocument*)
+		view_opendocument || view_binary
+		;;
+	application/octet-stream | application/x-*-binary | application/x-*executable)
+		view_binary
+		;;
+
+	*) view_sourcecode ;;
+	esac
+	return $?
+}
+
+main "$FILE"
