@@ -1,5 +1,31 @@
 # Changelog
 
+## [1.8.0](https://github.com/snelling-a/dotfiles/compare/v1.7.0...v1.8.0) (2023-06-11)
+
+
+### Features
+
+* element ([bab2a7d](https://github.com/snelling-a/dotfiles/commit/bab2a7d34eb5b769d2dd21195e55c8014b76fbd6))
+* **git:** add spellcheck document to global gitignore ([bd71491](https://github.com/snelling-a/dotfiles/commit/bd7149172283330818bdf6713ae15c7aaeeebd59))
+* hexyl & sk ([90d92a9](https://github.com/snelling-a/dotfiles/commit/90d92a9d57c9a95bde32c0c27dbe5ac0b9a42117))
+* **shell:** add steps to update script ([e5ea227](https://github.com/snelling-a/dotfiles/commit/e5ea2273af65c48c771cb926679de48190915e36))
+* zed ([9bef098](https://github.com/snelling-a/dotfiles/commit/9bef098b76a161458bb9703dd842f18e099f7928))
+
+
+### Bug Fixes
+
+* **lf:** fix file detection images ([e72a7ff](https://github.com/snelling-a/dotfiles/commit/e72a7ffe6e9d600ead052bbd1c3ffc342d3685de))
+* **lf:** remove .ts from media types ([fa43bc6](https://github.com/snelling-a/dotfiles/commit/fa43bc6f112d483a1c299feae06b63c1e2401db9))
+* **lf:** view binaries ([2d98cae](https://github.com/snelling-a/dotfiles/commit/2d98cae13f3626e07aad4f43182b4d3a09aba530))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([f054701](https://github.com/snelling-a/dotfiles/commit/f054701b20a51663b158b2da7e08ea12e9d62231))
+* **brew:** update packages ([c701c56](https://github.com/snelling-a/dotfiles/commit/c701c5660b83a30bec91e15c0d17d7e893a7cff3))
+* **brew:** update packages ([f7bc58e](https://github.com/snelling-a/dotfiles/commit/f7bc58ef59d9d905ed03b96b703e2698c4dc11ff))
+* **spell:** update cspell.json ([1329fb1](https://github.com/snelling-a/dotfiles/commit/1329fb1fd10bcf12f0c259b354317ef418f83be5))
+
 ## [1.7.0](https://github.com/snelling-a/dotfiles/compare/v1.6.1...v1.7.0) (2023-06-04)
 
 
