@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.8.1](https://github.com/snelling-a/dotfiles/compare/v1.8.0...v1.8.1) (2023-06-14)
+
+
+### Bug Fixes
+
+* **lf:** allow paging in preview mode ([298e0bf](https://github.com/snelling-a/dotfiles/commit/298e0bf1fd1c3d9b45bcc46671d7b13b3aaf3b67))
+* **shell:** typo ([f22feee](https://github.com/snelling-a/dotfiles/commit/f22feee08019711dcf5ecd3a577c047af715d14f))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([9d50964](https://github.com/snelling-a/dotfiles/commit/9d50964f33daf0fd1d99115a4243b631aca0c4f2))
+* **spell:** update cspell.json ([8af4489](https://github.com/snelling-a/dotfiles/commit/8af4489307a3a1ebd3ab29d5db8d5227c88d6d86))
+
 ## [1.8.0](https://github.com/snelling-a/dotfiles/compare/v1.7.0...v1.8.0) (2023-06-11)
 
 
