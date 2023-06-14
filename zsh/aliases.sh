@@ -74,7 +74,7 @@ brewup() {
 	echo "Updating Neovim nightly..."
 	nvim_update &
 	wait
-	install_plugins && firenvim &
+	update_plugins && firenvim &
 	wait
 	echo "Updating brewfile..."
 	brew bundle dump --force &
