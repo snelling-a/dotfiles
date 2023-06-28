@@ -47,7 +47,7 @@ brew "go"
 brew "helm"
 brew "hexyl"
 brew "jq"
-brew "kubernetes-cli"
+brew "kubernetes-cli", link: false
 brew "lazygit", args: ["HEAD"]
 brew "lf"
 brew "llvm"
