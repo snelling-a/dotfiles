@@ -1,6 +1,5 @@
 *local/
 
-config/gh/hosts.yml
 config/git/gitconfig_local
 config/lazygit/state.yml
 
