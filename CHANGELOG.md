@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/snelling-a/dotfiles/compare/v1.7.0...v1.8.0) (2023-07-03)
+
+
+### Features
+
+* backup raycast ([1c11470](https://github.com/snelling-a/dotfiles/commit/1c114709c6972dedd8942e51280975894e343aaf))
+
 ## [1.7.0](https://github.com/snelling-a/dotfiles/compare/v1.6.1...v1.7.0) (2023-06-04)
 
 
