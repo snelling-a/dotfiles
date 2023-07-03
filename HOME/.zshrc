@@ -15,8 +15,8 @@ done
 export LANG=en_US.UTF-8
 
 stty sane
-# set -o vi
-# bindkey -v
+set -o vi
+bindkey -v
 
 export MANPAGER='nvim +Man!'
 
@@ -37,7 +37,7 @@ fpath=($DOTFILES/zsh/completions $fpath)
 autoload -Uz compinit
 compinit
 
-if [[ $TERM == *-256color ]]; then
+if [[ $TERM_PROGRAM == WezTerm ]]; then
     export TERM=wezterm
 fi
 
