@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.0](https://github.com/snelling-a/dotfiles/compare/v1.9.0...v1.10.0) (2023-07-03)
+
+
+### Features
+
+* backup local home dotfiles ([e4df1b0](https://github.com/snelling-a/dotfiles/commit/e4df1b0689b8f899f888dc13f4ab09d1f6c1d55f))
+
 ## [1.9.0](https://github.com/snelling-a/dotfiles/compare/v1.8.4...v1.9.0) (2023-07-03)
 
 
