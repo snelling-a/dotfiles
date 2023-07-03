@@ -16,15 +16,20 @@ alias ~='cd ~'
 
 alias h='history'
 
-alias vim_stable="NVIM_APPNAME=neovim nvim"
 alias vim="nvim"
+alias firenvim="nvim --headless -c \"call firenvim#install(0, 'export PATH=\"$PATH\"')\" -c quit"
+alias update_plugins="dots && cd config/nvim && nvim --headless \"+Lazy! sync\" +qa"
+
 alias code="codium"
 
 alias rm="trash -v"
 alias "rm -rf"="rm"
 alias empty="trash -ey" # 'y' skips confirmation step
 
-alias dots="cd $DOTFILES"
+dots() {
+	cd "$DOTFILES" || exit
+}
+
 alias notes="cd $NOTES"
 alias work="cd $WORK"
 alias dockerclean="docker system prune -af --volumes"
@@ -57,17 +62,19 @@ alias nvim_update="brew upgrade neovim --fetch-HEAD"
 
 brewup() {
 	sudo echo "Updating all the things..."
-	cd "$DOTFILES" || exit
+	dots
 	echo "Updating homebrew packages..."
 	brew update && brew upgrade &
 	wait
 	brew upgrade --greedy --no-quarantine &
 	wait
-	echo "Updating Wezterm nightly..."
-	wez_update &
-	wait
+	# echo "Updating Wezterm nightly..."
+	# wez_update &
+	# wait
 	echo "Updating Neovim nightly..."
 	nvim_update &
+	wait
+	update_plugins && firenvim &
 	wait
 	echo "Updating brewfile..."
 	brew bundle dump --force &
