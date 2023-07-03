@@ -10,3 +10,6 @@
 [submodule "scripts/local"]
 	path = scripts/local
 	url = git@github.com:snelling-a/local_scripts.git
+[submodule "zsh/local"]
+	path = zsh/local
+	url = git@github.com:snelling-a/local_zsh.git
