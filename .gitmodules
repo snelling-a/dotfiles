@@ -1,3 +1,9 @@
 [submodule "config/nvim"]
 	path = config/nvim
 	url = https://github.com/snelling-a/nvim
+[submodule "scripts/local_scripts"]
+	path = scripts/local_scripts
+	url = git@github.com:snelling-a/local_scripts.git
+[submodule "HOME/local"]
+	path = HOME/local
+	url = git@github.com:snelling-a/local_home.git
