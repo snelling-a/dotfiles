@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.1](https://github.com/snelling-a/dotfiles/compare/v1.8.0...v1.8.1) (2023-07-03)
+
+
+### Bug Fixes
+
+* gh hosts ([4f39f49](https://github.com/snelling-a/dotfiles/commit/4f39f49a8b26752c1ad722a4472f90fa55d2247e))
+
 ## [1.8.0](https://github.com/snelling-a/dotfiles/compare/v1.7.0...v1.8.0) (2023-07-03)
 
 
