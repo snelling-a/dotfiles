@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.4](https://github.com/snelling-a/dotfiles/compare/v1.8.3...v1.8.4) (2023-07-03)
+
+
+### Bug Fixes
+
+* **zsh:** completions ([0223544](https://github.com/snelling-a/dotfiles/commit/0223544e76e9005a33969078439271cc8416bff3))
+
 ## [1.8.3](https://github.com/snelling-a/dotfiles/compare/v1.8.2...v1.8.3) (2023-07-03)
 
 
