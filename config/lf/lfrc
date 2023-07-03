@@ -15,7 +15,7 @@ set incfilter
 set incsearch
 set number
 set preview
-set previewer ~/.config/lf/previewer.sh
+set previewer ~/.config/lf/pv.sh
 set ratios '1:2:2'
 set relativenumber
 set scrolloff 10

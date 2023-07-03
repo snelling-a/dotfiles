@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 set -eu
 
 FILE="${1}"
@@ -9,6 +10,60 @@ WIDTH="$((WIDTH - 3))"
 HEIGHT="$((HEIGHT - 3))"
 
 [ -L "${FILE}" ] && FILE="$(readlink "$FILE")"
+
+view_sqlite() {
+	echo -e "# \e[1;37mTABLES\e[0m\n"
+	sqlite3 "$FILE" ".tables"
+	echo -e "\n# \e[1;37mSCHEMA\e[0m\n"
+	sqlite3 "$FILE" ".schema"
+	return $?
+}
+
+view_image() {
+	local input="${1:-$FILE}"
+
+	viu -sb -w "$WIDTH" "$input" ||
+		chafa -s "$WIDTH"x"$HEIGHT" "$input" ||
+		local result=$?
+
+	return "$result"
+}
+
+view_binary() {
+	local len="$((WIDTH * HEIGHT))"
+
+	hexyl -n "$len" --border none "$FILE" ||
+		hexdump -n "$len" -C "$FILE"
+
+	return $?
+}
+
+view_sourcecode() {
+	local input="${1:-$FILE}"
+
+	BAT_CONFIG_PATH='' bat "${input}" \
+		--theme=base16 --color=always --tabs=2 --wrap=auto \
+		--style=plain --terminal-width "${WIDTH}" ||
+		cat "${input}"
+
+	return $?
+}
+
+view_opendocument() {
+	if ! hash pandoc 2>/dev/null; then
+		odt2txt "${FILE}"
+	elif ! hash glow 2>/dev/null; then
+		pandoc "${FILE}" --to=markdown || odt2txt "${FILE}"
+	else
+		glow -s dark -w "${WIDTH}" \
+			<(pandoc "${FILE}" --to=markdown || odt2txt "${FILE}")
+	fi
+	return $?
+}
+
+not_implemented() {
+	echo "not implemented"
+}
 
 main() {
 	# Display title and border
@@ -45,7 +100,7 @@ main() {
 
 	case "$(file -b --mime-type "${FILE}")" in
 	image/*) view_image || view_binary ;;
-	application/pdf) view_pdf || view_binary ;;
+	application/pdf) view_binary ;;
 	application/gzip | application-x-xz) tar tvf "${FILE}" ;;
 	application/x-sqlite*) view_binary ;;
 	application/x-terminfo | text/x-bytecode.python) view_binary ;;
@@ -59,64 +114,6 @@ main() {
 	*) view_sourcecode ;;
 	esac
 	return $?
-}
-
-view_pdf() {
-	not_implemented
-}
-
-view_binary() {
-	local len="$((WIDTH * HEIGHT))"
-
-	hexyl -n "$len" --border none "$FILE" ||
-		hexdump -n "$len" -C "$FILE"
-
-	return $?
-}
-
-view_sourcecode() {
-	local input="${1:-$FILE}"
-
-	BAT_CONFIG_PATH='' bat "${input}" \
-		--theme=base16 --color=always --paging=never --tabs=2 --wrap=auto \
-		--style=plain --terminal-width "${WIDTH}" --line-range :"${HEIGHT}" ||
-		cat "${input}"
-
-	return $?
-}
-
-view_image() {
-	local input="${1:-$FILE}"
-
-	viu -sb -w "$WIDTH" "$input" ||
-	chafa -s "$WIDTH"x"$HEIGHT" "$input" ||
-		local result=$?
-
-	return "$result"
-}
-
-view_opendocument() {
-	if ! hash pandoc 2>/dev/null; then
-		odt2txt "${FILE}"
-	elif ! hash glow 2>/dev/null; then
-		pandoc "${FILE}" --to=markdown || odt2txt "${FILE}"
-	else
-		glow -s dark -w "${WIDTH}" \
-			<(pandoc "${FILE}" --to=markdown || odt2txt "${FILE}")
-	fi
-	return $?
-}
-
-view_sqlite() {
-	echo -e "# \e[1;37mTABLES\e[0m\n"
-	sqlite3 "$FILE" ".tables"
-	echo -e "\n# \e[1;37mSCHEMA\e[0m\n"
-	sqlite3 "$FILE" ".schema"
-	return $?
-}
-
-not_implemented() {
-	echo "not implemented"
 }
 
 main "$FILE"
