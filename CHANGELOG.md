@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.11.0](https://github.com/snelling-a/dotfiles/compare/v1.10.0...v1.11.0) (2023-07-03)
+
+
+### Features
+
+* backup local scripts ([dd00463](https://github.com/snelling-a/dotfiles/commit/dd00463bfbb96a452bac6c0e439373fdbf0bbe79))
+* backup local zsh setup ([ad57bcd](https://github.com/snelling-a/dotfiles/commit/ad57bcdf19d4c5511050a8972a9dd4cdeef409b9))
+
 ## [1.10.0](https://github.com/snelling-a/dotfiles/compare/v1.9.0...v1.10.0) (2023-07-03)
 
 
