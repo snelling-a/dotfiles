@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.2](https://github.com/snelling-a/dotfiles/compare/v1.8.1...v1.8.2) (2023-07-03)
+
+
+### Bug Fixes
+
+* **shell:** fix TERM variable ([92cb5ed](https://github.com/snelling-a/dotfiles/commit/92cb5ed297f93f5281332e9ebdb030c998c0b954))
+
 ## [1.8.1](https://github.com/snelling-a/dotfiles/compare/v1.8.0...v1.8.1) (2023-07-03)
 
 
