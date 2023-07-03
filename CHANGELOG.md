@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/snelling-a/dotfiles/compare/v1.7.0...v1.8.0) (2023-07-03)
+
+
+### Features
+
+* **shell:** aliases ([e7acc64](https://github.com/snelling-a/dotfiles/commit/e7acc64cba73c400a3c694165a0ed45917a74f46))
+
 ## [1.7.0](https://github.com/snelling-a/dotfiles/compare/v1.6.1...v1.7.0) (2023-06-04)
 
 
