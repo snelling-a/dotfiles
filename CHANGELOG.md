@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.3](https://github.com/snelling-a/dotfiles/compare/v1.8.2...v1.8.3) (2023-07-03)
+
+
+### Bug Fixes
+
+* **lf:** preview images ([50ed18f](https://github.com/snelling-a/dotfiles/commit/50ed18f6ca9c9be6f0f35f9b1fcd51d05712b746))
+
 ## [1.8.2](https://github.com/snelling-a/dotfiles/compare/v1.8.1...v1.8.2) (2023-07-03)
 
 
