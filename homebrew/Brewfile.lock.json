@@ -24,6 +24,9 @@
       },
       "ms-jpq/sad": {
         "revision": "56d68746691be5882940129392f197e6e9bb3e9e"
+      },
+      "yakitrak/yakitrak": {
+        "revision": "b26c0414b61489dcea89f0756bf9403c4e2362c0"
       }
     },
     "brew": {
