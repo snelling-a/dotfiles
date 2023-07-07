@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.12.0](https://github.com/snelling-a/dotfiles/compare/v1.11.0...v1.12.0) (2023-07-07)
+
+
+### Features
+
+* **brew:** casks ([4425486](https://github.com/snelling-a/dotfiles/commit/4425486f65d8d5a3e65fe8c769a07a463a2d64be))
+* **cli:** obsidian ([96c5e77](https://github.com/snelling-a/dotfiles/commit/96c5e772da498392802e65c5f305c2957dded275))
+* **cli:** sad ([1894b64](https://github.com/snelling-a/dotfiles/commit/1894b646000d7688a7b851af7f773f8ea76ad233))
+* **cli:** sk ([7cb31b5](https://github.com/snelling-a/dotfiles/commit/7cb31b5009df23ea9008bfff0ac317765beba435))
+* **shell:** improvements ([0dd6d23](https://github.com/snelling-a/dotfiles/commit/0dd6d237dcacf05fedba2bdb06c569558fd4fabb))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([2c23fdd](https://github.com/snelling-a/dotfiles/commit/2c23fdd5ec4ec13f2b8f06368f3a73f2ef5d07f8))
+* **spell:** update cspell.json ([cc0f9f5](https://github.com/snelling-a/dotfiles/commit/cc0f9f5af3c62c0f7cd69224528fb23e23608751))
+
 ## [1.11.0](https://github.com/snelling-a/dotfiles/compare/v1.10.0...v1.11.0) (2023-07-03)
 
 
