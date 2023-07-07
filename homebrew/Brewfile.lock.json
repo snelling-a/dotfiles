@@ -4258,6 +4258,30 @@
         "options": {
           "full_name": "nextcloud"
         }
+      },
+      "element": {
+        "version": "1.11.35",
+        "options": {
+          "full_name": "element"
+        }
+      },
+      "zed": {
+        "version": "0.93.4",
+        "options": {
+          "full_name": "zed"
+        }
+      },
+      "bitwarden": {
+        "version": "2023.5.1",
+        "options": {
+          "full_name": "bitwarden"
+        }
+      },
+      "appcleaner": {
+        "version": "3.6.8",
+        "options": {
+          "full_name": "appcleaner"
+        }
       }
     }
   },
