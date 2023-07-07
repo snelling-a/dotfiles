@@ -70,6 +70,7 @@ brew "ruby-install"
 brew "sd"
 brew "shellcheck"
 brew "shfmt"
+brew "sk"
 brew "starship", args: ["HEAD"]
 brew "stylua"
 brew "the_silver_searcher"
