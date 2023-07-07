@@ -9,13 +9,12 @@ tap "snyk/tap"
 tap "yakitrak/yakitrak"
 brew "act"
 brew "libyaml"
-brew "openssl@1.1"
 brew "readline"
 brew "automake"
 brew "bash"
 brew "bat"
 brew "bison"
-brew "node", link: false
+brew "node"
 brew "bitwarden-cli"
 brew "bottom", args: ["HEAD"]
 brew "gettext"
@@ -48,7 +47,7 @@ brew "gnupg"
 brew "go"
 brew "helm"
 brew "jq"
-brew "kubernetes-cli"
+brew "kubernetes-cli", link: false
 brew "lazygit", args: ["HEAD"]
 brew "lf"
 brew "llvm"
@@ -61,6 +60,7 @@ brew "mercurial"
 brew "microplane"
 brew "neofetch", args: ["HEAD"]
 brew "neovim", args: ["HEAD"]
+brew "openssl@1.1"
 brew "pandoc"
 brew "python-gdbm@3.11"
 brew "python-tk@3.11"
