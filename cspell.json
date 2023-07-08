@@ -9,9 +9,12 @@
   "enabled": true,
   "ignorePaths": [
     "./config/nvim/",
+    "./config/raycast/",
+    "./HOME/local/",
+    "./scripts/local/",
+    "./zsh/local/",
     ".git/",
-    "Session.vim",
-    "local/"
+    "Session.vim"
   ],
   "ignoreWords": [],
   "import": [
