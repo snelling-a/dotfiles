@@ -90,6 +90,10 @@ generate_completions() {
 	glow completion zsh >"$competion_dir/zsh/completions/_glow"
 }
 
+setup_macos_defaults() {
+	bash "$DOTFILES/scripts/macos_defaults.sh"
+}
+
 clone_notes() {
 	if [ ! -d "$NOTES" ]; then
 		echo "Cloning notes to $NOTES"
@@ -99,13 +103,13 @@ clone_notes() {
 
 mkdir "$backup_dir"
 
-create_symlinks
+setup_macos_defaults
+brew_install
 
+create_symlinks
 link_config_directories
 
 source_aliases
-
-brew_install
 
 generate_completions
 
