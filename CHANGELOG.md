@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.13.0](https://github.com/snelling-a/dotfiles/compare/v1.12.0...v1.13.0) (2023-07-08)
+
+
+### Features
+
+* **macos:** set macos defaults ([c2f54a2](https://github.com/snelling-a/dotfiles/commit/c2f54a23c2495a19eb44d3e5ff08d45aa655ab8b))
+
+
+### Miscellaneous
+
+* **spell:** update cspell.json ([b4af658](https://github.com/snelling-a/dotfiles/commit/b4af658ad8e7da4b547ee1761bee401d58b930ec))
+* update submodules ([552dae6](https://github.com/snelling-a/dotfiles/commit/552dae669a1da8dd6c663833567ddd90a24c5c4f))
+
 ## [1.12.0](https://github.com/snelling-a/dotfiles/compare/v1.11.0...v1.12.0) (2023-07-07)
 
 
