@@ -117,7 +117,7 @@ defaults write NSGlobalDomain AppleMetricUnits -bool true
 # Energy saving                                                               #
 ###############################################################################
 
-# Enable lid wakeup
+# Enable lid wake up
 sudo pmset -a lidwake 1
 
 # Restart automatically on power loss

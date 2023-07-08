@@ -81,13 +81,19 @@ generate_completions() {
 		mkdir "$competion_dir"
 	fi
 
-	wezterm shell-completion --shell zsh >"$competion_dir/_wezterm"
-
 	bw completion --shell=zsh >"$competion_dir/_bw"
 
 	curl https://raw.githubusercontent.com/gokcehan/lf/master/etc/lf.zsh -o "$competion_dir/_lf"
 
-	glow completion zsh >"$competion_dir/zsh/completions/_glow"
+	gh completion -s zsh >"$competion_dir/_gh"
+
+	glow completion zsh >"$competion_dir/_glow"
+
+	obs completion zsh >"$competion_dir/_obs"
+
+	wezterm shell-completion --shell zsh >"$competion_dir/_wezterm"
+}
+
 }
 
 setup_macos_defaults() {
