@@ -34,7 +34,7 @@ is_dir() {
 }
 
 create_symlinks() {
-	for f in ./HOME/.* ./local/.*; do
+	for f in ./HOME/.* ./HOME/local/.*; do
 		is_file "$f" && link_file "$f"
 	done
 }
@@ -55,21 +55,14 @@ check_for_backups() {
 	fi
 }
 
-source_aliases() {
-	if [ -f "$HOME/.zshenv" ]; then
-		source "$HOME/.zshenv"
-		source "$DOTFILES/zsh/aliases.sh"
-	fi
-	if [ -f "$HOME/.bashrc" ]; then
-		source "$HOME/.bashrc"
-	fi
-}
-
 brew_install() {
 	if ! command -v brew >/dev/null; then
+		xcode-select --install
 		echo "Installing Homebrew ..."
 		/bin/bash -c \
 			"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+		chmod -R go-w "$(brew --prefix)/share"
 	fi
 
 	brew bundle install
@@ -77,6 +70,7 @@ brew_install() {
 
 generate_completions() {
 	competion_dir="$DOTFILES/zsh/completions"
+
 	if [ ! -d "$competion_dir" ]; then
 		mkdir "$competion_dir"
 	fi
@@ -94,6 +88,18 @@ generate_completions() {
 	wezterm shell-completion --shell zsh >"$competion_dir/_wezterm"
 }
 
+setup_wezterm() {
+	tempfile=$(mktemp) &&
+		curl -o "$tempfile" https://raw.githubusercontent.com/wez/wezterm/master/termwiz/data/wezterm.terminfo &&
+		tic -x -o ~/.terminfo "$tempfile" &&
+		rm "$tempfile"
+
+}
+
+setup_fzf() {
+	if ! command -v fzf >/dev/null; then
+		/opt/homebrew/opt/fzf/install
+	fi
 }
 
 setup_macos_defaults() {
@@ -115,9 +121,10 @@ brew_install
 create_symlinks
 link_config_directories
 
-source_aliases
-
 generate_completions
+
+setup_wezterm
+setup_fzf
 
 clone_notes
 
