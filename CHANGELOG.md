@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.13.1](https://github.com/snelling-a/dotfiles/compare/v1.13.0...v1.13.1) (2023-07-08)
+
+
+### Bug Fixes
+
+* install script ([35f89e5](https://github.com/snelling-a/dotfiles/commit/35f89e52ad3ecee2cf67d510f9057659fe660402))
+
+
+### Miscellaneous
+
+* **spell:** update cspell.json ([b9d760e](https://github.com/snelling-a/dotfiles/commit/b9d760e409d711ed63e7ed252d30fdee7f1580eb))
+
 ## [1.13.0](https://github.com/snelling-a/dotfiles/compare/v1.12.0...v1.13.0) (2023-07-08)
 
 
