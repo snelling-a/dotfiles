@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.13.2](https://github.com/snelling-a/dotfiles/compare/v1.13.1...v1.13.2) (2023-07-10)
+
+
+### Bug Fixes
+
+* **brew:** downloading is now done from the api ([8131c46](https://github.com/snelling-a/dotfiles/commit/8131c46866aea6d304f1acc3d1f23dec3a8605b2))
+* starship regression ([b0ddac8](https://github.com/snelling-a/dotfiles/commit/b0ddac830ce23c1c075556349c7b8c1b936723cf))
+
+
+### Miscellaneous
+
+* update submodules ([2143cc6](https://github.com/snelling-a/dotfiles/commit/2143cc6fdd3a20d599a43844433dc57474c7be23))
+
 ## [1.13.1](https://github.com/snelling-a/dotfiles/compare/v1.13.0...v1.13.1) (2023-07-08)
 
 
