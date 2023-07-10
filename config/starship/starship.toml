@@ -3,39 +3,7 @@
 add_newline         = false
 continuation_prompt = '[▶▶](bright-black)'
 format              = """$sudo$status$directory$character"""
-# right_format is broken in v1.13.* remove when fixed
-# right_format        = """$all"""
-
-right_format = """
-$localip\
-$shlv
-$kubernetes\
-$git_branch\
-$git_commit\
-$git_state\
-$git_metrics\
-$git_status\
-$hg_branch\
-$docker_context\
-$package\
-$deno\
-$elm\
-$golang\
-$helm\
-$lua\
-$nodejs\
-$python\
-$ruby\
-$rust\
-$zig\
-$memory_usage\
-$env_var\
-$cmd_duration\
-$line_break\
-$jobs\
-$battery\
-$container\
-"""
+right_format        = """$all"""
 
 [battery]
   format         = '\[[$symbol$percentage]($style)\]'
