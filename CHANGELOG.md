@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.13.3](https://github.com/snelling-a/dotfiles/compare/v1.13.2...v1.13.3) (2023-07-11)
+
+
+### Bug Fixes
+
+* macos defaults ([b84c783](https://github.com/snelling-a/dotfiles/commit/b84c783abc221b43efb248b9fa393a6e1178a18b))
+
+
+### Miscellaneous
+
+* update packages ([8e82964](https://github.com/snelling-a/dotfiles/commit/8e82964cc631e6dbce45be61af19b35ce9cbc9d9))
+* update submodule ([c70afc2](https://github.com/snelling-a/dotfiles/commit/c70afc298603754053891f1bb6620e08d63a77a4))
+
 ## [1.13.2](https://github.com/snelling-a/dotfiles/compare/v1.13.1...v1.13.2) (2023-07-10)
 
 
