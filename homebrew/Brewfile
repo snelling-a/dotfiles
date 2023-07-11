@@ -73,7 +73,7 @@ brew "sd"
 brew "shellcheck"
 brew "shfmt"
 brew "sk"
-brew "starship"
+brew "starship", args: ["HEAD"]
 brew "stylua"
 brew "the_silver_searcher"
 brew "tig"
