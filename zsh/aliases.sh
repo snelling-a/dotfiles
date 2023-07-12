@@ -18,7 +18,7 @@ alias h='history'
 
 alias vim="nvim"
 alias firenvim="nvim --headless -c \"call firenvim#install(0, 'export PATH=\"$PATH\"')\" -c quit"
-alias update_plugins="dots && cd config/nvim && nvim --headless \"+Lazy! sync\" +qa"
+alias update_plugins="nvim --headless \"+Lazy! sync\" +qa"
 
 alias code="codium"
 
