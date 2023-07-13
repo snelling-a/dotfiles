@@ -2,22 +2,22 @@
   "entries": {
     "tap": {
       "fsouza/prettierd": {
-        "revision": "67db628c31ee38b6219ee18a20e6be1ac1304a54"
+        "revision": "2e128f1811c514823e3f59f5b210a70f5c60e598"
       },
       "homebrew/bundle": {
-        "revision": "5264d22973740ffcfa456be537930e431c19f4c7"
+        "revision": "2ab409bef9d94ce127bc611651d3af8ebb9edcdb"
       },
       "homebrew/cask-fonts": {
         "revision": "2f386c9e6738fb95545dca800fc1e56808d8155a"
       },
       "homebrew/cask-versions": {
-        "revision": "549aed43e3942e14a9da677694cfd71e5c2f1228"
+        "revision": "76f55ca3b9e1f6998f42228b7bd36df26842633f"
       },
       "ms-jpq/sad": {
         "revision": "28a126b0e9db17ba89d98ce2e35b6a63572ac440"
       },
       "snyk/tap": {
-        "revision": "72a3e47697eaeff5d4508e22db45f1646fcf7ffb"
+        "revision": "a59668203e3d62467967502f148f035bab0f5971"
       },
       "yakitrak/yakitrak": {
         "revision": "b26c0414b61489dcea89f0756bf9403c4e2362c0"
@@ -2495,7 +2495,7 @@
         }
       },
       "neovim": {
-        "version": "HEAD-ef94fb6",
+        "version": "HEAD-0ce3910",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -4233,7 +4233,7 @@
         }
       },
       "fsouza/prettierd/prettierd": {
-        "version": "0.24.1",
+        "version": "0.24.2",
         "bottle": false
       },
       "ms-jpq/sad/sad": {
@@ -4241,7 +4241,7 @@
         "bottle": false
       },
       "snyk/tap/snyk": {
-        "version": "1.1187.0",
+        "version": "1.1188.0",
         "bottle": false
       },
       "yakitrak/yakitrak/obs": {
@@ -4293,7 +4293,7 @@
         }
       },
       "cursor": {
-        "version": "0.2.45",
+        "version": "0.2.46",
         "options": {
           "full_name": "cursor"
         }
@@ -4377,7 +4377,7 @@
         }
       },
       "postman": {
-        "version": "10.15.0",
+        "version": "10.16.0",
         "options": {
           "full_name": "postman"
         }
