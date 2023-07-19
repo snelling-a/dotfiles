@@ -42,8 +42,13 @@ view_sourcecode() {
 	local input="${1:-$FILE}"
 
 	BAT_CONFIG_PATH='' bat "${input}" \
-		--theme=base16 --color=always --tabs=2 --wrap=auto \
-		--style=plain --terminal-width "${WIDTH}" ||
+		--theme=base16 \
+		--color=always \
+		--tabs=2 \
+		--wrap=auto \
+		--style=plain \
+		--number \
+		--terminal-width "${WIDTH}" ||
 		cat "${input}"
 
 	return $?
