@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.9](https://github.com/snelling-a/dotfiles/compare/v1.13.8...v1.13.9) (2023-07-19)
+
+
+### Miscellaneous
+
+* update submodules ([2522151](https://github.com/snelling-a/dotfiles/commit/252215189629e7739a5367a08b62bdcc7c508985))
+
 ## [1.13.8](https://github.com/snelling-a/dotfiles/compare/v1.13.7...v1.13.8) (2023-07-18)
 
 
