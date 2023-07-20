@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.13.10](https://github.com/snelling-a/dotfiles/compare/v1.13.9...v1.13.10) (2023-07-20)
+
+
+### Bug Fixes
+
+* **lf:** add numbers to bat/previewer ([a259d50](https://github.com/snelling-a/dotfiles/commit/a259d508dbe32a02b1560f75c407612614427c23))
+* PATH ([1a61a58](https://github.com/snelling-a/dotfiles/commit/1a61a5872fa8bd91013a294e54f33669b1c4bc9c))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([bdd6701](https://github.com/snelling-a/dotfiles/commit/bdd670123a693f2055b407e03b75658cb661a99d))
+* update submodules ([ba66e63](https://github.com/snelling-a/dotfiles/commit/ba66e63ad17460e2c3252ddd90317ee346701676))
+
 ## [1.13.9](https://github.com/snelling-a/dotfiles/compare/v1.13.8...v1.13.9) (2023-07-19)
 
 
