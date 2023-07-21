@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.14.0](https://github.com/snelling-a/dotfiles/compare/v1.13.10...v1.14.0) (2023-07-21)
+
+
+### Features
+
+* **script:** merge_pr ([2ff40b3](https://github.com/snelling-a/dotfiles/commit/2ff40b372b62e70288a2838e7ff9673d836c84e9))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([502b359](https://github.com/snelling-a/dotfiles/commit/502b359b14e25739b7aa88b451d6d75d6479c99b))
+* update submodule ([639c40b](https://github.com/snelling-a/dotfiles/commit/639c40b068887f739f68ce4327805b782260d5c7))
+
 ## [1.13.10](https://github.com/snelling-a/dotfiles/compare/v1.13.9...v1.13.10) (2023-07-20)
 
 
