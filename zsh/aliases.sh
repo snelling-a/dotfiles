@@ -57,39 +57,5 @@ cargoup() {
 
 alias brew_list="brew info --json=v2 --installed | jq -r '.formulae[]|select(any(.installed[]; .installed_on_request)).full_name'"
 
-alias wez_update="brew upgrade --cask wezterm-nightly --no-quarantine --greedy-latest"
-alias nvim_update="brew upgrade neovim --fetch-HEAD"
-
-brewup() {
-	sudo echo "Updating all the things..."
-	dots
-	echo "Updating homebrew packages..."
-	brew update && brew upgrade &
-	wait
-	brew upgrade --greedy --no-quarantine &
-	wait
-	# echo "Updating Wezterm nightly..."
-	# wez_update &
-	# wait
-	echo "Updating Neovim nightly..."
-	nvim_update &
-	wait
-	update_plugins && firenvim &
-	wait
-	echo "Updating brewfile..."
-	brew bundle dump --force &
-	wait
-	brew bundle &
-	wait
-	echo "Cleaning up homebrew..."
-	brew cleanup -s &
-	wait
-	echo "Updating crates..."
-	cargoup &
-	wait
-	printf "\nDone!\nHappy Hacking!"
-
-}
-
 export HOMEBREW_BUNDLE_FILE=$DOTFILES/homebrew/Brewfile
 export HOMEBREW_NO_ANALYTICS=1
