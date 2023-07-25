@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.14.1](https://github.com/snelling-a/dotfiles/compare/v1.14.0...v1.14.1) (2023-07-25)
+
+
+### Miscellaneous
+
+* **brew:** update packages ([1c68b0b](https://github.com/snelling-a/dotfiles/commit/1c68b0b1e406b56fbe2fa2fd9cfce89c91e595b3))
+* update submodules ([87c5aa6](https://github.com/snelling-a/dotfiles/commit/87c5aa6f853e733fd12a98d6d55d2a3c2c43b0ad))
+
 ## [1.14.0](https://github.com/snelling-a/dotfiles/compare/v1.13.10...v1.14.0) (2023-07-21)
 
 
