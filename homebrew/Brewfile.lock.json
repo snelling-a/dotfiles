@@ -5,19 +5,19 @@
         "revision": "2e128f1811c514823e3f59f5b210a70f5c60e598"
       },
       "homebrew/bundle": {
-        "revision": "fd80bbe5227c4d4636bf9767b2db1a1320f6e165"
+        "revision": "c9a60af09e39759d9f7e82f33d53d0def96cfff2"
       },
       "homebrew/cask-fonts": {
         "revision": "881b7c19be138605e0bc5c0069333ec57b23c4f5"
       },
       "homebrew/cask-versions": {
-        "revision": "ebb090fbca6bff929f0ab3628b783d6c918c06fe"
+        "revision": "2565d47c67e8ad2fbbf38bfc2c613cb560d7a9ef"
       },
       "ms-jpq/sad": {
         "revision": "d815db975448a0cca1b967748a11d11d37ab1474"
       },
       "snyk/tap": {
-        "revision": "cf81e8761e2b0ced29ca086117e7e1e7743fadc8"
+        "revision": "1d104c2de72150d23b59593ab9afb21c57da21ea"
       },
       "yakitrak/yakitrak": {
         "revision": "b26c0414b61489dcea89f0756bf9403c4e2362c0"
@@ -2495,7 +2495,7 @@
         }
       },
       "neovim": {
-        "version": "HEAD-7668f89",
+        "version": "HEAD-14d047a",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -4271,7 +4271,7 @@
         "bottle": false
       },
       "snyk/tap/snyk": {
-        "version": "1.1194.0",
+        "version": "1.1196.0",
         "bottle": false
       },
       "yakitrak/yakitrak/obs": {
@@ -4367,7 +4367,7 @@
         }
       },
       "cursor": {
-        "version": "0.3.1",
+        "version": "0.4.0",
         "options": {
           "full_name": "cursor"
         }
@@ -4439,7 +4439,7 @@
         }
       },
       "nextcloud": {
-        "version": "3.9.0",
+        "version": "3.9.1",
         "options": {
           "full_name": "nextcloud"
         }
