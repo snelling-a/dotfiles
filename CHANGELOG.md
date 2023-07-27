@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.1.1](https://github.com/snelling-a/dotfiles/compare/v2.1.0...v2.1.1) (2023-07-27)
+
+
+### Bug Fixes
+
+* **git:** gpg.ssh.allowedSignersFile ([a0d6b8c](https://github.com/snelling-a/dotfiles/commit/a0d6b8c4d7231fff5539b7e6b7c8689e810c1950))
+
+
+### Miscellaneous
+
+* update submodules ([dad30f1](https://github.com/snelling-a/dotfiles/commit/dad30f1f45fef76c1329a885a3deda78b73dc035))
+
 ## [2.1.0](https://github.com/snelling-a/dotfiles/compare/v2.0.0...v2.1.0) (2023-07-27)
 
 
