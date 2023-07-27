@@ -1,9 +1,0 @@
----
-aliases:
-  co: pr checkout
-browser:
-editor: nvim
-git_protocol: ssh
-http_unix_socket:
-pager: delta -s
-prompt: enabled
