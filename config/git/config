@@ -129,6 +129,9 @@
 [ghq]
 	root = ~/dev
 
+[gpg "ssh"]
+	allowedSignersFile = /Users/andrew.snelling/.config/git/allowed_signers
+
 [gpg]
 	format = ssh
 
