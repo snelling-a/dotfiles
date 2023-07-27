@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.14.3](https://github.com/snelling-a/dotfiles/compare/v1.14.2...v1.14.3) (2023-07-26)
+
+
+### Bug Fixes
+
+* remove local from gitignore ([711d330](https://github.com/snelling-a/dotfiles/commit/711d3302cb7b4a41fdce3ca5eaa4d71704ee8da5))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([136e732](https://github.com/snelling-a/dotfiles/commit/136e732b1fc52095440fa205f7270b36969c3ea0))
+* update submodules ([5d77471](https://github.com/snelling-a/dotfiles/commit/5d77471bbf52fbb903db88a9bf9759738dca4c5a))
+
 ## [1.14.2](https://github.com/snelling-a/dotfiles/compare/v1.14.1...v1.14.2) (2023-07-25)
 
 
