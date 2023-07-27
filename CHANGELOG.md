@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.1.0](https://github.com/snelling-a/dotfiles/compare/v2.0.0...v2.1.0) (2023-07-27)
+
+
+### Features
+
+* config/.local folders in install script ([b5921f4](https://github.com/snelling-a/dotfiles/commit/b5921f493d50783b6788f71b447099b2dc7f52c7))
+* move gh cli to .local ([00d8b8d](https://github.com/snelling-a/dotfiles/commit/00d8b8daa6fa63475dacb30d50ff5e4c00b52722))
+* move raycast to .local ([d82a318](https://github.com/snelling-a/dotfiles/commit/d82a3186c27f41941ec36a2a16946f0bf0cd1d2f))
+* update install script ([b8fd831](https://github.com/snelling-a/dotfiles/commit/b8fd831bafe176ecbc34453f845ae031b1a3285a))
+
 ## [2.0.0](https://github.com/snelling-a/dotfiles/compare/v1.14.3...v2.0.0) (2023-07-27)
 
 
