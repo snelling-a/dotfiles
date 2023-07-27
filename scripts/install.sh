@@ -40,7 +40,7 @@ create_symlinks() {
 }
 
 link_config_directories() {
-	for dir in ./config/*; do
+	for dir in ./config/* .config/.local; do
 		is_dir "$dir" && link_dir "$dir"
 	done
 }
