@@ -42,7 +42,7 @@ fstash() {
 }
 
 # fbr - checkout git branch (including remote branches), sorted by most recent commit, limit 30 last branches
-fbr() {
+fbranch() {
 	local branches branch
 	branches=$(git for-each-ref --count=30 --sort=-committerdate refs/heads/ --format="%(refname:short)") &&
 		branch=$(echo "$branches" |
@@ -51,7 +51,7 @@ fbr() {
 }
 
 # fco_preview - checkout git branch/tag, with a preview showing the commits between the tag/branch and HEAD
-fco_preview() {
+fco() {
 	local branches target
 	branches=$(
 		git --no-pager branch --all \
