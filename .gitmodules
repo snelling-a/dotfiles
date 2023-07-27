@@ -7,9 +7,6 @@
 [submodule "config/nvim"]
 	path = config/nvim
 	url = https://github.com/snelling-a/nvim
-[submodule "config/raycast"]
-	path = config/raycast
-	url = git@github.com:snelling-a/raycast.git
 [submodule "scripts/local"]
 	path = scripts/local
 	url = git@github.com:snelling-a/local_scripts.git
