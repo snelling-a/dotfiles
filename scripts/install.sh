@@ -40,7 +40,7 @@ create_symlinks() {
 }
 
 link_config_directories() {
-	for dir in ./config/* .config/.local; do
+	for dir in ./config/* ./config/.local/*; do
 		is_dir "$dir" && link_dir "$dir"
 	done
 }
@@ -115,17 +115,17 @@ clone_notes() {
 
 mkdir "$backup_dir"
 
-setup_macos_defaults
-brew_install
+# setup_macos_defaults
+# brew_install
 
 create_symlinks
 link_config_directories
 
-generate_completions
+# generate_completions
 
-setup_wezterm
-setup_fzf
+# setup_wezterm
+# setup_fzf
 
-clone_notes
+# clone_notes
 
 check_for_backups
