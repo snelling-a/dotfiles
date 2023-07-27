@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.0.0](https://github.com/snelling-a/dotfiles/compare/v1.14.3...v2.0.0) (2023-07-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* reorganizing submodules
+
+### Features
+
+* config/.local init ([1fb52f8](https://github.com/snelling-a/dotfiles/commit/1fb52f85fdf65c39e0cecdf493401ce77e1f2d19))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([3882b0b](https://github.com/snelling-a/dotfiles/commit/3882b0b914e1ea506d6a240b78dbb34525001d51))
+* update submodules ([b045549](https://github.com/snelling-a/dotfiles/commit/b045549a89d201c72fde68d4244e6d4c0aa4e798))
+
 ## [1.14.3](https://github.com/snelling-a/dotfiles/compare/v1.14.2...v1.14.3) (2023-07-26)
 
 
