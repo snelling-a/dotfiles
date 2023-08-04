@@ -5,4 +5,4 @@ print_path() {
 }
 
 # pull gitignore template
-gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/ "$@"; }
+gi() { curl -sLw n "https://www.toptal.com/developers/gitignore/api/$*"; }
