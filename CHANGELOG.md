@@ -1,5 +1,23 @@
 # Changelog
 
+## [2.2.0](https://github.com/snelling-a/dotfiles/compare/v2.1.6...v2.2.0) (2023-08-06)
+
+
+### Features
+
+* gitignore ([29b4c7c](https://github.com/snelling-a/dotfiles/commit/29b4c7c0ddf1bf2f58fba59b8d7155eb9deeec53))
+
+
+### Bug Fixes
+
+* gitignore template function ([fc8b1d6](https://github.com/snelling-a/dotfiles/commit/fc8b1d62b6d5348303d6adcae3c3a07f4242310a))
+
+
+### Miscellaneous
+
+* update submodule ([1eacdd2](https://github.com/snelling-a/dotfiles/commit/1eacdd27d56a4ede728e524c98b57d74c56fb627))
+* update submodules ([7bcc723](https://github.com/snelling-a/dotfiles/commit/7bcc7235de6f16048495584e5f73a0356ceb78b4))
+
 ## [2.1.6](https://github.com/snelling-a/dotfiles/compare/v2.1.5...v2.1.6) (2023-08-04)
 
 
