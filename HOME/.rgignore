@@ -1,5 +1,2 @@
-node_modules
-vim_tags
 package-lock.json
 yarn.lock
-bower_components
