@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/snelling-a/dotfiles/compare/v2.2.1...v2.3.0) (2023-08-08)
+
+
+### Features
+
+* ripgrep-all ([a30c000](https://github.com/snelling-a/dotfiles/commit/a30c000f99bef5dde606bd1f2bbfbd1a0eb9c6c4))
+
 ## [2.2.1](https://github.com/snelling-a/dotfiles/compare/v2.2.0...v2.2.1) (2023-08-07)
 
 
