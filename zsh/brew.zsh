@@ -45,11 +45,6 @@ brewit() {
     ${italic}?${reset}       Help (this page)
     ${italic}ESC${reset}     Quit
 
-
-    It is also advised you use auto-updates, this can be done with:
-
-        brew autoupdate start --upgrade --cleanup --enable-notification
-
     "
 
 	echo install >"$tmp_file"
