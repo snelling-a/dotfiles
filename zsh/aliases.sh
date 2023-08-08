@@ -23,7 +23,6 @@ alias update_plugins="nvim --headless \"+Lazy! sync\" +qa"
 alias code="codium"
 
 alias rm="trash -v"
-alias "rm -rf"="rm"
 alias empty="trash -ey" # 'y' skips confirmation step
 
 dots() {
@@ -55,6 +54,7 @@ cargoup() {
 	cargo install $(cargo install --list | grep -E '^[a-z0-9_-]+ v[0-9.]+:$' | cut -f1 -d' ') --force
 }
 
+alias rg="rga"
 alias brew_list="brew info --json=v2 --installed | jq -r '.formulae[]|select(any(.installed[]; .installed_on_request)).full_name'"
 
 export HOMEBREW_BUNDLE_FILE=$DOTFILES/homebrew/Brewfile
