@@ -30,6 +30,7 @@ brew "detox"
 brew "efm-langserver"
 brew "python@3.11"
 brew "fd", args: ["HEAD"]
+brew "ffmpeg"
 brew "figlet"
 brew "fnm", args: ["HEAD"]
 brew "fzf", args: ["HEAD"]
@@ -40,7 +41,6 @@ brew "gh"
 brew "ghq", args: ["HEAD"]
 brew "git"
 brew "git-delta"
-brew "gitlint"
 brew "glow"
 brew "gnu-sed"
 brew "gnupg"
@@ -64,10 +64,11 @@ brew "neovim", args: ["HEAD"]
 brew "odt2txt"
 brew "openssl@1.1"
 brew "pandoc"
+brew "poppler"
 brew "python-gdbm@3.11"
 brew "python-tk@3.11"
 brew "ripgrep", args: ["HEAD"]
-brew "ripgrep-all"
+brew "ripgrep-all", args: ["HEAD"]
 brew "ruby-install"
 brew "sd"
 brew "shellcheck"
