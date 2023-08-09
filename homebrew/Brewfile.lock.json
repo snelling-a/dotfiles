@@ -11,7 +11,7 @@
         "revision": "8b8e56d013a4663a52ddee71aaa46ea1b06fc024"
       },
       "homebrew/cask-versions": {
-        "revision": "8d1b544d08ef99555604e6a85f543ac1fab9cd14"
+        "revision": "bb15bf3a9ba0f78c36430823725d767a37d61dd5"
       },
       "ms-jpq/sad": {
         "revision": "0764c3dae9f9c0b082e05e32255011d2c69a8cb1"
@@ -2490,7 +2490,7 @@
         }
       },
       "neovim": {
-        "version": "HEAD-0211f88",
+        "version": "HEAD-8afdc1f",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -4461,7 +4461,7 @@
         }
       },
       "arc": {
-        "version": "1.2.1,40552",
+        "version": "1.2.2,40648",
         "options": {
           "full_name": "arc"
         }
@@ -4617,7 +4617,7 @@
         }
       },
       "zed": {
-        "version": "0.97.5",
+        "version": "0.97.6",
         "options": {
           "full_name": "zed"
         }
