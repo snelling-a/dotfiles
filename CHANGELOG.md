@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.0](https://github.com/snelling-a/dotfiles/compare/v2.3.2...v2.4.0) (2023-08-13)
+
+
+### Features
+
+* onefetch ([361f0f2](https://github.com/snelling-a/dotfiles/commit/361f0f20fc66844b4f677c2c3676b3c0e345de76))
+
 ## [2.3.2](https://github.com/snelling-a/dotfiles/compare/v2.3.1...v2.3.2) (2023-08-11)
 
 
