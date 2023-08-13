@@ -9,7 +9,7 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 [ -f $HOME/.zshrc_local ] && source $HOME/.zshrc_local
 
 for file in $DOTFILES/zsh/**/*.*sh; do
-    [ -f $file ] && source $file
+	[ -f $file ] && source $file
 done
 
 export LANG=en_US.UTF-8
@@ -38,7 +38,7 @@ autoload -Uz compinit
 compinit
 
 if [[ $TERM_PROGRAM == WezTerm ]]; then
-    export TERM=wezterm
+	export TERM=wezterm
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
