@@ -1,14 +1,11 @@
 #!/bin/zsh
 
 brewit() {
-    # Fully manage brew installation and suppression, and then some.
-    # needs zsh, jq, bat
+	# Fully manage brew installation and suppression, and then some.
+	# needs zsh, jq, bat
 
-    readonly wait_click="echo $'\n\e[34mPress any key to continue...' && read -rsk 1"
-    readonly jq_all='
-    (. | map(.cask_tokens) | flatten | map(split("/")[-1] + " (cask)"))[]
-    , (. | map(.formula_names) | flatten)[]
-    '
+	readonly wait_click="echo $'\n\e[34mPress any key to continue...' && read -rsk 1"
+	readonly jq_all=' (. | map(.cask_tokens) | flatten | map(split("/")[-1] + " (cask)"))[] , (. | map(.formula_names) | flatten)[] '
 
 	readonly jq_installed='(.formulae[] | .name), (.casks[] | .token + " (cask)")'
 
@@ -61,10 +58,10 @@ brewit() {
                     brew \$($state) {1}
                 fi
                 $wait_click)+$reload" \
-        --bind='ctrl-s:preview(
+			--bind='ctrl-s:preview(
         bat --color=always $(brew edit --print-path {1}) --style=header
     )' \
-        --bind="ctrl-j:preview:brew info --json=v2 {1} | jq '
+			--bind="ctrl-j:preview:brew info --json=v2 {1} | jq '
                 (.formulae + .casks)[0] | with_entries(select(try (.value | length > 0)))
     ' | bat --plain --language=json --color=always" \
 			--bind="ctrl-e:execute:
@@ -78,6 +75,6 @@ brewit() {
 			--bind="tab:$nextstate+$reload" \
 			--bind="?:preview:printf '$help'" \
 			--preview='brew info {1} | bat --color=always --language=Markdown --style=plain' \
-        --preview-window='bottom,wrap,<13(right)'
+			--preview-window='bottom,wrap,<13(right)'
 
 }
