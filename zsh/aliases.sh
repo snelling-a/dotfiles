@@ -18,7 +18,9 @@ alias h='history'
 
 alias vim="nvim"
 alias firenvim="nvim --headless -c \"call firenvim#install(0, 'export PATH=\"$PATH\"')\" -c quit"
+alias nvim_colors="nvim --headless \"GenrateAverageColor\" +qa"
 alias update_plugins="nvim --headless \"+Lazy! sync\" +qa"
+alias update_nvim="nvim --headless \"+Lazy! sync\" \"+GenrateAverageColor\" -c \"call firenvim#install(0, 'export PATH=\"$PATH\"')\" -c quit"
 
 alias code="codium"
 
@@ -54,7 +56,6 @@ cargoup() {
 	cargo install $(cargo install --list | grep -E '^[a-z0-9_-]+ v[0-9.]+:$' | cut -f1 -d' ') --force
 }
 
-alias rg="rga"
 alias brew_list="brew info --json=v2 --installed | jq -r '.formulae[]|select(any(.installed[]; .installed_on_request)).full_name'"
 
 export HOMEBREW_BUNDLE_FILE=$DOTFILES/homebrew/Brewfile
