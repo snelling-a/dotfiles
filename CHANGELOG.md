@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.4](https://github.com/snelling-a/dotfiles/compare/v2.4.3...v2.4.4) (2023-08-15)
+
+
+### Bug Fixes
+
+* fzf cd alias ([cdca996](https://github.com/snelling-a/dotfiles/commit/cdca996918a95ba3a878e18380cbdb6db617e10a))
+
 ## [2.4.3](https://github.com/snelling-a/dotfiles/compare/v2.4.2...v2.4.3) (2023-08-15)
 
 
