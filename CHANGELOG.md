@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.4.3](https://github.com/snelling-a/dotfiles/compare/v2.4.2...v2.4.3) (2023-08-15)
+
+
+### Miscellaneous
+
+* **spell:** update cspell.json ([2ef5f6a](https://github.com/snelling-a/dotfiles/commit/2ef5f6a9a7e3cd8df9e85bfdaf50a3fbbedd8202))
+* **submodules:** update ([384b8cc](https://github.com/snelling-a/dotfiles/commit/384b8ccf4fc6ab02f30a85020cfb886b6a0cbf9d))
+
 ## [2.4.2](https://github.com/snelling-a/dotfiles/compare/v2.4.1...v2.4.2) (2023-08-15)
 
 
