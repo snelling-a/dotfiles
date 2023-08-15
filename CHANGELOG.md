@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.4.2](https://github.com/snelling-a/dotfiles/compare/v2.4.1...v2.4.2) (2023-08-15)
+
+
+### Bug Fixes
+
+* global gitignore ([d1a7ca6](https://github.com/snelling-a/dotfiles/commit/d1a7ca6a127f36c8171911fd3a69cb8f87781fef))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([1aa6ac4](https://github.com/snelling-a/dotfiles/commit/1aa6ac4d52de9c61d42f576546946282b30f631a))
+
 ## [2.4.1](https://github.com/snelling-a/dotfiles/compare/v2.4.0...v2.4.1) (2023-08-14)
 
 
