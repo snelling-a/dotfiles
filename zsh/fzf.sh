@@ -49,7 +49,7 @@ fif() {
 	file="$(rga --max-count=1 --ignore-case --files-with-matches --no-messages "$*" | fzf-tmux +m --preview="rga --ignore-case --pretty --context 10 '$*' {}")" && echo "opening $file" && open "$file" || return 1
 }
 
-function cd() {
+function fcd() {
 	if [[ "$#" != 0 ]]; then
 		builtin cd "$@" || exit
 		return
