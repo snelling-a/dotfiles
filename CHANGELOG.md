@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.5.0](https://github.com/snelling-a/dotfiles/compare/v2.4.4...v2.5.0) (2023-08-16)
+
+
+### Features
+
+* **git:** trust level ([699d3d7](https://github.com/snelling-a/dotfiles/commit/699d3d70778e24dec2c4ffe2629b4257362268b3))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([95ddf64](https://github.com/snelling-a/dotfiles/commit/95ddf6474f6fa7bdcff35f41c888da6675a15c27))
+* update submodules ([22eff80](https://github.com/snelling-a/dotfiles/commit/22eff80dda047843bf5b50905548a0e5f07605bc))
+
 ## [2.4.4](https://github.com/snelling-a/dotfiles/compare/v2.4.3...v2.4.4) (2023-08-15)
 
 
