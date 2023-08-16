@@ -3,6 +3,7 @@
 [alias]
 	a = add
 	aa = add --all
+    aliases = !git config --get-regexp '^alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\\t => \\2/'
 	bd = branch --delete
 	branches = branch -a
 	c = commit
@@ -17,7 +18,7 @@
 	fc = "!f() { git log --pretty=custom --date=short -S$1; }; f" # Find commits by source code
 	fm = "!f() { git log --pretty=custom --date=short --grep=$1; }; f" # Find commits by commit message
 	l = pull
-	ls = log --graph --pretty=custom
+	ls = log --graph --oneline
 	lsa = log --graph --pretty=custom --all
 	lsla = log --pretty=custom --stat --graph --all
 	lss = log --stat --pretty=custom --date=short
@@ -156,7 +157,7 @@
 	status = true
 
 [pretty]
-	custom = %Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset
+	custom = %Cred%h%Creset %GT trust -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset
 
 [pull]
 	rebase = true
