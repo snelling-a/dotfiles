@@ -167,7 +167,7 @@
 [rebase]
 	autoSquash = true
 	autoStash = true
-	instructionFormat = format:%s (%cr) <%an> %G?
+	instructionFormat = format:%s (%cr) <%an> %GT %G?
 
 [status]
 	aheadBehind = true
