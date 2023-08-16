@@ -1,42 +1,59 @@
-local constants = require("const")
 local font = require("font")
 local keys = require("keys")
+local wezterm = require("wezterm")
+local colors = require("const").colors
 
 require("events")
 require("right-status")
 require("tabs")
 
-local hyperlink_rules = {
-	{ regex = "\\b\\w+://[\\w.-]+:[0-9]{2,15}\\S*\\b", format = "$0" },
-	{ regex = "\\b\\w+://[\\w.-]+\\.[a-z]{2,15}\\S*\\b", format = "$0" },
-	{ regex = [[\bfile://\S*\b]], format = "$0" },
-	{ regex = [[\b\w+://(?:[\d]{1,3}\.){3}[\d]{1,3}\S*\b]], format = "$0" },
+local Config = {}
+
+if wezterm.config_builder then
+	Config = wezterm.config_builder()
+end
+
+Config.audible_bell = "Disabled"
+Config.color_scheme = "Default Dark (base16)"
+Config.colors = {
+	visual_bell = colors.background,
+}
+Config.disable_default_key_bindings = true
+Config.font = font.font
+Config.font_rules = font.font_rules
+Config.font_size = font.font_size
+Config.hide_tab_bar_if_only_one_tab = true
+Config.hyperlink_rules = wezterm.default_hyperlink_rules()
+Config.key_tables = keys.key_tables
+Config.keys = keys.keys
+Config.leader = keys.leader
+Config.macos_window_background_blur = 20
+Config.switch_to_last_active_tab_when_closing_tab = true
+Config.term = "wezterm"
+Config.visual_bell = {
+	fade_in_function = "EaseIn",
+	fade_in_duration_ms = 70,
+	fade_out_function = "EaseOut",
+	fade_out_duration_ms = 70,
+}
+Config.window_background_opacity = 0.5
+Config.window_close_confirmation = "NeverPrompt"
+Config.window_decorations = "RESIZE"
+Config.window_frame = {
+	font_size = 15,
+	active_titlebar_bg = colors.background,
+}
+Config.window_padding = {
+	left = 0,
+	right = 0,
+	top = 0,
+	bottom = 0,
 }
 
-return {
-	adjust_window_size_when_changing_font_size = false,
-	audible_bell = "Disabled",
-	automatically_reload_config = true,
-	color_scheme = constants.color_scheme,
-	colors = constants.default_colors,
-	disable_default_key_bindings = keys.disable_default_key_bindings,
-	font = font.font,
-	font_rules = font.font_rules,
-	font_size = font.font_size,
-	hyperlink_rules = hyperlink_rules,
-	key_tables = keys.key_tables,
-	keys = keys.keys,
-	leader = keys.leader,
-	macos_window_background_blur = 100,
-	text_blink_ease_in = "Constant",
-	text_blink_ease_out = "Constant",
-	text_blink_rapid_ease_in = "Constant",
-	text_blink_rapid_ease_out = "Constant",
-	text_blink_rate = 0,
-	underline_position = -2,
-	use_fancy_tab_bar = false,
-	window_background_opacity = 0.5,
-	window_decorations = "RESIZE",
-	window_frame = { border_bottom_height = 0, border_left_width = 0, border_right_width = 0, border_top_height = 0 },
-	window_padding = { bottom = 0, left = 0, right = 0, top = 0 },
-}
+-- github user/repo
+table.insert(Config.hyperlink_rules, {
+	regex = [[["'\s]([\w\d]{1}[-\w\d]+)(/){1}([-\w\d\.]+)["'\s]] .. "]",
+	format = "https://www.github.com/$1/$3",
+})
+
+return Config

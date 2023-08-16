@@ -1,34 +1,33 @@
 local wezterm = require("wezterm")
 
-wezterm.on("toggle-ligature", function(window, _pane)
-	local overrides = window:get_config_overrides() or {}
-	if not overrides.harfbuzz_features then
-		overrides.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
-	else
-		overrides.harfbuzz_features = nil
-	end
-	window:set_config_overrides(overrides)
-end)
-
-wezterm.on("toggle-opacity", function(window, _pane)
+local function toggle_override(window, override, params)
 	local overrides = window:get_config_overrides() or {}
 
-	if not overrides.window_background_opacity then
-		overrides.window_background_opacity = 1
+	if not overrides[override] then
+		overrides[override] = params
 	else
-		overrides.window_background_opacity = nil
-	end
-	window:set_config_overrides(overrides)
-end)
-
-wezterm.on("toggle-leader", function(window, _pane)
-	wezterm.log_info("toggling the leader")
-	local overrides = window:get_config_overrides() or {}
-	if not overrides.leader then
-		overrides.leader = { key = "s", mods = "SUPER" }
-	else
-		overrides.leader = nil
+		overrides[override] = nil
 	end
 
 	window:set_config_overrides(overrides)
+end
+
+wezterm.on("toggle-ligature", function(window, _)
+	toggle_override(window, "harfbuzz_features", {
+		"calt=0",
+		"clig=0",
+		"liga=0",
+	})
 end)
+
+wezterm.on("toggle-opacity", function(window, _)
+	toggle_override(window, "window_background_opacity", 1)
+end)
+
+wezterm.on("toggle-leader", function(window, _)
+	toggle_override(window, "leader", {
+		key = "s",
+		mods = "SUPER",
+	})
+end)
+
