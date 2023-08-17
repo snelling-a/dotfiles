@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.5.1](https://github.com/snelling-a/dotfiles/compare/v2.5.0...v2.5.1) (2023-08-17)
+
+
+### Bug Fixes
+
+* **macos:** disable startup sound ([37dee2e](https://github.com/snelling-a/dotfiles/commit/37dee2e9c8a9c9482c57062d7696c2f8acc16f98))
+* wezterm tabs ([fc89e1f](https://github.com/snelling-a/dotfiles/commit/fc89e1f17ae224bed4cfcbffb69377f32e037357))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([32181d5](https://github.com/snelling-a/dotfiles/commit/32181d5da47c9627947fadf06dd43af90b91b307))
+
 ## [2.5.0](https://github.com/snelling-a/dotfiles/compare/v2.4.4...v2.5.0) (2023-08-16)
 
 
