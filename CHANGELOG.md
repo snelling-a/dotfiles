@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.0](https://github.com/snelling-a/dotfiles/compare/v2.5.1...v2.6.0) (2023-08-17)
+
+
+### Features
+
+* code-insiders ([35c54c9](https://github.com/snelling-a/dotfiles/commit/35c54c9b8346bed74347d0e5878f520c5673c6a6))
+
 ## [2.5.1](https://github.com/snelling-a/dotfiles/compare/v2.5.0...v2.5.1) (2023-08-17)
 
 
