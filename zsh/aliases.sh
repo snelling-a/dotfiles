@@ -22,7 +22,7 @@ alias nvim_colors="nvim --headless \"GenrateAverageColor\" +qa"
 alias update_plugins="nvim --headless \"+Lazy! sync\" +qa"
 alias update_nvim="nvim --headless \"+Lazy! sync\" \"+GenrateAverageColor\" -c \"call firenvim#install(0, 'export PATH=\"$PATH\"')\" -c quit"
 
-alias code="codium"
+alias code="code-insiders"
 
 alias rm="trash -v"
 alias empty="trash -ey" # 'y' skips confirmation step
