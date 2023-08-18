@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.1](https://github.com/snelling-a/dotfiles/compare/v2.6.0...v2.6.1) (2023-08-18)
+
+
+### Miscellaneous
+
+* **brew:** update packages ([7a7766b](https://github.com/snelling-a/dotfiles/commit/7a7766b92efd1dab82c689ad234d203ec2a3b032))
+
 ## [2.6.0](https://github.com/snelling-a/dotfiles/compare/v2.5.1...v2.6.0) (2023-08-17)
 
 
