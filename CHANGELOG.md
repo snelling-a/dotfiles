@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.6.2](https://github.com/snelling-a/dotfiles/compare/v2.6.1...v2.6.2) (2023-08-21)
+
+
+### Bug Fixes
+
+* **git:** prepare-commit-msg hook ([a97f938](https://github.com/snelling-a/dotfiles/commit/a97f9380813133d606494d3d41835d2ce4e76567))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([15a6eca](https://github.com/snelling-a/dotfiles/commit/15a6eca654f727c61b9fe97a807340bc5fd99684))
+
 ## [2.6.1](https://github.com/snelling-a/dotfiles/compare/v2.6.0...v2.6.1) (2023-08-18)
 
 
