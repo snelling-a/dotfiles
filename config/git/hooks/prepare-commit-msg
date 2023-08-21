@@ -30,8 +30,6 @@ if [[ -n "$jira_tag_id" ]]; then
 
 	# if command is set, prepend jira issue id to the commit message
 	[[ -n $command ]] && sed -i.bak -e "$command" "$COMMIT_MSG_FILE"
-
-	return
 fi
 
 conventional_commit_types=(
