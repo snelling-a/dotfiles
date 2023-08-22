@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 # shellcheck disable=1083,1009,1072,1073
 
-set shell sh
 set shellopts '-eu'
 
 set dircounts
-set dirfirst
 set drawbox
 set globsearch
 set hidden
@@ -14,9 +12,7 @@ set ifs "\n"
 set incfilter
 set incsearch
 set number
-set preview
 set previewer ~/.config/lf/pv.sh
-set ratios '1:2:2'
 set relativenumber
 set scrolloff 10
 
