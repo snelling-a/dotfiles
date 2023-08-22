@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.7.0](https://github.com/snelling-a/dotfiles/compare/v2.6.2...v2.7.0) (2023-08-22)
+
+
+### Features
+
+* **lf:** visual ([cbbc061](https://github.com/snelling-a/dotfiles/commit/cbbc06110412a97d7d48e642fcadea9c543b16f9))
+
+
+### Bug Fixes
+
+* **lf:** various fixes ([58b3266](https://github.com/snelling-a/dotfiles/commit/58b32663d9653d527d01d19904d6970339974860))
+
+
+### Miscellaneous
+
+* update submodules ([c1c4d59](https://github.com/snelling-a/dotfiles/commit/c1c4d59361cdde7e43405114f1c76a51d7ec69dc))
+
 ## [2.6.2](https://github.com/snelling-a/dotfiles/compare/v2.6.1...v2.6.2) (2023-08-21)
 
 
