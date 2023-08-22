@@ -15,6 +15,9 @@ set previewer ~/.config/lf/pv.sh
 set relativenumber
 set scrolloff 10
 
+set promptfmt "\033[34;1m%d\033[0m\033[1m%f\033[0m"
+set truncatechar …
+
 cmd open ${{
 case $(file --mime-type --dereference --brief $f) in
     text/*) nvim $fx;;
