@@ -5,7 +5,6 @@ set shellopts '-eu'
 
 set dircounts
 set drawbox
-set globsearch
 set hidden
 set icons
 set ifs "\n"
@@ -17,10 +16,11 @@ set relativenumber
 set scrolloff 10
 
 cmd open ${{
-    case $(file --mime-type -Lb $f) in
-        text/*) nvim $fx;;
-        *) for f in $fx; do xdg-open $f > /dev/null 2> /dev/null & done;;
-    esac
+case $(file --mime-type --dereference --brief $f) in
+    text/*) nvim $fx;;
+    application/json) nvim $fx;;
+    *) for f in $fx; do open $f > /dev/null 2> /dev/null & done;;
+esac
 }}
 
 cmd extract ${{
@@ -119,7 +119,6 @@ map <c-p> :fzf_jump
 map <enter> open
 map Md push :mkdir<space>
 map Mf push :mkfile<space>
-map O $mimeopen --ask $f
 map S openShell
 map X !$f
 map a push :rename<space>$f<space>
@@ -128,9 +127,7 @@ map cw push :rename<space>
 map dD delete
 map dd push :cut<enter>
 map ext extract
-map f $nvim $(fzf)
 map i $~/.config/lf/pv.sh $f | less -R
-map o & mimeopen $f
 map pp push :paste<enter>
 map x $$f
 map yd !printf $PWD | pbcopy
