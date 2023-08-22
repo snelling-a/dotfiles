@@ -29,12 +29,12 @@ esac
 cmd extract ${{
 set -f
 case $f in
-	*.tar.bz|*.tar.bz2|*.tbz|*.tbz2) tar xjvf $f;;
-	*.tar.gz|*.tgz) tar xzvf $f;;
-	*.tar.xz|*.txz) tar xJvf $f;;
-	*.zip) unzip $f;;
-	*.rar) unrar x $f;;
-	*.7z) 7z x $f;;
+    *.tar.bz|*.tar.bz2|*.tbz|*.tbz2) tar xjvf $f;;
+    *.tar.gz|*.tgz) tar xzvf $f;;
+    *.tar.xz|*.txz) tar xJvf $f;;
+    *.zip) unzip $f;;
+    *.rar) unrar x $f;;
+    *.7z) 7z x $f;;
 esac
 }}
 
@@ -77,39 +77,42 @@ touch $1
 }}
 
 cmd z ${{
-	result="$(zoxide query --exclude $PWD $@)"
-	lf -remote "send $id cd $result"
+result="$(zoxide query --exclude $PWD $@)"
+lf -remote "send $id cd $result"
 }}
 
 cmd zi ${{
-	result="$(zoxide query -i)"
-	lf -remote "send $id cd $result"
+result="$(zoxide query -i)"
+lf -remote "send $id cd $result"
 }}
 
 cmd fzf_jump ${{
-    res="$(fd | fzf --reverse --header='Jump to location' | sed 's/\\/\\\\/g;s/"/\\"/g')"
-    if [ -d "$res" ] ; then
-        cmd="cd"
-    elif [ -f "$res" ] ; then
-        cmd="select"
-    else
-        exit 0
-    fi
-    lf -remote "send $id $cmd \"$res\""
+res="$(fd | fzf --reverse --header='Jump to location' | sed 's/\\/\\\\/g;s/"/\\"/g')"
+if [ -d "$res" ] ; then
+    cmd="cd"
+elif [ -f "$res" ] ; then
+    cmd="select"
+else
+    exit 0
+fi
+lf -remote "send $id $cmd \"$res\""
 }}
 
 cmd fzf_search ${{
-    res="$( \
-        RG_PREFIX="rg --column --line-number --no-heading --color=always \
-            --smart-case "
-        FZF_DEFAULT_COMMAND="$RG_PREFIX ''" \
-            fzf --bind "change:reload:$RG_PREFIX {q} || true" \
-            --ansi --layout=reverse --header 'Search in files' \
-            | cut -d':' -f1
-    )"
-    [ ! -z "$res" ] && lf -remote "send $id select \"$res\""
-}}
+res="$( \
+    RG_PREFIX="rg --column --line-number --no-heading  --color=always  --smart-case "
+    FZF_DEFAULT_COMMAND="$RG_PREFIX ''" \
+        fzf \
+        --bind "change:reload:$RG_PREFIX {q} || true" \
+        --ansi\
+        --layout=reverse \
+        --header 'Search in files' \
+        | cut -d':' -f1
+            )"
+            [ ! -z "$res" ] && lf -remote "send $id select \"$res\"" 
+        }}
 
+# keymaps
 map c
 map d
 map M
@@ -119,22 +122,21 @@ map y
 
 map <backspace2> set hidden!
 map <c-p> :fzf_jump
+map <c-r> :fzf_search
 map <enter> open
-map Md push :mkdir<space>
-map Mf push :mkfile<space>
-map S openShell
-map X !$f
-map a push :rename<space>$f<space>
 map cmp tar
-map cw push :rename<space>
 map dD delete
 map dd push :cut<enter>
 map ext extract
 map i $~/.config/lf/pv.sh $f | less -R
+map Md push :mkdir<space>
+map Mf push :mkfile<space>
 map pp push :paste<enter>
+map rn push :rename<space>
+map S openShell
+map X !$f
 map x $$f
 map yd !printf $PWD | pbcopy
 map yn !printf $f | xargs basename | pbcopy
 map yp !printf $f | pbcopy
 map yy push :copy<enter>
-map <c-r> :fzf_search
