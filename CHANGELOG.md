@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.7.1](https://github.com/snelling-a/dotfiles/compare/v2.7.0...v2.7.1) (2023-08-23)
+
+
+### Bug Fixes
+
+* **lf:** fix rename mapping ([7a3e25b](https://github.com/snelling-a/dotfiles/commit/7a3e25be088d9b48debc79b55fc7429848703c10))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([7b728d2](https://github.com/snelling-a/dotfiles/commit/7b728d208789b3605c6cb762f91dd1f0242f0c57))
+* **brew:** update packages ([ecdc5c8](https://github.com/snelling-a/dotfiles/commit/ecdc5c830d8c2e092a8f2db394eac0014c145137))
+* update submodules ([ff904cd](https://github.com/snelling-a/dotfiles/commit/ff904cd21e63782bfa774a7b1a1eea1fdab621bd))
+
 ## [2.7.0](https://github.com/snelling-a/dotfiles/compare/v2.6.2...v2.7.0) (2023-08-22)
 
 
