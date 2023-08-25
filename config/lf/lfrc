@@ -60,7 +60,7 @@ cmd openShell ${{
 $SHELL
 }}
 
-cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
+# cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
 
 cmd delete ${{
 set -f
@@ -117,7 +117,7 @@ map c
 map d
 map M
 map p
-map r
+# map r
 map w
 map y
 
@@ -133,7 +133,7 @@ map i $~/.config/lf/pv.sh $f | less -R
 map Md push :mkdir<space>
 map Mf push :mkfile<space>
 map pp push :paste<enter>
-map rn push :rename<space>
+# map rn push :rename<space>
 map S openShell
 map X !$f
 map x $$f
