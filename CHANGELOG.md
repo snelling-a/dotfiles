@@ -1,5 +1,20 @@
 # Changelog
 
+## [2.7.3](https://github.com/snelling-a/dotfiles/compare/v2.7.2...v2.7.3) (2023-08-25)
+
+
+### Bug Fixes
+
+* **lfrc:** use builtin rename ([69086e8](https://github.com/snelling-a/dotfiles/commit/69086e8ac2ceccf556fd809edb5063c00c87f2a6))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([4270305](https://github.com/snelling-a/dotfiles/commit/4270305e68ad07d12ab405a67a62db23ce0394aa))
+* **spell:** update cspell.json ([2b48082](https://github.com/snelling-a/dotfiles/commit/2b4808271eabce83f1b74b79d68cf84063ae7b69))
+* update submodules ([020d6f8](https://github.com/snelling-a/dotfiles/commit/020d6f8cf91453025d1aa1ce721e021dafecf39b))
+* update submodules ([9fc1a62](https://github.com/snelling-a/dotfiles/commit/9fc1a62f7797c92a70a539ed42d8d0d12132f95f))
+
 ## [2.7.2](https://github.com/snelling-a/dotfiles/compare/v2.7.1...v2.7.2) (2023-08-24)
 
 
