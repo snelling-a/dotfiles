@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.8.0](https://github.com/snelling-a/dotfiles/compare/v2.7.4...v2.8.0) (2023-08-27)
+
+
+### Features
+
+* termicons ([5ebe386](https://github.com/snelling-a/dotfiles/commit/5ebe3868095df79007ca5a3821b599799c6ded4e))
+
 ## [2.7.4](https://github.com/snelling-a/dotfiles/compare/v2.7.3...v2.7.4) (2023-08-27)
 
 
