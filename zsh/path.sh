@@ -18,7 +18,7 @@ PATH="$HOMEBREW_PREFIX/bin/stylua:$PATH"
 
 PATH="$HOMEBREW_PREFIX/opt/curl/bin:$PATH"
 
-PATH=/usr/bin/python3:$PATH
+PATH="$HOMEBREW_PREFIX/python3:$PATH"
 
 PATH="$DOTFILES/scripts:$PATH"
 
