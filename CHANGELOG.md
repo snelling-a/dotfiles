@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.7.4](https://github.com/snelling-a/dotfiles/compare/v2.7.3...v2.7.4) (2023-08-27)
+
+
+### Bug Fixes
+
+* **path:** python location ([6cb41f4](https://github.com/snelling-a/dotfiles/commit/6cb41f419df18d8943957a580978a001464aed24))
+
+
+### Miscellaneous
+
+* update submodules ([5ebf0da](https://github.com/snelling-a/dotfiles/commit/5ebf0da8448ba0c8660082db7a70925b9e08090c))
+
 ## [2.7.3](https://github.com/snelling-a/dotfiles/compare/v2.7.2...v2.7.3) (2023-08-25)
 
 
