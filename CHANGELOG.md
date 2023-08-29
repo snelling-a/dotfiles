@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.8.1](https://github.com/snelling-a/dotfiles/compare/v2.8.0...v2.8.1) (2023-08-29)
+
+
+### Bug Fixes
+
+* toml formatting ([0b1484d](https://github.com/snelling-a/dotfiles/commit/0b1484d997624e336eddd58e6af0c70f02865bbd))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([bd5d88f](https://github.com/snelling-a/dotfiles/commit/bd5d88fc8d7ef8d481b5512b6816a1b802ce5e8f))
+* **brew:** update packages ([c074063](https://github.com/snelling-a/dotfiles/commit/c07406321096e02790fb87253b5a6092213491e5))
+
 ## [2.8.0](https://github.com/snelling-a/dotfiles/compare/v2.7.4...v2.8.0) (2023-08-27)
 
 
