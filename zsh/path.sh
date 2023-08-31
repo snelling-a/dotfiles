@@ -5,6 +5,7 @@ eval "$(brew shellenv)"
 PATH="/usr/local/bin/nvim:$PATH"
 
 # use gnu tools
+PATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin:$PATH"
 PATH="$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin:$PATH"
 PATH="$HOMEBREW_PREFIX/opt/gawk/libexec/gnubin:$PATH"
 PATH="$HOMEBREW_PREFIX/opt/make/libexec/gnubin:$PATH"
