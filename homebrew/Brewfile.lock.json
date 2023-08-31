@@ -11,7 +11,7 @@
         "revision": "9b3c7408afd0fd45ae20248eb7412a22f5a72e16"
       },
       "homebrew/cask-versions": {
-        "revision": "486e9743d4ae24be9ef888219c1473471958c773"
+        "revision": "07d46bb8da53909d1fa31b93e3cf67653bdc1124"
       },
       "ms-jpq/sad": {
         "revision": "7cc8b06341c44e6567f63ba4b217fdc77afbfadb"
@@ -1096,7 +1096,7 @@
         }
       },
       "fd": {
-        "version": "HEAD-3ae0454",
+        "version": "HEAD-a248607",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -1214,7 +1214,7 @@
         }
       },
       "fnm": {
-        "version": "HEAD-11ef090",
+        "version": "HEAD-595043f",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -1263,7 +1263,7 @@
         }
       },
       "fzf": {
-        "version": "HEAD-01302d0",
+        "version": "HEAD-58835e4",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -2051,7 +2051,7 @@
         }
       },
       "lazygit": {
-        "version": "HEAD-ebd56bd",
+        "version": "HEAD-ce91de7",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -2520,7 +2520,7 @@
         }
       },
       "neovim": {
-        "version": "HEAD-4afd33e",
+        "version": "HEAD-a1bec02",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -2814,7 +2814,7 @@
         }
       },
       "ripgrep": {
-        "version": "HEAD-a7f1276",
+        "version": "HEAD-6cd9479",
         "bottle": {
           "rebuild": 1,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -3117,7 +3117,7 @@
         }
       },
       "starship": {
-        "version": "HEAD-fcf4298",
+        "version": "HEAD-1884409",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -3323,7 +3323,7 @@
         }
       },
       "tldr": {
-        "version": "HEAD-fc6e38e",
+        "version": "HEAD-134df40",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -3646,7 +3646,7 @@
         }
       },
       "vim": {
-        "version": "HEAD-00d07a9",
+        "version": "HEAD-0b8b145",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -4858,7 +4858,7 @@
         }
       },
       "spotify": {
-        "version": "1.2.18.999,9b38fc27,20",
+        "version": "1.2.19.941,bf202593,416",
         "options": {
           "full_name": "spotify"
         }
@@ -4944,7 +4944,7 @@
     "macos": {
       "ventura": {
         "HOMEBREW_VERSION": "4.1.7",
-        "HOMEBREW_PREFIX": "/opt/homebrew",
+        "HOMEBREW_PREFIX": "/usr/local",
         "Homebrew/homebrew-core": "api",
         "CLT": "14.3.1.0.1.1683849156",
         "Xcode": "14.3",
