@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.9.0](https://github.com/snelling-a/dotfiles/compare/v2.8.1...v2.9.0) (2023-08-31)
+
+
+### Features
+
+* zed settings ([90f6b65](https://github.com/snelling-a/dotfiles/commit/90f6b65f14c0c852c31e2c90fe425edc0470014f))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([f9b429a](https://github.com/snelling-a/dotfiles/commit/f9b429affe49153959de9a97e6fc31824d25cb28))
+* update submodules ([0ef57b8](https://github.com/snelling-a/dotfiles/commit/0ef57b87a1169f6c2eedfebbde018d50d59a20c6))
+
 ## [2.8.1](https://github.com/snelling-a/dotfiles/compare/v2.8.0...v2.8.1) (2023-08-29)
 
 
