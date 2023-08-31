@@ -1,9 +1,14 @@
 # vim:filetype=gitconfig
 
+[advice]
+	detachedHead = false
+	statusHints = false
+	waitingForEditor = false
+
 [alias]
 	a = add
 	aa = add --all
-    aliases = !git config --get-regexp '^alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\\t => \\2/'
+	aliases = !git config --get-regexp '^alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\\t => \\2/'
 	bd = branch --delete
 	branches = branch -a
 	c = commit
@@ -183,3 +188,4 @@
 
 [includeIf "gitdir:~/work/"]
 	path = ./gitconfig_local
+
