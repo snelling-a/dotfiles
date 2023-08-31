@@ -1,0 +1,14 @@
+{
+  "buffer_font_family": "Iosevka Term SS15",
+  "buffer_font_size": 15,
+  "dock": "right",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "terminal": {
+    "font_family": "Iosevka Nerd Font Mono"
+  },
+  "theme": "Ayu Dark",
+  "vim_mode": true
+}
