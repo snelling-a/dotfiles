@@ -1,3 +1,4 @@
+config/git/allowed_signers
 config/git/gitconfig_local
 config/lazygit/state.yml
 config/zed/conversations/

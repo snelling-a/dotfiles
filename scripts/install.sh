@@ -10,8 +10,8 @@ backup() {
 }
 
 link_file() {
-	file=$(realpath "$1")
-	target=${HOME}/$(basename "$1")
+	file="$(realpath "$1")"
+	target="${HOME}/$(basename "$1")"
 
 	backup "$target"
 
@@ -19,10 +19,10 @@ link_file() {
 }
 
 link_dir() {
-	dir=$(realpath "$1")
-	target=${2:-$XDG_CONFIG_HOME}/$(basename "$1")
+	dir="$(realpath "$1")"
+	target="${2:-$XDG_CONFIG_HOME}/$(basename "$1")"
 
-	ln -fnsv "$dir" "$target"
+	ln -Ffnsv "$dir" "$target"
 }
 
 is_file() {
@@ -70,10 +70,7 @@ brew_install() {
 
 generate_completions() {
 	competion_dir="$DOTFILES/zsh/completions"
-
-	if [ ! -d "$competion_dir" ]; then
-		mkdir "$competion_dir"
-	fi
+	mkdir -p "$competion_dir"
 
 	bw completion --shell=zsh >"$competion_dir/_bw"
 
@@ -98,7 +95,7 @@ setup_wezterm() {
 
 setup_fzf() {
 	if ! command -v fzf >/dev/null; then
-		/opt/homebrew/opt/fzf/install
+		/usr/local/opt/fzf/install
 	fi
 }
 
@@ -113,19 +110,26 @@ clone_notes() {
 	fi
 }
 
-mkdir "$backup_dir"
+install_cargo() {
+	curl https://sh.rustup.rs -sSf | sh
+}
 
-# setup_macos_defaults
-# brew_install
+mkdir "$backup_dir"
+mkdir -p "$HOME/work"
+
+brew_install
 
 create_symlinks
 link_config_directories
 
-# generate_completions
+generate_completion
 
-# setup_wezterm
-# setup_fzf
+install_cargo
+setup_wezterm
+setup_fzf
 
-# clone_notes
+clone_notes
 
 check_for_backups
+
+setup_macos_defaults
