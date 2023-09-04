@@ -1,5 +1,25 @@
 # Changelog
 
+## [2.10.0](https://github.com/snelling-a/dotfiles/compare/v2.9.0...v2.10.0) (2023-09-04)
+
+
+### Features
+
+* **git:** ignore advice ([e0d1cf0](https://github.com/snelling-a/dotfiles/commit/e0d1cf0a760b4edf43758031cd2ba01e0bbdd955))
+
+
+### Bug Fixes
+
+* install hiccups ([328f170](https://github.com/snelling-a/dotfiles/commit/328f170541c497bfad376000e20ef11016e053b6))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([99caebe](https://github.com/snelling-a/dotfiles/commit/99caebec31171e380483d7bbf935acdb010e6560))
+* **brew:** update packages ([c067028](https://github.com/snelling-a/dotfiles/commit/c06702830c2fc2971eafeb92e66f61e7253a6224))
+* **brew:** update packages ([43043af](https://github.com/snelling-a/dotfiles/commit/43043af90abf63c9f50fdbe273734782c3245d63))
+* update submodules ([e39ae2f](https://github.com/snelling-a/dotfiles/commit/e39ae2f974beb6913d9e1783a0549ee60cf71116))
+
 ## [2.9.0](https://github.com/snelling-a/dotfiles/compare/v2.8.1...v2.9.0) (2023-08-31)
 
 
