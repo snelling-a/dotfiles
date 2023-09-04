@@ -8,7 +8,7 @@
 [alias]
 	a = add
 	aa = add --all
-	aliases = !git config --get-regexp '^alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\\t => \\2/'
+	aliases = !git config --get-regexp '^alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\ => \\2/'
 	bd = branch --delete
 	branches = branch -a
 	c = commit
@@ -17,7 +17,7 @@
 	cleanup = "!git branch --merged | grep -v '\\*\\|main\\|master\\|develop' | xargs -n 1 -r git branch -d"
 	co = checkout
 	count = shortlog --summary --numbered
-	cp = cherrypick
+	cp = cherry-pick
 	d = diff
 	dev = "!f() { ghq get $1; }; f"
 	fc = "!f() { git log --pretty=custom --date=short -S$1; }; f" # Find commits by source code
