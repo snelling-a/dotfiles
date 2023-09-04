@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.10.1](https://github.com/snelling-a/dotfiles/compare/v2.10.0...v2.10.1) (2023-09-04)
+
+
+### Bug Fixes
+
+* **git:** aliases ([dfefed8](https://github.com/snelling-a/dotfiles/commit/dfefed86dcea6d0622f3de7e4125c92f322b5600))
+
+
+### Miscellaneous
+
+* update submodules ([3c3d8bb](https://github.com/snelling-a/dotfiles/commit/3c3d8bb338483c671ae129e387a161531a89c9b5))
+
 ## [2.10.0](https://github.com/snelling-a/dotfiles/compare/v2.9.0...v2.10.0) (2023-09-04)
 
 
