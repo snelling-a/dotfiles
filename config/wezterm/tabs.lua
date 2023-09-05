@@ -29,7 +29,7 @@ local function get_process(tab)
 end
 
 local function get_current_working_dir(tab)
-	local current_dir = tab.active_pane.current_working_dir
+	local current_dir = (tab.active_pane.current_working_dir or {}).path
 	local HOME_DIR = string.format("file://%s", os.getenv("HOME"))
 
 	return current_dir == HOME_DIR and nerdfonts.md_tilde or string.format(" %s", get_basename(current_dir))
