@@ -55,14 +55,16 @@ brew "lf"
 brew "python@3.11"
 brew "llvm"
 brew "lsd"
+brew "lua"
 brew "lua-language-server"
-brew "luarocks"
+brew "luarocks", args: ["HEAD"]
 brew "make"
 brew "marksman"
 brew "mercurial"
 brew "microplane"
 brew "neofetch", args: ["HEAD"]
 brew "neovim", args: ["HEAD"]
+brew "ninja"
 brew "odt2txt"
 brew "onefetch"
 brew "openssl@1.1"
