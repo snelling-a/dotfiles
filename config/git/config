@@ -10,11 +10,11 @@
 	aa = add --all
 	aliases = !git config --get-regexp '^alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\ => \\2/'
 	bd = branch --delete
-	branches = branch -a
+	branches = branch --all
 	c = commit
 	cb = checkout -b
 	cl = clone --recurse-submodulesal
-	cleanup = "!git branch --merged | grep -v '\\*\\|main\\|master\\|develop' | xargs -n 1 -r git branch -d"
+	cleanup = !git branch --merged | grep -v '\\*\\|main\\|master\\|develop' | xargs -n 1 -r git branch --delete
 	co = checkout
 	count = shortlog --summary --numbered
 	cp = cherry-pick
@@ -38,12 +38,12 @@
 	rba = rebase --abort
 	rbc = rebase --continue
 	rbi = rebase --interactive
-	remotes = remote -v
 	st = status
+	remotes = remote --verbose
 	st = status
 	sta = "!f() { git stash push --all --include-untracked --message=$1; }; f" # Stash everything
 	standup = log --since='yesterday' --author='Andrew Snelling'
-	tags = tag -l # Show verbose output about tags, branches or remotes
+	tags = tag --long
 	undo = reset --soft HEAD^1
 
 [apply]
