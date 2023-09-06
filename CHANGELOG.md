@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.10.2](https://github.com/snelling-a/dotfiles/compare/v2.10.1...v2.10.2) (2023-09-06)
+
+
+### Bug Fixes
+
+* **wezterm:** active_pane.current_working_dir ([9aa85ae](https://github.com/snelling-a/dotfiles/commit/9aa85ae3ac40213a3627059e9533c08a17ce475a))
+
 ## [2.10.1](https://github.com/snelling-a/dotfiles/compare/v2.10.0...v2.10.1) (2023-09-04)
 
 
