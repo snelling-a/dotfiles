@@ -12,16 +12,15 @@
 	bd = branch --delete
 	branches = branch --all
 	c = commit
-	cb = checkout -b
-	cl = clone --recurse-submodulesal
+	cl = clone --recurse-submodules
 	cleanup = !git branch --merged | grep -v '\\*\\|main\\|master\\|develop' | xargs -n 1 -r git branch --delete
 	co = checkout
 	count = shortlog --summary --numbered
 	cp = cherry-pick
 	d = diff
 	dev = "!f() { ghq get $1; }; f"
-	fc = "!f() { git log --pretty=custom --date=short -S$1; }; f" # Find commits by source code
-	fm = "!f() { git log --pretty=custom --date=short --grep=$1; }; f" # Find commits by commit message
+	fc = "!f() { git log --pretty=custom --date=short -S$1; }; f" ; Find commits by source code
+	fm = "!f() { git log --pretty=custom --date=short --grep=$1; }; f" ; Find commits by commit message
 	l = pull
 	ls = log --graph --oneline
 	lsa = log --graph --pretty=custom --all
@@ -34,14 +33,13 @@
 	pf = push --force-with-lease
 	pop = stash pop
 	pristine = reset --hard && git clean --force -dx
-	rb = rebase --interactive --autosquash
+	rb = rebase --interactive 
 	rba = rebase --abort
 	rbc = rebase --continue
-	rbi = rebase --interactive
-	st = status
+	rbi = rebase --interactive --autosquash
 	remotes = remote --verbose
 	st = status
-	sta = "!f() { git stash push --all --include-untracked --message=$1; }; f" # Stash everything
+	sta = "!f() { git stash push --all --include-untracked --message=$1; }; f" ; Stash everything
 	standup = log --since='yesterday' --author='Andrew Snelling'
 	tags = tag --long
 	undo = reset --soft HEAD^1
