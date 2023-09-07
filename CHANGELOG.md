@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.12.2](https://github.com/snelling-a/dotfiles/compare/v2.12.1...v2.12.2) (2023-09-07)
+
+
+### Bug Fixes
+
+* install script ([3289685](https://github.com/snelling-a/dotfiles/commit/328968509e0b8032380641594e988d1f27c58fab))
+
+
+### Miscellaneous
+
+* **spell:** update cspell.json ([601e9c0](https://github.com/snelling-a/dotfiles/commit/601e9c0ad5ea93531e12276c91e679af5d45d542))
+
 ## [2.12.1](https://github.com/snelling-a/dotfiles/compare/v2.12.0...v2.12.1) (2023-09-07)
 
 
