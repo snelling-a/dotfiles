@@ -6,12 +6,12 @@ local function get_basename(s)
 	return string.gsub(s, "(.*[/\\])(.*)", "%2")
 end
 
-local function get_process(tab)
-	if string.match(tab.active_pane.title, "Copy mode:") then
+local function get_process(pane)
+	if string.match(pane.title, "Copy mode:") then
 		return nerdfonts.oct_copy
 	end
 
-	local process = get_basename(tab.active_pane.foreground_process_name)
+	local process = get_basename(pane.foreground_process_name)
 	local icon = require("const").process_icons[process]
 
 	local fallback = {
@@ -29,8 +29,8 @@ local function get_process(tab)
 end
 
 local function get_current_working_dir(tab)
-	local current_dir = (tab.active_pane.current_working_dir or {}).path
-	local HOME_DIR = string.format("file://%s", os.getenv("HOME"))
+	local current_dir = (tab.current_working_dir or {}).path or ""
+	local HOME_DIR = os.getenv("HOME")
 
 	return current_dir == HOME_DIR and nerdfonts.md_tilde or string.format(" %s", get_basename(current_dir))
 end
@@ -41,7 +41,7 @@ wezterm.on("format-tab-title", function(tab, _tabs, _panes, _config, _hover, _ma
 
 	return wezterm.format({
 		{
-			Text = " " .. get_process(tab),
+			Text = " " .. get_process(tab.active_pane),
 		},
 		{
 			Foreground = {
@@ -49,7 +49,7 @@ wezterm.on("format-tab-title", function(tab, _tabs, _panes, _config, _hover, _ma
 			},
 		},
 		{
-			Text = get_current_working_dir(tab),
+			Text = get_current_working_dir(tab.active_pane),
 		},
 		"ResetAttributes",
 		{
