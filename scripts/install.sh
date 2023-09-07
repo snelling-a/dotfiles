@@ -57,7 +57,7 @@ check_for_backups() {
 
 brew_install() {
 	if ! command -v brew >/dev/null; then
-		xcode-select --install
+		xcode-select --install && sudo xcodebuild -license accept
 		echo "Installing Homebrew ..."
 		/bin/bash -c \
 			"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
