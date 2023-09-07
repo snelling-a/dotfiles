@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.12.0](https://github.com/snelling-a/dotfiles/compare/v2.11.0...v2.12.0) (2023-09-07)
+
+
+### Features
+
+* colima setup ([45a6aa5](https://github.com/snelling-a/dotfiles/commit/45a6aa5821322be903f3e79454632668fa2b8121))
+
 ## [2.11.0](https://github.com/snelling-a/dotfiles/compare/v2.10.2...v2.11.0) (2023-09-07)
 
 
