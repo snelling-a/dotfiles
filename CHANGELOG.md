@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.12.1](https://github.com/snelling-a/dotfiles/compare/v2.12.0...v2.12.1) (2023-09-07)
+
+
+### Bug Fixes
+
+* **wezterm:** tabs (again) ([0530ca2](https://github.com/snelling-a/dotfiles/commit/0530ca2b9dd50b206b0494fc8c46ec8efe852e48))
+
+
+### Miscellaneous
+
+* update submodules ([1d5281e](https://github.com/snelling-a/dotfiles/commit/1d5281e49ee32bea294fb08791e306ab18ea5d57))
+
 ## [2.12.0](https://github.com/snelling-a/dotfiles/compare/v2.11.0...v2.12.0) (2023-09-07)
 
 
