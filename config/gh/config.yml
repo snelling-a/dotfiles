@@ -1,0 +1,13 @@
+aliases:
+  co: pr checkout
+  prl: pr list
+  pv: pr view
+  pvw: pr view --web
+  rc: repo clone
+  rvw: repo view --web
+browser:
+editor: nvim
+git_protocol: ssh
+http_unix_socket:
+pager: delta -s
+prompt: enabled
