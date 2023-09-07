@@ -1,5 +1,23 @@
 # Changelog
 
+## [2.11.0](https://github.com/snelling-a/dotfiles/compare/v2.10.2...v2.11.0) (2023-09-07)
+
+
+### Features
+
+* **macos:** update defaults for touchbar ([ad251cd](https://github.com/snelling-a/dotfiles/commit/ad251cdf389839f7009b346ccb6a9e8ca65aa667))
+
+
+### Bug Fixes
+
+* **git:** aliases ([8713a0c](https://github.com/snelling-a/dotfiles/commit/8713a0c101bea591dcf23cd0e902e8348e5fdce5))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([1665233](https://github.com/snelling-a/dotfiles/commit/1665233869d2ea06baa78e94495f818b473e9d63))
+* **brew:** update packages ([2637964](https://github.com/snelling-a/dotfiles/commit/26379641b8378327cdadc90fd5523496682c5e4b))
+
 ## [2.10.2](https://github.com/snelling-a/dotfiles/compare/v2.10.1...v2.10.2) (2023-09-06)
 
 
