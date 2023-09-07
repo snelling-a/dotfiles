@@ -41,4 +41,6 @@ if [[ $TERM_PROGRAM == WezTerm ]]; then
 	export TERM=wezterm
 fi
 
+export DOCKER_HOST=unix:///Users/andrew.snelling/.colima/docker.sock
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
