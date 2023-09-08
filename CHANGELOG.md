@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.13.0](https://github.com/snelling-a/dotfiles/compare/v2.12.2...v2.13.0) (2023-09-07)
+
+
+### Features
+
+* **git:** gh config ([53e95a4](https://github.com/snelling-a/dotfiles/commit/53e95a44e589b282c3ac3735b1b7364b36d3a72f))
+
+
+### Miscellaneous
+
+* update submodules ([c360c5e](https://github.com/snelling-a/dotfiles/commit/c360c5eabfa3d62fc02a6ab19c929c801c522da7))
+
 ## [2.12.2](https://github.com/snelling-a/dotfiles/compare/v2.12.1...v2.12.2) (2023-09-07)
 
 
