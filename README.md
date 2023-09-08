@@ -1,3 +1,5 @@
 # dotfiles
 
-This all started because I wanted to shave a few seconds off my terminal startup time.
+```bash
+bash <(curl https://raw.githubusercontent.com/snelling-a/dotfiles/main/scripts/install.sh)
+```

@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+DOTFILES="$HOME/dotfiles"
 timestamp=$(date +"%Y_%m_%d_%T")
 backup_dir=$HOME/.backup_${timestamp}
 
@@ -33,6 +34,11 @@ is_dir() {
 	[ -d "$1" ]
 }
 
+if ! is_dir "$DOTFILES"; then
+	print "Cloning dotfiles..."
+	git clone https://github.com/snelling-a/dotfiles.git --recurse-submodules "$DOTFILES"
+fi
+
 create_symlinks() {
 	for f in ./HOME/.* ./HOME/local/.*; do
 		is_file "$f" && link_file "$f"
@@ -45,9 +51,11 @@ link_config_directories() {
 	done
 }
 
+reset=$(tput sgr0)
+
 check_for_backups() {
 	if [ "$(ls -A "$backup_dir")" ]; then
-		echo "Take action $backup_dir is not Empty"
+		echo "$(tput setaf 1) Take action $backup_dir is not Empty ${reset}"
 
 		ls -la "$backup_dir"
 	else
@@ -55,63 +63,99 @@ check_for_backups() {
 	fi
 }
 
+print() {
+	printf "%s%s\n\n%s" "$(tput setaf 2)" "$1" "${reset}"
+}
+
+print "Installing dotfiles..."
+
 brew_install() {
-	if ! command -v brew >/dev/null; then
+	print "Installing homebrew..."
+
+	if ! command -v brew >/dev/null 2>&1; then
 		xcode-select --install && sudo xcodebuild -license accept
-		echo "Installing Homebrew ..."
+		print "Installing Homebrew ..."
 		/bin/bash -c \
 			"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 		chmod -R go-w "$(brew --prefix)/share"
 	fi
 
+	print "Homebrew installed"
+	print "Getting packages..."
+
 	brew bundle install
 }
 
 generate_completions() {
-	competion_dir="$DOTFILES/zsh/completions"
-	mkdir -p "$competion_dir"
+	print "Generating completions..."
 
-	bw completion --shell=zsh >"$competion_dir/_bw"
+	if ! is_dir "$DOTFILES/zsh/completions"; then
+		competion_dir="$DOTFILES/zsh/completions"
+		mkdir -p "$competion_dir"
 
-	curl https://raw.githubusercontent.com/gokcehan/lf/master/etc/lf.zsh -o "$competion_dir/_lf"
+		bw completion --shell=zsh >"$competion_dir/_bw"
 
-	gh completion -s zsh >"$competion_dir/_gh"
+		curl -fsSL https://raw.githubusercontent.com/gokcehan/lf/master/etc/lf.zsh -o "$competion_dir/_lf"
 
-	glow completion zsh >"$competion_dir/_glow"
+		gh completion -s zsh >"$competion_dir/_gh"
 
-	obs completion zsh >"$competion_dir/_obs"
+		glow completion zsh >"$competion_dir/_glow"
 
-	wezterm shell-completion --shell zsh >"$competion_dir/_wezterm"
+		obs completion zsh >"$competion_dir/_obs"
+
+		wezterm shell-completion --shell zsh >"$competion_dir/_wezterm"
+	fi
+
+	print "Completions generated"
 }
 
 setup_wezterm() {
-	tempfile=$(mktemp) &&
-		curl -o "$tempfile" https://raw.githubusercontent.com/wez/wezterm/master/termwiz/data/wezterm.terminfo &&
-		tic -x -o ~/.terminfo "$tempfile" &&
-		rm "$tempfile"
+	print "Setting up WezTerm..."
 
+	if ! infocmp "$TERM" >/dev/null 2>&1; then
+		tempfile=$(mktemp) &&
+			curl -o "$tempfile" https://raw.githubusercontent.com/wez/wezterm/master/termwiz/data/wezterm.terminfo &&
+			tic -x -o ~/.terminfo "$tempfile" &&
+			rm "$tempfile"
+	fi
+
+	print "WezTerm setup complete"
 }
 
 setup_fzf() {
-	if ! command -v fzf >/dev/null; then
-		/usr/local/opt/fzf/install
+	print "Setting up fzf..."
+
+	if ! is_file "$HOME/.config/fzf/fzf"; then
+		if ! command -v fzf >/dev/null 2>&1; then
+			/usr/local/opt/fzf/install --xdg --key-bindings --completion --no-update-rc
+		fi
 	fi
+
+	print "fzf is already setup"
 }
 
 setup_macos_defaults() {
-	bash "$DOTFILES/scripts/macos_defaults.sh"
-}
+	while true; do
+		read -p "Setup macOS defaults [y/n]: " -r
+		reply="${reply:-'y'}"
+		if [[ $REPLY =~ ^[Yy]$ ]]; then
+			bash "$DOTFILES/scripts/macos_defaults.sh"
+		elif [[ $REPLY =~ ^[Nn]$ ]]; then
+			break
+		fi
+	done
 
-clone_notes() {
-	if [ ! -d "$NOTES" ]; then
-		echo "Cloning notes to $NOTES"
-		git clone https://github.com/snelling-a/notes.git "$NOTES"
-	fi
+	print
+	print "macOS defaults setup complete"
 }
 
 install_cargo() {
-	curl https://sh.rustup.rs -sSf | sh
+	print "Installing cargo..."
+
+	if ! command -v cargo >/dev/null 2>&1; then
+		curl -fsSL https://sh.rustup.rs -sSf | sh
+	fi
 }
 
 mkdir "$backup_dir"
@@ -122,14 +166,17 @@ brew_install
 create_symlinks
 link_config_directories
 
-generate_completion
+generate_completions
 
 install_cargo
 setup_wezterm
 setup_fzf
 
-clone_notes
-
 check_for_backups
 
 setup_macos_defaults
+
+open -a WezTerm
+
+print "Installation complete"
+print "Happy Hacking!"
