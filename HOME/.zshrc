@@ -43,4 +43,4 @@ fi
 
 export DOCKER_HOST=unix:///Users/andrew.snelling/.colima/docker.sock
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh ] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh
