@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.14.0](https://github.com/snelling-a/dotfiles/compare/v2.13.0...v2.14.0) (2023-09-08)
+
+
+### Features
+
+* install.sh 2.0 ([d4f6ff1](https://github.com/snelling-a/dotfiles/commit/d4f6ff1be335bbed9c0064712f4d6ec9f17c8b45))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([e17e3b7](https://github.com/snelling-a/dotfiles/commit/e17e3b7b8b32467e652d5555a649c19487f6c06e))
+* move fzf files to $XDG_CONFIG_HOME ([ae6e8d5](https://github.com/snelling-a/dotfiles/commit/ae6e8d598bc513e902cc7a7b26e6a65acc2dd647))
+
 ## [2.13.0](https://github.com/snelling-a/dotfiles/compare/v2.12.2...v2.13.0) (2023-09-07)
 
 
