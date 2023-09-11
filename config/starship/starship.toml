@@ -117,7 +117,7 @@ right_format        = """$all"""
  format = '\[[$symbol($version)]($style)\]'
 
 [docker_context]
- format = '\[[$symbol$context]($style)\]'
+ format = '\[[$symbol]($style)\]'
  symbol = ' '
 
 [dotnet]
