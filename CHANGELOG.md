@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.14.1](https://github.com/snelling-a/dotfiles/compare/v2.14.0...v2.14.1) (2023-09-11)
+
+
+### Bug Fixes
+
+* docker context ([abd0b36](https://github.com/snelling-a/dotfiles/commit/abd0b3677f9fab65291fac75e6ebda33652c29a8))
+
 ## [2.14.0](https://github.com/snelling-a/dotfiles/compare/v2.13.0...v2.14.0) (2023-09-08)
 
 
