@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.14.3](https://github.com/snelling-a/dotfiles/compare/v2.14.2...v2.14.3) (2023-09-13)
+
+
+### Bug Fixes
+
+* brewup script ([a9daa7d](https://github.com/snelling-a/dotfiles/commit/a9daa7d5f4173184a08e2b428230951615fe0b9f))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([81a5833](https://github.com/snelling-a/dotfiles/commit/81a5833480da67c17678f332dd985678f0df9cce))
+
 ## [2.14.2](https://github.com/snelling-a/dotfiles/compare/v2.14.1...v2.14.2) (2023-09-12)
 
 
