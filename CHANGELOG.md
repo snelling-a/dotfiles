@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.15.0](https://github.com/snelling-a/dotfiles/compare/v2.14.3...v2.15.0) (2023-09-13)
+
+
+### Features
+
+* sudo touch id ([38ced35](https://github.com/snelling-a/dotfiles/commit/38ced358b3b3478945ca89c6814bb135c7df289c))
+
 ## [2.14.3](https://github.com/snelling-a/dotfiles/compare/v2.14.2...v2.14.3) (2023-09-13)
 
 
