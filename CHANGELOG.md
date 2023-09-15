@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.16.0](https://github.com/snelling-a/dotfiles/compare/v2.15.1...v2.16.0) (2023-09-15)
+
+
+### Features
+
+* add MasonInstallAll to brewup ([ffc06dd](https://github.com/snelling-a/dotfiles/commit/ffc06dd5fdc800039a62bee390180301ca2478af))
+
 ## [2.15.1](https://github.com/snelling-a/dotfiles/compare/v2.15.0...v2.15.1) (2023-09-15)
 
 
