@@ -73,6 +73,7 @@ brew "neovim", args: ["HEAD"]
 brew "ninja"
 brew "odt2txt"
 brew "onefetch"
+brew "openjdk"
 brew "openjdk@17"
 brew "openssl@1.1"
 brew "pandoc"
