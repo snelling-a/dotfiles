@@ -158,6 +158,10 @@ install_cargo() {
 	fi
 }
 
+setup_java() {
+	ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+}
+
 mkdir "$backup_dir"
 mkdir -p "$HOME/work"
 
@@ -169,6 +173,8 @@ link_config_directories
 generate_completions
 
 install_cargo
+setup_java
+
 setup_wezterm
 setup_fzf
 

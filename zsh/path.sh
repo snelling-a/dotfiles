@@ -2,28 +2,26 @@
 
 eval "$(brew shellenv)"
 
-PATH="/usr/local/bin/nvim:$PATH"
+PATH="$DOTFILES/scripts:$PATH"
+
+PATH="$HOMEBREW_PREFIX/bin/nvim:$PATH"
 
 # use gnu tools
 PATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin:$PATH"
 PATH="$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin:$PATH"
 PATH="$HOMEBREW_PREFIX/opt/gawk/libexec/gnubin:$PATH"
 PATH="$HOMEBREW_PREFIX/opt/make/libexec/gnubin:$PATH"
+PATH="$HOMEBREW_PREFIX/opt/curl/bin:$PATH"
+
+. "$HOME/.cargo/env"
 
 PATH="$HOMEBREW_PREFIX/bin/luacheck:$PATH"
 PATH="$HOMEBREW_PREFIX/bin/stylua:$PATH"
 
-. "$HOME/.cargo/env"
-
-# PATH="$(yarn bin):$PATH"
-
-PATH="$HOMEBREW_PREFIX/opt/curl/bin:$PATH"
-
 PATH="$HOMEBREW_PREFIX/python3:$PATH"
-
-PATH="$DOTFILES/scripts:$PATH"
-
 PATH="$HOMEBREW_PREFIX/go/bin:$PATH"
+PATH="$HOMEBREW_PREFIX/opt/ruby/bin:$PATH"
+PATH="$HOMEBREW_PREFIX/opt/openjdk/bin:$PATH"
 
 export PATH
 
