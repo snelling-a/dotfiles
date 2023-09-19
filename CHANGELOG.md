@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.16.1](https://github.com/snelling-a/dotfiles/compare/v2.16.0...v2.16.1) (2023-09-19)
+
+
+### Bug Fixes
+
+* path ([95d4f21](https://github.com/snelling-a/dotfiles/commit/95d4f2179f42e51b9889fa65b7ddf7405201cf9a))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([b63a6c5](https://github.com/snelling-a/dotfiles/commit/b63a6c519e6697af3afea9b1eb37f9a03294dec1))
+* **brew:** update packages ([664514b](https://github.com/snelling-a/dotfiles/commit/664514b971ab8baffc257039ee5a2f9bc3ef2272))
+* update submodules ([1424042](https://github.com/snelling-a/dotfiles/commit/14240425d9745ea2d47cefc1e620ae731f38a40c))
+
 ## [2.16.0](https://github.com/snelling-a/dotfiles/compare/v2.15.1...v2.16.0) (2023-09-15)
 
 
