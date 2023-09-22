@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.17.0](https://github.com/snelling-a/dotfiles/compare/v2.16.1...v2.17.0) (2023-09-21)
+
+
+### Features
+
+* neovim dev mode ([01691bc](https://github.com/snelling-a/dotfiles/commit/01691bc23341c14b04cbfeb02201fb3c05843f97))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([da4d280](https://github.com/snelling-a/dotfiles/commit/da4d280b1bc4c3059034fed5f35c697a40a77910))
+* update submodules ([68e375b](https://github.com/snelling-a/dotfiles/commit/68e375ba52027fce43cbc6f6127c4fb607862982))
+
 ## [2.16.1](https://github.com/snelling-a/dotfiles/compare/v2.16.0...v2.16.1) (2023-09-19)
 
 
