@@ -3,6 +3,7 @@
 eval "$(brew shellenv)"
 
 PATH="$DOTFILES/scripts:$PATH"
+PATH="$DOTFILES/scripts/local:$PATH"
 
 PATH="$HOMEBREW_PREFIX/bin/nvim:$PATH"
 
