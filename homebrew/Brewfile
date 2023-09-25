@@ -34,7 +34,6 @@ brew "deno"
 brew "detox"
 brew "docker-buildx"
 brew "docker-credential-helper", link: false
-brew "efm-langserver"
 brew "exiv2"
 brew "fd", args: ["HEAD"]
 brew "ffmpeg"
