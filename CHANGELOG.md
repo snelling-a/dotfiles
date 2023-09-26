@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.18.0](https://github.com/snelling-a/dotfiles/compare/v2.17.1...v2.18.0) (2023-09-26)
+
+
+### Features
+
+* node history ([4f7d371](https://github.com/snelling-a/dotfiles/commit/4f7d37194b6a3745981fd29806e55305e6de7d85))
+
 ## [2.17.1](https://github.com/snelling-a/dotfiles/compare/v2.17.0...v2.17.1) (2023-09-26)
 
 
