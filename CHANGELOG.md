@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.17.1](https://github.com/snelling-a/dotfiles/compare/v2.17.0...v2.17.1) (2023-09-26)
+
+
+### Bug Fixes
+
+* local scripts in path ([dd07c0f](https://github.com/snelling-a/dotfiles/commit/dd07c0f640179604b21fee22aa3d4ecf0798d7a4))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([18070da](https://github.com/snelling-a/dotfiles/commit/18070daaf46791a092cbfcfbf5bd3e69d64eb89c))
+* **brew:** update packages ([ba1501d](https://github.com/snelling-a/dotfiles/commit/ba1501d9d4a1f04c4ed17fbde5c94bddc65266e3))
+
 ## [2.17.0](https://github.com/snelling-a/dotfiles/compare/v2.16.1...v2.17.0) (2023-09-21)
 
 
