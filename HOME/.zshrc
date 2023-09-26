@@ -41,6 +41,4 @@ if [[ $TERM_PROGRAM == WezTerm ]]; then
 	export TERM=wezterm
 fi
 
-export DOCKER_HOST=unix:///Users/andrew.snelling/.colima/docker.sock
-
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh ] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh
