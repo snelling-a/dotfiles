@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.18.1](https://github.com/snelling-a/dotfiles/compare/v2.18.0...v2.18.1) (2023-09-27)
+
+
+### Bug Fixes
+
+* **fzf:** colors ([f07e0e6](https://github.com/snelling-a/dotfiles/commit/f07e0e657f892d12e3e40e9c01414f4600984465))
+
+
+### Miscellaneous
+
+* update submodules ([732f1a5](https://github.com/snelling-a/dotfiles/commit/732f1a5b2a4b7df1ef878b3f5581f792457e4fc0))
+
 ## [2.18.0](https://github.com/snelling-a/dotfiles/compare/v2.17.1...v2.18.0) (2023-09-26)
 
 
