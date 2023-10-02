@@ -32,8 +32,9 @@ brew "cpanminus"
 brew "curl"
 brew "deno"
 brew "detox"
+brew "docker"
 brew "docker-buildx"
-brew "docker-credential-helper", link: false
+brew "docker-credential-helper"
 brew "exiv2"
 brew "fd", args: ["HEAD"]
 brew "ffmpeg"
