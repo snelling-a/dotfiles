@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.20.0](https://github.com/snelling-a/dotfiles/compare/v2.19.0...v2.20.0) (2023-10-02)
+
+
+### Features
+
+* **git:** don't keep merge backups ([24c00f6](https://github.com/snelling-a/dotfiles/commit/24c00f6e3df6f91c0ba59f7bfd4da7718577601d))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([acc07d9](https://github.com/snelling-a/dotfiles/commit/acc07d9c0aa5135bda1f3930725ba344258b88d1))
+* update submodules ([4db76d6](https://github.com/snelling-a/dotfiles/commit/4db76d65a568b0fafdaec4a882ca1ab7e6fadf8c))
+
 ## [2.19.0](https://github.com/snelling-a/dotfiles/compare/v2.18.1...v2.19.0) (2023-09-27)
 
 
