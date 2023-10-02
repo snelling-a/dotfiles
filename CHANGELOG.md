@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.19.0](https://github.com/snelling-a/dotfiles/compare/v2.18.1...v2.19.0) (2023-09-27)
+
+
+### Features
+
+* **fzf:** preview files with bat ([35f91b2](https://github.com/snelling-a/dotfiles/commit/35f91b2d7dc3f8cd9648be8e89cd3d42167ab40d))
+
 ## [2.18.1](https://github.com/snelling-a/dotfiles/compare/v2.18.0...v2.18.1) (2023-09-27)
 
 
