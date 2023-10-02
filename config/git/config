@@ -152,6 +152,9 @@
 	conflictstyle = diff3
 	tool = nvimmerge
 
+[mergetool]
+    keepBackup = false
+
 [mergetool "nvimmerge"]
 	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\" \"$MERGED\" -c '$wincmd w' -c 'wincmd J'"
 	trustexitcode = true
