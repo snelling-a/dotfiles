@@ -3,8 +3,7 @@
 --max-columns-preview
 
 # Add my 'web' type.
---type-add
-web:*.{html,css,js}*
+--type-add=web:*.{html,css,js}*
 
 # Using glob patterns to include/exclude files or folders
 --glob=!**/.git/*
@@ -15,3 +14,56 @@ web:*.{html,css,js}*
 
 # Because who cares about case!?
 --smart-case
+
+--glob=!*.cache
+--glob=!*.orig
+--glob=!.AppleDB
+--glob=!.AppleDesktop
+--glob=!.AppleDouble
+--glob=!.DS_Store
+--glob=!.Spotlight-V100
+--glob=!.TemporaryItems
+--glob=!.Trash-*
+--glob=!.Trash/
+--glob=!.Trashes
+--glob=!.VolumeIcon.icns
+--glob=!._backup/
+--glob=!.cargo/
+--glob=!.git/
+--glob=!.npm/
+--glob=!.sass-cache/
+--glob=!.tmp/
+--glob=!.viminfo
+--glob=!.yarn/
+--glob=!Applications/
+--glob=!Downloads/
+--glob=!Library/
+--glob=!Movies/
+--glob=!Music/
+--glob=!Pictures/
+--glob=!Podcasts/
+--glob=!Public/
+--glob=!Screenshots/
+--glob=!Thumbs.db
+--glob=!Videos/
+--glob=![Dd]esktop.ini
+--glob=!build/
+--glob=!cache/
+--glob=!cargo/registry/
+--glob=!ccache/
+--glob=!coverage/
+--glob=!deps/
+--glob=!dist/
+--glob=!hg/
+--glob=!history/
+--glob=!node_modules/
+--glob=!npm-debug.log
+--glob=!npm-debug.log.*
+--glob=!public/
+--glob=!public/js/
+--glob=!storage/
+--glob=!tmp/
+--glob=!vendor/
+--glob=!venv/
+--glob=!wget-log
+--glob=!yarn-error.log
