@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.20.1](https://github.com/snelling-a/dotfiles/compare/v2.20.0...v2.20.1) (2023-10-05)
+
+
+### Bug Fixes
+
+* **lazygit:** nerdfonts icons ([5b1744e](https://github.com/snelling-a/dotfiles/commit/5b1744e2d047a5a3462f720e9e4f4f230706d2fe))
+
+
+### Miscellaneous
+
+* update submodules ([91e20c4](https://github.com/snelling-a/dotfiles/commit/91e20c4ad1e063a65736229b4bf29d6b570acd35))
+
 ## [2.20.0](https://github.com/snelling-a/dotfiles/compare/v2.19.0...v2.20.0) (2023-10-02)
 
 
