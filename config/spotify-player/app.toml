@@ -1,0 +1,38 @@
+app_refresh_duration_in_ms         = 32
+border_type                        = "Rounded"
+client_id                          = "c2c844272f434f24b95525e136ff2ca8"
+client_port                        = 8080
+cover_image_refresh_duration_in_ms = 2000
+cover_img_length                   = 9
+cover_img_scale                    = 1.0
+cover_img_width                    = 5
+default_device                     = "spotify-player"
+enable_cover_image_cache           = true
+enable_media_control               = false
+enable_streaming                   = "Always"
+liked_icon                         = "♥"
+page_size_in_rows                  = 20
+pause_icon                         = "▌▌"
+play_icon                          = "▶"
+playback_format                    = "{track} • {artists} {album} {metadata}"
+playback_refresh_duration_in_ms    = 0
+playback_window_position           = "Bottom"
+playback_window_width              = 6
+progress_bar_type                  = "Rectangle"
+tracks_playback_limit              = 50
+
+[copy_command]
+ args    = []
+ command = "pbcopy"
+
+[notify_format]
+ body    = "{track} • {artists}"
+ summary = "{album}"
+
+[device]
+ audio_cache   = false
+ bitrate       = 320
+ device_type   = "speaker"
+ name          = "spotify-player"
+ normalization = false
+ volume        = 100

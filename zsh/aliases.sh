@@ -58,5 +58,7 @@ cargoup() {
 
 alias brew_list="brew info --json=v2 --installed | jq -r '.formulae[]|select(any(.installed[]; .installed_on_request)).full_name'"
 
+alias spt=spotify_player
+
 export HOMEBREW_BUNDLE_FILE=$DOTFILES/homebrew/Brewfile
 export HOMEBREW_NO_ANALYTICS=1
