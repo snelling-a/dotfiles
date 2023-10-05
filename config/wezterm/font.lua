@@ -1,8 +1,8 @@
 local wezterm = require("wezterm")
 
-local Font = {}
+local M = {}
 
-Font.font = wezterm.font_with_fallback({
+M.font = wezterm.font_with_fallback({
 	{
 		family = "Iosevka Term SS15",
 	},
@@ -14,6 +14,6 @@ Font.font = wezterm.font_with_fallback({
 	},
 })
 
-Font.font_size = 16.0
+M.font_size = 16.0
 
-return Font
+return M

@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
 
-local Keys = {}
+local M = {}
 
 local tab_keys = {}
 
@@ -13,7 +13,7 @@ for i = 1, 8 do
 	})
 end
 
-Keys.keys = {
+M.keys = {
 	{
 		key = "+",
 		mods = "SUPER|SHIFT",
@@ -383,14 +383,14 @@ for key, _ in ipairs(copy_mode_remap) do
 	table.insert(copy_mode, copy_mode_remap[key])
 end
 
-Keys.key_tables = {
+M.key_tables = {
 	copy_mode = copy_mode,
 	resize_pane = resize_pane,
 }
 
-Keys.leader = {
+M.leader = {
 	key = "a",
 	mods = "CTRL",
 }
 
-return Keys
+return M
