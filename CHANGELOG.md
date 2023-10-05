@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.21.0](https://github.com/snelling-a/dotfiles/compare/v2.20.1...v2.21.0) (2023-10-05)
+
+
+### Features
+
+* spotify ([353c462](https://github.com/snelling-a/dotfiles/commit/353c462c6c35e40f14aaa53317adebef9c082b69))
+
 ## [2.20.1](https://github.com/snelling-a/dotfiles/compare/v2.20.0...v2.20.1) (2023-10-05)
 
 
