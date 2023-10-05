@@ -1,13 +1,14 @@
 ---
 git:
-  allBranchesLogCmd: 'git lsa'
-  branchLogCmd: 'git lsla'
+  allBranchesLogCmd: "git lsa"
+  branchLogCmd: "git lsla"
   overrideGpg: true
   paging:
     colorArg: always
-    pager: delta --dark --paging=never --true-color=never
+    pager: delta --dark --paging=never --true-color=always
 gui:
-  border: 'rounded'
+  border: "rounded"
+  nerdFontsVersion: "3"
   showBottomLine: false
   showIcons: true
   theme:
@@ -18,16 +19,8 @@ gui:
       - reverse
 keybinding:
   universal:
-    confirm: '<enter>'
-    copyToClipboard: '<c-o>'
-    edit: 'e'
-    executeCustomCommand: ';'
-    goInto: '<enter>'
-    new: 'n'
+    executeCustomCommand: ";"
     openFile: null
-    openRecentRepos: null
-    optionMenu: '?'
-    optionMenu-alt1: '?'
-    remove: 'd'
-    select: '<space>'
-notARepository: 'quit'
+    optionMenu: "?"
+    optionMenu-alt1: "?"
+notARepository: "quit"
