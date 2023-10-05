@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# shellcheck disable=1083,1009,1072,1073
+# shellcheck disable=all
 
 set shellopts '-eu'
 
@@ -10,6 +10,7 @@ set icons
 set ifs "\n"
 set incfilter
 set incsearch
+set info "size"
 set number
 set previewer ~/.config/lf/pv.sh
 set relativenumber
@@ -60,8 +61,6 @@ cmd openShell ${{
 $SHELL
 }}
 
-# cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
-
 cmd delete ${{
 set -f
 printf "$fx\n"
@@ -70,7 +69,9 @@ read ans
 [ $ans = "y" ] && trash $fx
 }}
 
-cmd mkdir %mkdir $1
+cmd mkdir %{{
+[[ -n "${1}" ]] && command mkdir -pv -- "${@}"
+}}
 
 cmd mkfile ${{
 touch $1
@@ -109,35 +110,77 @@ res="$( \
         --header 'Search in files' \
         | cut -d':' -f1
             )"
-            [ ! -z "$res" ] && lf -remote "send $id select \"$res\"" 
+            [ ! -z "$res" ] && lf -remote "send $id select \"$res\""
         }}
 
-# keymaps
+# Create a folder & cd into it
+cmd mkcd %{{
+command mkdir -p -- "${@}" && lf -remote "send $id cd \"$@\""
+}}
+
+map ,
 map c
 map d
-map M
+map i
+map m
 map p
-# map r
+map r
 map w
 map y
 
-map <backspace2> set hidden!
+cmap <a-,>  cmd-menu-complete-back
+cmap <a-.>  cmd-menu-complete
+cmap <a-b> cmd-word-back
+cmap <a-f> cmd-word
+cmap <a-i> cmd-word
+cmap <a-o> cmd-word-back
+cmap <c-c>  cmd-interrupt
+cmap <c-j>  cmd-history-next
+cmap <c-k>  cmd-history-prev
+cmap <down> cmd-history-next
+cmap <esc>  cmd-escape
+cmap <tab>  cmd-complete
+cmap <up>   cmd-history-prev
+map ,F setfilter
+map ,f filter
+map . set hidden!
+map <a-i> :{{ clear; unselect; }}
 map <c-p> :fzf_jump
 map <c-r> :fzf_search
 map <enter> open
-map cmp tar
-map dD delete
-map dd push :cut<enter>
-map ext extract
-map i $~/.config/lf/pv.sh $f | less -R
-map Md push :mkdir<space>
-map Mf push :mkfile<space>
-map pp push :paste<enter>
-# map rn push :rename<space>
+map <f-2> rename
+map <tab> :toggle; down
+map A push <f-2><end>
+map Ee $sudo -A nvim "$f"
+map Ev $vim "$f"
+map I push <f-2><home>
 map S openShell
 map X !$f
+map ZZ quit
+map aa push <f-2><end><a-b>
+map cmp tar
+map cn push <f-2><end><c-u>
+map dD delete
+map dd push :cut<enter>
+map eZ $$EDITOR $HOME/.zshenv
+map ee $$EDITOR "$f"
+map ext extract
+map ez $$EDITOR $HOME/.zshrc
+map fF setfilter
+map ff filter
+map gst $lazygit
+map i $~/.config/lf/pv.sh $f | less -R
+map md push :mkdir<space>
+map mf push :mkfile<space>
+map mt push :mkcd<space>
+map pp push :paste<enter>
 map x $$f
 map yd !printf $PWD | pbcopy
 map yn !printf $f | xargs basename | pbcopy
 map yp !printf $f | pbcopy
 map yy push :copy<enter>
+
+map gf ${{
+# git onefetch
+clear -x; onefetch | bat --paging=always --style=plain
+}}
