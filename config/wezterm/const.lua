@@ -4,13 +4,13 @@ local color_scheme = "Default Dark (base16)"
 local default_colors = wezterm.color.get_builtin_schemes()[color_scheme]
 local nerdfonts = wezterm.nerdfonts
 
-local Constants = {}
+local M = {}
 
-function Constants.pad_right(string)
+function M.pad_right(string)
 	return wezterm.pad_right(string, 3)
 end
 
-Constants.colors = {
+M.colors = {
 	background = default_colors.background, -- #181818
 	black = default_colors.ansi[1], --#181818
 	blue = default_colors.ansi[5], --#7cafc2
@@ -33,217 +33,44 @@ Constants.colors = {
 	yellow = default_colors.ansi[4], --#f7ca88
 }
 
-Constants.process_icons = {
-	["bash"] = {
+local function get_process_icon(color, text)
+	return {
 		{
 			Foreground = {
-				Color = Constants.colors.bright_black,
+				Color = color,
 			},
 		},
 		{
-			Text = Constants.pad_right(nerdfonts.cod_terminal_bash),
+			Text = M.pad_right(text),
 		},
-	},
-	["bat"] = {
-		{
-			Foreground = {
-				Color = Constants.colors.bright_black,
-			},
-		},
-		{
-			Text = Constants.pad_right(nerdfonts.md_bat),
-		},
-	},
-	["btm"] = {
-		{
-			Foreground = {
-				Color = Constants.colors.magenta,
-			},
-		},
-		{
-			Text = Constants.pad_right(nerdfonts.cod_pie_chart) .. " ",
-		},
-	},
-	["cargo"] = {
-		{
-			Foreground = {
-				Color = Constants.colors.red,
-			},
-		},
-		{
-			Text = Constants.pad_right(nerdfonts.dev_rust),
-		},
-	},
-	["curl"] = {
-		{
-			Foreground = {
-				Color = Constants.colors.cyan,
-			},
-		},
-		{
-			Text = Constants.pad_right(nerdfonts.oct_download),
-		},
-	},
-	["docker"] = {
-		{
-			Foreground = {
-				Color = Constants.colors.blue,
-			},
-		},
-		{
-			Text = Constants.pad_right(nerdfonts.dev_docker),
-		},
-	},
-	["gh"] = {
-		{
-			Foreground = {
-				Color = Constants.colors.grey,
-			},
-		},
-		{
-			Text = Constants.pad_right(nerdfonts.dev_github_badge),
-		},
-	},
-	["git"] = {
-		{
-			Foreground = {
-				Color = Constants.colors.red,
-			},
-		},
-		{
-			Text = Constants.pad_right(nerdfonts.dev_git),
-		},
-	},
-	["go"] = {
-		{
-			Foreground = {
-				Color = Constants.colors.cyan,
-			},
-		},
-		{
-			Text = Constants.pad_right(nerdfonts.dev_go),
-		},
-	},
-	["lazygit"] = {
-		{
-			Foreground = {
-				Color = Constants.colors.red,
-			},
-		},
-		{
-			Text = Constants.pad_right(nerdfonts.dev_git),
-		},
-	},
-	["lf"] = {
-		{
-			Foreground = {
-				Color = Constants.colors.blue,
-			},
-		},
-		{
-			Text = Constants.pad_right(nerdfonts.cod_list_tree),
-		},
-	},
-	["lua"] = {
-		{
-			Foreground = {
-				Color = Constants.colors.blue,
-			},
-		},
-		{
-			Text = Constants.pad_right(nerdfonts.seti_lua),
-		},
-	},
-	["node"] = {
-		{
-			Foreground = {
-				Color = Constants.colors.green,
-			},
-		},
-		{
-			Text = Constants.pad_right(nerdfonts.md_nodejs),
-		},
-	},
-	["nvim"] = {
-		{
-			Foreground = {
-				Color = Constants.colors.green,
-			},
-		},
-		{
-			Text = Constants.pad_right(nerdfonts.custom_vim),
-		},
-	},
-	["ruby"] = {
-		{
-			Foreground = {
-				Color = Constants.colors.red,
-			},
-		},
-		{
-			Text = Constants.pad_right(nerdfonts.dev_ruby),
-		},
-	},
-	["tig"] = {
-		{
-			Foreground = {
-				Color = Constants.colors.red,
-			},
-		},
-		{
-			Text = Constants.pad_right(nerdfonts.dev_git),
-		},
-	},
-	["tmux"] = {
-		{
-			Foreground = {
-				Color = Constants.colors.bright_green,
-			},
-		},
-		{
-			Text = Constants.pad_right(nerdfonts.cod_terminal_tmux),
-		},
-	},
-	["vim"] = {
-		{
-			Foreground = {
-				Color = Constants.colors.green,
-			},
-		},
-		{
-			Text = Constants.pad_right(nerdfonts.dev_vim),
-		},
-	},
-	["wget"] = {
-		{
-			Foreground = {
-				Color = Constants.colors.cyan,
-			},
-		},
-		{
-			Text = Constants.pad_right(nerdfonts.oct_download),
-		},
-	},
-	["yarn"] = {
-		{
-			Foreground = {
-				Color = Constants.colors.cyan,
-			},
-		},
-		{
-			Text = Constants.pad_right(nerdfonts.seti_yarn),
-		},
-	},
-	["zsh"] = {
-		{
-			Foreground = {
-				Color = Constants.colors.red,
-			},
-		},
-		{
-			Text = Constants.pad_right(nerdfonts.dev_terminal),
-		},
-	},
+	}
+end
+
+M.process_icons = {
+	bash = get_process_icon(M.colors.bright_black, nerdfonts.cod_terminal_bash),
+	bat = get_process_icon(M.colors.bright_black, nerdfonts.md_bat),
+	btm = get_process_icon(M.colors.magenta, nerdfonts.cod_pie_chart),
+	cargo = get_process_icon(M.colors.red, nerdfonts.dev_rust),
+	colima = get_process_icon(M.colors.blue, nerdfonts.dev_docker),
+	curl = get_process_icon(M.colors.cyan, nerdfonts.oct_download),
+	docker = get_process_icon(M.colors.blue, nerdfonts.dev_docker),
+	gh = get_process_icon(M.colors.grey, nerdfonts.dev_github_badge),
+	git = get_process_icon(M.colors.red, nerdfonts.dev_git),
+	go = get_process_icon(M.colors.cyan, nerdfonts.dev_go),
+	lazygit = get_process_icon(M.colors.red, nerdfonts.dev_git),
+	lf = get_process_icon(M.colors.blue, nerdfonts.cod_list_tree),
+	lua = get_process_icon(M.colors.blue, nerdfonts.seti_lua),
+	node = get_process_icon(M.colors.green, nerdfonts.md_nodejs),
+	nvim = get_process_icon(M.colors.green, nerdfonts.custom_vim),
+	onefetch = get_process_icon(M.colors.red, nerdfonts.dev_git),
+	ruby = get_process_icon(M.colors.red, nerdfonts.dev_ruby),
+	spotify_player = get_process_icon(M.colors.green, nerdfonts.md_spotify),
+	tig = get_process_icon(M.colors.red, nerdfonts.dev_git),
+	tmux = get_process_icon(M.colors.bright_green, nerdfonts.cod_terminal_tmux),
+	vim = get_process_icon(M.colors.green, nerdfonts.dev_vim),
+	wget = get_process_icon(M.colors.cyan, nerdfonts.oct_download),
+	yarn = get_process_icon(M.colors.cyan, nerdfonts.seti_yarn),
+	zsh = get_process_icon(M.colors.red, nerdfonts.dev_terminal),
 }
 
-return Constants
+return M
