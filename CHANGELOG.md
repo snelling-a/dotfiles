@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.21.2](https://github.com/snelling-a/dotfiles/compare/v2.21.1...v2.21.2) (2023-10-06)
+
+
+### Bug Fixes
+
+* **spotify:** use computer as device ([1eaa5cb](https://github.com/snelling-a/dotfiles/commit/1eaa5cb38ab1732bb2f28f8186eea02505653d3c))
+
 ## [2.21.1](https://github.com/snelling-a/dotfiles/compare/v2.21.0...v2.21.1) (2023-10-06)
 
 
