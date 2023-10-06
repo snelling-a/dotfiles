@@ -8,7 +8,7 @@ cover_img_scale                    = 1.0
 cover_img_width                    = 5
 default_device                     = "spotify-player"
 enable_cover_image_cache           = true
-enable_media_control               = false
+enable_media_control               = true
 enable_streaming                   = "Always"
 liked_icon                         = "♥"
 page_size_in_rows                  = 20
@@ -32,7 +32,7 @@ tracks_playback_limit              = 50
 [device]
  audio_cache   = false
  bitrate       = 320
- device_type   = "speaker"
+ device_type   = "computer"
  name          = "spotify-player"
  normalization = false
  volume        = 100
