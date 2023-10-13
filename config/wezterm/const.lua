@@ -6,10 +6,6 @@ local nerdfonts = wezterm.nerdfonts
 
 local M = {}
 
-function M.pad_right(string)
-	return wezterm.pad_right(string, 3)
-end
-
 --- @type table<string,string>
 M.colors = {
 	base00 = default_colors.ansi[1], -- #181818 default background
@@ -38,7 +34,7 @@ local function get_process_icon(color, text)
 			},
 		},
 		{
-			Text = M.pad_right(text),
+			Text = wezterm.pad_right(text, 3),
 		},
 	}
 end
