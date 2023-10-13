@@ -3,16 +3,17 @@ local colors = require("const").colors
 local nerdfonts = wezterm.nerdfonts
 
 local function get_basename(s)
-	return string.gsub(s, "(.*[/\\])(.*)", "%2")
+	return s:gsub("(.*[/\\])(.*)", "%2")
 end
 
 local function get_process(pane)
-	if string.match(pane.title, "Copy mode:") then
+	local title = pane.title or "zsh"
+
+	if title:match("Copy mode:") then
 		return nerdfonts.oct_copy
 	end
 
-	local process = get_basename(pane.foreground_process_name)
-	local icon = require("const").process_icons[process]
+	local icon = require("const").process_icons[title]
 
 	local fallback = {
 		{
@@ -21,7 +22,7 @@ local function get_process(pane)
 			},
 		},
 		{
-			Text = string.format("[%s]", process or "zsh"),
+			Text = ("[%s]"):format(title),
 		},
 	}
 
@@ -32,12 +33,11 @@ local function get_current_working_dir(tab)
 	local current_dir = (tab.current_working_dir or {}).path or ""
 	local HOME_DIR = os.getenv("HOME")
 
-	return current_dir == HOME_DIR and nerdfonts.md_tilde or string.format(" %s", get_basename(current_dir))
+	return current_dir == HOME_DIR and nerdfonts.md_tilde or (" %s"):format(get_basename(current_dir))
 end
 
----@diagnostic disable-next-line: unused-local
 wezterm.on("format-tab-title", function(tab, _tabs, _panes, _config, _hover, _max_width)
-	local zoomed = tab.active_pane.is_zoomed and wezterm.pad_left(nerdfonts.md_magnify, 3) or ""
+	local zoomed = tab.active_pane.is_zoomed and wezterm.pad_left(nerdfonts.md_magnify, 2) or ""
 
 	return wezterm.format({
 		{
