@@ -41,10 +41,6 @@ M.visual_bell = {
 M.window_background_opacity = 0.5
 M.window_close_confirmation = "NeverPrompt"
 M.window_decorations = "RESIZE"
-M.window_frame = {
-	active_titlebar_bg = colors.base00,
-	font_size = 15,
-}
 M.window_padding = {
 	bottom = 0,
 	left = 0,
