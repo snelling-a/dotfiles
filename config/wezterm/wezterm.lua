@@ -1,5 +1,5 @@
 local font = require("font")
-local keys = require("keys")
+local keys = require("keys") --[[@as table]]
 local wezterm = require("wezterm")
 local colors = require("const").colors
 
