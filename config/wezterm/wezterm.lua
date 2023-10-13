@@ -14,6 +14,7 @@ if wezterm.config_builder then
 end
 
 M.audible_bell = "Disabled"
+M.check_for_updates = false
 M.color_scheme = "Default Dark (base16)"
 M.colors = {
 	visual_bell = colors.base00,
@@ -28,6 +29,7 @@ M.key_tables = keys.key_tables
 M.keys = keys.keys
 M.leader = keys.leader
 M.macos_window_background_blur = 20
+M.show_update_window = false
 M.switch_to_last_active_tab_when_closing_tab = true
 M.term = "wezterm"
 M.visual_bell = {
