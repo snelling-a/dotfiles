@@ -16,7 +16,7 @@ end
 M.audible_bell = "Disabled"
 M.color_scheme = "Default Dark (base16)"
 M.colors = {
-	visual_bell = colors.background,
+	visual_bell = colors.base00,
 }
 M.disable_default_key_bindings = true
 M.font = font.font
@@ -40,7 +40,7 @@ M.window_background_opacity = 0.5
 M.window_close_confirmation = "NeverPrompt"
 M.window_decorations = "RESIZE"
 M.window_frame = {
-    active_titlebar_bg = colors.background,
+	active_titlebar_bg = colors.base00,
 	font_size = 15,
 }
 M.window_padding = {

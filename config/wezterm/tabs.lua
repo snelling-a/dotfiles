@@ -18,7 +18,7 @@ local function get_process(pane)
 	local fallback = {
 		{
 			Foreground = {
-				Color = colors.foreground,
+				Color = colors.base05,
 			},
 		},
 		{
@@ -45,7 +45,7 @@ wezterm.on("format-tab-title", function(tab, _tabs, _panes, _config, _hover, _ma
 		},
 		{
 			Foreground = {
-				Color = colors.foreground,
+				Color = colors.base05,
 			},
 		},
 		{

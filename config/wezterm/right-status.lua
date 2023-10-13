@@ -32,7 +32,7 @@ wezterm.on("update-right-status", function(window)
 	window:set_right_status(wezterm.format({
 		{
 			Background = {
-				Color = const.colors.background,
+				Color = const.colors.base01,
 			},
 		},
 		{
