@@ -1,5 +1,21 @@
 # Changelog
 
+## [3.0.0](https://github.com/snelling-a/dotfiles/compare/v2.21.5...v3.0.0) (2023-10-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* **vim:** move vimrc to vimdir
+
+### refactor
+
+* **vim:** move vimrc to vimdir ([e42d186](https://github.com/snelling-a/dotfiles/commit/e42d1860ab3ab8dc027efb6c604ae366e4d94c4b))
+
+
+### Miscellaneous
+
+* update submodules ([6e3c70a](https://github.com/snelling-a/dotfiles/commit/6e3c70a00fd44caad91b7707e89bc1315aa6fdb2))
+
 ## [2.21.5](https://github.com/snelling-a/dotfiles/compare/v2.21.4...v2.21.5) (2023-10-14)
 
 
