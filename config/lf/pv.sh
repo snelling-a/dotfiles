@@ -2,123 +2,138 @@
 
 set -eu
 
-FILE="${1}"
-WIDTH="${2:-$(tput cols)}"
-HEIGHT="${3:-$(tput lines)}"
+thumbnail="/tmp/thumbnail.png"
 
-WIDTH="$((WIDTH - 3))"
-HEIGHT="$((HEIGHT - 3))"
+file="${1}"
+width="${2}"
+height="${3}"
 
-[ -L "${FILE}" ] && FILE="$(readlink "$FILE")"
+[ -L "${file}" ] && file="$(readlink "$file")"
 
-view_sqlite() {
-	echo -e "# \e[1;37mTABLES\e[0m\n"
-	sqlite3 "$FILE" ".tables"
-	echo -e "\n# \e[1;37mSCHEMA\e[0m\n"
-	sqlite3 "$FILE" ".schema"
-	return $?
+jq_json() {
+	jq --color-output . "${1}"
 }
 
-view_image() {
-	local input="${1:-$FILE}"
-
-	viu -sb -w "$WIDTH" "$input" ||
-		chafa -s "$WIDTH"x"$HEIGHT" "$input" ||
-		local result=$?
-
-	return "$result"
+preview() {
+	local input="${1:-$file}"
+	chafa "$input" -f sixel -s "$((width - 2))x$height" | sed 's/#/\n#/g'
 }
 
 view_binary() {
-	local len="$((WIDTH * HEIGHT))"
+	local len="$((width * height))"
 
-	hexyl -n "$len" --border none "$FILE" ||
-		hexdump -n "$len" -C "$FILE"
-
-	return $?
-}
-
-view_sourcecode() {
-	local input="${1:-$FILE}"
-
-	BAT_CONFIG_PATH='' bat "${input}" \
-		--theme=base16 \
-		--color=always \
-		--tabs=2 \
-		--wrap=auto \
-		--style=plain \
-		--number \
-		--terminal-width "${WIDTH}" ||
-		cat "${input}"
-
-	return $?
+	hexyl -n "$len" --border none "$file" ||
+		hexdump -n "$len" -C "$file"
 }
 
 view_opendocument() {
 	if ! hash pandoc 2>/dev/null; then
-		odt2txt "${FILE}"
+		odt2txt "${file}"
 	elif ! hash glow 2>/dev/null; then
-		pandoc "${FILE}" --to=markdown || odt2txt "${FILE}"
+		pandoc "${file}" --to=markdown || odt2txt "${file}"
 	else
-		glow -s dark -w "${WIDTH}" \
-			<(pandoc "${FILE}" --to=markdown || odt2txt "${FILE}")
+		glow -s dark -w "${width}" \
+			<(pandoc "${file}" --to=markdown || odt2txt "${file}")
 	fi
-	return $?
+}
+
+view_sourcecode() {
+	local input="${1:-$file}"
+
+	BAT_CONFIG_PATH='' bat "${input}" \
+		--color=always \
+		--number \
+		--style=plain \
+		--tabs=2 \
+		--terminal-width "${width}" \
+		--theme=base16 \
+		--wrap=auto ||
+		cat "${input}" || view_binary
+}
+
+view_sqlite() {
+	echo -e "# \e[1;37mTABLES\e[0m\n"
+	sqlite3 "$file" ".tables"
+	echo -e "\n# \e[1;37mSCHEMA\e[0m\n"
+	sqlite3 "$file" ".schema"
 }
 
 not_implemented() {
 	echo "not implemented"
+	file="$(readlink "$file")"
 }
 
-main() {
-	# Display title and border
-	local filename="${FILE/$PWD\//}"
-	printf "\e[38;5;243m%*s\e[0m\n" $(((${#filename} + WIDTH) / 2)) "$filename"
-	printf "\e[38;5;238m%${WIDTH}s\e[0m\n" | tr ' ' '-'
-
-	case "${FILE}" in
-	*.tar | *.tgz | *.xz)
-		tar tvf "${FILE}"
-		return $?
-		;;
-	*.deb)
-		ar -tv "${FILE}"
-		return $?
-		;;
-	*.zip)
-		unzip -l "${FILE}"
-		return $?
-		;;
-	*.rar)
-		not_implemented
-		return $?
-		;;
-	*.7z | *.dmg | *.gz) not_implemented ;;
-	*.bzip | *.bzip2 | *.bp | *.bz2) not_implemented ;;
-
-	*.jpg | *.JPG | *.png | *.PNG) view_image "$FILE" || view_binary ;;
-	*.json) jq -C . "${FILE}" && return $? ;;
-	*.md) glow -s dark -w "${WIDTH}" "${FILE}" && return $? ;;
-	*.plist) plutil -p "${FILE}" && return $? ;;
-	*.txt) view_sourcecode "$FILE" && return $? ;;
-	esac
-
-	case "$(file -b --mime-type "${FILE}")" in
-	image/*) view_image || view_binary ;;
-	application/pdf) view_binary ;;
-	application/gzip | application-x-xz) tar tvf "${FILE}" ;;
-	application/x-sqlite*) view_binary ;;
-	application/x-terminfo | text/x-bytecode.python) view_binary ;;
-	application/vnd.*-officedocument* | application/vnd.*.opendocument*)
-		view_opendocument || view_binary
+case "$file" in
+*.jpg | *.jpeg | *.png | *.bmp | *.webp)
+	preview "$file" "$@"
+	;;
+*.7z)
+	7zz l "$file"
+	;;
+*.avi | *.gif | *.mp4 | *.mkv | *.webm)
+	not_implemented
+	;;
+*.csv)
+	csview --style=Rounded "${file}"
+	;;
+*.mp3 | *.flac | *.opus)
+	not_implemented
+	;;
+*.tar* | *.tgz | *.xz)
+	tar tf "$file"
+	;;
+*.bzip | *.bzip2 | *.bp | *.bz2 | *.dmg | *.gz)
+	not_implemented
+	;;
+*.deb)
+	ar -tv "${file}"
+	;;
+*.json*)
+	sed '/^[[:blank:]]*#/d;s/\/\/.*//' "${file}" | jq --color-output .
+	;;
+*.md)
+	glow -s dark -w "${width}" "${file}"
+	;;
+*.pdf)
+	gs -o "$thumbnail" -sDEVICE=png48 -dLastPage=1 "$file" >/dev/null
+	preview "$thumbnail" "$@"
+	;;
+*.plist)
+	plutil -p "${file}"
+	;;
+*.rar)
+	rar l "$file"
+	;;
+*.svg)
+	convert "$file" "$thumbnail"
+	preview "$thumbnail" "$@"
+	;;
+*.zip)
+	unzip -l "${file}"
+	;;
+*)
+	case "$(file -b --mime-type "${file}")" in
+	inode/directory | application/x-directory) lsd --tree --color=always --icon=always --icon-theme=fancy "$file" ;;
+	application/gzip | application-x-xz)
+		tar tvf "${file}"
 		;;
 	application/octet-stream | application/x-*-binary | application/x-*executable)
 		view_binary
 		;;
-
-	*) view_sourcecode ;;
+	application/vnd.*-officedocument* | application/vnd.*.opendocument*)
+		view_opendocument || view_binary
+		;;
+	application/x-sqlite*)
+		view_sqlite
+		;;
+	application/x-terminfo | text/x-bytecode.python)
+		view_binary
+		;;
+	*)
+		view_sourcecode "$file"
+		;;
 	esac
-	return $?
-}
+	;;
+esac
 
-main "$FILE"
+return 127 # nonzero retcode required for lf previews to reload#
