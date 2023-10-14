@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.21.4](https://github.com/snelling-a/dotfiles/compare/v2.21.3...v2.21.4) (2023-10-14)
+
+
+### Bug Fixes
+
+* **wezterm:** types ([8b362da](https://github.com/snelling-a/dotfiles/commit/8b362dadab0847dcf9c2aac694fecb695b847269))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([d258428](https://github.com/snelling-a/dotfiles/commit/d25842842dff7fdffdd998add3ba086168077d53))
+
 ## [2.21.3](https://github.com/snelling-a/dotfiles/compare/v2.21.2...v2.21.3) (2023-10-10)
 
 
