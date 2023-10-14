@@ -20,8 +20,11 @@ link_file() {
 }
 
 link_dir() {
+	echo "$1 $2"
 	dir="$(realpath "$1")"
-	target="${2:-$XDG_CONFIG_HOME}/$(basename "$1")"
+	target="${2:-$XDG_CONFIG_HOME}/$3$(basename "$1")"
+	echo "$dir -> $target"
+	echo "$(basename "$1")"
 
 	ln -Ffnsv "$dir" "$target"
 }
@@ -49,6 +52,10 @@ link_config_directories() {
 	for dir in ./config/* ./config/.local/*; do
 		is_dir "$dir" && link_dir "$dir"
 	done
+}
+
+link_vimdir() {
+	link_dir ./vim "$HOME" '.'
 }
 
 reset=$(tput sgr0)
@@ -169,6 +176,7 @@ brew_install
 
 create_symlinks
 link_config_directories
+link_vimdir
 
 generate_completions
 
