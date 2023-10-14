@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.21.5](https://github.com/snelling-a/dotfiles/compare/v2.21.4...v2.21.5) (2023-10-14)
+
+
+### Bug Fixes
+
+* **lf:** previewer ([4e6c7dc](https://github.com/snelling-a/dotfiles/commit/4e6c7dcd05ce650cb6a51370b3cf7702851d1795))
+
 ## [2.21.4](https://github.com/snelling-a/dotfiles/compare/v2.21.3...v2.21.4) (2023-10-14)
 
 
