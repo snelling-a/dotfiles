@@ -20,8 +20,8 @@ M.colors = {
 	visual_bell = colors.base00,
 	tab_bar = {
 		active_tab = {
-			bg_color = colors.base03,
-			fg_color = colors.base01,
+			bg_color = colors.base02,
+			fg_color = colors.base02,
 			intensity = "Bold",
 		},
 		background = colors.base01,
@@ -31,8 +31,8 @@ M.colors = {
 			intensity = "Half",
 		},
 		inactive_tab_hover = {
-			bg_color = colors.base01,
-			fg_color = colors.base01,
+			bg_color = colors.base02,
+			fg_color = colors.base02,
 			italic = false,
 		},
 	},
