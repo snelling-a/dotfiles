@@ -18,6 +18,24 @@ M.check_for_updates = false
 M.color_scheme = "Default Dark (base16)"
 M.colors = {
 	visual_bell = colors.base00,
+	tab_bar = {
+		active_tab = {
+			bg_color = colors.base03,
+			fg_color = colors.base01,
+			intensity = "Bold",
+		},
+		background = colors.base01,
+		inactive_tab = {
+			bg_color = colors.base01,
+			fg_color = colors.base01,
+			intensity = "Half",
+		},
+		inactive_tab_hover = {
+			bg_color = colors.base01,
+			fg_color = colors.base01,
+			italic = false,
+		},
+	},
 }
 M.disable_default_key_bindings = true
 M.font = font.font
@@ -30,9 +48,11 @@ M.keys = keys.keys
 M.leader = keys.leader
 M.macos_window_background_blur = 20
 M.send_composed_key_when_right_alt_is_pressed = false
+M.show_new_tab_button_in_tab_bar = false
 M.show_update_window = false
 M.switch_to_last_active_tab_when_closing_tab = true
 M.term = "wezterm"
+M.use_fancy_tab_bar = false
 M.visual_bell = {
 	fade_in_duration_ms = 70,
 	fade_in_function = "EaseIn",
