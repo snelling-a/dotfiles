@@ -29,6 +29,7 @@ M.key_tables = keys.key_tables
 M.keys = keys.keys
 M.leader = keys.leader
 M.macos_window_background_blur = 20
+M.send_composed_key_when_right_alt_is_pressed = false
 M.show_update_window = false
 M.switch_to_last_active_tab_when_closing_tab = true
 M.term = "wezterm"
@@ -39,7 +40,6 @@ M.visual_bell = {
 	fade_out_function = "EaseOut",
 }
 M.window_background_opacity = 0.5
-M.window_close_confirmation = "NeverPrompt"
 M.window_decorations = "RESIZE"
 M.window_padding = {
 	bottom = 0,
@@ -50,8 +50,8 @@ M.window_padding = {
 
 -- github user/repo
 table.insert(M.hyperlink_rules, {
-	regex = [[["'\s]([\w\d]{1}[-\w\d]+)(/){1}([-\w\d\.]+)["'\s]] .. "]",
 	format = "https://www.github.com/$1/$3",
+	regex = [[["]?([\w\d]{1}[-\w\d]+)(/){1}([-\w\d\.]+)["]?]],
 })
 
 return M
