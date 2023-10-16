@@ -7,12 +7,12 @@ right_format        = """$all"""
 
 [battery]
  format         = '\[[$symbol$percentage]($style)\]'
- unknown_symbol = '󰂑'
+ unknown_symbol = '󰂑 '
  [[battery.display]]
-  style     = 'bold red'
+  style     = 'red'
   threshold = 10
  [[battery.display]]
-  style     = 'bold yellow'
+  style     = 'yellow'
   threshold = 20
 
 [directory]
@@ -22,12 +22,12 @@ right_format        = """$all"""
  repo_root_format = '\[[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style)\]'
 
 [character]
- error_symbol              = '[](bold red)'
- success_symbol            = '[](bold green)'
- vimcmd_replace_one_symbol = '[](bold purple)'
- vimcmd_replace_symbol     = '[](bold purple)'
- vimcmd_symbol             = '[](bold green)'
- vimcmd_visual_symbol      = '[](bold yellow)'
+ error_symbol              = '[](red)'
+ success_symbol            = '[](green)'
+ vimcmd_replace_one_symbol = '[](purple)'
+ vimcmd_replace_symbol     = '[](purple)'
+ vimcmd_symbol             = '[](green)'
+ vimcmd_visual_symbol      = '[](yellow)'
 
 [git_branch]
  format          = '\[[$symbol$branch]($style)\]'
@@ -50,17 +50,18 @@ right_format        = """$all"""
  format = '\[[$state($progress_current/$progress_total)]($style)\]'
 
 [git_status]
- ahead      = ''
- behind     = ''
- conflicted = '󰦎'
- deleted    = ''
- diverged   = '⇕'
+ ahead      = ' '
+ behind     = ' '
+ conflicted = '󰦎 '
+ deleted    = ' '
+ diverged   = ' '
  format     = '([\[$all_status$ahead_behind\]]($style))'
- modified   = '!'
- renamed    = '»'
- staged     = '+'
- stashed    = '$'
- untracked  = ''
+ modified   = '󱈸 '
+ renamed    = '󱀱 '
+ staged     = ' '
+ stashed    = '󰏓 '
+ style      = "red"
+ untracked  = ' '
  up_to_date = ''
 
 [localip]
@@ -87,6 +88,7 @@ right_format        = """$all"""
 
 [cmd_duration]
  format = '\[[󰔛 $duration]($style)\]'
+ style  = 'yellow'
 
 [cobol]
  format = '\[[$symbol($version)]($style)\]'
@@ -201,44 +203,44 @@ right_format        = """$all"""
 [os]
  disabled = false
  format   = '\[[$symbol]($style)\]'
-
+ style    = 'white'
  [os.symbols]
-  Alpine           = ''
-  Amazon           = ''
-  Android          = ''
-  Arch             = ''
-  CentOS           = ''
-  Debian           = ''
-  DragonFly        = ''
-  Emscripten       = ''
-  EndeavourOS      = ''
-  Fedora           = ''
-  FreeBSD          = ''
-  Garuda           = '󰛓'
-  Gentoo           = ''
-  HardenedBSD      = '󰞌'
-  Illumos          = '󰈸'
-  Linux            = ''
-  Macos            = '󰀵'
-  Manjaro          = ''
-  Mariner          = ''
-  MidnightBSD      = ''
-  Mint             = ''
-  NetBSD           = ''
-  NixOS            = ''
-  OpenBSD          = '󰈺'
-  OracleLinux      = '󰌷'
-  Pop              = ''
-  Raspbian         = ''
-  RedHatEnterprise = ''
-  Redhat           = ''
-  Redox            = ''
-  SUSE             = ''
-  Solus            = '󰠳'
-  Ubuntu           = ''
-  Unknown          = ''
-  Windows          = '󰍲'
-  openSUSE         = ''
+  Alpine           = ' '
+  Amazon           = ' '
+  Android          = ' '
+  Arch             = ' '
+  CentOS           = ' '
+  Debian           = ' '
+  DragonFly        = ' '
+  Emscripten       = ' '
+  EndeavourOS      = ' '
+  Fedora           = ' '
+  FreeBSD          = ' '
+  Garuda           = '󰛓 '
+  Gentoo           = ' '
+  HardenedBSD      = '󰞌 '
+  Illumos          = '󰈸 '
+  Linux            = ' '
+  Macos            = '󰀵 '
+  Manjaro          = ' '
+  Mariner          = ' '
+  MidnightBSD      = ' '
+  Mint             = ' '
+  NetBSD           = ' '
+  NixOS            = ' '
+  OpenBSD          = '󰈺 '
+  OracleLinux      = '󰌷 '
+  Pop              = ' '
+  Raspbian         = ' '
+  RedHatEnterprise = ' '
+  Redhat           = ' '
+  Redox            = ' '
+  SUSE             = ' '
+  Solus            = '󰠳 '
+  Ubuntu           = ' '
+  Unknown          = ' '
+  Windows          = '󰍲 '
+  openSUSE         = ' '
 
 [package]
  format = '\[[$symbol$version]($style)\]'
