@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.0.1](https://github.com/snelling-a/dotfiles/compare/v3.0.0...v3.0.1) (2023-10-17)
+
+
+### Miscellaneous
+
+* **brew:** update packages ([1c6fc71](https://github.com/snelling-a/dotfiles/commit/1c6fc71311ee0cf9c56ae973153c6eea51eef383))
+* **brew:** update packages ([6086474](https://github.com/snelling-a/dotfiles/commit/6086474202f1f040e7fc68855ffe65f52222e53a))
+
 ## [3.0.0](https://github.com/snelling-a/dotfiles/compare/v2.21.5...v3.0.0) (2023-10-14)
 
 
