@@ -65,7 +65,6 @@ brew "llvm"
 brew "lsd"
 brew "lsix"
 brew "lua"
-brew "lua-language-server"
 brew "luacheck"
 brew "luarocks", args: ["HEAD"]
 brew "make"
