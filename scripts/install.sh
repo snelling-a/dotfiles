@@ -23,8 +23,6 @@ link_dir() {
 	echo "$1 $2"
 	dir="$(realpath "$1")"
 	target="${2:-$XDG_CONFIG_HOME}/$3$(basename "$1")"
-	echo "$dir -> $target"
-	echo "$(basename "$1")"
 
 	ln -Ffnsv "$dir" "$target"
 }
