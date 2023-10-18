@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.0.2](https://github.com/snelling-a/dotfiles/compare/v3.0.1...v3.0.2) (2023-10-18)
+
+
+### Bug Fixes
+
+* **lf:** preview ([f7842ed](https://github.com/snelling-a/dotfiles/commit/f7842ed764dc7a0140ad97cbd7514dbf08eb7c56))
+
+
+### Miscellaneous
+
+* update submodules ([4cb22d4](https://github.com/snelling-a/dotfiles/commit/4cb22d42eb11a5ed8527eaee38532466f7ff81a2))
+
 ## [3.0.1](https://github.com/snelling-a/dotfiles/compare/v3.0.0...v3.0.1) (2023-10-17)
 
 
