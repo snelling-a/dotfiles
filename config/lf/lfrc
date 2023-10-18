@@ -171,7 +171,7 @@ map ez $$EDITOR $HOME/.zshrc
 map fF setfilter
 map ff filter
 map gst $lazygit
-map i $LESSOPEN='| ~/.config/lf/pv.sh %s' less -R $f
+map i $~/.config/lf/pv.sh "$f" | less -R
 map md push :mkdir<space>
 map mf push :mkfile<space>
 map mt push :mkcd<space>
