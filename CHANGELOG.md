@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.0.3](https://github.com/snelling-a/dotfiles/compare/v3.0.2...v3.0.3) (2023-10-20)
+
+
+### Bug Fixes
+
+* remove echos ([d55ce4d](https://github.com/snelling-a/dotfiles/commit/d55ce4db4fa340d3df313bc2c8be20457be5f056))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([f33bfc2](https://github.com/snelling-a/dotfiles/commit/f33bfc260a796afe9fc0a2aac7f7748f71b680c6))
+
 ## [3.0.2](https://github.com/snelling-a/dotfiles/compare/v3.0.1...v3.0.2) (2023-10-18)
 
 
