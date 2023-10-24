@@ -26,6 +26,7 @@ M.colors = {
 	base0F = default_colors.indexed[17], -- #a16946 deprecated, opening/closing embedded language tags, e.g. <?php ?>
 }
 
+---@return {{Foreground:string},{Text:string}}
 local function get_process_icon(color, text)
 	return {
 		{
