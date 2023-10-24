@@ -6,6 +6,14 @@ local function get_basename(s)
 	return s:gsub("(.*[/\\])(.*)", "%2")
 end
 
+local function track_and_artist()
+	local now_playing =
+		os.execute("spotify_player get item --id $(spotify_player get key playback | jq --raw-output '.item.id') track")
+
+	for k, v in pairs(now_playing) do
+		print(k, v)
+	end
+end
 local function get_process(pane)
 	local title = pane.title or "zsh"
 
@@ -18,7 +26,7 @@ local function get_process(pane)
 	local fallback = {
 		{
 			Foreground = {
-				Color = colors.base05,
+				Color = colors.base04,
 			},
 		},
 		{
@@ -26,7 +34,8 @@ local function get_process(pane)
 		},
 	}
 
-	return wezterm.format(icon or fallback)
+	local color = icon and icon[1].Foreground.Color or fallback[1].Foreground.Color
+	return color, wezterm.format(icon or fallback)
 end
 
 local function get_current_working_dir(tab)
@@ -38,23 +47,25 @@ end
 
 wezterm.on("format-tab-title", function(tab, _tabs, _panes, _config, _hover, _max_width)
 	local zoomed = tab.active_pane.is_zoomed and wezterm.pad_left(nerdfonts.md_magnify, 2) or ""
+	local color, process = get_process(tab.active_pane)
 
 	return wezterm.format({
 		{
-			Text = " " .. get_process(tab.active_pane),
+			Text = " " .. process,
 		},
 		{
 			Foreground = {
-				Color = colors.base05,
+				Color = color,
 			},
 		},
 		{
 			Text = get_current_working_dir(tab.active_pane),
 		},
-		"ResetAttributes",
+		{ Foreground = { Color = colors.base04 } },
 		{
 			Text = zoomed,
 		},
+		"ResetAttributes",
 		{
 			Text = " ▕",
 		},
