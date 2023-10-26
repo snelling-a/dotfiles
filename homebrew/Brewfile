@@ -42,7 +42,7 @@ brew "fd", args: ["HEAD"]
 brew "ffmpeg"
 brew "figlet"
 brew "fnm", args: ["HEAD"]
-brew "fzf", args: ["HEAD"]
+brew "fzf"
 brew "gawk"
 brew "gcc"
 brew "gdbm"
