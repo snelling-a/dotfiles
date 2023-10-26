@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.1.0](https://github.com/snelling-a/dotfiles/compare/v3.0.3...v3.1.0) (2023-10-26)
+
+
+### Features
+
+* **shell:** list_env function ([17ce544](https://github.com/snelling-a/dotfiles/commit/17ce5442a78f3d8c473e5f422dd23b21f1993fc5))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([ee3b645](https://github.com/snelling-a/dotfiles/commit/ee3b645a524c5cc1ae4aeaefedd977f896b7c1bd))
+* update submodules ([e2c9d21](https://github.com/snelling-a/dotfiles/commit/e2c9d21cf23fd7d8d38fb5a43353f4727f5af42b))
+
 ## [3.0.3](https://github.com/snelling-a/dotfiles/compare/v3.0.2...v3.0.3) (2023-10-20)
 
 
