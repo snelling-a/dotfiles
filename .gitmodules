@@ -1,23 +1,18 @@
 [submodule "HOME/local"]
 	path = HOME/local
 	url = git@github.com:snelling-a/local_home.git
-
 [submodule "config/.local"]
 	path = config/.local
 	url = git@github.com:snelling-a/local_config.git
-
 [submodule "config/nvim"]
 	path = config/nvim
 	url = https://github.com/snelling-a/nvim
-
 [submodule "scripts/local"]
 	path = scripts/local
 	url = git@github.com:snelling-a/local_scripts.git
-
 [submodule "shell/local"]
 	path = shell/local
 	url = git@github.com:snelling-a/local_shell.git
-
 [submodule "vim"]
 	path = vim
 	url = git@github.com:snelling-a/vim.git
