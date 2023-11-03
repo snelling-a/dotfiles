@@ -70,6 +70,7 @@ brew "luarocks", args: ["HEAD"]
 brew "make"
 brew "marksman"
 brew "mercurial"
+brew "micro"
 brew "microplane"
 brew "neofetch", args: ["HEAD"]
 brew "neovim", args: ["HEAD"]
