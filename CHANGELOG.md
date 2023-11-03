@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.0.1](https://github.com/snelling-a/dotfiles/compare/v4.0.0...v4.0.1) (2023-11-03)
+
+
+### Bug Fixes
+
+* **shell:** don't source zsh in fzf.sh ([8437581](https://github.com/snelling-a/dotfiles/commit/84375819ec21481b3e7c8f52ae1c3a6836079973))
+
+
+### Miscellaneous
+
+* update submodules ([82554f1](https://github.com/snelling-a/dotfiles/commit/82554f1e5c0440998add1c05ad44c32a544dc1b3))
+
 ## [4.0.0](https://github.com/snelling-a/dotfiles/compare/v3.1.0...v4.0.0) (2023-11-03)
 
 
