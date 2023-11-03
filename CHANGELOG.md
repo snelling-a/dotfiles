@@ -1,5 +1,16 @@
 # Changelog
 
+## [4.0.0](https://github.com/snelling-a/dotfiles/compare/v3.1.0...v4.0.0) (2023-11-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* **shell:** zsh -> sh
+
+### refactor
+
+* **shell:** zsh -&gt; sh ([5eb9e05](https://github.com/snelling-a/dotfiles/commit/5eb9e05aa8785f5daf7d00292d0f15ae3ba39f6c))
+
 ## [3.1.0](https://github.com/snelling-a/dotfiles/compare/v3.0.3...v3.1.0) (2023-10-26)
 
 
