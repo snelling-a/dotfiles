@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+alias nvm='fnm'
+
 alias nukenode="rm -rf node_modules && rm package-lock.json && npm install"
 
 # Install dependencies globally

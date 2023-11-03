@@ -37,6 +37,7 @@ is_dir() {
 
 if ! is_dir "$DOTFILES"; then
 	print "Cloning dotfiles..."
+
 	git clone https://github.com/snelling-a/dotfiles.git --recurse-submodules "$DOTFILES"
 fi
 
@@ -80,6 +81,7 @@ brew_install() {
 	if ! command -v brew >/dev/null 2>&1; then
 		xcode-select --install && sudo xcodebuild -license accept
 		print "Installing Homebrew ..."
+
 		/bin/bash -c \
 			"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
@@ -92,24 +94,25 @@ brew_install() {
 	brew bundle install
 }
 
-generate_completions() {
-	print "Generating completions..."
+generate_zsh_completions() {
+	print "Generating zsh completions..."
 
-	if ! is_dir "$DOTFILES/zsh/completions"; then
-		competion_dir="$DOTFILES/zsh/completions"
-		mkdir -p "$competion_dir"
+	completion_dir=$(brew --prefix)/share/zsh-completions
 
-		bw completion --shell=zsh >"$competion_dir/_bw"
+	if ! is_dir completion_dir; then
+		mkdir -p "$completion_dir"
 
-		curl -fsSL https://raw.githubusercontent.com/gokcehan/lf/master/etc/lf.zsh -o "$competion_dir/_lf"
+		bw completion --shell=zsh >"$completion_dir/_bw"
 
-		gh completion -s zsh >"$competion_dir/_gh"
+		curl -fsSL https://raw.githubusercontent.com/gokcehan/lf/master/etc/lf.zsh -o "$completion_dir/_lf"
 
-		glow completion zsh >"$competion_dir/_glow"
+		gh completion -s zsh >"$completion_dir/_gh"
 
-		obs completion zsh >"$competion_dir/_obs"
+		glow completion zsh >"$completion_dir/_glow"
 
-		wezterm shell-completion --shell zsh >"$competion_dir/_wezterm"
+		obs completion zsh >"$completion_dir/_obs"
+
+		wezterm shell-completion --shell zsh >"$completion_dir/_wezterm"
 	fi
 
 	print "Completions generated"
@@ -151,7 +154,6 @@ setup_macos_defaults() {
 		fi
 	done
 
-	print
 	print "macOS defaults setup complete"
 }
 
@@ -176,7 +178,7 @@ create_symlinks
 link_config_directories
 link_vimdir
 
-generate_completions
+generate_zsh_completions
 
 install_cargo
 setup_java
