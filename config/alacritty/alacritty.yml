@@ -37,7 +37,7 @@ shell:
     - --login
     - -c
     - 'tmux attach || tmux'
-  program: /bin/bash
+  program: /usr/local/bin/bash
 window:
   decorations: none
   dynamic_padding: true
