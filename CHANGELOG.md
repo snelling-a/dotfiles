@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.1.0](https://github.com/snelling-a/dotfiles/compare/v4.0.1...v4.1.0) (2023-11-04)
+
+
+### Features
+
+* **shell:** basic bash config ([3180801](https://github.com/snelling-a/dotfiles/commit/31808013aa309aeba534564bb6b16822d2cc0083))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([11bae95](https://github.com/snelling-a/dotfiles/commit/11bae95f31aa7c5851a3fdaf94dd9112b02f9b1f))
+
 ## [4.0.1](https://github.com/snelling-a/dotfiles/compare/v4.0.0...v4.0.1) (2023-11-03)
 
 
