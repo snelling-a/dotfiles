@@ -89,7 +89,6 @@ brew "ripgrep-all", args: ["HEAD"]
 brew "ruby-install"
 brew "sd"
 brew "sevenzip"
-brew "shellcheck"
 brew "shfmt"
 brew "silicon"
 brew "sk"
