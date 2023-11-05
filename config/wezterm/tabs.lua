@@ -6,14 +6,6 @@ local function get_basename(s)
 	return s:gsub("(.*[/\\])(.*)", "%2")
 end
 
-local function track_and_artist()
-	local now_playing =
-		os.execute("spotify_player get item --id $(spotify_player get key playback | jq --raw-output '.item.id') track")
-
-	for k, v in pairs(now_playing) do
-		print(k, v)
-	end
-end
 local function get_process(pane)
 	local title = pane.title or "zsh"
 
