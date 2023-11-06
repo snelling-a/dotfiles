@@ -198,6 +198,10 @@ setup_gh() {
 	gh extension install seachicken/gh-poi
 }
 
+install_local() {
+	is_file "$DOTFILES/shell/local/install.sh" && "$DOTFILES/shell/local/install.sh"
+}
+
 mkdir "$backup_dir"
 mkdir -p "$HOME/work"
 
