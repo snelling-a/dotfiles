@@ -193,6 +193,11 @@ setup_java() {
 	ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
 }
 
+setup_gh() {
+	gh extension install dlvhdr/gh-dash
+	gh extension install seachicken/gh-poi
+}
+
 mkdir "$backup_dir"
 mkdir -p "$HOME/work"
 
