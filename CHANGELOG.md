@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.2](https://github.com/snelling-a/dotfiles/compare/v4.1.1...v4.1.2) (2023-11-06)
+
+
+### Bug Fixes
+
+* **shell:** improve bash setup ([e082d93](https://github.com/snelling-a/dotfiles/commit/e082d93be8c0fdd405ba749d646b47ae0de264f2))
+
 ## [4.1.1](https://github.com/snelling-a/dotfiles/compare/v4.1.0...v4.1.1) (2023-11-05)
 
 
