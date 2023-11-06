@@ -106,13 +106,10 @@ generate_bash_completions() {
 	fi
 
 	curl -fsSL https://raw.githubusercontent.com/gokcehan/lf/master/etc/lf.bash -o "$completion_dir/_lf"
-
 	gh completion -s bash >"$completion_dir/_gh"
-
 	glow completion bash >"$completion_dir/_glow"
-
+	npm completion >"$completion_dir/_npm"
 	obs completion bash >"$completion_dir/_obs"
-
 	wezterm shell-completion --shell bash >"$completion_dir/_wezterm"
 
 	print "Completions generated"
@@ -128,15 +125,11 @@ generate_zsh_completions() {
 	fi
 
 	bw completion --shell=zsh >"$completion_dir/_bw"
-
 	curl -fsSL https://raw.githubusercontent.com/gokcehan/lf/master/etc/lf.zsh -o "$completion_dir/_lf"
-
 	gh completion -s zsh >"$completion_dir/_gh"
-
 	glow completion zsh >"$completion_dir/_glow"
-
+	npm completion >"$completion_dir/_npm"
 	obs completion zsh >"$completion_dir/_obs"
-
 	wezterm shell-completion --shell zsh >"$completion_dir/_wezterm"
 
 	print "Completions generated"

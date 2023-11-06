@@ -10,7 +10,11 @@ fi
 setopt AUTO_LIST
 setopt COMPLETE_IN_WORD
 
-zstyle ':completion:*' completer _extensions _complete _approximate
+
+# zstyle ':completion:*' completer _extensions _complete _approximate
+zstyle ':completion:*' completer _expand _complete _files _correct _approximate
+zstyle ':completion:*' verbose yes
+zstyle ':completion:*' insert-tab pending
 
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/.zcompcache"
@@ -33,6 +37,14 @@ zstyle ':completion:*:*:cd:*' tag-order local-directories directory-stack path-d
 
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*:*:-command-:*:*' group-order aliases builtins functions commands
+
+expand-or-complete-with-dots() {
+    echo -n "\e[31m......\e[0m"
+    zle expand-or-complete
+    zle redisplay
+}
+zle -N expand-or-complete-with-dots
+bindkey "^I" expand-or-complete-with-dots
 
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
