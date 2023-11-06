@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.4.0](https://github.com/snelling-a/dotfiles/compare/v4.3.0...v4.4.0) (2023-11-06)
+
+
+### Features
+
+* local install ([c690179](https://github.com/snelling-a/dotfiles/commit/c69017913a6f90a3918cc787d2b924ab0e023968))
+
+
+### Miscellaneous
+
+* update submodules ([4eeafa6](https://github.com/snelling-a/dotfiles/commit/4eeafa68b7ebd86587fb59bf3fdcc355607969d6))
+
 ## [4.3.0](https://github.com/snelling-a/dotfiles/compare/v4.2.0...v4.3.0) (2023-11-06)
 
 
