@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.3.0](https://github.com/snelling-a/dotfiles/compare/v4.2.0...v4.3.0) (2023-11-06)
+
+
+### Features
+
+* **shell:** gh extensions ([3907eb0](https://github.com/snelling-a/dotfiles/commit/3907eb07b2cb072b43e24e67e82509756a510336))
+
+
+### Miscellaneous
+
+* update submodules ([4e021c1](https://github.com/snelling-a/dotfiles/commit/4e021c11cd86dab7a952a7be318646e63dd7be7c))
+
 ## [4.2.0](https://github.com/snelling-a/dotfiles/compare/v4.1.2...v4.2.0) (2023-11-06)
 
 
