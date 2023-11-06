@@ -14,3 +14,4 @@ for file in "$DOTFILES"/shell/**/*".sh"; do
 done
 
 eval "$(starship init bash)"
+eval "$(zoxide init bash)"

@@ -32,11 +32,8 @@ for file in $DOTFILES/shell/**/*.*sh; do
 done
 [ -f $HOME/.zshrc_local ] && source $HOME/.zshrc_local
 
-export LANG=en_US.UTF-8
-export MANPAGER='nvim +Man!'
-export DELTA_FEATURES='+side-by-side'
-
 eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
 
 source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 bindkey '^[[A' history-substring-search-up

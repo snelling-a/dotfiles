@@ -6,7 +6,11 @@ export DOTFILES="$HOME/dotfiles"
 export VIMDIR="$DOTFILES/vim"
 export WORK="$HOME/work"
 export NOTES="$HOME/notes"
-export AWKPATH="$DOTFILES/awk/"
+
+export LANG=en_US.UTF-8
+export MANPAGER='nvim +Man!'
+export DELTA_FEATURES='+side-by-side'
+
 
 export VISUAL=nvim
 export EDITOR="$VISUAL"
