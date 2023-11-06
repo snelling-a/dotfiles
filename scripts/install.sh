@@ -76,9 +76,10 @@ print() {
 print "Installing dotfiles..."
 
 brew_install() {
-	print "Installing homebrew..."
 
 	if ! command -v brew >/dev/null 2>&1; then
+		print "Installing homebrew..."
+
 		xcode-select --install && sudo xcodebuild -license accept
 		print "Installing Homebrew ..."
 
@@ -86,9 +87,10 @@ brew_install() {
 			"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 		chmod -R go-w "$(brew --prefix)/share"
+
+		print "Homebrew installed"
 	fi
 
-	print "Homebrew installed"
 	print "Getting packages..."
 
 	brew bundle install
@@ -204,10 +206,12 @@ generate_bash_completions
 generate_zsh_completions
 
 install_cargo
-setup_java
-
-setup_wezterm
 setup_fzf
+setup_gh
+setup_java
+setup_wezterm
+
+install_local
 
 check_for_backups
 
