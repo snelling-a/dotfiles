@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.1.1](https://github.com/snelling-a/dotfiles/compare/v4.1.0...v4.1.1) (2023-11-05)
+
+
+### Bug Fixes
+
+* **wezterm:** delete unused function ([3db4a49](https://github.com/snelling-a/dotfiles/commit/3db4a49614ae2b657a944e0937a16f9a31507203))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([c358ae3](https://github.com/snelling-a/dotfiles/commit/c358ae312db3c3b712bcf98e2af152bf53ef549c))
+
 ## [4.1.0](https://github.com/snelling-a/dotfiles/compare/v4.0.1...v4.1.0) (2023-11-04)
 
 
