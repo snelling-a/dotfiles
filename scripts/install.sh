@@ -94,26 +94,48 @@ brew_install() {
 	brew bundle install
 }
 
-generate_zsh_completions() {
-	print "Generating zsh completions..."
+generate_bash_completions() {
+	print "Generating bash completions..."
 
-	completion_dir=$(brew --prefix)/share/zsh-completions
+	completion_dir="${XDG_CONFIG_HOME:-$HOME/.config}/bash_completion"
 
 	if ! is_dir completion_dir; then
 		mkdir -p "$completion_dir"
-
-		bw completion --shell=zsh >"$completion_dir/_bw"
-
-		curl -fsSL https://raw.githubusercontent.com/gokcehan/lf/master/etc/lf.zsh -o "$completion_dir/_lf"
-
-		gh completion -s zsh >"$completion_dir/_gh"
-
-		glow completion zsh >"$completion_dir/_glow"
-
-		obs completion zsh >"$completion_dir/_obs"
-
-		wezterm shell-completion --shell zsh >"$completion_dir/_wezterm"
 	fi
+
+	curl -fsSL https://raw.githubusercontent.com/gokcehan/lf/master/etc/lf.bash -o "$completion_dir/_lf"
+
+	gh completion -s bash >"$completion_dir/_gh"
+
+	glow completion bash >"$completion_dir/_glow"
+
+	obs completion bash >"$completion_dir/_obs"
+
+	wezterm shell-completion --shell bash >"$completion_dir/_wezterm"
+
+	print "Completions generated"
+}
+
+generate_zsh_completions() {
+	print "Generating zsh completions..."
+
+	completion_dir="${XDG_CONFIG_HOME:-$HOME/.config}/zsh_completion"
+
+	if ! is_dir completion_dir; then
+		mkdir -p "$completion_dir"
+	fi
+
+	bw completion --shell=zsh >"$completion_dir/_bw"
+
+	curl -fsSL https://raw.githubusercontent.com/gokcehan/lf/master/etc/lf.zsh -o "$completion_dir/_lf"
+
+	gh completion -s zsh >"$completion_dir/_gh"
+
+	glow completion zsh >"$completion_dir/_glow"
+
+	obs completion zsh >"$completion_dir/_obs"
+
+	wezterm shell-completion --shell zsh >"$completion_dir/_wezterm"
 
 	print "Completions generated"
 }
@@ -178,6 +200,7 @@ create_symlinks
 link_config_directories
 link_vimdir
 
+generate_bash_completions
 generate_zsh_completions
 
 install_cargo

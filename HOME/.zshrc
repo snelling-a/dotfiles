@@ -1,9 +1,6 @@
 alias reload="source ~/.zshrc"
 alias settings="$EDITOR ~/.zshrc && source ~/.zshrc"
 
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root line)
-ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red')
-
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
 stty sane
@@ -28,32 +25,28 @@ setopt PROMPT_SUBST
 setopt SHARE_HISTORY
 
 for file in $DOTFILES/shell/**/*.*sh; do
-	[ -f $file ] && source $file
+    [ -f $file ] && source $file
 done
 [ -f $HOME/.zshrc_local ] && source $HOME/.zshrc_local
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
-source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+source ${HOMEBREW_PREFIX:-/usr/local}/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-if type brew &>/dev/null; then
-    source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-    source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-    source $(brew --prefix)/share/zsh-you-should-use/you-should-use.plugin.zsh
-    source $(brew --prefix)/share/zsh-autopair/autopair.zsh
+export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=${HOMEBREW_PREFIX:-/usr/local}/share/zsh-syntax-highlighting/highlighters
+source ${HOMEBREW_PREFIX:-/usr/local}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor root line)
+ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red')
 
-	FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-	FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-fi
-
-autoload -Uz compinit
-compinit
+source ${HOMEBREW_PREFIX:-/usr/local}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ${HOMEBREW_PREFIX:-/usr/local}/share/zsh-you-should-use/you-should-use.plugin.zsh
+source ${HOMEBREW_PREFIX:-/usr/local}/share/zsh-autopair/autopair.zsh
 
 if [[ $TERM_PROGRAM == WezTerm ]]; then
-	export TERM=wezterm
+    export TERM=wezterm
 fi
 
 fzf="${XDG_CONFIG_HOME:-$HOME/.config}/fzf/fzf.zsh"
