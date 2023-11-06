@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.2.0](https://github.com/snelling-a/dotfiles/compare/v4.1.2...v4.2.0) (2023-11-06)
+
+
+### Features
+
+* **shell:** completions ([c2b6728](https://github.com/snelling-a/dotfiles/commit/c2b67282e0d6b4fe2c56973bfb3457420f2f969d))
+
 ## [4.1.2](https://github.com/snelling-a/dotfiles/compare/v4.1.1...v4.1.2) (2023-11-06)
 
 
