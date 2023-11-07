@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.4.1](https://github.com/snelling-a/dotfiles/compare/v4.4.0...v4.4.1) (2023-11-06)
+
+
+### Bug Fixes
+
+* **shell:** history ([a54c39d](https://github.com/snelling-a/dotfiles/commit/a54c39d552f0031f6759f5126616fb366da5d280))
+
 ## [4.4.0](https://github.com/snelling-a/dotfiles/compare/v4.3.0...v4.4.0) (2023-11-06)
 
 
