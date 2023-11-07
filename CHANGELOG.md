@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.4.2](https://github.com/snelling-a/dotfiles/compare/v4.4.1...v4.4.2) (2023-11-07)
+
+
+### Bug Fixes
+
+* **lf:** map e ([d38e834](https://github.com/snelling-a/dotfiles/commit/d38e834435e0d4c30b2e79c6a4a42f5112477121))
+
 ## [4.4.1](https://github.com/snelling-a/dotfiles/compare/v4.4.0...v4.4.1) (2023-11-06)
 
 
