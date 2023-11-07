@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+shell=${SHELL##*/}
+fzf="${XDG_CONFIG_HOME:-$HOME/.config}/fzf/fzf.$shell"
+[ -f "$fzf" ] && source "$fzf"
+
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
 export FZF_DEFAULT_OPTS="--height=80% \

@@ -48,6 +48,3 @@ source ${HOMEBREW_PREFIX:-/usr/local}/share/zsh-autopair/autopair.zsh
 if [[ $TERM_PROGRAM == WezTerm ]]; then
     export TERM=wezterm
 fi
-
-fzf="${XDG_CONFIG_HOME:-$HOME/.config}/fzf/fzf.zsh"
-[ -f $fzf ] && source $fzf
