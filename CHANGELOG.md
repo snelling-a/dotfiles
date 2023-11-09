@@ -1,5 +1,19 @@
 # Changelog
 
+## [4.4.3](https://github.com/snelling-a/dotfiles/compare/v4.4.2...v4.4.3) (2023-11-09)
+
+
+### Bug Fixes
+
+* **spotify:** play/pause icons ([6a5d34b](https://github.com/snelling-a/dotfiles/commit/6a5d34b487c1d89092d0d18e16e8673aa9c74d90))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([887d1a3](https://github.com/snelling-a/dotfiles/commit/887d1a37be7ca1852a44acf32c653abc3c8356ea))
+* **brew:** update packages ([327777d](https://github.com/snelling-a/dotfiles/commit/327777dd12aab8fe13705f4676d70d41ed10bfa3))
+* update submodules ([9cf144c](https://github.com/snelling-a/dotfiles/commit/9cf144c83168441da44633c5a5b204c470e5a426))
+
 ## [4.4.2](https://github.com/snelling-a/dotfiles/compare/v4.4.1...v4.4.2) (2023-11-07)
 
 
