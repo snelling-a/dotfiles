@@ -99,13 +99,14 @@ brew_install() {
 generate_bash_completions() {
 	print "Generating bash completions..."
 
-	completion_dir="${XDG_CONFIG_HOME:-$HOME/.config}/bash_completion"
+	completion_dir="${XDG_DATA_HOME:-$HOME/.local/share}/bash-completion/completions"
 
 	if ! is_dir completion_dir; then
 		mkdir -p "$completion_dir"
 	fi
 
 	curl -fsSL https://raw.githubusercontent.com/gokcehan/lf/master/etc/lf.bash -o "$completion_dir/_lf"
+	curl -fsSl https://raw.githubusercontent.com/ajeetdsouza/zoxide/master/contrib/completions/zoxide.bash -o "$completion_dir/_zoxide"
 	gh completion -s bash >"$completion_dir/_gh"
 	glow completion bash >"$completion_dir/_glow"
 	npm completion >"$completion_dir/_npm"
