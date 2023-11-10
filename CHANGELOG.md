@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.4.4](https://github.com/snelling-a/dotfiles/compare/v4.4.3...v4.4.4) (2023-11-10)
+
+
+### Bug Fixes
+
+* **rg:** search hidden files ([76e1c99](https://github.com/snelling-a/dotfiles/commit/76e1c99d63d12667b308d15a8c77bff5cfb4f755))
+
 ## [4.4.3](https://github.com/snelling-a/dotfiles/compare/v4.4.2...v4.4.3) (2023-11-09)
 
 
