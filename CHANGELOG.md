@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.4.6](https://github.com/snelling-a/dotfiles/compare/v4.4.5...v4.4.6) (2023-11-12)
+
+
+### Bug Fixes
+
+* **onefetch:** override __zoxide_z after init ([c399132](https://github.com/snelling-a/dotfiles/commit/c399132013a773ea893624faf12a52c5ec4ed1ae))
+
 ## [4.4.5](https://github.com/snelling-a/dotfiles/compare/v4.4.4...v4.4.5) (2023-11-10)
 
 
