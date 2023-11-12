@@ -13,8 +13,7 @@ function __zoxide_z() {
 		if [ -n "${OLDPWD}" ]; then
 			__zoxide_cd "${OLDPWD}"
 		else
-			# shellcheck disable=SC2016
-			\builtin printf 'zoxide: $OLDPWD is not set'
+			\builtin printf 'zoxide: %s is not set' "$OLDPWD"
 			return 1
 		fi
 	elif [ "$#" -eq 1 ] && [ -d "$1" ]; then
@@ -25,9 +24,7 @@ function __zoxide_z() {
 			__zoxide_cd "${result}"
 	fi
 
-	git rev-parse 2>/dev/null
-
-	if [ $? -eq 0 ]; then
+	if git rev-parse 2>/dev/null; then
 		if [ "$LAST_REPO" != "$(basename "$(git rev-parse --show-toplevel)")" ]; then
 			onefetch
 			LAST_REPO=$(basename "$(git rev-parse --show-toplevel)")
