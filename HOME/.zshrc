@@ -24,13 +24,13 @@ setopt MENU_COMPLETE
 setopt PROMPT_SUBST
 setopt SHARE_HISTORY
 
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
+
 for file in $DOTFILES/shell/**/*.*sh; do
     [ -f $file ] && source $file
 done
 [ -f $HOME/.zshrc_local ] && source $HOME/.zshrc_local
-
-eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
 
 source ${HOMEBREW_PREFIX:-/usr/local}/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 bindkey '^[[A' history-substring-search-up

@@ -17,13 +17,13 @@ bind "set menu-complete-display-prefix on"
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
 
+eval "$(starship init bash)"
+eval "$(zoxide init bash)"
+
 export HISTCONTROL="erasedupes"
 shopt -s globstar nullglob dotglob
 for file in "$DOTFILES"/shell/**/*".sh"; do
 	source "$file"
 done
-
-eval "$(starship init bash)"
-eval "$(zoxide init bash)"
 
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
