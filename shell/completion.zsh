@@ -48,4 +48,4 @@ bindkey "^I" expand-or-complete-with-dots
 
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
-FPATH=${XDG_CONFIG_HOME:-$HOME/.config}/zsh_completion:$FPATH
+FPATH=${XDG_DATA_HOME:-$HOME/.local/share}/zsh_completion:$FPATH
