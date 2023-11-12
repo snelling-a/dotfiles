@@ -25,6 +25,3 @@ PATH="$HOMEBREW_PREFIX/opt/ruby/bin:$PATH"
 PATH="$HOMEBREW_PREFIX/opt/openjdk/bin:$PATH"
 
 export PATH
-
-# this needs to be evaluated after PATH is set
-eval "$(fnm env --use-on-cd)"
