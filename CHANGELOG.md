@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.4.5](https://github.com/snelling-a/dotfiles/compare/v4.4.4...v4.4.5) (2023-11-10)
+
+
+### Bug Fixes
+
+* **shell:** bash completions location ([9091f6a](https://github.com/snelling-a/dotfiles/commit/9091f6a66bd0a98d2098dbc4e120096190169236))
+
 ## [4.4.4](https://github.com/snelling-a/dotfiles/compare/v4.4.3...v4.4.4) (2023-11-10)
 
 
