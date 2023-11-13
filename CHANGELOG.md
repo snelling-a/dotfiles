@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.4.7](https://github.com/snelling-a/dotfiles/compare/v4.4.6...v4.4.7) (2023-11-12)
+
+
+### Bug Fixes
+
+* **zoxide:** shellcheck error ([1eed1aa](https://github.com/snelling-a/dotfiles/commit/1eed1aa1f879d55ef1388a741849c509c9f421a4))
+
 ## [4.4.6](https://github.com/snelling-a/dotfiles/compare/v4.4.5...v4.4.6) (2023-11-12)
 
 
