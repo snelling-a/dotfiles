@@ -119,12 +119,13 @@ generate_bash_completions() {
 generate_zsh_completions() {
 	print "Generating zsh completions..."
 
-	completion_dir="${XDG_CONFIG_HOME:-$HOME/.config}/zsh_completion"
+	completion_dir="${XDG_DATA_HOME:-$HOME/.local/share}/zsh_completion"
 
 	if ! is_dir completion_dir; then
 		mkdir -p "$completion_dir"
 	fi
 
+	completion_dir="${XDG_DATA_HOME:-$HOME/.local/share}/zsh_completion"
 	bw completion --shell=zsh >"$completion_dir/_bw"
 	curl -fsSL https://raw.githubusercontent.com/gokcehan/lf/master/etc/lf.zsh -o "$completion_dir/_lf"
 	gh completion -s zsh >"$completion_dir/_gh"
