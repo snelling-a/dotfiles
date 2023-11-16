@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.4.9](https://github.com/snelling-a/dotfiles/compare/v4.4.8...v4.4.9) (2023-11-16)
+
+
+### Bug Fixes
+
+* **shell:** update install script for zsh completions ([d52aa58](https://github.com/snelling-a/dotfiles/commit/d52aa58af063711277b4c5fd3ae434ef61a33ed1))
+
 ## [4.4.8](https://github.com/snelling-a/dotfiles/compare/v4.4.7...v4.4.8) (2023-11-13)
 
 
