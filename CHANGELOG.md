@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.4.8](https://github.com/snelling-a/dotfiles/compare/v4.4.7...v4.4.8) (2023-11-13)
+
+
+### Miscellaneous
+
+* **brew:** update packages ([e3f6e62](https://github.com/snelling-a/dotfiles/commit/e3f6e62eda5a2cb6a433bb5391c986f61aad4ce5))
+
 ## [4.4.7](https://github.com/snelling-a/dotfiles/compare/v4.4.6...v4.4.7) (2023-11-12)
 
 
