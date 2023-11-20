@@ -28,11 +28,10 @@ wait
 echo "Updating Neovim nightly..."
 nvim_update &
 wait
-nvim --headless '+GenerateAverageColor' "+Lazy! sync" "+MasonUpdateAll" -c "call firenvim#install(0)" -c quit &
+nvim --headless "+Lazy! sync" -c "call firenvim#install(0)" -c quit &
 wait
 
 git_commit_push "$DOTFILES/config/nvim" "$DOTFILES/config/nvim/lazy-lock.json" ": update plugins"
-git_commit_push "$DOTFILES/config/nvim" "$DOTFILES/config/nvim/colors/average_dark.lua" ": update AverageDark colorscheme"
 
 echo "Updating brewfile..."
 brew bundle dump --force &
