@@ -24,6 +24,10 @@ function __zoxide_z() {
 			__zoxide_cd "${result}"
 	fi
 
+	if [[ -f .node-version || -f .nvmrc ]]; then
+		fnm use --silent-if-unchanged
+	fi
+
 	if git rev-parse 2>/dev/null; then
 		if [ "$LAST_REPO" != "$(basename "$(git rev-parse --show-toplevel)")" ]; then
 			onefetch
