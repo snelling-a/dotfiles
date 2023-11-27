@@ -1,5 +1,15 @@
 # Changelog
 
+## [4.4.10](https://github.com/snelling-a/dotfiles/compare/v4.4.9...v4.4.10) (2023-11-27)
+
+
+### Miscellaneous
+
+* **brew:** update packages ([cca22d3](https://github.com/snelling-a/dotfiles/commit/cca22d3c9e1859d3c2f464e795ab7611de86eb52))
+* update packages ([c0fea33](https://github.com/snelling-a/dotfiles/commit/c0fea333892265c02e4d8966137a58f4a5ac683f))
+* update submodules ([6658ecc](https://github.com/snelling-a/dotfiles/commit/6658ecce56fb87f7264c2b2693c5df341dcfc32f))
+* update submodules ([b52eede](https://github.com/snelling-a/dotfiles/commit/b52eedee500cb8260d50a7005155d21030e1273a))
+
 ## [4.4.9](https://github.com/snelling-a/dotfiles/compare/v4.4.8...v4.4.9) (2023-11-16)
 
 
