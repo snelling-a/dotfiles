@@ -68,7 +68,7 @@ M.window_padding = {
 	top = 0,
 }
 
--- github user/repo
+-- GitHub user/repo
 table.insert(M.hyperlink_rules, {
 	format = "https://www.github.com/$1/$3",
 	regex = [[["]?([\w\d]{1}[-\w\d]+)(/){1}([-\w\d\.]+)["]?]],

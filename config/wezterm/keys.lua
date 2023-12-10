@@ -12,6 +12,7 @@ local function get_key(key, action, mods)
 		mods = mods,
 	}
 end
+
 local M = {}
 
 local tab_keys = {}

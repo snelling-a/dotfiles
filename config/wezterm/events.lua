@@ -30,4 +30,3 @@ wezterm.on("toggle-leader", function(window, _)
 		mods = "SUPER",
 	})
 end)
-
