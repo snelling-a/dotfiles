@@ -1,5 +1,19 @@
 # Changelog
 
+## [4.4.12](https://github.com/snelling-a/dotfiles/compare/v4.4.11...v4.4.12) (2023-12-10)
+
+
+### Bug Fixes
+
+* **spt:** liked_icon ([e323f27](https://github.com/snelling-a/dotfiles/commit/e323f27b9825ce557c85a2a8e6f6fbd2ad4176ca))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([9abd8ec](https://github.com/snelling-a/dotfiles/commit/9abd8ecf4f135fccb513987957db622ea62dea72))
+* **brew:** update packages ([dac9258](https://github.com/snelling-a/dotfiles/commit/dac92586e05584215a8b929b623c06ce54cefa40))
+* **git:** update global gitignore ([a8c54c4](https://github.com/snelling-a/dotfiles/commit/a8c54c4099173938f7e9741415e91893178dca74))
+
 ## [4.4.11](https://github.com/snelling-a/dotfiles/compare/v4.4.10...v4.4.11) (2023-12-03)
 
 
