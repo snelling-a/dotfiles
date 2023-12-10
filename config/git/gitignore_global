@@ -1,5 +1,6 @@
 # vim:filetype=gitignore
 vim_tags*
+.neoconf.json
 
 # editing postman scripts is much nicer in vim
 postman.js
