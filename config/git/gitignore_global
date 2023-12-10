@@ -1,6 +1,4 @@
 # vim:filetype=gitignore
-*[Ss]ession*.vim
-z_spell.txt
 vim_tags*
 
 # editing postman scripts is much nicer in vim
