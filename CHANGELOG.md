@@ -1,5 +1,18 @@
 # Changelog
 
+## [4.5.0](https://github.com/snelling-a/dotfiles/compare/v4.4.12...v4.5.0) (2023-12-12)
+
+
+### Features
+
+* **git:** add .neoconf.json to global gitignore ([cf550ff](https://github.com/snelling-a/dotfiles/commit/cf550ff72eafbdbeb97134db463cfe5850819baf))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([549c25d](https://github.com/snelling-a/dotfiles/commit/549c25d9097666b778192603dd7624eb767b733e))
+* **brew:** update packages ([2be7f98](https://github.com/snelling-a/dotfiles/commit/2be7f984018adf9b2fe0f55cfd775ec1d800383c))
+
 ## [4.4.12](https://github.com/snelling-a/dotfiles/compare/v4.4.11...v4.4.12) (2023-12-10)
 
 
