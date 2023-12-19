@@ -27,6 +27,4 @@ for file in "$DOTFILES"/shell/**/*".sh"; do
 	source "$file"
 done
 
-eval "$(fnm env --use-on-cd)"
-
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
