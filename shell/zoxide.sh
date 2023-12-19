@@ -6,7 +6,7 @@ export _ZO_FZF_OPTS="$FZF_DEFAULT_OPTS \
     --oneline {2..}'"
 
 LAST_REPO=""
-function __zoxide_z() {
+__zoxide_z() {
 	if [ "$#" -eq 0 ]; then
 		__zoxide_cd ~
 	elif [ "$#" -eq 1 ] && [ "$1" = '-' ]; then
