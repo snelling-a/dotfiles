@@ -49,7 +49,7 @@ alias awk="gawk"
 
 alias glow='glow --config "$XDG_CONFIG_HOME/glow/glow.yml"'
 
-alias ctags="$HOMEBREW_PREFIX/bin/ctags"
+# alias ctags="$HOMEBREW_PREFIX/bin/ctags"
 
 cargoup() {
 	# shellcheck disable=2046 # does not work if it is double quoted
