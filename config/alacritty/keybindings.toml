@@ -1,0 +1,382 @@
+[[keyboard.bindings]]
+ chars = '\ea'
+ key   = "A"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\eA'
+ key   = "A"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\eb'
+ key   = "B"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\eB'
+ key   = "B"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\e\\'
+ key   = "Backslash"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\e|'
+ key   = "Backslash"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\ec'
+ key   = "C"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\eC'
+ key   = "C"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\e<'
+ key   = "Comma"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\ed'
+ key   = "D"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\eD'
+ key   = "D"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\ee'
+ key   = "E"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\eE'
+ key   = "E"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\ef'
+ key   = "F"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\eF'
+ key   = "F"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\eg'
+ key   = "G"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\eG'
+ key   = "G"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\e`'
+ key   = "`"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\e~'
+ key   = "`"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\eh'
+ key   = "H"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\eH'
+ key   = "H"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\ei'
+ key   = "I"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\eI'
+ key   = "I"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\ej'
+ key   = "J"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\eJ'
+ key   = "J"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\ek'
+ key   = "K"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\eK'
+ key   = "K"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ key  = "K"
+ mods = "Command"
+
+ [keyboard.bindings.command]
+  args    = ["send-keys", "-R", "C-l", ";", "clear-history"]
+  program = "/usr/local/bin/tmux"
+
+[[keyboard.bindings]]
+ chars = '\e0'
+ key   = "Key0"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\e1'
+ key   = "Key1"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\e2'
+ key   = "Key2"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\e3'
+ key   = "Key3"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\e#'
+ key   = "Key3"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\e4'
+ key   = "Key4"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\e5'
+ key   = "Key5"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\e%'
+ key   = "Key5"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\e6'
+ key   = "Key6"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\e^'
+ key   = "Key6"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\e7'
+ key   = "Key7"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\e8'
+ key   = "Key8"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\e*'
+ key   = "Key8"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\e9'
+ key   = "Key9"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\el'
+ key   = "L"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\eL'
+ key   = "L"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\em'
+ key   = "M"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\eM'
+ key   = "M"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\e_'
+ key   = "Minus"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\en'
+ key   = "N"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\eN'
+ key   = "N"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\eo'
+ key   = "O"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\eO'
+ key   = "O"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\ep'
+ key   = "P"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\eP'
+ key   = "P"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\e.'
+ key   = "Period"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\e>'
+ key   = "Period"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\eq'
+ key   = "Q"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\eQ'
+ key   = "Q"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\er'
+ key   = "R"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\eR'
+ key   = "R"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\es'
+ key   = "S"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\eS'
+ key   = "S"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\0'
+ key   = "Space"
+ mods  = "Control"
+
+[[keyboard.bindings]]
+ chars = '\et'
+ key   = "T"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\eT'
+ key   = "T"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\eu'
+ key   = "U"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\eU'
+ key   = "U"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\ev'
+ key   = "V"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\eV'
+ key   = "V"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\ew'
+ key   = "W"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\eW'
+ key   = "W"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\ex'
+ key   = "X"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\eX'
+ key   = "X"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\ey'
+ key   = "Y"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\eY'
+ key   = "Y"
+ mods  = "Alt|Shift"
+
+[[keyboard.bindings]]
+ chars = '\ez'
+ key   = "Z"
+ mods  = "Alt"
+
+[[keyboard.bindings]]
+ chars = '\eZ'
+ key   = "Z"
+ mods  = "Alt|Shift"
