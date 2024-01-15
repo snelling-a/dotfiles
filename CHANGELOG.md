@@ -1,5 +1,22 @@
 # Changelog
 
+## [4.5.2](https://github.com/snelling-a/dotfiles/compare/v4.5.1...v4.5.2) (2024-01-11)
+
+
+### Bug Fixes
+
+* ctags/universal-ctags ([dc1c2e5](https://github.com/snelling-a/dotfiles/commit/dc1c2e57c785a44a020808de663cd9a34d15a1a0))
+
+
+### Miscellaneous
+
+* **alacritty:** migrate to toml config ([8d9f7cc](https://github.com/snelling-a/dotfiles/commit/8d9f7cc9530d3888e57673f2fe57e533b537d7d8))
+* **brew:** update packages ([4c85d4c](https://github.com/snelling-a/dotfiles/commit/4c85d4ce18c77a5a0bb1ca06e0fc5a093ea5fda3))
+* **brew:** update packages ([276da02](https://github.com/snelling-a/dotfiles/commit/276da02ef86fe1672bcaad36505034beb2666448))
+* **brew:** update packages ([1aab5c1](https://github.com/snelling-a/dotfiles/commit/1aab5c18de643a9609d38adff6a650379d2bd161))
+* **brew:** update packages ([3ccbf81](https://github.com/snelling-a/dotfiles/commit/3ccbf81e55be7a30f0affb5218091f1b6024b738))
+* update submodules ([6145c4e](https://github.com/snelling-a/dotfiles/commit/6145c4eda0aa1a6183b66b270c464f00e9ee7b73))
+
 ## [4.5.1](https://github.com/snelling-a/dotfiles/compare/v4.5.0...v4.5.1) (2023-12-19)
 
 
