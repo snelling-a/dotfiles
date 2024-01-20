@@ -76,7 +76,7 @@ brew "mercurial"
 brew "micro"
 brew "microplane"
 brew "neofetch", args: ["HEAD"]
-brew "neovim", args: ["HEAD"]
+brew "neovim", args: ["HEAD"], link: false
 brew "ninja"
 brew "odt2txt"
 brew "onefetch"
@@ -137,7 +137,6 @@ cask "arc"
 cask "bitwarden"
 cask "deepl"
 cask "discord"
-cask "firefox"
 cask "firefox-nightly"
 cask "font-iosevka-nerd-font"
 cask "font-iosevka-ss15"
