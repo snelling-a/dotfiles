@@ -1,5 +1,21 @@
 # Changelog
 
+## [4.5.3](https://github.com/snelling-a/dotfiles/compare/v4.5.2...v4.5.3) (2024-01-20)
+
+
+### Bug Fixes
+
+* **node:** fnm in zsh ([3ed8a17](https://github.com/snelling-a/dotfiles/commit/3ed8a170475adabfe97ee6cd277582432cf92439))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([4d07ccc](https://github.com/snelling-a/dotfiles/commit/4d07ccc5f133ae18778d652b7ecdb16e6eca2c29))
+* **brew:** update packages ([74941fe](https://github.com/snelling-a/dotfiles/commit/74941feb0b6f429bff477369ac5d85f110f82829))
+* **brew:** update packages ([7b8e658](https://github.com/snelling-a/dotfiles/commit/7b8e658d72d174ef5533dbfb98e0d874c53c286f))
+* update submodules ([c921b5a](https://github.com/snelling-a/dotfiles/commit/c921b5ab0d3727d6f46b12aa923817b87a865e40))
+* update submodules ([bd06858](https://github.com/snelling-a/dotfiles/commit/bd06858bd4ab6b136cca6cbc380857de60cb0c77))
+
 ## [4.5.2](https://github.com/snelling-a/dotfiles/compare/v4.5.1...v4.5.2) (2024-01-11)
 
 
