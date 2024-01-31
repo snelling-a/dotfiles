@@ -40,12 +40,12 @@ brew "docker-buildx"
 brew "docker-credential-helper"
 brew "exiv2"
 brew "fd", args: ["HEAD"]
+brew "gcc"
 brew "ffmpeg"
 brew "figlet"
 brew "fnm", args: ["HEAD"]
 brew "fzf"
 brew "gawk"
-brew "gcc"
 brew "gdbm"
 brew "gh"
 brew "ghq", args: ["HEAD"]
