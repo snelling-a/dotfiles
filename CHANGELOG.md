@@ -1,5 +1,22 @@
 # Changelog
 
+## [4.6.0](https://github.com/snelling-a/dotfiles/compare/v4.5.3...v4.6.0) (2024-02-03)
+
+
+### Features
+
+* add raycast as submodule ([10c3152](https://github.com/snelling-a/dotfiles/commit/10c31529666493d5e1c3dad8b94c2ac453bc4b78))
+* **wezterm:** update neovim icon ([adb52a2](https://github.com/snelling-a/dotfiles/commit/adb52a2548161b223b6ca5b5853f54e6699fdd19))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([81dffbf](https://github.com/snelling-a/dotfiles/commit/81dffbfbda6662dc285ad84d100f0f7439be5626))
+* **brew:** update packages ([438f198](https://github.com/snelling-a/dotfiles/commit/438f198b13d18035503f22b598eb871c7fb0c1f8))
+* **brew:** update packages ([abf65b8](https://github.com/snelling-a/dotfiles/commit/abf65b8e7bc4d69d76fbce9a90449348c33cbba5))
+* **brew:** update packages ([3c121e0](https://github.com/snelling-a/dotfiles/commit/3c121e04ed006e11415a97346016e618a79e2571))
+* update submodules ([c9edfdf](https://github.com/snelling-a/dotfiles/commit/c9edfdfade2ae35eb30ce554a1293e2c23ada334))
+
 ## [4.5.3](https://github.com/snelling-a/dotfiles/compare/v4.5.2...v4.5.3) (2024-01-20)
 
 
