@@ -49,7 +49,6 @@ M.leader = keys.leader
 M.macos_window_background_blur = 20
 M.send_composed_key_when_right_alt_is_pressed = false
 M.show_new_tab_button_in_tab_bar = false
-M.show_update_window = false
 M.switch_to_last_active_tab_when_closing_tab = true
 M.term = "wezterm"
 M.use_fancy_tab_bar = false
