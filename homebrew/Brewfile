@@ -107,6 +107,7 @@ brew "tmux"
 brew "trash"
 brew "tree"
 brew "typescript-language-server"
+brew "universal-ctags", args: ["HEAD"]
 brew "vifm"
 brew "vim", args: ["HEAD"]
 brew "vint"
@@ -129,7 +130,6 @@ brew "zsh-syntax-highlighting"
 brew "zsh-you-should-use"
 brew "fsouza/prettierd/prettierd"
 brew "snyk/tap/snyk"
-brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 cask "alacritty"
 cask "altair-graphql-client"
 cask "appcleaner"
