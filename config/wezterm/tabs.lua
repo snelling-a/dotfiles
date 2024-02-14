@@ -38,7 +38,7 @@ local function get_current_working_dir(tab)
 end
 
 wezterm.on("format-tab-title", function(tab, _tabs, _panes, _config, _hover, _max_width)
-	local zoomed = tab.active_pane.is_zoomed and wezterm.pad_left(nerdfonts.md_magnify, 2) or ""
+	local zoomed = tab.active_pane.is_zoomed and wezterm.pad_left(nerdfonts.md_magnify, 2) .. " " or ""
 	local color, process = get_process(tab.active_pane)
 
 	return wezterm.format({
