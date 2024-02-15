@@ -1,5 +1,21 @@
 # Changelog
 
+## [4.6.1](https://github.com/snelling-a/dotfiles/compare/v4.6.0...v4.6.1) (2024-02-15)
+
+
+### Bug Fixes
+
+* **wezterm:** tab zoom icon ([a4250c4](https://github.com/snelling-a/dotfiles/commit/a4250c4dd139f79734d74ecc0876ff78f0a91420))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([8a4b2ac](https://github.com/snelling-a/dotfiles/commit/8a4b2acf9a26212cd9ecdc839dea29c9901c8c15))
+* **brew:** update packages ([61a8c27](https://github.com/snelling-a/dotfiles/commit/61a8c27de070bd96ba464ce18645cca683ef6463))
+* **brew:** update packages ([db13a0d](https://github.com/snelling-a/dotfiles/commit/db13a0df481668f27d8edd8ff7376a910a2cb072))
+* update submodules ([a4f3f1d](https://github.com/snelling-a/dotfiles/commit/a4f3f1db9167246facd32d6b7483f9267a1e96c1))
+* **wezterm:** show_update_window is deprecated ([1f4ab00](https://github.com/snelling-a/dotfiles/commit/1f4ab00d174de0cab5b8902636b415006388cf62))
+
 ## [4.6.0](https://github.com/snelling-a/dotfiles/compare/v4.5.3...v4.6.0) (2024-02-03)
 
 
