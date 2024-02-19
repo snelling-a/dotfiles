@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.6.2](https://github.com/snelling-a/dotfiles/compare/v4.6.1...v4.6.2) (2024-02-19)
+
+
+### Miscellaneous
+
+* **brew:** update packages ([9bca244](https://github.com/snelling-a/dotfiles/commit/9bca24408d12ed7a7fcc338890afbdc78d7b7f49))
+
 ## [4.6.1](https://github.com/snelling-a/dotfiles/compare/v4.6.0...v4.6.1) (2024-02-15)
 
 
