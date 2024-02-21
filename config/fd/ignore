@@ -1,0 +1,65 @@
+# *.jpeg
+# *.jpg
+# *.pdf
+# *.png
+# .cargo/
+# .ipython/
+# .java/
+# .jupyter/
+# .luarocks/
+# .mozilla/
+# .npm/
+# .nvm/
+*$*
+*%*
+*.bkp
+*.bz2
+*.db
+*.directory
+*.dll
+*.doc
+*.docx
+*.drawio
+*.gif
+*.git/
+*.gz
+*.ico
+*.ipynb
+*.iso
+*.jar
+*.mp3
+*.mp4
+*.o
+*.otf
+*.out
+*.pickle
+*.ppt
+*.pptx
+*.pyc
+*.rar
+*.so
+*.svg
+*.tar
+*.ttf
+*.venv/
+*.xls
+*.xlsx
+*.zip
+*Cache*/
+*\\~
+*cache*/
+.*Cache*/
+.*cache*/
+.*wine/
+.conda/
+.dot/
+.fonts/
+.steam*/
+.thunderbird/
+.tmp/
+__pycache__/
+dosdevices/
+events.out.tfevents.*
+node_modules/
+vendor/
+venv/
