@@ -20,7 +20,6 @@ link_file() {
 }
 
 link_dir() {
-	echo "$1 $2"
 	dir="$(realpath "$1")"
 	target="${2:-$XDG_CONFIG_HOME}/$3$(basename "$1")"
 
@@ -108,6 +107,7 @@ generate_bash_completions() {
 	curl -fsSL https://raw.githubusercontent.com/gokcehan/lf/master/etc/lf.bash -o "$completion_dir/_lf"
 	curl -fsSl https://raw.githubusercontent.com/ajeetdsouza/zoxide/master/contrib/completions/zoxide.bash -o "$completion_dir/_zoxide"
 	gh completion -s bash >"$completion_dir/_gh"
+	glab completion >"$completion_dir/_glab"
 	glow completion bash >"$completion_dir/_glow"
 	npm completion >"$completion_dir/_npm"
 	obs completion bash >"$completion_dir/_obs"
@@ -195,6 +195,13 @@ setup_gh() {
 
 install_local() {
 	is_file "$DOTFILES/shell/local/install.sh" && "$DOTFILES/shell/local/install.sh"
+}
+
+setup_vscode() {
+	target="$HOME/Library/Application Support/Code - Insiders/User"
+
+	mkdir -p "$target"
+	link_file "$DOTFILES/config/vscode/*" "$target"
 }
 
 mkdir "$backup_dir"
