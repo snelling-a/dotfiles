@@ -22,17 +22,17 @@ progress_bar_type                  = "Rectangle"
 tracks_playback_limit              = 50
 
 [copy_command]
- args    = []
- command = "pbcopy"
+    args    = []
+    command = "pbcopy"
 
 [notify_format]
- body    = "{track} • {artists}"
- summary = "{album}"
+    body    = "{track} • {artists}"
+    summary = "{album}"
 
 [device]
- audio_cache   = false
- bitrate       = 320
- device_type   = "computer"
- name          = "spotify-player"
- normalization = false
- volume        = 100
+    audio_cache   = false
+    bitrate       = 320
+    device_type   = "computer"
+    name          = "spotify-player"
+    normalization = false
+    volume        = 100
