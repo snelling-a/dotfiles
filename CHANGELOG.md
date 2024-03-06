@@ -1,5 +1,28 @@
 # Changelog
 
+## [4.7.0](https://github.com/snelling-a/dotfiles/compare/v4.6.2...v4.7.0) (2024-03-05)
+
+
+### Features
+
+* fd ignore ([6b14cfb](https://github.com/snelling-a/dotfiles/commit/6b14cfbd158ec80743175cf28610221359a9ed81))
+* **vscode:** neovim setup ([481ec08](https://github.com/snelling-a/dotfiles/commit/481ec08ab9242ad0bf29580883813d1f76ed9999))
+
+
+### Bug Fixes
+
+* delete styluaignore ([371998e](https://github.com/snelling-a/dotfiles/commit/371998ea13b201a7ba6e4da33939e4c719f168b2))
+* macos defaults ([15ce405](https://github.com/snelling-a/dotfiles/commit/15ce405334f4b14c64765fbc887fe31be29ef729))
+* **toml:** formatting ([e9f76a1](https://github.com/snelling-a/dotfiles/commit/e9f76a14461bfb387ab0bb4cfa4d3b3bafa6f55e))
+
+
+### Miscellaneous
+
+* **alacritty:** update theme ([e560220](https://github.com/snelling-a/dotfiles/commit/e560220a1e39bbb83649974903c598897ea7f39f))
+* **brew:** update packages ([c83e36c](https://github.com/snelling-a/dotfiles/commit/c83e36cd7995fc6dc123145a90d486787d3e46ec))
+* update submodules ([a2684b0](https://github.com/snelling-a/dotfiles/commit/a2684b0378f1f04ed6a80c8ece4e164faea93a2e))
+* update submodules ([bfe6ce8](https://github.com/snelling-a/dotfiles/commit/bfe6ce89f51e800eb1f57b6647a8091cbd62fe6a))
+
 ## [4.6.2](https://github.com/snelling-a/dotfiles/compare/v4.6.1...v4.6.2) (2024-02-19)
 
 
