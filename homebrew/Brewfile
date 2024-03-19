@@ -75,7 +75,8 @@ brew "marksman"
 brew "mercurial"
 brew "micro"
 brew "microplane"
-brew "mysql"
+brew "mongosh"
+brew "mysql", restart_service: true
 brew "neofetch", args: ["HEAD"]
 brew "neovim", args: ["HEAD"]
 brew "ninja"
