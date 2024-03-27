@@ -1,5 +1,15 @@
 # Changelog
 
+## [4.7.1](https://github.com/snelling-a/dotfiles/compare/v4.7.0...v4.7.1) (2024-03-27)
+
+
+### Miscellaneous
+
+* **brew:** update packages ([3fa0569](https://github.com/snelling-a/dotfiles/commit/3fa05693068241a0f9d8a00016dbd151409a5d33))
+* **brew:** update packages ([af3e73f](https://github.com/snelling-a/dotfiles/commit/af3e73fb72b9ce82ba2e193beeb47216f14d35c2))
+* **brew:** update packages ([45ed21f](https://github.com/snelling-a/dotfiles/commit/45ed21f5eb7cc6cc2e90fc06bec03f1995106375))
+* **brew:** update packages ([f37138a](https://github.com/snelling-a/dotfiles/commit/f37138a2afe35766ba81310d1d48997c15f75c50))
+
 ## [4.7.0](https://github.com/snelling-a/dotfiles/compare/v4.6.2...v4.7.0) (2024-03-05)
 
 
