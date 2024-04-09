@@ -18,22 +18,14 @@ local function get_overrides(window)
 	local blur_sign = blur and pad_right(nerdfonts.md_blur_off) or ""
 
 	return wezterm.format({
-		{
-			Text = blur_sign,
-		},
-		{
-			Text = ligature_sign,
-		},
-		{
-			Text = leader_sign,
-		},
+		{ Text = blur_sign },
+		{ Text = ligature_sign },
+		{ Text = leader_sign },
 	})
 end
 
 wezterm.on("update-right-status", function(window)
 	window:set_right_status(wezterm.format({
-		{
-			Text = get_overrides(window),
-		},
+		{ Text = get_overrides(window) },
 	}))
 end)

@@ -17,13 +17,9 @@ local function get_process(pane)
 
 	local fallback = {
 		{
-			Foreground = {
-				Color = colors.base04,
-			},
+			Foreground = { Color = colors.base04 },
 		},
-		{
-			Text = ("[%s]"):format(title),
-		},
+		{ Text = ("[%s]"):format(title) },
 	}
 
 	local color = icon and icon[1].Foreground.Color or fallback[1].Foreground.Color
@@ -42,24 +38,14 @@ wezterm.on("format-tab-title", function(tab, _tabs, _panes, _config, _hover, _ma
 	local color, process = get_process(tab.active_pane)
 
 	return wezterm.format({
+		{ Text = " " .. process },
 		{
-			Text = " " .. process,
+			Foreground = { Color = color },
 		},
-		{
-			Foreground = {
-				Color = color,
-			},
-		},
-		{
-			Text = get_current_working_dir(tab.active_pane),
-		},
+		{ Text = get_current_working_dir(tab.active_pane) },
 		{ Foreground = { Color = colors.base04 } },
-		{
-			Text = zoomed,
-		},
+		{ Text = zoomed },
 		"ResetAttributes",
-		{
-			Text = " ▕",
-		},
+		{ Text = " ▕" },
 	})
 end)

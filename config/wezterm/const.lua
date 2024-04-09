@@ -1,29 +1,35 @@
 local wezterm = require("wezterm")
-
-local color_scheme = "Default Dark (base16)"
-local default_colors = wezterm.color.get_builtin_schemes()[color_scheme]
 local nerdfonts = wezterm.nerdfonts
+
+local function scheme_for_appearance()
+	local appearance = wezterm.gui and wezterm.gui.get_appearance() or "Dark"
+
+	return "Default " .. appearance .. " (base16)"
+end
 
 local M = {}
 
+M.color_scheme = scheme_for_appearance()
+local default_colors = wezterm.color.get_builtin_schemes()[M.color_scheme]
+
 --- @type table<string,string>
 M.colors = {
-	base00 = default_colors.ansi[1], -- #181818 default background
-	base01 = default_colors.indexed[18], --#282828 lighter background
-	base02 = default_colors.indexed[19], --#383838 selection background
-	base03 = default_colors.brights[1], -- #585858 comments, invisibles, line highlighting, etc.
-	base04 = default_colors.indexed[20], -- #b8b8b8 dark foreground (status bars)
-	base05 = default_colors.ansi[8], -- #d8d8d8 default foreground, caret, delimiters, operators, etc.
-	base06 = default_colors.indexed[21], -- #e8e8e8 light foreground (status bars)
-	base07 = default_colors.brights[8], -- #f8f8f8 light background (status bars)
-	base08 = default_colors.ansi[2], -- #ab4642 variables, XML tags, markup link text, markup lists, diff deleted
-	base09 = default_colors.indexed[16], -- #dc9656 integers, boolean, constants, XML attributes, markup link url
-	base0A = default_colors.ansi[4], -- #f7ca88 classes, markup bold, search text background
-	base0B = default_colors.ansi[3], -- #a1b56c strings, inherited class, markup code, diff inserted
-	base0C = default_colors.ansi[7], -- #86c1b9 support, regular expressions, escape characters, markup quotes
-	base0D = default_colors.ansi[5], -- #7cafc2 functions, methods, attribute IDs, headings
-	base0E = default_colors.ansi[6], -- #ba8baf keywords, storage, selector, markup italic, diff changed
-	base0F = default_colors.indexed[17], -- #a16946 deprecated, opening/closing embedded language tags, e.g. <?php ?>
+	base00 = default_colors.ansi[1], -- default background
+	base01 = default_colors.indexed[18], -- lighter background
+	base02 = default_colors.indexed[19], -- selection background
+	base03 = default_colors.brights[1], -- comments, invisibles, line highlighting, etc.
+	base04 = default_colors.indexed[20], -- dark foreground (status bars)
+	base05 = default_colors.ansi[8], -- default foreground, caret, delimiters, operators, etc.
+	base06 = default_colors.indexed[21], -- light foreground (status bars)
+	base07 = default_colors.brights[8], -- light background (status bars)
+	base08 = default_colors.ansi[2], -- variables, XML tags, markup link text, markup lists, diff deleted
+	base09 = default_colors.indexed[16], -- integers, boolean, constants, XML attributes, markup link url
+	base0A = default_colors.ansi[4], -- classes, markup bold, search text background
+	base0B = default_colors.ansi[3], -- strings, inherited class, markup code, diff inserted
+	base0C = default_colors.ansi[7], -- support, regular expressions, escape characters, markup quotes
+	base0D = default_colors.ansi[5], -- functions, methods, attribute IDs, headings
+	base0E = default_colors.ansi[6], -- keywords, storage, selector, markup italic, diff changed
+	base0F = default_colors.indexed[17], -- deprecated, opening/closing embedded language tags, e.g. <?php ?>
 }
 
 ---@alias Color {Foreground:{Color:string}}
@@ -34,13 +40,9 @@ M.colors = {
 local function get_process_icon(color, text)
 	return {
 		{
-			Foreground = {
-				Color = color,
-			},
+			Foreground = { Color = color },
 		},
-		{
-			Text = wezterm.pad_right(text, 3),
-		},
+		{ Text = wezterm.pad_right(text, 3) },
 	}
 end
 

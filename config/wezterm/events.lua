@@ -3,6 +3,7 @@ local wezterm = require("wezterm")
 local function toggle_override(window, override, params)
 	local overrides = window:get_config_overrides() or {}
 
+	print(overrides[override])
 	if not overrides[override] then
 		overrides[override] = params
 	else

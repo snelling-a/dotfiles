@@ -1,7 +1,7 @@
+local const = require("const")
 local font = require("font")
 local keys = require("keys") --[[@as table]]
 local wezterm = require("wezterm")
-local colors = require("const").colors
 
 require("events")
 require("right-status")
@@ -15,24 +15,24 @@ end
 
 M.audible_bell = "Disabled"
 M.check_for_updates = false
-M.color_scheme = "Default Dark (base16)"
+M.color_scheme = const.color_scheme
 M.colors = {
-	visual_bell = colors.base00,
+	visual_bell = const.colors.base00,
 	tab_bar = {
 		active_tab = {
-			bg_color = colors.base02,
-			fg_color = colors.base02,
+			bg_color = const.colors.base02,
+			fg_color = const.colors.base02,
 			intensity = "Bold",
 		},
-		background = colors.base01,
+		background = const.colors.base01,
 		inactive_tab = {
-			bg_color = colors.base01,
-			fg_color = colors.base01,
+			bg_color = const.colors.base01,
+			fg_color = const.colors.base01,
 			intensity = "Half",
 		},
 		inactive_tab_hover = {
-			bg_color = colors.base02,
-			fg_color = colors.base02,
+			bg_color = const.colors.base02,
+			fg_color = const.colors.base02,
 			italic = false,
 		},
 	},
