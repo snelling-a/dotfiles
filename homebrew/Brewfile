@@ -78,7 +78,7 @@ brew "mercurial"
 brew "micro"
 brew "microplane"
 brew "mongosh"
-brew "mysql", restart_service: true
+brew "mysql"
 brew "neofetch", args: ["HEAD"]
 brew "neovim", args: ["HEAD"]
 brew "ninja"
@@ -92,6 +92,7 @@ brew "poppler"
 brew "python@3.11"
 brew "python-gdbm@3.11"
 brew "python-tk@3.11"
+brew "rabbitmq"
 brew "ripgrep", args: ["HEAD"]
 brew "ripgrep-all", args: ["HEAD"]
 brew "ruby-install"
@@ -103,6 +104,7 @@ brew "sk"
 brew "spotify_player"
 brew "starship", args: ["HEAD"]
 brew "stylua"
+brew "telnet"
 brew "the_silver_searcher"
 brew "tig"
 brew "timg"
@@ -136,6 +138,8 @@ brew "zsh-you-should-use"
 brew "fsouza/prettierd/prettierd"
 brew "sass/sass/sass"
 brew "snyk/tap/snyk"
+cask "1password-cli"
+cask "1password@nightly"
 cask "adguard@nightly"
 cask "alacritty"
 cask "altair-graphql-client"
