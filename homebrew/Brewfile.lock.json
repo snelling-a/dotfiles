@@ -11,7 +11,7 @@
         "revision": "f1a0ff2bdcb645bec743417787bc1ff5c47e9636"
       },
       "homebrew/bundle": {
-        "revision": "f0aa10ce605d1400fdb0cbe490e012238ef93b0c"
+        "revision": "5372559758cc6fb81024349431b6baad7ffd1bda"
       },
       "homebrew/cask-fonts": {
         "revision": "0ed20f35d21ebc3f4f829689b101078718ad5ce1"
@@ -20,13 +20,13 @@
         "revision": "211ae5be9d965d6362ac10af863902a86153662d"
       },
       "ms-jpq/sad": {
-        "revision": "8ef141b55eebeaa46afec8c90a02afc9c2252479"
+        "revision": "e66e18fe257075406c199f03e6c013b410b84652"
       },
       "sass/sass": {
         "revision": "569b61e2263bdf2e57bf618cfd11a3b0aa082bd8"
       },
       "snyk/tap": {
-        "revision": "ac0341e73c75ae9b65dd92a0f43d0263fb15dbe9"
+        "revision": "4c3c515b01dfe84bafec4c591219680bff91bf96"
       },
       "universal-ctags/universal-ctags": {
         "revision": "c84df0fc89f3a63ce5438eb59244ec2080352c0d"
@@ -3316,7 +3316,7 @@
         }
       },
       "neovim": {
-        "version": "HEAD-724d111",
+        "version": "HEAD-4618711",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -4907,7 +4907,7 @@
         }
       },
       "universal-ctags": {
-        "version": "HEAD-8976ec3",
+        "version": "p6.1.20240623.0",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -4948,11 +4948,6 @@
               "sha256": "09a34b10b5efa1262b0aa42664500fe05916a65a4bc4fd281061497379571f41"
             }
           }
-        },
-        "options": {
-          "args": [
-            "HEAD"
-          ]
         }
       },
       "vifm": {
@@ -5764,7 +5759,7 @@
         "bottle": false
       },
       "snyk/tap/snyk": {
-        "version": "1.1292.0",
+        "version": "1.1292.1",
         "bottle": false
       }
     },
@@ -5794,7 +5789,7 @@
         }
       },
       "altair-graphql-client": {
-        "version": "7.2.0",
+        "version": "7.2.1",
         "options": {
           "full_name": "altair-graphql-client"
         }
@@ -5884,7 +5879,7 @@
         }
       },
       "logi-options-plus": {
-        "version": "1.74.577900",
+        "version": "1.76.583666",
         "options": {
           "full_name": "logi-options-plus"
         }
@@ -5950,7 +5945,7 @@
         }
       },
       "signal@beta": {
-        "version": "7.14.0-beta.1",
+        "version": "7.15.0-beta.1",
         "options": {
           "full_name": "signal@beta"
         }
@@ -5980,7 +5975,7 @@
         }
       },
       "whatsapp@beta": {
-        "version": "2.24.13.74",
+        "version": "2.24.13.75",
         "options": {
           "full_name": "whatsapp@beta"
         }
