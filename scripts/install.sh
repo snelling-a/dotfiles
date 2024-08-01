@@ -75,7 +75,6 @@ print() {
 print "Installing dotfiles..."
 
 brew_install() {
-
 	if ! command -v brew >/dev/null 2>&1; then
 		print "Installing homebrew..."
 
@@ -125,8 +124,6 @@ generate_zsh_completions() {
 		mkdir -p "$completion_dir"
 	fi
 
-	completion_dir="${XDG_DATA_HOME:-$HOME/.local/share}/zsh_completion"
-	bw completion --shell=zsh >"$completion_dir/_bw"
 	curl -fsSL https://raw.githubusercontent.com/gokcehan/lf/master/etc/lf.zsh -o "$completion_dir/_lf"
 	gh completion -s zsh >"$completion_dir/_gh"
 	glow completion zsh >"$completion_dir/_glow"
