@@ -17,6 +17,7 @@ bind "set menu-complete-display-prefix on"
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
 
+eval "$(fzf --bash)"
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 

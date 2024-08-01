@@ -44,3 +44,5 @@ ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red')
 source ${HOMEBREW_PREFIX:-/usr/local}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ${HOMEBREW_PREFIX:-/usr/local}/share/zsh-you-should-use/you-should-use.plugin.zsh
 source ${HOMEBREW_PREFIX:-/usr/local}/share/zsh-autopair/autopair.zsh
+
+source <(fzf --zsh)
