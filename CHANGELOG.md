@@ -1,5 +1,47 @@
 # Changelog
 
+## [4.8.0](https://github.com/snelling-a/dotfiles/compare/v4.7.0...v4.8.0) (2024-08-01)
+
+
+### Features
+
+* **btm:** use terminal theme ([953d8fa](https://github.com/snelling-a/dotfiles/commit/953d8fabc86dfc528ce4a7f120a6450e091ceefe))
+* **lsd:** use terminal theme ([bcb8bd4](https://github.com/snelling-a/dotfiles/commit/bcb8bd430c928765e8a0a47343cbe88c36ca582e))
+* **macos:** update defaults ([96510cf](https://github.com/snelling-a/dotfiles/commit/96510cf303274aca4c3d1d93a0150f3a754ac9ef))
+* **vscode:** update settings.json ([e71a708](https://github.com/snelling-a/dotfiles/commit/e71a708fbe18f7c0c24562c147139a63b9ae5d9c))
+* **wezterm:** system based color scheme ([54a1bea](https://github.com/snelling-a/dotfiles/commit/54a1bea8d16ec60ec282bfd389c5824229374e2e))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([d7a0f8c](https://github.com/snelling-a/dotfiles/commit/d7a0f8c96f3a69b95c11a937b45c1de67dd7ca23))
+* **brew:** update packages ([ae35b74](https://github.com/snelling-a/dotfiles/commit/ae35b74db97bfd12359cf0a8f01e9c107ce7eac7))
+* **brew:** update packages ([1319ebf](https://github.com/snelling-a/dotfiles/commit/1319ebff6da0685fd8c65cfeecf8a9b249e43136))
+* **brew:** update packages ([db8058e](https://github.com/snelling-a/dotfiles/commit/db8058e714cc6a1cfd3aee32ba1011a76da4f514))
+* **brew:** update packages ([a50beb0](https://github.com/snelling-a/dotfiles/commit/a50beb0aa7f8baf424a310a6196f4de0e0334d8c))
+* **brew:** update packages ([78581cf](https://github.com/snelling-a/dotfiles/commit/78581cfaf5d6ac478f40f072a2284e15d516310e))
+* **brew:** update packages ([e6970f1](https://github.com/snelling-a/dotfiles/commit/e6970f18ac0768bdaec4a7bf22648b3ea16ea3e7))
+* **brew:** update packages ([c9c09d7](https://github.com/snelling-a/dotfiles/commit/c9c09d75ea8d6487f92ba756d2e392f98be91996))
+* **brew:** update packages ([bceb1b0](https://github.com/snelling-a/dotfiles/commit/bceb1b0dbd6361320bcf3fe09e5afef3b9fba987))
+* **brew:** update packages ([7837a53](https://github.com/snelling-a/dotfiles/commit/7837a53a38da9111316ce703701fcbdc8a7dcd62))
+* **brew:** update packages ([2667b48](https://github.com/snelling-a/dotfiles/commit/2667b48838afa487e56d980722acd629f6833a47))
+* **brew:** update packages ([2629f99](https://github.com/snelling-a/dotfiles/commit/2629f99393f49b22c2e1dcf4e12e8f4a757193b2))
+* **brew:** update packages ([1e39a39](https://github.com/snelling-a/dotfiles/commit/1e39a39e8219d7da2871cf93cfbe3e48a02f2cad))
+* **brew:** update packages ([a3e419d](https://github.com/snelling-a/dotfiles/commit/a3e419de6962877a5d31e77ecba27d95fba29d0d))
+* **brew:** update packages ([f472fc6](https://github.com/snelling-a/dotfiles/commit/f472fc66be8762be4c9fbb0cbf4dfcd7bbc51d40))
+* **brew:** update packages ([1e4fd84](https://github.com/snelling-a/dotfiles/commit/1e4fd84eb0ff37c1f7fe9fccf8ca226677521364))
+* **brew:** update packages ([f191ca4](https://github.com/snelling-a/dotfiles/commit/f191ca4809525afd6f868f5fd083ad386135ddf4))
+* **brew:** update packages ([e200794](https://github.com/snelling-a/dotfiles/commit/e20079474ee26ed52ffe7bff81f21ab8ef1f6c8c))
+* **brew:** update packages ([d609aa0](https://github.com/snelling-a/dotfiles/commit/d609aa00b0a5ab0c8623791e8fa3c7faa6cc41a9))
+* **brew:** update packages ([3fa0569](https://github.com/snelling-a/dotfiles/commit/3fa05693068241a0f9d8a00016dbd151409a5d33))
+* **brew:** update packages ([af3e73f](https://github.com/snelling-a/dotfiles/commit/af3e73fb72b9ce82ba2e193beeb47216f14d35c2))
+* **brew:** update packages ([45ed21f](https://github.com/snelling-a/dotfiles/commit/45ed21f5eb7cc6cc2e90fc06bec03f1995106375))
+* **brew:** update packages ([f37138a](https://github.com/snelling-a/dotfiles/commit/f37138a2afe35766ba81310d1d48997c15f75c50))
+* **fzf:** init shell bindings ([8b84ac0](https://github.com/snelling-a/dotfiles/commit/8b84ac0e3bc6c553e76197ccf9a7ae2ed599fe8b))
+* remove bitwarden cli completions ([a42d4d5](https://github.com/snelling-a/dotfiles/commit/a42d4d5f6c0ec11289371e24817ab52dc5a8ea5c))
+* update submodules ([9f48c45](https://github.com/snelling-a/dotfiles/commit/9f48c45e7c2ed0a5fec35bc2da961f0d6f20d202))
+* update submodules ([ecb6ab4](https://github.com/snelling-a/dotfiles/commit/ecb6ab48be347f2895a5929f7ffc74557a9a9de5))
+
 ## [4.7.0](https://github.com/snelling-a/dotfiles/compare/v4.6.2...v4.7.0) (2024-03-05)
 
 
