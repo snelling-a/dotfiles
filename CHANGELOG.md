@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.8.1](https://github.com/snelling-a/dotfiles/compare/v4.8.0...v4.8.1) (2024-08-07)
+
+
+### Miscellaneous
+
+* **brew:** update packages ([09003e2](https://github.com/snelling-a/dotfiles/commit/09003e2376251cd8eca22bac51c9dcd8f592dca2))
+* **brew:** update packages ([e05dd18](https://github.com/snelling-a/dotfiles/commit/e05dd18827fe8ba140e424fd18f9c71209bf0c85))
+
 ## [4.8.0](https://github.com/snelling-a/dotfiles/compare/v4.7.0...v4.8.0) (2024-08-01)
 
 
