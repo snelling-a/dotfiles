@@ -1,10 +1,11 @@
 #!/usr/bin/env zsh
 
 if type brew &>/dev/null; then
-    export FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+  export FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
-    autoload -Uz compinit
-    compinit
+  autoload -Uz compinit
+  compinit
 fi
 
 setopt AUTO_LIST
@@ -39,9 +40,9 @@ zstyle ':completion:*' group-name ''
 zstyle ':completion:*:*:-command-:*:*' group-order aliases builtins functions commands
 
 expand-or-complete-with-dots() {
-    echo -n "\e[31m......\e[0m"
-    zle expand-or-complete
-    zle redisplay
+echo -n "\e[31m......\e[0m"
+zle expand-or-complete
+zle redisplay
 }
 zle -N expand-or-complete-with-dots
 bindkey "^I" expand-or-complete-with-dots
