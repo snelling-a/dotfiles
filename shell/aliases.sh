@@ -28,7 +28,7 @@ alias rm="trash -v"
 alias empty="trash -ey" # 'y' skips confirmation step
 
 dots() {
-	cd "$DOTFILES" || exit
+  cd "$DOTFILES" || exit
 }
 
 alias notes="cd $NOTES"
@@ -52,8 +52,8 @@ alias glow='glow --config "$XDG_CONFIG_HOME/glow/glow.yml"'
 # alias ctags="$HOMEBREW_PREFIX/bin/ctags"
 
 cargoup() {
-	# shellcheck disable=2046 # does not work if it is double quoted
-	cargo install $(cargo install --list | grep -E '^[a-z0-9_-]+ v[0-9.]+:$' | cut -f1 -d' ') --force
+  # shellcheck disable=2046 # does not work if it is double quoted
+  cargo install $(cargo install --list | grep -E '^[a-z0-9_-]+ v[0-9.]+:$' | cut -f1 -d' ') --force
 }
 
 alias brew_list="brew info --json=v2 --installed | jq -r '.formulae[]|select(any(.installed[]; .installed_on_request)).full_name'"

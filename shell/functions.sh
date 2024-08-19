@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
 print_path() {
-	tr : '\n' <<<"$PATH" | sort
+  tr : '\n' <<<"$PATH" | sort
 }
 
 list_env() {
-	local var
-	var=$(printenv | cut -d= -f1 | fzf --prompt 'env:' --preview='printenv {}') &&
-		echo "$var=$(printenv "$var")" &&
-		unset var
+  local var
+  var=$(printenv | cut -d= -f1 | fzf --prompt 'env:' --preview='printenv {}') &&
+    echo "$var=$(printenv "$var")" &&
+    unset var
 }
 
 # pull gitignore template

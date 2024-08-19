@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 
 nvim_update() {
-	brew upgrade neovim --fetch-HEAD
+  brew upgrade neovim --fetch-HEAD
 }
 
 git_commit_push() {
-	dir="$1"
-	target="$2"
-	message="$3"
+  dir="$1"
+  target="$2"
+  message="$3"
 
-	git -C "$dir" add "$target"
-	git -C "$dir" commit -m "chore$message"
-	git -C "$dir" push
+  git -C "$dir" add "$target"
+  git -C "$dir" commit -m "chore$message"
+  git -C "$dir" push
 }
 
 sudo -v
@@ -28,7 +28,7 @@ wait
 echo "Updating Neovim nightly..."
 nvim_update &
 wait
-nvim --headless "+Lazy! sync" -c "call firenvim#install(0)" -c quit &
+nvim --headless "+Lazy! sync" -c quit &
 wait
 
 git_commit_push "$DOTFILES/config/nvim" "$DOTFILES/config/nvim/lazy-lock.json" ": update plugins"
