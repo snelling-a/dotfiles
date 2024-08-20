@@ -47,7 +47,7 @@
   "editor.fontFamily": "Iosevka Term SS15, Iosevka Nerd Font Mono, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 15,
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "editor.inlayHints.enabled": "on",
   "editor.inlayHints.fontFamily": "Iosevka Term SS15",
   "editor.inlayHints.fontSize": 13,
@@ -161,7 +161,7 @@
   "markdown-preview-enhanced.previewTheme": "github-dark.css",
   "postman.telemetry.enabled": false,
   "redhat.telemetry.enabled": false,
-  "snyk.advanced.cliPath": "~/.local/share/snyk-ls/snyk-macos",
+  "snyk.advanced.cliPath": "/Users/andrewsnelling/.local/share/snyk-ls/snyk-macos-arm64",
   "snyk.trustedFolders": [
     "/Users/andrewsnelling"
   ],
@@ -197,4 +197,3 @@
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "readme"
 }
-
