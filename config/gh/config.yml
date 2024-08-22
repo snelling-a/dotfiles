@@ -11,4 +11,4 @@ git_protocol: ssh
 http_unix_socket:
 pager: delta -s
 prompt: enabled
-version: "1"
+version: '1'

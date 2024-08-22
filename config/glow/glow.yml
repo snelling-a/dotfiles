@@ -1,10 +1,5 @@
-# style name or JSON path (default "auto")
-style: "auto"
-# show local files only; no network (TUI-mode only)
-local: false
-# mouse support (TUI-mode only)
-mouse: false
-# use pager to display markdown
-pager: true
-# word-wrap at width
-width: 80
+style: auto # style name or JSON path (default "auto")
+local: false # show local files only; no network (TUI-mode only)
+mouse: false # mouse support (TUI-mode only)
+pager: true # use pager to display markdown
+width: 80 # word-wrap at width
