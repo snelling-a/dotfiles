@@ -1,5 +1,31 @@
 # Changelog
 
+## [4.9.0](https://github.com/snelling-a/dotfiles/compare/v4.8.0...v4.9.0) (2024-08-22)
+
+
+### Features
+
+* **vscode:** update settings.json ([570e1e8](https://github.com/snelling-a/dotfiles/commit/570e1e8ba0cd64c337a579b7ddd459ae63d3f6ad))
+
+
+### Bug Fixes
+
+* completions ([457600c](https://github.com/snelling-a/dotfiles/commit/457600cd794bea9405ef7564ecb1ce06129e0eff))
+* remove unused aliases ([86adb14](https://github.com/snelling-a/dotfiles/commit/86adb141530a3d2df5b9f8ab5a579dbf8c424056))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([4bca74a](https://github.com/snelling-a/dotfiles/commit/4bca74af87c91ad24f1ead383259935fff6951c2))
+* **brew:** update packages ([8d342a9](https://github.com/snelling-a/dotfiles/commit/8d342a92745c44284271180ab315805ede46b70e))
+* **brew:** update packages ([09003e2](https://github.com/snelling-a/dotfiles/commit/09003e2376251cd8eca22bac51c9dcd8f592dca2))
+* **brew:** update packages ([e05dd18](https://github.com/snelling-a/dotfiles/commit/e05dd18827fe8ba140e424fd18f9c71209bf0c85))
+* format gh config files ([3834761](https://github.com/snelling-a/dotfiles/commit/383476100bcc142e8e9aca09c9d19da707b279c8))
+* sh formatting ([8d70c65](https://github.com/snelling-a/dotfiles/commit/8d70c65e8c91048522ce8c6ff9d3445b17ed1a21))
+* update lazygit config file ([7a7f9b9](https://github.com/snelling-a/dotfiles/commit/7a7f9b99bc24cc57b87cce10a4b84b9119e1c7d2))
+* update submodules ([962e64d](https://github.com/snelling-a/dotfiles/commit/962e64d66e4f014a5714e63ee5cb12018166caad))
+* **vscode:** update settings ([8343992](https://github.com/snelling-a/dotfiles/commit/83439922fa82020d8cf7bfcfe3970aae5ab21b3d))
+
 ## [4.8.0](https://github.com/snelling-a/dotfiles/compare/v4.7.0...v4.8.0) (2024-08-01)
 
 
