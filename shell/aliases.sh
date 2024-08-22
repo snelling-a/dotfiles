@@ -17,10 +17,8 @@ alias ~='cd ~'
 alias h='history'
 
 alias vim="nvim"
-alias firenvim="nvim --headless -c \"call firenvim#install(0, 'export PATH=\"$PATH\"')\" -c quit"
 alias nvim_colors="nvim --headless \"+GenerateAverageColor\" +qa"
 alias update_plugins="nvim --headless \"+Lazy! sync\" +qa"
-alias update_nvim="nvim --headless '+GenerateAverageColor' '+Lazy! sync' -c 'call firenvim#install(0, \'export PATH=\"$PATH\"\')' -c quit"
 
 alias code="code-insiders"
 
