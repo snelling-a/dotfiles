@@ -1,204 +1,205 @@
 # vim:filetype=gitconfig
 
 [advice]
-	detachedHead = false
-	statusHints = false
-	waitingForEditor = false
+  detachedHead = false
+  statusHints = false
+  waitingForEditor = false
 
 [alias]
-	a = add
-	aa = add --all
-	aliases = !git config --get-regexp '^alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\ => \\2/'
-	bd = branch --delete
-	branches = branch --all
-	c = commit
-	cl = clone --recurse-submodules
-	cleanup = !git branch --merged | grep -v '\\*\\|main\\|master\\|develop' | xargs -n 1 -r git branch --delete
-	co = checkout
-	count = shortlog --summary --numbered
-	cp = cherry-pick
-	d = diff
-	dev = "!f() { ghq get $1; }; f"
-	fc = "!f() { git log --pretty=custom --date=short -S$1; }; f" ; Find commits by source code
-	fm = "!f() { git log --pretty=custom --date=short --grep=$1; }; f" ; Find commits by commit message
-	l = pull
-	ls = log --graph --oneline
-	lsa = log --graph --pretty=custom --all
-	lsla = log --pretty=custom --stat --graph --all
-	lss = log --stat --pretty=custom --date=short
-	mt = mergetool
-	nb = checkout -b
-	oops = commit --amend --no-edit
-	p = push
-	pf = push --force-with-lease
-	pop = stash pop
-	pristine = reset --hard && git clean --force -dx
-	rb = rebase --interactive 
-	rba = rebase --abort
-	rbc = rebase --continue
-	rbi = rebase --interactive --autosquash
-	remotes = remote --verbose
-	st = status
-	sta = "!f() { git stash push --all --include-untracked --message=$1; }; f" ; Stash everything
-	standup = log --since='yesterday' --author='Andrew Snelling'
-	tags = tag --long
-	undo = reset --soft HEAD^1
+  a = add
+  aa = add --all
+  aliases = !git config --get-regexp '^alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\ => \\2/'
+  bd = branch --delete
+  branches = branch --all
+  c = commit
+  cl = clone --recurse-submodules
+  cleanup = !git branch --merged | grep -v '\\*\\|main\\|master\\|develop' | xargs -n 1 -r git branch --delete
+  co = checkout
+  count = shortlog --summary --numbered
+  cp = cherry-pick
+  d = diff
+  dev = "!f() { ghq get $1; }; f"
+  fc = "!f() { git log --pretty=custom --date=short -S$1; }; f" ; Find commits by source code
+  fm = "!f() { git log --pretty=custom --date=short --grep=$1; }; f" ; Find commits by commit message
+  l = pull
+  ll = submodule update --recursive --remote
+  ls = log --graph --oneline
+  lsa = log --graph --pretty=custom --all
+  lsla = log --pretty=custom --stat --graph --all
+  lss = log --stat --pretty=custom --date=short
+  mt = mergetool
+  nb = checkout -b
+  oops = commit --amend --no-edit
+  p = push
+  pf = push --force-with-lease
+  pop = stash pop
+  pristine = reset --hard && git clean --force -dx
+  rb = rebase --interactive 
+  rba = rebase --abort
+  rbc = rebase --continue
+  rbi = rebase --interactive --autosquash
+  remotes = remote --verbose
+  st = status
+  sta = "!f() { git stash push --all --include-untracked --message=$1; }; f" ; Stash everything
+  standup = log --since='yesterday' --author='Andrew Snelling'
+  tags = tag --long
+  undo = reset --soft HEAD^1
 
 [apply]
-	whitespace = fix
+  whitespace = fix
 
 [blame]
-	coloring = repeatedLines
-	date = human
-	markIgnoredLines = true
-	markUnblamableLines = true
+  coloring = repeatedLines
+  date = human
+  markIgnoredLines = true
+  markUnblamableLines = true
 
 [branch]
-	sort = -committerdate
+  sort = -committerdate
 
 [color "branch"]
-	current = "#f7ca88 reverse"
-	local = "#f7ca88"
-	remote = "#a1b56c"
+  current = "#f7ca88 reverse"
+  local = "#f7ca88"
+  remote = "#a1b56c"
 
 [color "diff"]
-	frag = "#ba8baf bold"
-	meta = "#f7ca88 bold"
-	new = "#a1b56c bold"
-	old = "#ab4642 bold"
+  frag = "#ba8baf bold"
+  meta = "#f7ca88 bold"
+  new = "#a1b56c bold"
+  old = "#ab4642 bold"
 
 [color "diff-highlight"]
-	newHighlight = "#a1b56c bold 22"
-	newNormal = "#a1b56c bold"
-	oldHighlight = "#ab4642 bold 52"
-	oldNormal = "#ab4642 bold"
+  newHighlight = "#a1b56c bold 22"
+  newNormal = "#a1b56c bold"
+  oldHighlight = "#ab4642 bold 52"
+  oldNormal = "#ab4642 bold"
 
 [color "status"]
-	added = "#a1b56c"
-	changed = "#ab4642"
-	untracked = "#86c1b9"
+  added = "#a1b56c"
+  changed = "#ab4642"
+  untracked = "#86c1b9"
 
 [color]
-	diff = true
-	ui = auto
+  diff = true
+  ui = auto
 
 [column]
-	ui = auto
+  ui = auto
 
 [commit]
-	gpgsign = true
-	template = ~/.config/git/gitcommit
-	verbose = true
+  gpgsign = true
+  template = ~/.config/git/gitcommit
+  verbose = true
 
 [core]
-	editor = nvim
-	excludesfile = ~/.config/git/gitignore_global
-	hooksPath = ~/.config/git/hooks
-	pager = delta
+  editor = nvim
+  excludesfile = ~/.config/git/gitignore_global
+  hooksPath = ~/.config/git/hooks
+  pager = delta
 
 [delta "blame"]
-	blame-code-style = syntax
-	blame-format = {author:<15.14}
-	blame-separator-style = "#ab4642"
+  blame-code-style = syntax
+  blame-format = {author:<15.14}
+  blame-separator-style = "#ab4642"
 
 [delta "decorations"]
-	commit-decoration-style = "bold #f7ca88 box ul"
-	commit-style = raw
-	file-style = "bold #f7ca88 ul"
-	hunk-header-decoration-style = "#7cafc2 box"
-	hunk-header-file-style = "#ab4642"
-	hunk-header-line-number-style = "#a1b56c"
-	hunk-header-style = file line-number syntax
+  commit-decoration-style = "bold #f7ca88 box ul"
+  commit-style = raw
+  file-style = "bold #f7ca88 ul"
+  hunk-header-decoration-style = "#7cafc2 box"
+  hunk-header-file-style = "#ab4642"
+  hunk-header-line-number-style = "#a1b56c"
+  hunk-header-style = file line-number syntax
 
 [delta "interactive"]
-	keep-plus-minus-markers = false
+  keep-plus-minus-markers = false
 
 [delta]
-	features = unobtrusive-line-numbers decorations
-	hyperlinks = true
-	line-numbers = true
-	map-styles = "bold #a16946" => "syntax #ba8baf", "bold #86c1b9" => "syntax #7cafc2"
-	navigate = true
-	side-by-side = true
-	syntax-theme = base16
+  features = unobtrusive-line-numbers decorations
+  hyperlinks = true
+  line-numbers = true
+  map-styles = "bold #a16946" => "syntax #ba8baf", "bold #86c1b9" => "syntax #7cafc2"
+  navigate = true
+  side-by-side = true
+  syntax-theme = base16
 
 [diff]
-	colorMoved = default
-	submodule = log
-	tool = nvimdiff
+  colorMoved = default
+  submodule = log
+  tool = nvimdiff
 
 [difftool "nvimdiff"]
-	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+  cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 
 [difftool]
-	prompt = false
+  prompt = false
 
 [ghq]
-	root = ~/dev
+  root = ~/dev
 
 [gpg "ssh"]
   allowedSignersFile = ~/.ssh/allowed_signers
-	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 
 [gpg]
-	format = ssh
+  format = ssh
 
 [help]
-	autocorrect = prompt
+  autocorrect = prompt
 
 [init]
-	defaultBranch = main
+  defaultBranch = main
 
 [interactive]
-	diffFilter = delta --color-only --features=interactive
+  diffFilter = delta --color-only --features=interactive
 
 [maintenance]
-	repo = /Users/andrewsnelling/dotfiles
-	repo = /Users/andrewsnelling/dotfiles/config/nvim
+  repo = /Users/andrewsnelling/dotfiles
+  repo = /Users/andrewsnelling/dotfiles/config/nvim
 
 [merge]
-	conflictstyle = diff3
-	tool = nvimmerge
+  conflictstyle = diff3
+  tool = nvimmerge
 
 [mergetool]
-	keepBackup = false
+  keepBackup = false
 
 [mergetool "nvimmerge"]
-	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\" \"$MERGED\" -c '$wincmd w' -c 'wincmd J'"
-	trustexitcode = true
+  cmd = "nvim -d \"$LOCAL\" \"$REMOTE\" \"$MERGED\" -c '$wincmd w' -c 'wincmd J'"
+  trustexitcode = true
 
 [pager]
-	status = true
+  status = true
 
 [pretty]
-	custom = %Cred%h%Creset %GT trust -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset
+  custom = %Cred%h%Creset %GT trust -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset
 
 [pull]
-	rebase = true
+  rebase = true
 
 [push]
-	default = current
+  default = current
 
 [rebase]
-	autoSquash = true
-	autoStash = true
-	instructionFormat = format:%s (%cr) <%an> %GT %G?
+  autoSquash = true
+  autoStash = true
+  instructionFormat = format:%s (%cr) <%an> %GT %G?
 
 [rerere]
-	enabled = true
+  enabled = true
 
 [status]
-	aheadBehind = true
-	branch = true
-	short = true
-	showStash = true
+  aheadBehind = true
+  branch = true
+  short = true
+  showStash = true
 
 [user]
-	email = 72226000+snelling-a@users.noreply.github.com
-	name = snelling-a
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKIOFG4U+e6zQbuFledN+yLZpK2WtMljpndaIuFDwnEV
+  email = 72226000+snelling-a@users.noreply.github.com
+  name = snelling-a
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKIOFG4U+e6zQbuFledN+yLZpK2WtMljpndaIuFDwnEV
 
 
 [includeIf "gitdir:~/work/"]
-	path = ./gitconfig_local
+  path = ./gitconfig_local
 
