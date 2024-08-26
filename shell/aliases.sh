@@ -57,6 +57,8 @@ cargoup() {
 alias brew_list="brew info --json=v2 --installed | jq -r '.formulae[]|select(any(.installed[]; .installed_on_request)).full_name'"
 
 alias spt=spotify_player
+alias quit_noTunes="osascript -e 'quit app \"noTunes\"'"
+alias sort_launchpad="defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock"
 
 export HOMEBREW_BAT=1
 export HOMEBREW_BUNDLE_FILE=$DOTFILES/homebrew/Brewfile
