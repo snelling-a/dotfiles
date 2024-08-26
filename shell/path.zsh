@@ -24,6 +24,8 @@ PATH="$HOMEBREW_PREFIX/go/bin:$PATH"
 PATH="$HOMEBREW_PREFIX/opt/ruby/bin:$PATH"
 PATH="$HOMEBREW_PREFIX/opt/openjdk/bin:$PATH"
 
+PATH="/usr/local/lib/ruby/gems/3.3.0/bin:$PATH"
+
 eval "$(fnm env --use-on-cd)"
 
 export PATH

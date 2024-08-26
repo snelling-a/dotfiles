@@ -58,5 +58,8 @@ alias brew_list="brew info --json=v2 --installed | jq -r '.formulae[]|select(any
 
 alias spt=spotify_player
 
+export HOMEBREW_BAT=1
 export HOMEBREW_BUNDLE_FILE=$DOTFILES/homebrew/Brewfile
+export HOMEBREW_CASK_OPTS="--no-quarantine"
 export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_UPGRADE_GREEDY=1
