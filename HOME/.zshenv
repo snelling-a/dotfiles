@@ -29,3 +29,5 @@ export _ZO_DATA_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/zoxide"
 export FNM_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/fnm"
 
 [[ -f "$HOME/.zshenv_local" ]] && source "$HOME/.zshenv_local"
+
+[[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/op/plugins.sh" ]] && source "${XDG_CONFIG_HOME:-$HOME/.config}/op/plugins.sh"

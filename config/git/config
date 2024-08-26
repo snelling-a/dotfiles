@@ -53,6 +53,9 @@
 	markIgnoredLines = true
 	markUnblamableLines = true
 
+[branch]
+	sort = -committerdate
+
 [color "branch"]
 	current = "#f7ca88 reverse"
 	local = "#f7ca88"
@@ -79,6 +82,9 @@
 	diff = true
 	ui = auto
 
+[column]
+	ui = auto
+
 [commit]
 	gpgsign = true
 	template = ~/.config/git/gitcommit
@@ -89,9 +95,6 @@
 	excludesfile = ~/.config/git/gitignore_global
 	hooksPath = ~/.config/git/hooks
 	pager = delta
-
-[credential]
-	helper = osxkeychain
 
 [delta "blame"]
 	blame-code-style = syntax
@@ -149,12 +152,16 @@
 [interactive]
 	diffFilter = delta --color-only --features=interactive
 
+[maintenance]
+	repo = /Users/andrewsnelling/dotfiles
+	repo = /Users/andrewsnelling/dotfiles/config/nvim
+
 [merge]
 	conflictstyle = diff3
 	tool = nvimmerge
 
 [mergetool]
-    keepBackup = false
+	keepBackup = false
 
 [mergetool "nvimmerge"]
 	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\" \"$MERGED\" -c '$wincmd w' -c 'wincmd J'"
@@ -176,6 +183,9 @@
 	autoSquash = true
 	autoStash = true
 	instructionFormat = format:%s (%cr) <%an> %GT %G?
+
+[rerere]
+	enabled = true
 
 [status]
 	aheadBehind = true

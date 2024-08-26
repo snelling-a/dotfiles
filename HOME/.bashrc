@@ -29,3 +29,4 @@ for file in "$DOTFILES"/shell/**/*".sh"; do
 done
 
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+source <(op completion bash)
