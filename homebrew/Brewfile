@@ -30,7 +30,7 @@ brew "csview"
 brew "curl"
 brew "deno"
 brew "detox"
-brew "docker"
+brew "docker", link: false
 brew "exiv2"
 brew "fd", args: ["HEAD"]
 brew "ffmpeg"
@@ -75,7 +75,7 @@ brew "node"
 brew "mongosh"
 brew "mysql"
 brew "neofetch", args: ["HEAD"]
-brew "neovim", args: ["HEAD"]
+brew "neovim", args: ["HEAD"], link: false
 brew "ninja"
 brew "odt2txt"
 brew "onefetch"
@@ -161,6 +161,7 @@ cask "microsoft-teams"
 cask "mysqlworkbench"
 cask "notunes"
 cask "obsidian"
+cask "postman"
 cask "proxyman"
 cask "rar"
 cask "raycast"
