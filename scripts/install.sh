@@ -12,7 +12,7 @@ backup() {
 
 link_file() {
   file="$(realpath "$1")"
-  target="${HOME}/$(basename "$1")"
+  target="${2:-$HOME}/$(basename "$1")"
 
   backup "$target"
 
@@ -41,19 +41,19 @@ if ! is_dir "$DOTFILES"; then
 fi
 
 create_symlinks() {
-  for f in $DOTFILES/HOME/.* ./HOME/local/.*; do
+  for f in "$DOTFILES/HOME/.*" ./HOME/local/.*; do
     is_file "$f" && link_file "$f"
   done
 }
 
 link_config_directories() {
-  for dir in $DOTFILES/config/* ./config/.local/*; do
+  for dir in "$DOTFILES/config/*" ./config/.local/*; do
     is_dir "$dir" && link_dir "$dir"
   done
 }
 
 link_vimdir() {
-  link_dir $DOTFILES/vim "$HOME" '.'
+  link_dir "$DOTFILES/vim" "$HOME" '.'
 }
 
 reset=$(tput sgr0)
@@ -193,37 +193,44 @@ install_local() {
 }
 
 setup_vscode() {
-	target="$HOME/Library/Application Support/Code - Insiders/User"
+  target="$HOME/Library/Application Support/Code - Insiders/User"
 
-	mkdir -p "$target"
-	link_file "$DOTFILES/config/vscode/*" "$target"
+  mkdir -p "$target"
+
+  for f in "$DOTFILES"/vscode/*; do
+    print "$f"
+    print "$target"
+    # is_file "$f" && link_file "$f" "$target"
+  done
+
 }
 
 mkdir "$backup_dir"
 mkdir -p "$HOME/work"
 
-brew_install
-
-create_symlinks
-link_config_directories
-link_vimdir
-
-generate_bash_completions
-generate_zsh_completions
-
-install_cargo
-setup_fzf
-setup_gh
-setup_java
-setup_wezterm
+# brew_install
+#
+# create_symlinks
+# link_config_directories
+# link_vimdir
+#
+# generate_bash_completions
+# generate_zsh_completions
+#
+# install_cargo
+# setup_fzf
+# setup_gh
+# setup_java
+# setup_wezterm
+setup_vscode
 
 install_local
 
 check_for_backups
 
-setup_macos_defaults
-
-open -a WezTerm
+# setup_macos_defaults
+#
+# open -a WezTerm
 
 print "Installation complete"
 print "Happy Hacking!"
