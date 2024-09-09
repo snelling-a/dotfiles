@@ -1,5 +1,24 @@
 # Changelog
 
+## [4.10.0](https://github.com/snelling-a/dotfiles/compare/v4.9.0...v4.10.0) (2024-09-01)
+
+
+### Features
+
+* 1password ([d7f0c80](https://github.com/snelling-a/dotfiles/commit/d7f0c80e9a76ee5ebcfc6d2a5c1c69509520f586))
+* **shell:** aliases ([6605d2d](https://github.com/snelling-a/dotfiles/commit/6605d2d4298ba7a0cc336a1bcd3df436d9d4cc68))
+* **shell:** homebrew opts ([e96cde2](https://github.com/snelling-a/dotfiles/commit/e96cde263096e4dc02a5c17bc16c50672aab4cd7))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([0cb5f7b](https://github.com/snelling-a/dotfiles/commit/0cb5f7bcd605c40acfbaaa47e851687ce71b82e8))
+* **brew:** update packages ([c97817b](https://github.com/snelling-a/dotfiles/commit/c97817bb501c809468232e7c7c0f7ec7a848d80a))
+* **brew:** update packages ([0b00e45](https://github.com/snelling-a/dotfiles/commit/0b00e45fa81ecd414b3738b12d33e0111f966d6b))
+* **git:** formatting ([8dbebd3](https://github.com/snelling-a/dotfiles/commit/8dbebd32e0e811fffc0e001f9dcec26e56069da3))
+* update submodules ([f617db3](https://github.com/snelling-a/dotfiles/commit/f617db3fcc2a40f3922965251353df78b3d87569))
+* **vscode:** update settings.json ([aa58dec](https://github.com/snelling-a/dotfiles/commit/aa58dec948741979b5c2404769ce7ef9eaa9e7d1))
+
 ## [4.9.0](https://github.com/snelling-a/dotfiles/compare/v4.8.0...v4.9.0) (2024-08-22)
 
 
