@@ -1,27 +1,27 @@
 [flags]
-    battery           = true
-    enable_gpu_memory = true
-    rate              = 500
-    tree              = true
+  battery           = true
+  enable_gpu_memory = true
+  rate              = 500
+  tree              = true
 
 [[row]]
-    [[row.child]]
-        type = "cpu"
+  [[row.child]]
+    type = "cpu"
 [[row]]
-    [[row.child]]
-        ratio = 4
-        type  = "memory"
-    [[row.child]]
-        ratio = 3
-        [[row.child.child]]
-            type = "temperature"
-        [[row.child.child]]
-            type = "disk"
-        [[row.child.child]]
-            type = "battery"
+  [[row.child]]
+    ratio = 4
+    type  = "memory"
+  [[row.child]]
+    ratio = 3
+    [[row.child.child]]
+      type = "temperature"
+    [[row.child.child]]
+      type = "disk"
+    [[row.child.child]]
+      type = "battery"
 [[row]]
-    [[row.child]]
-        type = "network"
-    [[row.child]]
-        default = true
-        type    = "processes"
+  [[row.child]]
+    type = "network"
+  [[row.child]]
+    default = true
+    type    = "processes"
