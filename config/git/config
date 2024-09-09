@@ -44,6 +44,9 @@
   standup = log --since='yesterday' --author='Andrew Snelling'
   tags = tag --long
   undo = reset --soft HEAD^1
+  wt = worktree
+  wta = "!f() { git worktree add .worktrees/$1 $1; }; f"
+  wtan = "!f() { git worktree add .worktrees/$1 -b $1; }; f"
 
 [apply]
   whitespace = fix

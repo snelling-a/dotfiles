@@ -5,6 +5,9 @@ vim_tags*
 # editing postman scripts is much nicer in vim
 postman.js
 
+# ignore worktrees
+.worktrees/*
+
 # Created by https://www.toptal.com/developers/gitignore/api/macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos
 
