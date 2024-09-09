@@ -141,7 +141,7 @@
   root = ~/dev
 
 [gpg "ssh"]
-  allowedSignersFile = ~/.ssh/allowed_signers
+  allowedSignersFile = ~/.config/git/allowed_signers
   program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 
 [gpg]
