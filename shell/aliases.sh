@@ -31,7 +31,10 @@ dots() {
 
 alias notes="cd $NOTES"
 alias work="cd $WORK"
+
+alias dcu="docker compose up"
 alias dockerclean="docker system prune -af --volumes"
+
 alias diff="delta"
 
 alias ls='lsd'
