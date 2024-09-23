@@ -14,7 +14,7 @@
         "revision": "8b0df4d29278e734a00121dd453fe9758e5486ed"
       },
       "homebrew/services": {
-        "revision": "a362409022882ef5737e86df6e6edb8b714c2646"
+        "revision": "d4e97512f68222c65048e372c7c2586c5ef3d2b1"
       },
       "ms-jpq/sad": {
         "revision": "e66e18fe257075406c199f03e6c013b410b84652"
@@ -1244,9 +1244,6 @@
               "sha256": "4f9af7f20c3d2b82d2146ffa6e1a524edfe8afc28251e4ed2dcbee01fe13f855"
             }
           }
-        },
-        "options": {
-          "link": false
         }
       },
       "exiv2": {
@@ -1476,7 +1473,7 @@
         }
       },
       "fnm": {
-        "version": "HEAD-2b211ef",
+        "version": "HEAD-1a58394",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -4003,7 +4000,7 @@
         }
       },
       "ripgrep": {
-        "version": "HEAD-8bd5950",
+        "version": "HEAD-bf63fe8",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -4478,7 +4475,7 @@
         }
       },
       "starship": {
-        "version": "HEAD-20d75a0",
+        "version": "HEAD-ad705ef",
         "bottle": {
           "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -5204,7 +5201,7 @@
         }
       },
       "vim": {
-        "version": "HEAD-c9bfed2",
+        "version": "HEAD-3d5065f",
         "bottle": {
           "rebuild": 1,
           "root_url": "https://ghcr.io/v2/homebrew/core",
@@ -6008,6 +6005,20 @@
             }
           }
         }
+      },
+      "fop": {
+        "version": "2.9",
+        "bottle": {
+          "rebuild": 1,
+          "root_url": "https://ghcr.io/v2/homebrew/core",
+          "files": {
+            "all": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/fop/blobs/sha256:69e353f9fb01a721daa25ca0ef2df097a7f24de2025e43d8a912ea6bf2dc9a02",
+              "sha256": "69e353f9fb01a721daa25ca0ef2df097a7f24de2025e43d8a912ea6bf2dc9a02"
+            }
+          }
+        }
       }
     },
     "cask": {
@@ -6054,7 +6065,7 @@
         }
       },
       "deepl": {
-        "version": "24.9.21268003",
+        "version": "24.9.21271708",
         "options": {
           "full_name": "deepl"
         }
@@ -6072,7 +6083,7 @@
         }
       },
       "duckduckgo": {
-        "version": "1.106.0,261",
+        "version": "1.107.0,270",
         "options": {
           "full_name": "duckduckgo"
         }
@@ -6270,12 +6281,12 @@
         "macOS": "14.6.1"
       },
       "sequoia": {
-        "HOMEBREW_VERSION": "4.3.23",
-        "HOMEBREW_PREFIX": "/opt/homebrew",
+        "HOMEBREW_VERSION": "4.3.24",
+        "HOMEBREW_PREFIX": "/usr/local",
         "Homebrew/homebrew-core": "api",
         "CLT": "16.0.0.0.1.1724870825",
         "Xcode": "16.0",
-        "macOS": "15.0"
+        "macOS": "15.1"
       }
     }
   }
