@@ -1,5 +1,7 @@
 local wezterm = require("wezterm")
+---@type table<string, string>
 local colors = require("const").colors
+---@type table<string>
 local nerdfonts = wezterm.nerdfonts
 
 local function get_basename(s)
@@ -13,6 +15,7 @@ local function get_process(pane)
 		return nerdfonts.oct_copy
 	end
 
+	---@type string
 	local icon = require("const").process_icons[title]
 
 	local fallback = {
@@ -28,9 +31,9 @@ end
 
 local function get_current_working_dir(tab)
 	local current_dir = (tab.current_working_dir or {}).path or ""
-	local HOME_DIR = os.getenv("HOME")
+	local HOME_DIR = os.getenv("HOME") .. "/"
 
-	return current_dir == HOME_DIR and nerdfonts.md_tilde or (" %s"):format(get_basename(current_dir))
+	return current_dir == HOME_DIR and nerdfonts.md_tilde or current_dir:gsub(HOME_DIR .. "(.*)/", "%1")
 end
 
 wezterm.on("format-tab-title", function(tab, _tabs, _panes, _config, _hover, _max_width)
