@@ -1,5 +1,30 @@
 # Changelog
 
+## [4.11.0](https://github.com/snelling-a/dotfiles/compare/v4.10.0...v4.11.0) (2024-09-23)
+
+
+### Features
+
+* **git:** worktrees ([7f3fff3](https://github.com/snelling-a/dotfiles/commit/7f3fff335bdc2d0c5f9cfaae763ae419ad4fed7b))
+* **shell:** docker compose up ([c00fce1](https://github.com/snelling-a/dotfiles/commit/c00fce1b3daf03ac42910892c54e0c9622300b90))
+
+
+### Bug Fixes
+
+* shellcheck warnings ([c95dd25](https://github.com/snelling-a/dotfiles/commit/c95dd25d5db448e84b55146544c067f1cd0ddb17))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([2daabf3](https://github.com/snelling-a/dotfiles/commit/2daabf34c02e0cb29ee1455e7b85d2e13c49d9c0))
+* **brew:** update packages ([ad09acb](https://github.com/snelling-a/dotfiles/commit/ad09acb8ced689e125775772321c7e04fe03b315))
+* **brew:** update packages ([f8d692d](https://github.com/snelling-a/dotfiles/commit/f8d692d865ff05a9b2461c9a44f032ed9096b117))
+* **brew:** update packages ([0823dce](https://github.com/snelling-a/dotfiles/commit/0823dce1f6d8e7cdd7a23806e9db3945390d6a5c))
+* shell formatting ([36689bb](https://github.com/snelling-a/dotfiles/commit/36689bb7c96378984223f7d995a2ae348aea99ec))
+* sort settings.json ([2a3e769](https://github.com/snelling-a/dotfiles/commit/2a3e76936ff2af803e1f8c5cb45bea69c02a4d26))
+* toml formatting ([49f79a0](https://github.com/snelling-a/dotfiles/commit/49f79a08263d894e80deddd703cd48bda3321c3a))
+* update submodules ([56f614d](https://github.com/snelling-a/dotfiles/commit/56f614df5ae1dc7c4791f94de8090b9c72b8b2e8))
+
 ## [4.10.0](https://github.com/snelling-a/dotfiles/compare/v4.9.0...v4.10.0) (2024-09-01)
 
 
