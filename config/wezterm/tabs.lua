@@ -4,10 +4,6 @@ local colors = require("const").colors
 ---@type table<string>
 local nerdfonts = wezterm.nerdfonts
 
-local function get_basename(s)
-	return s:gsub("(.*[/\\])(.*)", "%2")
-end
-
 local function get_process(pane)
 	local title = pane.title or "zsh"
 
