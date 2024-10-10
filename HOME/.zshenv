@@ -11,8 +11,8 @@ export WORK="$HOME/work"
 export NOTES="$HOME/notes"
 
 export LANG=en_US.UTF-8
-export MANPAGER='nvim +Man!'
-export DELTA_FEATURES='+side-by-side'
+export MANPAGER="nvim +Man! "
+export DELTA_FEATURES="+side-by-side"
 
 export VISUAL=nvim
 export EDITOR="$VISUAL"
