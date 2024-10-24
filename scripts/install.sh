@@ -37,7 +37,7 @@ is_dir() {
 if ! is_dir "$DOTFILES"; then
   print "Cloning dotfiles..."
 
-  git clone git@github.com:snelling-a/dotfiles.git --recurse-submodules "$DOTFILES"
+  git clone https://github.com/snelling-a/dotfiles.git --recurse-submodules "$DOTFILES"
 fi
 
 create_symlinks() {
