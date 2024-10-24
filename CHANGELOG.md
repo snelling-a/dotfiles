@@ -1,5 +1,21 @@
 # Changelog
 
+## [4.11.1](https://github.com/snelling-a/dotfiles/compare/v4.11.0...v4.11.1) (2024-10-24)
+
+
+### Bug Fixes
+
+* **ci:** delete unused function ([0e9bf51](https://github.com/snelling-a/dotfiles/commit/0e9bf5111d215965d86a13b7100c13618923d937))
+* **wezterm:** tabs ([37aaa05](https://github.com/snelling-a/dotfiles/commit/37aaa050521d721576559d71a308e8f4b032ba76))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([0cd19da](https://github.com/snelling-a/dotfiles/commit/0cd19daecde0dfec1e0bf5d1072d66e66d4d8711))
+* **brew:** update packages ([de37412](https://github.com/snelling-a/dotfiles/commit/de3741225b8f3e54b956777c72b6806ae17c618f))
+* **brew:** update packages ([58fa5bd](https://github.com/snelling-a/dotfiles/commit/58fa5bdb146895d271c05f25470352bdbe05c82d))
+* update submodules ([d72daa9](https://github.com/snelling-a/dotfiles/commit/d72daa986370038b3af1fbdd7ba0f1302e4d4c9b))
+
 ## [4.11.0](https://github.com/snelling-a/dotfiles/compare/v4.10.0...v4.11.0) (2024-09-23)
 
 
