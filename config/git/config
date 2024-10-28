@@ -34,7 +34,7 @@
   pf = push --force-with-lease
   pop = stash pop
   pristine = reset --hard && git clean --force -dx
-  rb = rebase --interactive 
+  rb = rebase --interactive
   rba = rebase --abort
   rbc = rebase --continue
   rbi = rebase --interactive --autosquash
