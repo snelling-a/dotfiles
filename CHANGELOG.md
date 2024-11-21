@@ -1,5 +1,36 @@
 # Changelog
 
+## [4.12.0](https://github.com/snelling-a/dotfiles/compare/v4.11.1...v4.12.0) (2024-11-21)
+
+
+### Features
+
+* fastfetch ([d5e5247](https://github.com/snelling-a/dotfiles/commit/d5e52471532f532cbf2113b42d55ff669ae1a5a4))
+* update fdignore ([afc10d7](https://github.com/snelling-a/dotfiles/commit/afc10d753c3571c75adb1d9859be2b2339e04753))
+* update rgignore ([553b4a4](https://github.com/snelling-a/dotfiles/commit/553b4a40bbb02fb3f06f1900dc64571097f0faf4))
+* yazi ([713c482](https://github.com/snelling-a/dotfiles/commit/713c482ac297977cb3a4ee666dc52e37b6015c66))
+
+
+### Bug Fixes
+
+* **node:** fnm defaults ([6aaa6b5](https://github.com/snelling-a/dotfiles/commit/6aaa6b5a1ab00bf995078fb757ab765e2a95bfae))
+* **shell:** aliases ([226aa50](https://github.com/snelling-a/dotfiles/commit/226aa50fdd5c2538c9bb2af084fceaa88e9d4cfb))
+* **starship:** nodejs icon ([3ba5bba](https://github.com/snelling-a/dotfiles/commit/3ba5bba39149c22af3ce31a8cae586ebfac53189))
+
+
+### Miscellaneous
+
+* **brew:** remove unused packages ([60d9139](https://github.com/snelling-a/dotfiles/commit/60d913987a185ad26d4ebd7688bbfc5f6f3010a0))
+* **brew:** update packages ([8d50a33](https://github.com/snelling-a/dotfiles/commit/8d50a3323df858442ed6dbd6a65c85451f4b7d88))
+* **brew:** update packages ([932dd26](https://github.com/snelling-a/dotfiles/commit/932dd26a91a875d9cd8342ecb70cb86b68dfb09e))
+* **brew:** update packages ([061cc6d](https://github.com/snelling-a/dotfiles/commit/061cc6d6aef0a59ec160ef574db0ca20fcef415a))
+* **brew:** update packages ([cb73648](https://github.com/snelling-a/dotfiles/commit/cb73648971bfd28e484acff8ea05ea57e3b1b8b6))
+* **brew:** update packages ([21503ec](https://github.com/snelling-a/dotfiles/commit/21503ec1a16ee4dbe32b1bd2303bd0abdf264c70))
+* **brew:** update packages ([0fca33f](https://github.com/snelling-a/dotfiles/commit/0fca33f77d94114693b4c98087af5e1fcca341e9))
+* delete cspell.json ([31c9338](https://github.com/snelling-a/dotfiles/commit/31c9338aa309b3cd845c6e5a76a71da37a6d08a3))
+* update submodules ([4e165e5](https://github.com/snelling-a/dotfiles/commit/4e165e59414c7c91374e3e840b0499f4fb4285a5))
+* update submodules ([2808610](https://github.com/snelling-a/dotfiles/commit/28086105522b9d5f3c12c5d9e699e66269e8b68e))
+
 ## [4.11.1](https://github.com/snelling-a/dotfiles/compare/v4.11.0...v4.11.1) (2024-10-24)
 
 
