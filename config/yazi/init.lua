@@ -1,24 +1,28 @@
-function Linemode:size_and_mtime()
-	local time = math.floor(self._file.cha.modified or 0)
-	if time == 0 then
-		time = ""
-	elseif os.date("%Y", time) == os.date("%Y") then
-		time = os.date("%b %d %H:%M", time)
+local function module_exists(name)
+	if package.loaded[name] then
+		return true
 	else
-		time = os.date("%b %d  %Y", time)
+		---@diagnostic disable-next-line: no-unknown
+		local status, _ = pcall(require, name)
+		return status
 	end
-
-	local size = self._file:size()
-	return ui.Line(string.format("%s %s", size and ya.readable_size(size) or "-", time))
 end
 
-require("starship"):setup()
+if not module_exists("starship") then
+	os.execute("ya pack -i")
+end
+
 require("full-border"):setup()
 require("git"):setup()
+require("starship"):setup()
 
+---@diagnostic disable-next-line: no-unknown
 function Status:name()
+	---@type table
 	local h = self._tab.current.hovered
 	if not h then
+		---@type {Line: fun(arg: table|string)}
+		---@diagnostic disable-next-line: no-unknown
 		return ui.Line({})
 	end
 
@@ -26,34 +30,6 @@ function Status:name()
 	if h.link_to ~= nil then
 		linked = " -> " .. tostring(h.link_to)
 	end
+	---@diagnostic disable-next-line: no-unknown
 	return ui.Line(" " .. h.name .. linked)
-end
-
-Status:children_add(function()
-	local h = cx.active.current.hovered
-	if h == nil or ya.target_family() ~= "unix" then
-		return ui.Line({})
-	end
-
-	return ui.Line({
-		ui.Span(ya.user_name(h.cha.uid) or tostring(h.cha.uid)):fg("magenta"),
-		ui.Span(":"),
-		ui.Span(ya.group_name(h.cha.gid) or tostring(h.cha.gid)):fg("magenta"),
-		ui.Span(" "),
-	})
-end, 500, Status.RIGHT)
-
-function Status:percentage() end
-
-local function module_exists(name)
-	if package.loaded[name] then
-		return true
-	else
-		local status, _ = pcall(require, name)
-		return status
-	end
-end
-
-if module_exists("starship") then
-	print("THIS")
 end

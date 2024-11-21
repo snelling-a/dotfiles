@@ -1,18 +1,14 @@
 "$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
 
 [manager]
-  linemode     = "size_and_mtime"
+  linemode     = "mtime"
   ratio        = [1, 3, 4]
   show_hidden  = true
   sort_by      = "natural"
   title_format = "yazi"
 
-[[plugin.prepend_fetchers]]
-  id   = "git"
-  name = "*"
-  run  = "git"
-
-[[plugin.prepend_fetchers]]
-  id   = "git"
-  name = "*/"
-  run  = "git"
+[plugin]
+  prepend_fetchers = [
+    { id = "git", name = "*", run = "git" },
+    { id = "git", name = "*/", run = "git" },
+  ]

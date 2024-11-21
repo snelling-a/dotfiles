@@ -1,9 +1,7 @@
--- vim:ft=lua
-
-exclude_files = {
-	"./config/nvim/",
-}
-
 globals = {
-	"vim",
+	"cx",
+	"Status",
+	"ui",
+	"Wezterm",
+	"ya",
 }

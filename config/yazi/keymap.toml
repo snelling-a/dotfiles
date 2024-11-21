@@ -1,33 +1,16 @@
 "$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
 
-[[manager.prepend_keymap]]
-  desc = "Enter the child directory, or open the file"
-  on   = "l"
-  run  = "plugin --sync smart-enter"
-[[manager.prepend_keymap]]
-  desc = "Enter the child directory, or open the file"
-  on   = "<Enter>"
-  run  = "plugin --sync smart-enter"
-
-[[manager.prepend_keymap]]
-  on  = "k"
-  run = "plugin --sync arrow --args=-1"
-
-[[manager.prepend_keymap]]
-  on  = "j"
-  run = "plugin --sync arrow --args=1"
-
-[[manager.prepend_keymap]]
-  on = "<C-p>"
-  run = '''
-  shell 'qlmanage -p "$@"' --confirm
-'''
-[[manager.prepend_keymap]]
-  desc = "Chmod on selected files"
-  on   = ["c", "m"]
-  run  = "plugin chmod"
-
-[[manager.prepend_keymap]]
-  desc = "run lazygit"
-  on   = ["g", "i"]
-  run  = "plugin lazygit"
+[manager]
+  prepend_keymap = [
+    { desc = "Chmod on selected files", on = [
+      "c",
+      "m",
+    ], run = "plugin chmod" },
+    { desc = "Maximize or restore preview", on = "T", run = "plugin --sync max-preview" },
+    { desc = "Move down, with wrap", on = "j", run = "plugin --sync arrow --args=1" },
+    { desc = "Move up, with wrap", on = "k", run = "plugin --sync arrow --args=-1" },
+    { desc = "Run lazygit", on = [
+      "g",
+      "i",
+    ], run = "plugin lazygit" },
+  ]

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://raw.githubusercontent.com/sumneko/vscode-lua/master/setting/schema.json",
+  "diagnostics": {
+    "globals": [
+      "Status",
+      "ui",
+      "Wezterm",
+      "cx",
+      "ya"
+    ],
+    "unusedLocalExclude": [
+      "_*"
+    ]
+  }
+}
