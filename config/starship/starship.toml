@@ -189,7 +189,7 @@ right_format        = """$all"""
 
 [nodejs]
   format = '\[[$symbol($version)]($style)\]'
-  symbol = ' '
+  symbol = ' '
 
 [ocaml]
   format = '\[[$symbol($version)(\($switch_indicator$switch_name\))]($style)\]'
