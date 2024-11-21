@@ -63,3 +63,6 @@ events.out.tfevents.*
 node_modules/
 vendor/
 venv/
+dist/
+build/
+.worktrees/
