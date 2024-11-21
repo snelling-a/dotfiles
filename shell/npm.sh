@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-eval "$(fnm env --use-on-cd)"
+eval "$(fnm env --use-on-cd --version-file-strategy=recursive)"
 
 alias nvm='fnm'
 
