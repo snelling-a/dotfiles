@@ -109,6 +109,7 @@ right_format        = """$all"""
 
 [deno]
   format = '\[[$symbol($version)]($style)\]'
+  symbol = " "
 
 [docker_context]
   format = '\[[$symbol]($style)\]'
