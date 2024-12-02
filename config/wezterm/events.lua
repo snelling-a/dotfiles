@@ -1,9 +1,7 @@
-local wezterm = require("wezterm")
-
 local function toggle_override(window, override, params)
+	---@type table<string, table>
 	local overrides = window:get_config_overrides() or {}
 
-	print(overrides[override])
 	if not overrides[override] then
 		overrides[override] = params
 	else
@@ -13,7 +11,7 @@ local function toggle_override(window, override, params)
 	window:set_config_overrides(overrides)
 end
 
-wezterm.on("toggle-ligature", function(window, _)
+Wezterm.on("toggle-ligature", function(window, _)
 	toggle_override(window, "harfbuzz_features", {
 		"calt=0",
 		"clig=0",
@@ -21,11 +19,11 @@ wezterm.on("toggle-ligature", function(window, _)
 	})
 end)
 
-wezterm.on("toggle-opacity", function(window, _)
+Wezterm.on("toggle-opacity", function(window, _)
 	toggle_override(window, "window_background_opacity", 1)
 end)
 
-wezterm.on("toggle-leader", function(window, _)
+Wezterm.on("toggle-leader", function(window, _)
 	toggle_override(window, "leader", {
 		key = "s",
 		mods = "SUPER",

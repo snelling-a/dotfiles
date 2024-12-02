@@ -1,5 +1,4 @@
-local wezterm = require("wezterm")
-local act = wezterm.action
+local act = Wezterm.action
 
 ---@param key string
 ---@param action function|string?
@@ -24,7 +23,7 @@ end
 M.keys = {
 	get_key(
 		"!",
-		wezterm.action_callback(function(_win, pane)
+		Wezterm.action_callback(function(_win, pane)
 			pane:move_to_new_tab()
 		end),
 		"LEADER|SHIFT"
@@ -101,8 +100,9 @@ local copy_mode_remap = {
 }
 
 local copy_mode = nil
-if wezterm.gui then
-	copy_mode = wezterm.gui.default_key_tables().copy_mode
+if Wezterm.gui then
+	---@type table|nil
+	copy_mode = Wezterm.gui.default_key_tables().copy_mode
 end
 
 for key, _ in ipairs(copy_mode_remap) do

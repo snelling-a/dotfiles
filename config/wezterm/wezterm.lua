@@ -1,7 +1,9 @@
+---@type Wezterm
+_G.Wezterm = require("wezterm")
+
 local const = require("const")
 local font = require("font")
-local keys = require("keys") --[[@as table]]
-local wezterm = require("wezterm")
+local keys = require("keys")
 
 require("events")
 require("right-status")
@@ -9,8 +11,8 @@ require("tabs")
 
 local M = {}
 
-if wezterm.config_builder then
-	M = wezterm.config_builder()
+if Wezterm.config_builder then
+	M = Wezterm.config_builder()
 end
 
 M.audible_bell = "Disabled"
@@ -39,10 +41,9 @@ M.colors = {
 }
 M.disable_default_key_bindings = true
 M.font = font.font
-M.font_rules = font.font_rules
 M.font_size = font.font_size
 M.hide_tab_bar_if_only_one_tab = true
-M.hyperlink_rules = wezterm.default_hyperlink_rules()
+M.hyperlink_rules = Wezterm.default_hyperlink_rules()
 M.key_tables = keys.key_tables
 M.keys = keys.keys
 M.leader = keys.leader
@@ -71,7 +72,7 @@ M.window_padding = {
 -- GitHub user/repo
 table.insert(M.hyperlink_rules, {
 	format = "https://www.github.com/$1/$3",
-	regex = [[["]?([\w\d]{1}[-\w\d]+)(/){1}([-\w\d\.]+)["]?]],
+	regex = [[[\"]?([%w%d]{1}[-%w%d]+)(/){1}([-%w%d%.]+)[\"]?]],
 })
 
 return M

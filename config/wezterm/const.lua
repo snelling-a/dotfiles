@@ -1,8 +1,17 @@
-local wezterm = require("wezterm")
-local nerdfonts = wezterm.nerdfonts
+---@class Wezterm.builtin_scheme
+---@field ansi table<string>,
+---@field background string,
+---@field brights table<string>,
+---@field cursor_bg string,
+---@field cursor_border string,
+---@field cursor_fg string,
+---@field foreground string,
+---@field indexed table<integer,string>,
+---@field selection_bg string,
+---@field selection_fg string,
 
 local function scheme_for_appearance()
-	local appearance = wezterm.gui and wezterm.gui.get_appearance() or "Dark"
+	local appearance = Wezterm.gui and Wezterm.gui.get_appearance() or "Dark"
 
 	return "Default " .. appearance .. " (base16)"
 end
@@ -10,7 +19,8 @@ end
 local M = {}
 
 M.color_scheme = scheme_for_appearance()
-local default_colors = wezterm.color.get_builtin_schemes()[M.color_scheme]
+---@type Wezterm.builtin_scheme
+local default_colors = Wezterm.color.get_builtin_schemes()[M.color_scheme]
 
 --- @type table<string,string>
 M.colors = {
@@ -33,45 +43,48 @@ M.colors = {
 }
 
 ---@alias Color {Foreground:{Color:string}}
----@alias Text {Text:string}
+---@alias Wezterm.text {Text:string}
+
 ---@param color string
 ---@param text string
----@return table<Color,Text>
+---@return table<Color,Wezterm.text>
 local function get_process_icon(color, text)
 	return {
 		{
 			Foreground = { Color = color },
 		},
-		{ Text = wezterm.pad_right(text, 3) },
+		{ Text = Wezterm.pad_right(text, 3) },
 	}
 end
 
 M.process_icons = {
-	bash = get_process_icon(M.colors.base03, nerdfonts.cod_terminal_bash),
-	bat = get_process_icon(M.colors.base00, nerdfonts.md_bat),
-	btm = get_process_icon(M.colors.base0E, nerdfonts.md_chart_bar_stacked),
-	cargo = get_process_icon(M.colors.base08, nerdfonts.dev_rust),
-	colima = get_process_icon(M.colors.base0D, nerdfonts.dev_docker),
-	curl = get_process_icon(M.colors.base0C, nerdfonts.oct_download),
-	docker = get_process_icon(M.colors.base0D, nerdfonts.dev_docker),
-	gh = get_process_icon(M.colors.base05, nerdfonts.oct_mark_github),
-	git = get_process_icon(M.colors.base08, nerdfonts.dev_git),
-	glow = get_process_icon(M.colors.base0D, nerdfonts.dev_markdown),
-	go = get_process_icon(M.colors.base0C, nerdfonts.dev_go),
-	lazygit = get_process_icon(M.colors.base08, nerdfonts.dev_git),
-	lf = get_process_icon(M.colors.base0D, nerdfonts.md_file_tree),
-	lua = get_process_icon(M.colors.base0D, nerdfonts.md_language_lua),
-	node = get_process_icon(M.colors.base0B, nerdfonts.dev_nodejs_small),
-	nvim = get_process_icon(M.colors.base0D, nerdfonts.custom_neovim),
-	onefetch = get_process_icon(M.colors.base08, nerdfonts.dev_git),
-	ruby = get_process_icon(M.colors.base08, nerdfonts.dev_ruby),
-	spotify_player = get_process_icon(M.colors.base0B, nerdfonts.md_spotify),
-	tig = get_process_icon(M.colors.base08, nerdfonts.dev_git),
-	tmux = get_process_icon(M.colors.base0B, nerdfonts.cod_terminal_tmux),
-	vim = get_process_icon(M.colors.base0B, nerdfonts.dev_vim),
-	wget = get_process_icon(M.colors.base0C, nerdfonts.oct_download),
-	yarn = get_process_icon(M.colors.base0C, nerdfonts.seti_yarn),
-	zsh = get_process_icon(M.colors.base08, nerdfonts.dev_terminal),
+	bash = get_process_icon(M.colors.base03, Wezterm.nerdfonts.cod_terminal_bash),
+	bat = get_process_icon(M.colors.base00, Wezterm.nerdfonts.md_bat),
+	btm = get_process_icon(M.colors.base0E, Wezterm.nerdfonts.md_chart_bar_stacked),
+	cargo = get_process_icon(M.colors.base08, Wezterm.nerdfonts.dev_rust),
+	colima = get_process_icon(M.colors.base0D, Wezterm.nerdfonts.dev_docker),
+	curl = get_process_icon(M.colors.base0C, Wezterm.nerdfonts.oct_download),
+	deno = get_process_icon(M.colors.base0B, " "),
+	docker = get_process_icon(M.colors.base0D, Wezterm.nerdfonts.dev_docker),
+	gh = get_process_icon(M.colors.base05, Wezterm.nerdfonts.oct_mark_github),
+	git = get_process_icon(M.colors.base08, Wezterm.nerdfonts.dev_git),
+	glow = get_process_icon(M.colors.base0D, Wezterm.nerdfonts.dev_markdown),
+	go = get_process_icon(M.colors.base0C, Wezterm.nerdfonts.dev_go),
+	lazygit = get_process_icon(M.colors.base08, Wezterm.nerdfonts.dev_git),
+	lf = get_process_icon(M.colors.base0D, Wezterm.nerdfonts.md_file_tree),
+	lua = get_process_icon(M.colors.base0D, Wezterm.nerdfonts.md_language_lua),
+	node = get_process_icon(M.colors.base0B, Wezterm.nerdfonts.md_nodejs),
+	nvim = get_process_icon(M.colors.base0D, Wezterm.nerdfonts.custom_neovim),
+	onefetch = get_process_icon(M.colors.base08, Wezterm.nerdfonts.dev_git),
+	ruby = get_process_icon(M.colors.base08, Wezterm.nerdfonts.dev_ruby),
+	spotify_player = get_process_icon(M.colors.base0B, Wezterm.nerdfonts.md_spotify),
+	tig = get_process_icon(M.colors.base08, Wezterm.nerdfonts.dev_git),
+	tmux = get_process_icon(M.colors.base0B, Wezterm.nerdfonts.cod_terminal_tmux),
+	vim = get_process_icon(M.colors.base0B, Wezterm.nerdfonts.dev_vim),
+	wget = get_process_icon(M.colors.base0C, Wezterm.nerdfonts.oct_download),
+	yarn = get_process_icon(M.colors.base0C, Wezterm.nerdfonts.seti_yarn),
+	yazi = get_process_icon(M.colors.base0D, Wezterm.nerdfonts.md_file_tree),
+	zsh = get_process_icon(M.colors.base08, Wezterm.nerdfonts.dev_terminal),
 }
 
 return M
