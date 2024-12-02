@@ -44,6 +44,8 @@ alias awk="gawk"
 
 alias glow='glow --config "$XDG_CONFIG_HOME/glow/glow.yml"'
 
+alias y="yazi"
+
 cargoup() {
   # shellcheck disable=2046 # does not work if it is double quoted
   cargo install $(cargo install --list | grep -E '^[a-z0-9_-]+ v[0-9.]+:$' | cut -f1 -d' ') --force
