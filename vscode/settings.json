@@ -1,9 +1,7 @@
 // vim:ft=json5
 {
   "Lua.codeLens.enable": true,
-  "Lua.diagnostics.globals": [
-    "vim"
-  ],
+  "Lua.diagnostics.globals": ["vim"],
   "Lua.format.enable": false,
   "Lua.hint.arrayIndex": "Disable",
   "Lua.hint.enable": true,
@@ -23,7 +21,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[lua]": {
     "editor.defaultFormatter": "JohnnyMorganz.stylua"
@@ -164,11 +162,6 @@
   "postman.telemetry.enabled": false,
   "redhat.telemetry.enabled": false,
   "snyk.advanced.cliPath": "/Users/andrewsnelling/.local/share/snyk-ls/snyk-macos-arm64",
-  "snyk.trustedFolders": [
-    "/Users/andrewsnelling/.config/",
-    "/Users/andrewsnelling/dotfiles/",
-    "/Users/andrewsnelling/work/"
-  ],
   "snyk.yesCrashReport": false,
   "snyk.yesWelcomeNotification": false,
   "sonarlint.connectedMode.connections.sonarqube": [],
@@ -177,6 +170,7 @@
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
   "telemetry.telemetryLevel": "off",
+  "terminal.integrated.fontFamily": "Iosevka Term SS15, Symbols Nerd Font Mono",
   "totalTypeScript.hiddenTips": [
     "passing-generics-to-types",
     "partial-utility-type",
@@ -192,7 +186,6 @@
   "typescript.inlayHints.variableTypes.enabled": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "vscode-neovim.logOutputToConsole": true,
-  // "vscode-neovim.neovimInitVimPaths.darwin": "~/.config/nvim/lua/vscode/init.lua",
   "window.autoDetectColorScheme": true,
   "workbench.colorTheme": "Base16 Default Dark",
   "workbench.editorAssociations": {
