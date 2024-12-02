@@ -1,5 +1,3 @@
-# vim:filetype=gitconfig
-
 [advice]
   detachedHead = false
   statusHints = false
@@ -13,7 +11,7 @@
   branches = branch --all
   c = commit
   cl = clone --recurse-submodules
-  cleanup = !git branch --merged | grep -v '\\*\\|main\\|master\\|develop' | xargs -n 1 -r git branch --delete
+  cleanup = "!git fetch --prune && git branch -vv | grep '\\[gone\\]' | grep -v '\\*' | awk '{print $1}' | xargs -r git branch -D"
   co = checkout
   count = shortlog --summary --numbered
   cp = cherry-pick
@@ -100,6 +98,12 @@
   hooksPath = ~/.config/git/hooks
   pager = delta
 
+[credential "https://gist.github.com"]
+  helper = !/opt/homebrew/bin/gh auth git-credential
+
+[credential "https://github.com"]
+  helper = !/opt/homebrew/bin/gh auth git-credential
+
 [delta "blame"]
   blame-code-style = syntax
   blame-format = {author:<15.14}
@@ -132,7 +136,7 @@
   tool = nvimdiff
 
 [difftool "nvimdiff"]
-  cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+  cmd = "nvim -d $LOCAL $BASE $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J' -c 'set diffopt&' -c 'set diffopt+=algorithm:patience'"
 
 [difftool]
   prompt = false
@@ -142,7 +146,6 @@
 
 [gpg "ssh"]
   allowedSignersFile = ~/.config/git/allowed_signers
-  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 
 [gpg]
   format = ssh
@@ -164,12 +167,12 @@
   conflictstyle = diff3
   tool = nvimmerge
 
-[mergetool]
-  keepBackup = false
-
 [mergetool "nvimmerge"]
   cmd = "nvim -d \"$LOCAL\" \"$REMOTE\" \"$MERGED\" -c '$wincmd w' -c 'wincmd J'"
   trustexitcode = true
+
+[mergetool]
+  keepBackup = false
 
 [pager]
   status = true
@@ -189,6 +192,7 @@
   instructionFormat = format:%s (%cr) <%an> %GT %G?
 
 [rerere]
+  autoUpdate = true
   enabled = true
 
 [status]
@@ -201,7 +205,6 @@
   email = 72226000+snelling-a@users.noreply.github.com
   name = snelling-a
   signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKIOFG4U+e6zQbuFledN+yLZpK2WtMljpndaIuFDwnEV
-
 
 [includeIf "gitdir:~/work/"]
   path = ./gitconfig_local
