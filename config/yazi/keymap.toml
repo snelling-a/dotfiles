@@ -6,9 +6,9 @@
       "c",
       "m",
     ], run = "plugin chmod" },
-    { desc = "Maximize or restore preview", on = "T", run = "plugin --sync max-preview" },
-    { desc = "Move down, with wrap", on = "j", run = "plugin --sync arrow --args=1" },
-    { desc = "Move up, with wrap", on = "k", run = "plugin --sync arrow --args=-1" },
+    { desc = "Maximize or restore preview", on = "T", run = "plugin max-preview" },
+    { desc = "Move down, with wrap", on = "j", run = "plugin arrow --args=1" },
+    { desc = "Move up, with wrap", on = "k", run = "plugin arrow --args=-1" },
     { desc = "Run lazygit", on = [
       "g",
       "i",
