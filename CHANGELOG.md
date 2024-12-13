@@ -1,5 +1,30 @@
 # Changelog
 
+## [4.13.0](https://github.com/snelling-a/dotfiles/compare/v4.12.0...v4.13.0) (2024-12-13)
+
+
+### Features
+
+* **git:** alias/credentials ([10afc7f](https://github.com/snelling-a/dotfiles/commit/10afc7f34f5dcba42677181ab2a7b6663359ddd3))
+* **shell:** yazi alias ([36f5724](https://github.com/snelling-a/dotfiles/commit/36f5724c24d0908f1b364d7eb5d17b0eef1c4b19))
+* update rgignore/fdignore ([b55a5c9](https://github.com/snelling-a/dotfiles/commit/b55a5c9f10d52056f4822865f679950970355a0d))
+
+
+### Bug Fixes
+
+* **git:** credential helper ([105d989](https://github.com/snelling-a/dotfiles/commit/105d98911d2d4657a239766943d88fa02f544622))
+* **starship:** deno icon ([293a283](https://github.com/snelling-a/dotfiles/commit/293a2832933e9e3d0e93efe62d8e580d4b1cec0d))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([0d7a810](https://github.com/snelling-a/dotfiles/commit/0d7a81002e61182941725108b1f2390f88f94ba2))
+* **brew:** update packages ([84166c9](https://github.com/snelling-a/dotfiles/commit/84166c93e6bb47c2284ba8e7ffff7ba2eb800c59))
+* **brew:** update packages ([49c48e8](https://github.com/snelling-a/dotfiles/commit/49c48e8441716cabd139b49ebe8adc4582e1929e))
+* update submodules ([f100754](https://github.com/snelling-a/dotfiles/commit/f10075486e7c63c53cc9060d8f2d4a0d1dc967c9))
+* **vscode:** update settings.json ([647f6ed](https://github.com/snelling-a/dotfiles/commit/647f6ed9e77ee224d7bfdfaa34b16d5324db0992))
+* **yazi:** update for breaking changes ([412bf01](https://github.com/snelling-a/dotfiles/commit/412bf014bd72817efc9c7e1bd4a16b8b0231b551))
+
 ## [4.12.0](https://github.com/snelling-a/dotfiles/compare/v4.11.1...v4.12.0) (2024-11-21)
 
 
