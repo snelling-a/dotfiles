@@ -149,7 +149,6 @@
   "files.trimTrailingWhitespace": true,
   "git.mergeEditor": true,
   "git.openRepositoryInParentFolders": "always",
-  "github.copilot.chat.customInstructions": {},
   "github.gitProtocol": "ssh",
   "gitlens.telemetry.enabled": false,
   "javascript.inlayHints.enumMemberValues.enabled": true,
