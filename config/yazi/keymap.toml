@@ -13,4 +13,8 @@
       "g",
       "i",
     ], run = "plugin lazygit" },
+    { desc = "cd back to the root of the current Git repository ", on = [
+      "g",
+      "r",
+    ], run = ''' shell 'ya emit cd "$(git rev-parse --show-toplevel)"' ''' },
   ]
