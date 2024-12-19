@@ -7,7 +7,7 @@ right_format        = """$all"""
 
 [battery]
   format         = '\[[$symbol$percentage]($style)\]'
-  unknown_symbol = '󰂑 '
+  unknown_symbol = '󰂑  '
   [[battery.display]]
     style     = 'red'
     threshold = 10
@@ -18,7 +18,7 @@ right_format        = """$all"""
 [directory]
   format           = '\[[$path]($style)[$read_only]($read_only_style)\]'
   home_symbol      = '󰜥'
-  read_only        = ' '
+  read_only        = '  '
   repo_root_format = '\[[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style)\]'
 
 [character]
@@ -53,7 +53,7 @@ right_format        = """$all"""
   ahead      = ' '
   behind     = ' '
   conflicted = '󰦎 '
-  deleted    = ' '
+  deleted    = '  '
   diverged   = ' '
   format     = '([\[$all_status$ahead_behind\]]($style))'
   modified   = '󱈸 '
@@ -134,13 +134,14 @@ right_format        = """$all"""
 
 [golang]
   format = '\[[$symbol($version)]($style)\]'
-  symbol = ''
+  symbol = '󰟓  '
 
 [guix_shell]
   format = '\[[$symbol]($style)\]'
 
 [haskell]
   format = '\[[$symbol($version)]($style)\]'
+  symbol = '  '
 
 [haxe]
   format = '\[[$symbol($version)]($style)\]'
@@ -155,7 +156,7 @@ right_format        = """$all"""
 
 [java]
   format = '\[[$symbol($version)]($style)\]'
-  symbol = ' '
+  symbol = '  '
 
 [julia]
   format = '\[[$symbol($version)]($style)\]'
@@ -163,9 +164,11 @@ right_format        = """$all"""
 
 [kotlin]
   format = '\[[$symbol($version)]($style)\]'
+  symbol = '  '
 
 [kubernetes]
   format = '\[[$symbol$context( \($namespace\))]($style)\]'
+  symbol = '  '
 
 [lua]
   format = '\[[$symbol($version)]($style)\]'
@@ -194,12 +197,14 @@ right_format        = """$all"""
 
 [ocaml]
   format = '\[[$symbol($version)(\($switch_indicator$switch_name\))]($style)\]'
+  symbol = '  '
 
 [opa]
   format = '\[[$symbol($version)]($style)\]'
 
 [openstack]
   format = '\[[$symbol$cloud(\($project\))]($style)\]'
+  symbol = '  '
 
 [os]
   disabled = false
@@ -249,15 +254,19 @@ right_format        = """$all"""
 
 [perl]
   format = '\[[$symbol($version)]($style)\]'
+  symbol = '  '
 
 [php]
   format = '\[[$symbol($version)]($style)\]'
+  symbol = '  '
 
 [pulumi]
   format = '\[[$symbol$stack]($style)\]'
+  symbol = '  '
 
 [purescript]
   format = '\[[$symbol($version)]($style)\]'
+  symbol = '  '
 
 [python]
   format = '\[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'
@@ -301,9 +310,11 @@ right_format        = """$all"""
 
 [swift]
   format = '\[[$symbol($version)]($style)\]'
+  symbol = '󰛥  '
 
 [terraform]
   format = '\[[$symbol$workspace]($style)\]'
+  symbol = '  '
 
 [time]
   format   = '\[[$time]($style)\]'
@@ -314,9 +325,12 @@ right_format        = """$all"""
 
 [vagrant]
   format = '\[[$symbol($version)]($style)\]'
+  symbol = '  '
 
 [vlang]
   format = '\[[$symbol($version)]($style)\]'
+  symbol = '  '
 
 [zig]
   format = '\[[$symbol($version)]($style)\]'
+  symbol = '  '
