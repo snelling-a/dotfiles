@@ -1,5 +1,19 @@
 # Changelog
 
+## [4.13.1](https://github.com/snelling-a/dotfiles/compare/v4.13.0...v4.13.1) (2024-12-19)
+
+
+### Bug Fixes
+
+* **yazi:** update for breaking changes ([c45d421](https://github.com/snelling-a/dotfiles/commit/c45d421bf68a42dd3b143d11205769976f0ab505))
+
+
+### Miscellaneous
+
+* update settings.json ([93cc0d1](https://github.com/snelling-a/dotfiles/commit/93cc0d1d6e975c7d096758de82c141c13ed1d090))
+* update submodules ([689c1ba](https://github.com/snelling-a/dotfiles/commit/689c1ba97ab125f93d883551ad8087e475bd53e4))
+* update yazi packages ([c27b2d3](https://github.com/snelling-a/dotfiles/commit/c27b2d3562b871f5ba792ea7872fab7f3b0cb113))
+
 ## [4.13.0](https://github.com/snelling-a/dotfiles/compare/v4.12.0...v4.13.0) (2024-12-13)
 
 
