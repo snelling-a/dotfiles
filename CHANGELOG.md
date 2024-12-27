@@ -1,5 +1,29 @@
 # Changelog
 
+## [4.14.0](https://github.com/snelling-a/dotfiles/compare/v4.13.0...v4.14.0) (2024-12-27)
+
+
+### Features
+
+* ghostty ([500fe9b](https://github.com/snelling-a/dotfiles/commit/500fe9b9f76cd5a6c7f384989353eddc4c25fd22))
+* killport ([f23896e](https://github.com/snelling-a/dotfiles/commit/f23896e40e5c279339b8a6c4294cbe5283e7d346))
+* nvim config v7.0.0 ([77ee768](https://github.com/snelling-a/dotfiles/commit/77ee7683d2ebf2c77e639db5789201468f611572))
+* **yazi:** cd ([c98025a](https://github.com/snelling-a/dotfiles/commit/c98025a29b6cf5d5a7461139d4237a80cf8604dd))
+
+
+### Bug Fixes
+
+* brew neovim ([25a6a99](https://github.com/snelling-a/dotfiles/commit/25a6a9967f3d0a8816e5a076047eeadd13e2b297))
+* **gh:** hosts.yml ([076502f](https://github.com/snelling-a/dotfiles/commit/076502f635d5e4bdbe8f5739d8e62ece94fca6cb))
+* **yazi:** update for breaking changes ([c45d421](https://github.com/snelling-a/dotfiles/commit/c45d421bf68a42dd3b143d11205769976f0ab505))
+
+
+### Miscellaneous
+
+* update settings.json ([93cc0d1](https://github.com/snelling-a/dotfiles/commit/93cc0d1d6e975c7d096758de82c141c13ed1d090))
+* update submodules ([689c1ba](https://github.com/snelling-a/dotfiles/commit/689c1ba97ab125f93d883551ad8087e475bd53e4))
+* update yazi packages ([c27b2d3](https://github.com/snelling-a/dotfiles/commit/c27b2d3562b871f5ba792ea7872fab7f3b0cb113))
+
 ## [4.13.0](https://github.com/snelling-a/dotfiles/compare/v4.12.0...v4.13.0) (2024-12-13)
 
 
