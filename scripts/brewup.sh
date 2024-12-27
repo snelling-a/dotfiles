@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-nvim_update() {
-  brew upgrade neovim --fetch-HEAD
-}
-
 git_commit_push() {
   dir="$1"
   target="$2"
@@ -25,9 +21,7 @@ wait
 brew upgrade --greedy --no-quarantine &
 wait
 
-echo "Updating Neovim nightly..."
-nvim_update &
-wait
+echo "Updating Neovim plugins..."
 nvim --headless "+Lazy! sync" -c quit &
 wait
 
