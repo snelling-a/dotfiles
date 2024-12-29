@@ -1,54 +1,23 @@
-import = [
-  "/Users/andrew.snelling/.config/alacritty/base16_default_dark.toml",
-  "/Users/andrew.snelling/.config/alacritty/keybindings.toml",
-]
-live_config_reload = true
+[general]
+  import = ["/Users/andrew.snelling/.config/alacritty/base16_default_dark.toml"]
 
 [bell]
   animation = "EaseOutExpo"
   color     = "#000000"
   duration  = 10
 
-[cursor]
-  blink_interval = 550
-  blink_timeout  = 0
-
-  [cursor.style]
-    blinking = "Always"
-
 [env]
   TERM = "xterm-256color"
 
 [font]
-  size = 17
-
-  [font.bold]
-    style = "Semibold"
-
-  [font.bold_italic]
-    style = "Semibold Oblique"
-
-  [font.glyph_offset]
-    y = 2
-
-  [font.italic]
-    style = "Light Oblique"
-
-  [font.normal]
-    family = "Iosevka Nerd Font Mono"
-    style  = "Light"
-
-  [font.offset]
-    y = 6
+  normal = { family = "Iosevka Nerd Font Propo" }
+  size   = 17
 
 [selection]
   save_to_clipboard = true
 
-[shell]
-  args    = ["--login", "-c", "tmux attach || tmux"]
-  program = "/usr/local/bin/bash"
-
 [window]
-  decorations     = "none"
-  dynamic_padding = true
-  option_as_alt   = "Both"
+  option_as_alt = "Both"
+
+[mouse]
+  hide_when_typing = true
