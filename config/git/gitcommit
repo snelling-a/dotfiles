@@ -1,13 +1,12 @@
 # -Capitalize the subject line
 # -Use the imperative mood in the subject line
-
 # type(optional scope): subject
+
 # -Limit the subject line to 50 characters        ^TOO LONG!
 # type: fix, feat, docs, style, refactor, perf, test, build, ci, chore, revert,
 
-# -Do not end the subject line with a period
-# -Separate subject from body with a blank line
+# - Do not end the subject line with a period
+# - Separate subject from body with a blank line
+# - Use the body to explain what and why vs. how
 
-# -Use the body to explain what and why vs. how
-
-# -Wrap the body at 72 characters                                       ^WRAP HERE
+# - Wrap the body at 72 characters                                      ^WRAP HERE
