@@ -1,5 +1,25 @@
 # Changelog
 
+## [4.15.0](https://github.com/snelling-a/dotfiles/compare/v4.14.0...v4.15.0) (2024-12-31)
+
+
+### Features
+
+* automate updating yazi packages ([4c9198f](https://github.com/snelling-a/dotfiles/commit/4c9198f6a94e8a35b31cf3ff9eb865cfbbd94bfa))
+
+
+### Bug Fixes
+
+* alacritty setup ([3b039b4](https://github.com/snelling-a/dotfiles/commit/3b039b4018492a261ab7c3194869ca1cbd287899))
+* shellcheck errors ([24fe126](https://github.com/snelling-a/dotfiles/commit/24fe126950d7f293030e7a8f04ac5cd065963958))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([56db53d](https://github.com/snelling-a/dotfiles/commit/56db53d52a7d196d71510dca83c0faef5b143979))
+* **brew:** update packages ([c874de1](https://github.com/snelling-a/dotfiles/commit/c874de1031572f873c3ef4624a4e2cc0c3ee3ea2))
+* **yazi:** update yazi packages ([3553011](https://github.com/snelling-a/dotfiles/commit/3553011e1259d643beb764510bead2e4d07b6d76))
+
 ## [4.14.0](https://github.com/snelling-a/dotfiles/compare/v4.13.0...v4.14.0) (2024-12-27)
 
 
