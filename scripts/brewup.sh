@@ -21,12 +21,6 @@ wait
 brew upgrade --greedy --no-quarantine &
 wait
 
-echo "Updating Neovim plugins..."
-nvim --headless "+Lazy! sync" -c quit &
-wait
-
-git_commit_push "$DOTFILES/config/nvim" "$DOTFILES/config/nvim/lazy-lock.json" ": update plugins"
-
 echo "Updating brewfile..."
 brew bundle dump --force &
 wait
@@ -38,5 +32,17 @@ brew cleanup -s &
 wait
 
 git_commit_push "$DOTFILES" "$DOTFILES/homebrew/" "(brew): update packages"
+
+echo "Updating yazi packages..."
+ya pack --upgrade &
+wait
+
+git_commit_push "$DOTFILES" "$DOTFILES/yazi/package.toml" "(yazi): update packages"
+
+echo "Updating Neovim plugins..."
+nvim --headless "+Lazy! sync" -c quit &
+wait
+
+git_commit_push "$DOTFILES/config/nvim" "$DOTFILES/config/nvim/lazy-lock.json" ": update plugins"
 
 printf "\nDone!\nHappy Hacking!"
