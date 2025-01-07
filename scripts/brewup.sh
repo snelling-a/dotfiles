@@ -7,7 +7,8 @@ git_commit_push() {
 
   git -C "$dir" add "$target"
   git -C "$dir" commit -m "chore$message"
-  git -C "$dir" push
+  git -C "$dir" push &
+  wait
 }
 
 sudo -v
@@ -37,7 +38,7 @@ echo "Updating yazi packages..."
 ya pack --upgrade &
 wait
 
-git_commit_push "$DOTFILES" "$DOTFILES/yazi/package.toml" "(yazi): update packages"
+git_commit_push "$DOTFILES" "$DOTFILES/config/yazi/package.toml" "(yazi): update packages"
 
 echo "Updating Neovim plugins..."
 nvim --headless "+Lazy! sync" -c quit &
