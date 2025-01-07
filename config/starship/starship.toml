@@ -306,7 +306,7 @@ right_format        = """$all"""
 [sudo]
   disabled = false
   format   = '\[[$symbol]($style)\]'
-  symbol   = ''
+  symbol   = ' '
 
 [swift]
   format = '\[[$symbol($version)]($style)\]'
