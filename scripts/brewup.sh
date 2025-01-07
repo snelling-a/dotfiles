@@ -16,10 +16,7 @@ sudo -v
 echo "Updating all the things..."
 
 echo "Updating homebrew packages..."
-brew update && brew upgrade &
-wait
-
-brew upgrade --greedy --no-quarantine &
+brew update && brew upgrade --greedy --no-quarantine &
 wait
 
 echo "Updating brewfile..."
@@ -44,6 +41,11 @@ echo "Updating Neovim plugins..."
 nvim --headless "+Lazy! sync" -c quit &
 wait
 
+echo "Updating spellfile..."
+nvim -e -c 'lua vim.cmd.edit(spellfile)' -c "lua require('user.autocmd').sort_spellfile()" -c quit &
+wait
+
 git_commit_push "$DOTFILES/config/nvim" "$DOTFILES/config/nvim/lazy-lock.json" ": update plugins"
+git_commit_push "$DOTFILES/config/nvim" "$DOTFILES/config/nvim/spell" "(spell): update spellfile"
 
 printf "\nDone!\nHappy Hacking!"
