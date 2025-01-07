@@ -1207,9 +1207,7 @@
           }
         },
         "options": {
-          "args": [
-            "HEAD"
-          ]
+          "args": ["HEAD"]
         }
       },
       "ffmpeg": {
@@ -1374,9 +1372,7 @@
           }
         },
         "options": {
-          "args": [
-            "HEAD"
-          ]
+          "args": ["HEAD"]
         }
       },
       "fzf": {
@@ -1628,9 +1624,7 @@
           }
         },
         "options": {
-          "args": [
-            "HEAD"
-          ]
+          "args": ["HEAD"]
         }
       },
       "git": {
@@ -2966,7 +2960,6 @@
           }
         }
       },
-      ,
       "ninja": {
         "version": "1.12.1",
         "bottle": {
@@ -3588,9 +3581,7 @@
           }
         },
         "options": {
-          "args": [
-            "HEAD"
-          ]
+          "args": ["HEAD"]
         }
       },
       "ripgrep-all": {
@@ -3642,9 +3633,7 @@
           }
         },
         "options": {
-          "args": [
-            "HEAD"
-          ]
+          "args": ["HEAD"]
         }
       },
       "ruby-install": {
@@ -4317,9 +4306,7 @@
           }
         },
         "options": {
-          "args": [
-            "HEAD"
-          ]
+          "args": ["HEAD"]
         }
       },
       "tmate": {
@@ -4684,9 +4671,7 @@
           }
         },
         "options": {
-          "args": [
-            "HEAD"
-          ]
+          "args": ["HEAD"]
         }
       },
       "vint": {
