@@ -115,6 +115,7 @@ brew "vifm"
 brew "vim", args: ["HEAD"]
 brew "vint"
 brew "viu"
+brew "vscode-langservers-extracted"
 brew "w3m"
 brew "watchman"
 brew "wget"
