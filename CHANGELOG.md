@@ -1,5 +1,24 @@
 # Changelog
 
+## [4.16.0](https://github.com/snelling-a/dotfiles/compare/v4.15.0...v4.16.0) (2025-01-16)
+
+
+### Features
+
+* **nvim:** automate update spellfile ([735c39f](https://github.com/snelling-a/dotfiles/commit/735c39f1d4e7ed655868f6e9f0d9e4e7c5c273f1))
+
+
+### Bug Fixes
+
+* **brew:** yazi package path ([9043531](https://github.com/snelling-a/dotfiles/commit/90435315ebe9a7bc4f7bc00cb870722eaca94913))
+* **starship:** sudo icon ([a882c8f](https://github.com/snelling-a/dotfiles/commit/a882c8fe169cd921c23866b76980c9f2f7e53a92))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([2521c58](https://github.com/snelling-a/dotfiles/commit/2521c58f914f622c896bada4b3cb1d305428cad8))
+* **yazi:** update packages ([086c10b](https://github.com/snelling-a/dotfiles/commit/086c10bd0a61208027545fae43eedecb1fa7dfb0))
+
 ## [4.15.0](https://github.com/snelling-a/dotfiles/compare/v4.14.0...v4.15.0) (2025-01-07)
 
 
