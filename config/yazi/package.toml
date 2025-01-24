@@ -2,11 +2,11 @@
   deps = [
     { use = "Ape/simple-status", rev = "3ef1447" },
     { use = "Lil-Dank/lazygit", rev = "c82794f" },
-    { use = "Rolv-Apneseth/starship", rev = "4053c8c" },
-    { use = "yazi-rs/plugins:chmod", rev = "7707c09" },
-    { use = "yazi-rs/plugins:full-border", rev = "7707c09" },
-    { use = "yazi-rs/plugins:git", rev = "7707c09" },
-    { use = "yazi-rs/plugins:max-preview", rev = "7707c09" },
+    { use = "Rolv-Apneseth/starship", rev = "af8bf6f" },
+    { use = "yazi-rs/plugins:chmod", rev = "6418698" },
+    { use = "yazi-rs/plugins:full-border", rev = "6418698" },
+    { use = "yazi-rs/plugins:git", rev = "6418698" },
+    { use = "yazi-rs/plugins:max-preview", rev = "6418698" },
   ]
 
 [flavor]
