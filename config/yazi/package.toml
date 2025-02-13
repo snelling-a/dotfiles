@@ -1,13 +1,37 @@
-[plugin]
-  deps = [
-    { use = "Ape/simple-status", rev = "3ef1447" },
-    { use = "Lil-Dank/lazygit", rev = "c82794f" },
-    { use = "Rolv-Apneseth/starship", rev = "af8bf6f" },
-    { use = "yazi-rs/plugins:chmod", rev = "02d18be" },
-    { use = "yazi-rs/plugins:full-border", rev = "02d18be" },
-    { use = "yazi-rs/plugins:git", rev = "02d18be" },
-    { use = "yazi-rs/plugins:max-preview", rev = "02d18be" },
-  ]
+[[plugin.deps]]
+use = "Ape/simple-status"
+rev = "d0da104"
+hash = "68603fdd1dcaf415227e2c77a9317947"
+
+[[plugin.deps]]
+use = "Lil-Dank/lazygit"
+rev = "9f924e3"
+hash = "2b0c33928986f126d5c5a4cac31a6b46"
+
+[[plugin.deps]]
+use = "Rolv-Apneseth/starship"
+rev = "d1cd0a3"
+hash = "d1fee6d0f74cb52d4e031dc6b9207f31"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:chmod"
+rev = "8945e54"
+hash = "f28138c2e11e87962b66d583fef724c3"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:full-border"
+rev = "8945e54"
+hash = "ae9e1d0c6bfd68cdebc98cc684c22b45"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:git"
+rev = "8945e54"
+hash = "771f18427fb75fb19990ce602bb322f4"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:max-preview"
+rev = "8945e54"
+hash = "15b2ff7f6563c14d5b2e93b3e9da35de"
 
 [flavor]
-  deps = []
+deps = []
