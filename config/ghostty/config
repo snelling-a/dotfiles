@@ -4,9 +4,6 @@ background-opacity = 0.8
 bold-is-bright = true
 
 clipboard-read = allow
-clipboard-write = allow
-
-copy-on-select = true
 
 cursor-style-blink = false
 
