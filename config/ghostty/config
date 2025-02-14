@@ -13,10 +13,7 @@ cursor-style-blink = false
 font-family = "Iosevka Term SS15"
 font-size = 16
 
-macos-icon = custom-style
-macos-icon-frame = plastic
-macos-icon-ghost-color = a1b56c
-macos-icon-screen-color = 181818
+macos-icon = glass
 macos-option-as-alt = true
 
 mouse-hide-while-typing = true
