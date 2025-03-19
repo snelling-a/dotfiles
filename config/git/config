@@ -11,7 +11,7 @@
   branches = branch --all
   c = commit
   cl = clone --recurse-submodules
-  cleanup = "!git fetch --prune && git branch -vv | grep '\\[gone\\]' | grep -v '\\*' | awk '{print $1}' | xargs -r git branch -D"
+  cleanup = "!git fetch --prune && git branch -vv | grep 'gone\\]' | grep -v '\\*' | awk '{print $1}' | xargs -r git branch -D"
   co = checkout
   count = shortlog --summary --numbered
   cp = cherry-pick
