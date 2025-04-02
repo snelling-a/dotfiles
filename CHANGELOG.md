@@ -1,5 +1,38 @@
 # Changelog
 
+## [4.17.0](https://github.com/snelling-a/dotfiles/compare/v4.16.0...v4.17.0) (2025-04-02)
+
+
+### Features
+
+* **ghostty:** new icons ([94a14eb](https://github.com/snelling-a/dotfiles/commit/94a14eba818b13bae10d3096fa861b981627a431))
+
+
+### Bug Fixes
+
+* **git:** cleanup alias ([ccef2dd](https://github.com/snelling-a/dotfiles/commit/ccef2dd42bfa3aeb7ff9fe08aabbb533b2439862))
+* **yazi:** arrow keymaps ([60710e2](https://github.com/snelling-a/dotfiles/commit/60710e2f25d1489e604767ad498de132ce440eaa))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([8d5122c](https://github.com/snelling-a/dotfiles/commit/8d5122c65cec775a5590151444a58afb6a9b5149))
+* **brew:** update packages ([a7b7930](https://github.com/snelling-a/dotfiles/commit/a7b7930768eb5e8eda8020a5fed0b5deca0af57f))
+* **brew:** update packages ([672cd58](https://github.com/snelling-a/dotfiles/commit/672cd58598306dad3f704f4f339490ef9ad80072))
+* **brew:** update packages ([6587efb](https://github.com/snelling-a/dotfiles/commit/6587efbcda3d1de30ae1d32a51986c31c0332855))
+* **brew:** update packages ([a591b4f](https://github.com/snelling-a/dotfiles/commit/a591b4fab29317c7a299f9b282f24270cef681be))
+* **brew:** update packages ([c5a668d](https://github.com/snelling-a/dotfiles/commit/c5a668d336cd6d94fe8ed79bef7d11175d2b52b1))
+* update submodules ([73333d4](https://github.com/snelling-a/dotfiles/commit/73333d44e9532c2cbee7ba18121c53231d1d2983))
+* **yazi:** update packages ([4900958](https://github.com/snelling-a/dotfiles/commit/4900958b8d9f4ea9321d3f4491b5fd25df071684))
+* **yazi:** update packages ([c22d96a](https://github.com/snelling-a/dotfiles/commit/c22d96a3c720482b810197039ddfa5a1287813cd))
+* **yazi:** update packages ([fd6bfc1](https://github.com/snelling-a/dotfiles/commit/fd6bfc1eb0ade166324408980e80b410863e939d))
+* **yazi:** update packages ([92e1be7](https://github.com/snelling-a/dotfiles/commit/92e1be7b6df88a2126ebebaa1576eddb93e2d224))
+* **yazi:** update packages ([c63e722](https://github.com/snelling-a/dotfiles/commit/c63e722197eb41cad741cd9acb7d08aefe502d08))
+* **yazi:** update packages ([14664a4](https://github.com/snelling-a/dotfiles/commit/14664a4a3cbc8e8fb9e19a5b1503390c354ca35e))
+* **yazi:** update packages ([95db832](https://github.com/snelling-a/dotfiles/commit/95db83270f4ac8d462659ff806e4ed5ec2549067))
+* **yazi:** update packages ([608e539](https://github.com/snelling-a/dotfiles/commit/608e539bbb9fc33441c70c9fd10a599dce269f80))
+* **yazi:** update packages ([c930016](https://github.com/snelling-a/dotfiles/commit/c930016b7c5a83807c35f4b87fdd533ccbc2e5c8))
+
 ## [4.16.0](https://github.com/snelling-a/dotfiles/compare/v4.15.0...v4.16.0) (2025-01-28)
 
 
