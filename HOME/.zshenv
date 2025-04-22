@@ -24,6 +24,7 @@ export XDG_STATE_HOME="${HOME}/.local/share/state"
 
 export RIPGREP_CONFIG_PATH="${XDG_CONFIG_HOME:-$HOME/.config}/ripgrep/.ripgreprc"
 export STARSHIP_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/starship/starship.toml"
+export TEALDEER_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/tldr"
 
 export _ZO_DATA_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/zoxide"
 export FNM_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/fnm"

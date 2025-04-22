@@ -1,0 +1,35 @@
+[style.description]
+  bold      = false
+  color     = "red"
+  italic    = false
+  underline = false
+
+[style.command_name]
+  bold       = true
+  foreground = "blue"
+  italic     = false
+  underline  = false
+
+[style.example_text]
+  bold       = false
+  foreground = "white"
+  italic     = false
+  underline  = false
+
+[style.example_code]
+  bold       = false
+  foreground = "green"
+  italic     = false
+  underline  = false
+
+[style.example_variable]
+  bold       = false
+  foreground = "yellow"
+  italic     = false
+  underline  = true
+
+[updates]
+  auto_update                = false
+  auto_update_interval_hours = 720
+
+[directories]
