@@ -1,5 +1,20 @@
 # Changelog
 
+## [4.18.0](https://github.com/snelling-a/dotfiles/compare/v4.17.0...v4.18.0) (2025-05-05)
+
+
+### Features
+
+* **sh:** tealdeer ([b52c2ad](https://github.com/snelling-a/dotfiles/commit/b52c2ad3e44ae9bea41e46e3827003796aa5f3bf))
+
+
+### Miscellaneous
+
+* **brew:** update packages ([b28db4f](https://github.com/snelling-a/dotfiles/commit/b28db4f4511cb1adc262f6acf6648d2bbb8145a0))
+* **brew:** update packages ([6a72b29](https://github.com/snelling-a/dotfiles/commit/6a72b292467daab66950379d91e3311ae149d49a))
+* **brew:** update packages ([7f069b6](https://github.com/snelling-a/dotfiles/commit/7f069b6d925b262b0d1d7b9bdeeb69c769789892))
+* **yazi:** max-preview is deprecated ([d6a4499](https://github.com/snelling-a/dotfiles/commit/d6a449963deb22dd66d78150e321f3a0b4ca981a))
+
 ## [4.17.0](https://github.com/snelling-a/dotfiles/compare/v4.16.0...v4.17.0) (2025-04-02)
 
 
