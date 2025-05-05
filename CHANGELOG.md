@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.18.1](https://github.com/snelling-a/dotfiles/compare/v4.18.0...v4.18.1) (2025-05-05)
+
+
+### Miscellaneous
+
+* update submodules ([d85d0d0](https://github.com/snelling-a/dotfiles/commit/d85d0d0fa0ee741324cff1219354b0f7c0bdfff2))
+
 ## [4.18.0](https://github.com/snelling-a/dotfiles/compare/v4.17.0...v4.18.0) (2025-05-05)
 
 
