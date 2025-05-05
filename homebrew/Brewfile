@@ -78,6 +78,7 @@ brew "mercurial"
 brew "microplane"
 brew "miller"
 brew "mongosh"
+brew "neovim", args: ["HEAD"]
 brew "ninja"
 brew "odt2txt"
 brew "onefetch"
