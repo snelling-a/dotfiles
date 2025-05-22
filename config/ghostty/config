@@ -25,3 +25,4 @@ theme = light:base16-default-light,dark:base16-default-dark
 unfocused-split-fill = 000000
 unfocused-split-opacity = 0.5
 
+keybind = super+ctrl+equal=equalize_splits
