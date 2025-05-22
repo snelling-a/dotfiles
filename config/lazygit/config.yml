@@ -1,6 +1,4 @@
 git:
-  allBranchesLogCmd: git lsa
-  branchLogCmd: git lsla
   overrideGpg: true
   paging:
     colorArg: always
