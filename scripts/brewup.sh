@@ -32,7 +32,8 @@ wait
 git_commit_push "$DOTFILES" "$DOTFILES/homebrew/" "(brew): update packages"
 
 echo "Updating yazi packages..."
-ya pack --upgrade &
+ya pack --upgrade && taplo fmt "$DOTFILES/**/*.toml" --config "$DOTFILES/.taplo.toml" &
+
 wait
 
 git_commit_push "$DOTFILES" "$DOTFILES/config/yazi/package.toml" "(yazi): update packages"
