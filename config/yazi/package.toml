@@ -1,27 +1,27 @@
 [[plugin.deps]]
-  hash = "7918aab6a71caf31b58411f789195677"
-  rev  = "55bf699"
-  use  = "yazi-rs/plugins:smart-enter"
+use = "yazi-rs/plugins:smart-enter"
+rev = "55bf699"
+hash = "7918aab6a71caf31b58411f789195677"
 
 [[plugin.deps]]
-  hash = "7ddb7a790746fd91ecdd0350cc5a5d8c"
-  rev  = "6fde3b2"
-  use  = "Rolv-Apneseth/starship"
+use = "Rolv-Apneseth/starship"
+rev = "6fde3b2"
+hash = "7ddb7a790746fd91ecdd0350cc5a5d8c"
 
 [[plugin.deps]]
-  hash = "f3853bbdd1da2fad09d059ab5464abfd"
-  rev  = "55bf699"
-  use  = "yazi-rs/plugins:toggle-pane"
+use = "yazi-rs/plugins:toggle-pane"
+rev = "55bf699"
+hash = "f3853bbdd1da2fad09d059ab5464abfd"
 
 [[plugin.deps]]
-  hash = "1f3dad061209081a6b04dd6ff2cb06c7"
-  rev  = "55bf699"
-  use  = "yazi-rs/plugins:full-border"
+use = "yazi-rs/plugins:full-border"
+rev = "55bf699"
+hash = "1f3dad061209081a6b04dd6ff2cb06c7"
 
 [[plugin.deps]]
-  hash = "e0ada736ea676c2bbb3ec705a49526ef"
-  rev  = "55bf699"
-  use  = "yazi-rs/plugins:git"
+use = "yazi-rs/plugins:git"
+rev = "55bf699"
+hash = "e0ada736ea676c2bbb3ec705a49526ef"
 
 [flavor]
-  deps = []
+deps = []
