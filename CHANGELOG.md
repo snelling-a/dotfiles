@@ -1,5 +1,28 @@
 # Changelog
 
+## [4.19.0](https://github.com/snelling-a/dotfiles/compare/v4.18.0...v4.19.0) (2025-05-26)
+
+
+### Features
+
+* **ghostty:** equal splits keymap ([169674f](https://github.com/snelling-a/dotfiles/commit/169674f03afbaadd8187a5455a4851047f68211e))
+
+
+### Bug Fixes
+
+* **lazygit:** branch cmd ([af8a9de](https://github.com/snelling-a/dotfiles/commit/af8a9de7994696ad18b9b149d8e67b97389521b4))
+* **toml:** formatting ([c814c38](https://github.com/snelling-a/dotfiles/commit/c814c384eabb83dca9dbb226e3a76a204500ad0a))
+* **yazi:** breaking changes ([53f9f34](https://github.com/snelling-a/dotfiles/commit/53f9f3497a7a5e6cc6cc9020ea57e711a3bc19d9))
+
+
+### Miscellaneous
+
+* **brew:** delete brewfile lock ([8753b55](https://github.com/snelling-a/dotfiles/commit/8753b55b159c12d77950be77ee27a85f250d7460))
+* **brew:** update packages ([d9478a8](https://github.com/snelling-a/dotfiles/commit/d9478a86bb1ffd1bcaa770048784e0f2e3e0ae92))
+* **brew:** update packages ([cb9ff21](https://github.com/snelling-a/dotfiles/commit/cb9ff21949505234f2e29d823f9e05cb5f4be1e9))
+* update submodules ([d85d0d0](https://github.com/snelling-a/dotfiles/commit/d85d0d0fa0ee741324cff1219354b0f7c0bdfff2))
+* **yazi:** update packages ([6ee0298](https://github.com/snelling-a/dotfiles/commit/6ee029878fe57da79478e7e67cf6639082a9941e))
+
 ## [4.18.0](https://github.com/snelling-a/dotfiles/compare/v4.17.0...v4.18.0) (2025-05-05)
 
 
