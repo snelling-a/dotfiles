@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.19.1](https://github.com/snelling-a/dotfiles/compare/v4.19.0...v4.19.1) (2025-06-10)
+
+
+### Miscellaneous
+
+* **brew:** update packages ([d52a335](https://github.com/snelling-a/dotfiles/commit/d52a33504b6201d9a55ab1d0becde11c863e2f0a))
+* **yazi:** update packages ([e6c148b](https://github.com/snelling-a/dotfiles/commit/e6c148b90018bf12e04f0d525e71984c3fd165e6))
+
 ## [4.19.0](https://github.com/snelling-a/dotfiles/compare/v4.18.0...v4.19.0) (2025-05-26)
 
 
