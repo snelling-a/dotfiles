@@ -1,6 +1,6 @@
 [[plugin.deps]]
-  hash = "a7ab702e1ef0c097defbc976ed34c186"
-  rev  = "aeca767"
+  hash = "56fdabc96fc1f4d53c96eb884b02a5be"
+  rev  = "42f64c0"
   use  = "yazi-rs/plugins:smart-enter"
 
 [[plugin.deps]]
@@ -9,18 +9,18 @@
   use  = "Rolv-Apneseth/starship"
 
 [[plugin.deps]]
-  hash = "d5d4f3527592da5fbe77fd6f51815f80"
-  rev  = "aeca767"
+  hash = "d6f60c24d8c0cf57a855bf46115b2502"
+  rev  = "42f64c0"
   use  = "yazi-rs/plugins:toggle-pane"
 
 [[plugin.deps]]
   hash = "3996fc74044bc44144b323686f887e1"
-  rev  = "aeca767"
+  rev  = "42f64c0"
   use  = "yazi-rs/plugins:full-border"
 
 [[plugin.deps]]
-  hash = "bf6f074cd41ee33c3360341d168f9733"
-  rev  = "aeca767"
+  hash = "e01006bfb38951ea89031bd918b20dbb"
+  rev  = "42f64c0"
   use  = "yazi-rs/plugins:git"
 
 [flavor]
