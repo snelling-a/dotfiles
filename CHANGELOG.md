@@ -1,5 +1,19 @@
 # Changelog
 
+## [4.19.1](https://github.com/snelling-a/dotfiles/compare/v4.19.0...v4.19.1) (2025-06-30)
+
+
+### Miscellaneous
+
+* **brew:** update packages ([a17f80d](https://github.com/snelling-a/dotfiles/commit/a17f80d3c736799de4afb22814f703887f857590))
+* **brew:** update packages ([f04f103](https://github.com/snelling-a/dotfiles/commit/f04f1034bd9e30edac02646a2adac041851b1b3d))
+* **brew:** update packages ([160e78d](https://github.com/snelling-a/dotfiles/commit/160e78db6e771c65ff439f50e3945e3d82f3f125))
+* **brew:** update packages ([d52a335](https://github.com/snelling-a/dotfiles/commit/d52a33504b6201d9a55ab1d0becde11c863e2f0a))
+* **yazi:** update packages ([5ef1c2e](https://github.com/snelling-a/dotfiles/commit/5ef1c2edd2aaa56250473353bdbffc111cd136d6))
+* **yazi:** update packages ([883763d](https://github.com/snelling-a/dotfiles/commit/883763d4c70c19c7106da643ca4c14e377270054))
+* **yazi:** update packages ([26b3dcb](https://github.com/snelling-a/dotfiles/commit/26b3dcb10163fdaf820d0bcee150fe32acf6df53))
+* **yazi:** update packages ([e6c148b](https://github.com/snelling-a/dotfiles/commit/e6c148b90018bf12e04f0d525e71984c3fd165e6))
+
 ## [4.19.0](https://github.com/snelling-a/dotfiles/compare/v4.18.0...v4.19.0) (2025-05-26)
 
 
