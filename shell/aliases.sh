@@ -29,6 +29,7 @@ alias notes="cd $NOTES"
 alias work="cd $WORK"
 
 alias dcu="docker compose up"
+alias dcd="docker compose down"
 alias dockerclean="docker system prune -af --volumes"
 
 alias diff="delta"
