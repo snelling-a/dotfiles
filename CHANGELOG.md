@@ -1,5 +1,18 @@
 # Changelog
 
+## [4.20.0](https://github.com/snelling-a/dotfiles/compare/v4.19.1...v4.20.0) (2025-07-02)
+
+
+### Features
+
+* **sh:** docker compose down ([3adca12](https://github.com/snelling-a/dotfiles/commit/3adca126dab5402d91069e3b1c21527f377ae0ab))
+* **sh:** ngrok completions ([efef0a2](https://github.com/snelling-a/dotfiles/commit/efef0a22a735dde6c60d8dc3d779cb9f5e943cf4))
+
+
+### Bug Fixes
+
+* **vscode:** remove jj/jk keymaps ([c2528e8](https://github.com/snelling-a/dotfiles/commit/c2528e8727b3897995742c5d4a27d1ac8fb40211))
+
 ## [4.19.1](https://github.com/snelling-a/dotfiles/compare/v4.19.0...v4.19.1) (2025-06-30)
 
 
