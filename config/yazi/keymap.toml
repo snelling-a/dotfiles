@@ -1,11 +1,7 @@
 "$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
 
-[[manager.prepend_keymap]]
-  desc = "Enter the child directory, or open the file"
-  on   = "<Enter>"
-  run  = "plugin smart-enter"
-
-[[manager.prepend_keymap]]
-  desc = "Maximize or restore the preview pane"
-  on   = "T"
-  run  = "plugin toggle-pane max-preview"
+[mgr]
+  prepend_keymap = [
+    { desc = "Maximize or restore the preview pane", on = "T", run = "plugin toggle-pane max-preview" },
+    { desc = "Open the file under the cursor", on = "<Enter>", run = "plugin smart-enter" },
+  ]
