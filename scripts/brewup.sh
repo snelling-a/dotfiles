@@ -26,7 +26,7 @@ brew bundle &
 wait
 
 echo "Cleaning up homebrew..."
-brew cleanup -s &
+brew cleanup --scrub &
 wait
 
 git_commit_push "$DOTFILES" "$DOTFILES/homebrew/" "(brew): update packages"
