@@ -1,5 +1,14 @@
 # Changelog
 
+## [4.20.1](https://github.com/snelling-a/dotfiles/compare/v4.20.0...v4.20.1) (2025-07-14)
+
+
+### Miscellaneous
+
+* **brew:** update packages ([3a9f227](https://github.com/snelling-a/dotfiles/commit/3a9f227a6ffa60648e8d731a452ce1d8d65f2eaf))
+* **deps:** bump actions/setup-python from 2 to 5 ([#200](https://github.com/snelling-a/dotfiles/issues/200)) ([e36a271](https://github.com/snelling-a/dotfiles/commit/e36a271e51d61fc26f50691bfb7a2f6da535d65b))
+* **yazi:** update packages ([dcdc486](https://github.com/snelling-a/dotfiles/commit/dcdc4862fd54f1f3911bb2c1e86329c82b115a07))
+
 ## [4.20.0](https://github.com/snelling-a/dotfiles/compare/v4.19.1...v4.20.0) (2025-07-07)
 
 
