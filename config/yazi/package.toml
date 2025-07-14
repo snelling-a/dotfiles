@@ -4,8 +4,8 @@
   use  = "yazi-rs/plugins:smart-enter"
 
 [[plugin.deps]]
-  hash = "d5a74d95c2e8194ac352c5e10e81e64f"
-  rev  = "6a0f3f7"
+  hash = "c2021386289a0cbb3e152a052f67c177"
+  rev  = "a63550b"
   use  = "Rolv-Apneseth/starship"
 
 [[plugin.deps]]
