@@ -1,12 +1,16 @@
-on: [push]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
 jobs:
   YAMLLINT:
     name: YAML
     runs-on: ubuntu-latest
     steps:
-      - uses: 'actions/setup-python@v5'
+      - uses: actions/setup-python@v5
         with:
-          python-version: '3.8'
+          python-version: "3.8"
       - name: yamllint
         run: |
           echo "Installing yamllint..."
