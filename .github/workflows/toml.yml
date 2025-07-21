@@ -1,10 +1,14 @@
-on: [push]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
 jobs:
   TAPLO:
     name: Taplo
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - uses: actions-rs/install@v0.1
         with:
           crate: taplo-cli
