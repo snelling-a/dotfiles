@@ -1,6 +1,6 @@
 [[plugin.deps]]
   hash = "56fdabc96fc1f4d53c96eb884b02a5be"
-  rev  = "de53d90"
+  rev  = "e95c7b3"
   use  = "yazi-rs/plugins:smart-enter"
 
 [[plugin.deps]]
@@ -10,17 +10,17 @@
 
 [[plugin.deps]]
   hash = "d6f60c24d8c0cf57a855bf46115b2502"
-  rev  = "de53d90"
+  rev  = "e95c7b3"
   use  = "yazi-rs/plugins:toggle-pane"
 
 [[plugin.deps]]
   hash = "3996fc74044bc44144b323686f887e1"
-  rev  = "de53d90"
+  rev  = "e95c7b3"
   use  = "yazi-rs/plugins:full-border"
 
 [[plugin.deps]]
   hash = "63b6c222bf2103b3023389dde5e2ecfe"
-  rev  = "de53d90"
+  rev  = "e95c7b3"
   use  = "yazi-rs/plugins:git"
 
 [flavor]
