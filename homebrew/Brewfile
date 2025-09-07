@@ -79,6 +79,7 @@ brew "marksman"
 brew "mercurial"
 brew "microplane"
 brew "mongosh"
+brew "mysql"
 brew "neovim", args: ["HEAD"]
 brew "ninja"
 brew "odt2txt"
