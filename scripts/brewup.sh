@@ -60,7 +60,7 @@ else
   echo "Brewfile already up to date."
 fi
 
-# git_commit_push "$DOTFILES" "$DOTFILES/homebrew/" "(brew): update packages"
+git_commit_push "$DOTFILES" "$DOTFILES/homebrew/" "(brew): update packages"
 
 echo "Updating Yazi + Neovim..."
 (
@@ -72,10 +72,10 @@ echo "Updating Yazi + Neovim..."
 ) &
 wait
 
-# git_commit_push "$DOTFILES" "$DOTFILES/config/yazi/package.toml" "(yazi): update packages"
+git_commit_push "$DOTFILES" "$DOTFILES/config/yazi/package.toml" "(yazi): update packages"
 
 echo "Updating spellfile..."
 nvim --headless +'lua require("user.autocmd").sort_spellfile()' +qall! >/dev/null 2>&1
-# git_commit_push "$DOTFILES/config/nvim" "$DOTFILES/config/nvim/spell" "(spell): update spellfile"
+git_commit_push "$DOTFILES/config/nvim" "$DOTFILES/config/nvim/spell" "(spell): update spellfile"
 
 printf "\nDone!\nHappy Hacking, %s 🚀\n" "$(whoami)"
