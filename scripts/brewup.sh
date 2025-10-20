@@ -63,8 +63,6 @@ else
   echo "Brewfile already up to date."
 fi
 
-git_commit_push "$DOTFILES" "$DOTFILES/homebrew/" "(brew): update packages"
-
 echo "Updating Yazi + Neovim..."
 (
   ya pkg upgrade >/dev/null 2>&1 &&
