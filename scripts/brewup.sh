@@ -65,7 +65,7 @@ git_commit_push "$DOTFILES" "$DOTFILES/homebrew/" "(brew): update packages"
 echo "Updating Yazi + Neovim..."
 (
   ya pkg upgrade >/dev/null 2>&1 &&
-    RUST_LOG=off taplo fmt "$DOTFILES/**/*.toml" --config "$DOTFILES/.taplo.toml" &
+    taplo fmt "$DOTFILES"/**/*.toml --config "$DOTFILES"/.taplo.toml &
 ) &
 (
   nvim --headless "+Lazy! sync" -c "qall!" >/dev/null 2>&1
