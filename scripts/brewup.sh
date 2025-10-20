@@ -4,6 +4,9 @@ set -euo pipefail
 : "${DOTFILES:?DOTFILES env var not set}"
 : "${HOMEBREW_BUNDLE_FILE:?HOMEBREW_BUNDLE_FILE env var not set}"
 
+# @param dir directory of the git repo
+# @param target file or directory to add/commit/push
+# @param message commit message suffix
 git_commit_push() {
   local dir="$1" target="$2" message="$3"
   git -C "$dir" add "$target"
@@ -73,6 +76,7 @@ echo "Updating Yazi + Neovim..."
 wait
 
 git_commit_push "$DOTFILES" "$DOTFILES/config/yazi/package.toml" "(yazi): update packages"
+git_commit_push "$DOTFILES/config/nvim" "$DOTFILES/config/nvim/lazy-lock.json" ": update plugins"
 
 echo "Updating spellfile..."
 nvim --headless +'lua require("user.autocmd").sort_spellfile()' +qall! >/dev/null 2>&1
