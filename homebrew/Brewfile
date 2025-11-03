@@ -4,10 +4,8 @@ tap "hashicorp/tap"
 tap "homebrew/autoupdate"
 tap "homebrew/bundle"
 tap "homebrew/services"
-tap "ms-jpq/sad"
 tap "sass/sass"
 tap "snyk/tap"
-tap "yakitrak/yakitrak"
 # GNU internationalization (i18n) and localization (l10n) library
 brew "gettext"
 # Library for command-line editing
@@ -49,11 +47,11 @@ brew "docker-compose"
 # Like neofetch, but much faster because written mostly in C
 brew "fastfetch"
 # Simple, fast and user-friendly alternative to find
-brew "fd", args: ["HEAD"]
+brew "fd"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
 # Fast and simple Node.js version manager
-brew "fnm", args: ["HEAD"]
+brew "fnm"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GNU awk utility
@@ -65,7 +63,7 @@ brew "gdbm"
 # GitHub command-line tool
 brew "gh"
 # Remote repository management made easy
-brew "ghq", args: ["HEAD"]
+brew "ghq"
 # Distributed revision control system
 brew "git"
 # Syntax-highlighting pager for git and diff output
@@ -119,7 +117,7 @@ brew "mongosh"
 # Open source relational database management system
 brew "mysql"
 # Fast, highly customisable system info script
-brew "neofetch", args: ["HEAD"]
+brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim", args: ["HEAD"]
 # Small build system for use with gyp or CMake
@@ -149,7 +147,7 @@ brew "python-tk@3.11"
 # Messaging and streaming broker
 brew "rabbitmq"
 # Search tool like grep and The Silver Searcher
-brew "ripgrep", args: ["HEAD"]
+brew "ripgrep"
 # Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
 brew "ruby-install"
 # Cross-shell prompt for astronauts
