@@ -110,14 +110,12 @@ brew "luarocks"
 brew "make"
 # CLI tool to make git changes across many repos
 brew "microplane"
-# Platform built on V8 to build network applications
+# Open-source, cross-platform JavaScript runtime environment
 brew "node"
 # MongoDB Shell to connect, configure, query, and work with your MongoDB database
 brew "mongosh"
 # Open source relational database management system
 brew "mysql"
-# Fast, highly customisable system info script
-brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim", args: ["HEAD"]
 # Small build system for use with gyp or CMake
@@ -232,8 +230,6 @@ cask "font-iosevka-ss15"
 cask "font-symbols-only-nerd-font"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
-# Free and open-source image editor
-cask "gimp"
 # Web browser
 cask "google-chrome"
 # Interface for reading and syncing eBooks
