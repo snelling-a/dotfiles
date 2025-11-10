@@ -31,7 +31,7 @@ brew update
 echo "Checking for outdated formulae..."
 if [[ -n "$(brew outdated --formula)" ]]; then
   echo "Upgrading formulae..."
-  brew upgrade
+  brew upgrade --fetch-HEAD
 else
   echo "Formulae up to date."
 fi
