@@ -78,10 +78,10 @@ brew "gnu-sed"
 brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.13"
 # Kubernetes package manager
 brew "helm"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.13"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
 # Lightweight and flexible command-line JSON processor
@@ -212,6 +212,8 @@ cask "brave-browser"
 cask "chatgpt"
 # Anthropic's official Claude AI desktop app
 cask "claude"
+# Terminal-based AI coding assistant
+cask "claude-code"
 # Universal database tool and SQL client
 cask "dbeaver-community"
 # AI-powered translator
