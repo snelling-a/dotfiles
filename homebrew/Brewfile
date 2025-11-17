@@ -148,6 +148,8 @@ brew "rabbitmq"
 brew "ripgrep"
 # Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
 brew "ruby-install"
+# Fast and accurate code counter with complexity and COCOMO estimates
+brew "scc"
 # Cross-shell prompt for astronauts
 brew "starship"
 # Very fast implementation of tldr in Rust
@@ -214,6 +216,8 @@ cask "chatgpt"
 cask "claude"
 # Terminal-based AI coding assistant
 cask "claude-code"
+# AI code review CLI
+cask "coderabbit"
 # Universal database tool and SQL client
 cask "dbeaver-community"
 # AI-powered translator
@@ -270,8 +274,8 @@ cask "slack"
 cask "spotify"
 # Open-source code editor
 cask "visual-studio-code@insiders"
-# Open-source cross-platform multimedia player
-cask "vlc@nightly"
+# Multimedia player
+cask "vlc"
 # GPU-accelerated cross-platform terminal emulator and multiplexer
 cask "wezterm@nightly"
 # Native desktop client for WhatsApp
@@ -302,29 +306,22 @@ vscode "graphql.vscode-graphql"
 vscode "graphql.vscode-graphql-syntax"
 vscode "jock.svg"
 vscode "johnnymorganz.stylua"
-vscode "laktak.hjson"
 vscode "mariusalchimavicius.json-to-ts"
 vscode "mattpocock.ts-error-translator"
 vscode "meta.relay"
 vscode "mjmlio.vscode-mjml"
-vscode "ms-azuretools.vscode-containers"
-vscode "ms-azuretools.vscode-docker"
 vscode "ms-vscode-remote.remote-containers"
-vscode "ms-vscode.azure-repos"
 vscode "ms-vscode.remote-repositories"
-vscode "ms-vsliveshare.vsliveshare"
 vscode "oouo-diogo-perdigao.docthis"
 vscode "petli-full.json-to-yaml-and-more"
 vscode "planbcoding.vscode-react-refactor"
 vscode "postman.postman-for-vscode"
 vscode "redhat.vscode-yaml"
-vscode "ritwickdey.liveserver"
 vscode "shd101wyy.markdown-preview-enhanced"
 vscode "simonsiefke.svg-preview"
 vscode "snyk-security.snyk-vulnerability-scanner"
 vscode "sonarsource.sonarlint-vscode"
 vscode "sumneko.lua"
-vscode "tanh.hjson-formatter"
 vscode "timonwong.shellcheck"
 vscode "yoavbls.pretty-ts-errors"
 go "github.com/noperator/jqfmt/cmd/jqfmt"
