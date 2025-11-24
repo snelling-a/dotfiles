@@ -26,3 +26,4 @@ unfocused-split-fill = 000000
 unfocused-split-opacity = 0.5
 
 keybind = super+ctrl+equal=equalize_splits
+keybind = shift+enter=text:\n
