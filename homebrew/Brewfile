@@ -6,6 +6,8 @@ tap "homebrew/bundle"
 tap "homebrew/services"
 tap "sass/sass"
 tap "snyk/tap"
+# Run your GitHub Actions locally
+brew "act"
 # GNU internationalization (i18n) and localization (l10n) library
 brew "gettext"
 # Library for command-line editing
@@ -104,6 +106,8 @@ brew "lsd"
 brew "lsix"
 # Powerful, lightweight programming language
 brew "lua"
+# Just-In-Time Compiler (JIT) for the Lua programming language
+brew "luajit"
 # Package manager for the Lua programming language
 brew "luarocks"
 # Utility for directing compilation
@@ -182,6 +186,8 @@ brew "yarn"
 brew "yazi"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
+# Feature-rich command-line audio/video downloader
+brew "yt-dlp"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 # UNIX shell (command interpreter)
