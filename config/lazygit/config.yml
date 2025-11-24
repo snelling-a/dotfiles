@@ -1,8 +1,8 @@
 git:
   overrideGpg: true
-  paging:
-    colorArg: always
-    pager: delta --dark --paging=never --true-color=always
+  pagers:
+    - colorArg: always
+      pager: delta --dark --paging=never --true-color=always
 gui:
   border: rounded
   nerdFontsVersion: "3"

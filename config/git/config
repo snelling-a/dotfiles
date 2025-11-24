@@ -138,7 +138,7 @@
   tool = nvimdiff
 
 [difftool "nvimdiff"]
-  cmd = "nvim -d $LOCAL $BASE $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J' -c 'set diffopt&' -c 'set diffopt+=algorithm:patience'"
+  cmd = "nvim -c \"packadd nvim.difftool\" -c \"DiffTool $LOCAL $REMOTE\""
 
 [difftool]
   prompt = false

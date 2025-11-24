@@ -12,5 +12,6 @@ if [ -z "$pid" ]; then
   exit 1
 fi
 
-echo "Found process $pid on port $1"
-kill -9 "$pid" && echo "Successfully killed process $pid"
+for pid in $pid; do
+  kill -9 "$pid" && echo "Successfully killed process $pid"
+done

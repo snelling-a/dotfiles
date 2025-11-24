@@ -117,6 +117,7 @@
 ._*
 ._zinit
 .apdisk
+.claude/
 .com.apple.timemachine.donotpresent
 .docusaurus
 .env
@@ -150,6 +151,7 @@
 .zsh_sessions
 /.idea/
 /.vscode/
+CLAUDE.md
 Icon
 Network Trash Folder
 Temporary Items
