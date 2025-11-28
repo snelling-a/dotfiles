@@ -26,6 +26,4 @@ PATH="$DOTFILES/scripts/local:$PATH"
 
 PATH="/usr/local/lib/ruby/gems/3.3.0/bin:$PATH"
 
-eval "$(fnm env --use-on-cd)"
-
 export PATH
