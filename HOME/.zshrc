@@ -46,3 +46,4 @@ source ${HOMEBREW_PREFIX:-/usr/local}/share/zsh-you-should-use/you-should-use.pl
 source ${HOMEBREW_PREFIX:-/usr/local}/share/zsh-autopair/autopair.zsh
 
 source <(fzf --zsh)
+eval "$(fnm env --use-on-cd --version-file-strategy=recursive)"
