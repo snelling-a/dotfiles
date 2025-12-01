@@ -126,6 +126,8 @@ brew "neovim", args: ["HEAD"]
 brew "ninja"
 # Command-line Git information tool
 brew "onefetch"
+# AI coding agent, built for the terminal
+brew "opencode"
 # Development kit for the Java programming language
 brew "openjdk"
 # Development kit for the Java programming language
@@ -171,7 +173,7 @@ brew "tree"
 # Language for application scale JavaScript development
 brew "typescript"
 # Vi 'workalike' with many additional features
-brew "vim", args: ["HEAD"]
+brew "vim"
 # Simple terminal image viewer written in Rust
 brew "viu"
 # Pager/text based browser
@@ -278,6 +280,8 @@ cask "signal"
 cask "slack"
 # Music streaming service
 cask "spotify"
+# Virtual machines UI using QEMU
+cask "utm"
 # Open-source code editor
 cask "visual-studio-code@insiders"
 # Multimedia player
