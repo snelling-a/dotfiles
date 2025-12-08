@@ -17,6 +17,7 @@ alias ~='cd ~'
 alias h='history'
 
 alias vim="nvim"
+alias mvim="NVIM_APPNAME=nvim/.worktrees/rewrite nvim"
 alias update_plugins="nvim --headless \"+Lazy! sync\" +qa"
 
 alias code="code-insiders"
