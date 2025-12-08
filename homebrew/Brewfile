@@ -4,8 +4,10 @@ tap "hashicorp/tap"
 tap "homebrew/autoupdate"
 tap "homebrew/bundle"
 tap "homebrew/services"
+tap "oven-sh/bun"
 tap "sass/sass"
 tap "snyk/tap"
+tap "theboredteam/boring-notch"
 # Run your GitHub Actions locally
 brew "act"
 # GNU internationalization (i18n) and localization (l10n) library
@@ -50,6 +52,8 @@ brew "docker-compose"
 brew "fastfetch"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
+# OCR (Optical Character Recognition) engine
+brew "tesseract"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
 # Fast and simple Node.js version manager
@@ -106,8 +110,6 @@ brew "lsd"
 brew "lsix"
 # Powerful, lightweight programming language
 brew "lua"
-# Just-In-Time Compiler (JIT) for the Lua programming language
-brew "luajit"
 # Package manager for the Lua programming language
 brew "luarocks"
 # Utility for directing compilation
@@ -170,6 +172,8 @@ brew "tmux"
 brew "trash"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Parser generator tool
+brew "tree-sitter-cli"
 # Language for application scale JavaScript development
 brew "typescript"
 # Vi 'workalike' with many additional features
@@ -206,6 +210,12 @@ brew "zsh-history-substring-search"
 brew "zsh-syntax-highlighting"
 # ZSH plugin that reminds you to use existing aliases for commands you just typed
 brew "zsh-you-should-use"
+# Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
+brew "oven-sh/bun/bun"
+# Stylesheet Preprocessor
+brew "sass/sass/sass"
+# Find & fix known vulnerabilities in open-source dependencies
+brew "snyk/tap/snyk"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Command-line interface for 1Password
@@ -216,6 +226,8 @@ cask "adguard"
 cask "alacritty"
 # Application uninstaller
 cask "appcleaner"
+# Not so boring notch That Rocks 🎸🎶 
+cask "boring-notch"
 # Web browser focusing on privacy
 cask "brave-browser"
 # OpenAI's official ChatGPT desktop app
@@ -254,6 +266,8 @@ cask "logi-options+"
 cask "microsoft-auto-update"
 # Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
+# Visual tool to design, develop and administer MySQL servers
+cask "mysqlworkbench"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
 # App to write, plan, collaborate, and get organised
@@ -316,22 +330,29 @@ vscode "graphql.vscode-graphql"
 vscode "graphql.vscode-graphql-syntax"
 vscode "jock.svg"
 vscode "johnnymorganz.stylua"
+vscode "laktak.hjson"
 vscode "mariusalchimavicius.json-to-ts"
 vscode "mattpocock.ts-error-translator"
 vscode "meta.relay"
 vscode "mjmlio.vscode-mjml"
+vscode "ms-azuretools.vscode-containers"
+vscode "ms-azuretools.vscode-docker"
 vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vscode.azure-repos"
 vscode "ms-vscode.remote-repositories"
+vscode "ms-vsliveshare.vsliveshare"
 vscode "oouo-diogo-perdigao.docthis"
 vscode "petli-full.json-to-yaml-and-more"
 vscode "planbcoding.vscode-react-refactor"
 vscode "postman.postman-for-vscode"
 vscode "redhat.vscode-yaml"
+vscode "ritwickdey.liveserver"
 vscode "shd101wyy.markdown-preview-enhanced"
 vscode "simonsiefke.svg-preview"
 vscode "snyk-security.snyk-vulnerability-scanner"
 vscode "sonarsource.sonarlint-vscode"
 vscode "sumneko.lua"
+vscode "tanh.hjson-formatter"
 vscode "timonwong.shellcheck"
 vscode "yoavbls.pretty-ts-errors"
 go "github.com/noperator/jqfmt/cmd/jqfmt"
