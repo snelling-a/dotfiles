@@ -155,7 +155,7 @@ CLAUDE.md
 Icon
 Network Trash Folder
 Temporary Items
-build*
+build/
 jspm_packages/
 lerna-debug.log*
 logs
