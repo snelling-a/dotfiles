@@ -8,12 +8,11 @@ tap "oven-sh/bun"
 tap "sass/sass"
 tap "snyk/tap"
 tap "theboredteam/boring-notch"
+tap "xenodium/one"
 # Run your GitHub Actions locally
 brew "act"
 # GNU internationalization (i18n) and localization (l10n) library
 brew "gettext"
-# Library for command-line editing
-brew "readline"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Programmable completion for Bash 4.2+
@@ -52,8 +51,6 @@ brew "docker-compose"
 brew "fastfetch"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
-# OCR (Optical Character Recognition) engine
-brew "tesseract"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
 # Fast and simple Node.js version manager
@@ -80,7 +77,7 @@ brew "glab"
 brew "glow"
 # GNU implementation of the famous stream editor
 brew "gnu-sed"
-# GNU Pretty Good Privacy (PGP) package
+# GNU Privacy Guard (OpenPGP)
 brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
@@ -112,6 +109,8 @@ brew "lsd"
 brew "lsix"
 # Powerful, lightweight programming language
 brew "lua"
+# Just-In-Time Compiler (JIT) for the Lua programming language
+brew "luajit"
 # Package manager for the Lua programming language
 brew "luarocks"
 # Utility for directing compilation
@@ -130,6 +129,8 @@ brew "neovim", args: ["HEAD"]
 brew "ninja"
 # Command-line Git information tool
 brew "onefetch"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
 # AI coding agent, built for the terminal
 brew "opencode"
 # Development kit for the Java programming language
@@ -154,8 +155,6 @@ brew "python-gdbm@3.11"
 brew "python-tk@3.11"
 # Messaging and streaming broker
 brew "rabbitmq"
-# Search tool like grep and The Silver Searcher
-brew "ripgrep"
 # Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
 brew "ruby-install"
 # Fast and accurate code counter with complexity and COCOMO estimates
@@ -212,12 +211,6 @@ brew "zsh-history-substring-search"
 brew "zsh-syntax-highlighting"
 # ZSH plugin that reminds you to use existing aliases for commands you just typed
 brew "zsh-you-should-use"
-# Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
-brew "oven-sh/bun/bun"
-# Stylesheet Preprocessor
-brew "sass/sass/sass"
-# Find & fix known vulnerabilities in open-source dependencies
-brew "snyk/tap/snyk"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Command-line interface for 1Password
