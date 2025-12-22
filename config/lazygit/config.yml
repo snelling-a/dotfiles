@@ -13,7 +13,8 @@ gui:
       - reverse
 keybinding:
   universal:
-    openFile: <disabled>
     optionMenu: '?'
     optionMenu-alt1: '?'
 notARepository: quit
+os:
+  editPreset: nvim-remote
