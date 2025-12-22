@@ -39,7 +39,7 @@ fi
 echo "Checking for outdated casks..."
 if [[ -n "$(brew outdated --cask --greedy)" ]]; then
   echo "Upgrading casks..."
-  brew upgrade --cask --greedy --no-quarantine 2>&1 |
+  brew upgrade --cask --greedy 2>&1 |
     awk '!/Not upgrading .*installer manual/ && !/^[[:space:]]*[[:alnum:]_\-]+$/' || true
 else
   echo "Casks up to date."
