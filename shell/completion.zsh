@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+FPATH=${XDG_DATA_HOME:-$HOME/.local/share}/zsh_completion:$FPATH
+
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
   export FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
@@ -13,7 +15,7 @@ setopt COMPLETE_IN_WORD
 
 
 # zstyle ':completion:*' completer _extensions _complete _approximate
-zstyle ':completion:*' completer _expand _complete _files _correct _approximate
+zstyle ':completion:*' completer _expand _complete _correct _approximate
 zstyle ':completion:*' verbose yes
 zstyle ':completion:*' insert-tab pending
 
@@ -49,9 +51,10 @@ bindkey "^I" expand-or-complete-with-dots
 
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
-FPATH=${XDG_DATA_HOME:-$HOME/.local/share}/zsh_completion:$FPATH
 eval "$(op completion zsh)"; compdef _op op
 
 if command -v ngrok &>/dev/null; then
     eval "$(ngrok completion)"
 fi
+
+source ${XDG_DATA_HOME:-$HOME/.local/share}/zsh_completion/_npm 2>/dev/null
