@@ -83,8 +83,6 @@ brew "gnupg"
 brew "go"
 # Kubernetes package manager
 brew "helm"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.13"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
 # Lightweight and flexible command-line JSON processor
@@ -97,8 +95,6 @@ brew "lazygit"
 brew "lazysql"
 # General purpose TCP-IP emulator
 brew "libslirp"
-# Linux virtual machines
-brew "lima"
 # Next-gen compiler infrastructure
 brew "llvm"
 # Next-gen compiler infrastructure
@@ -123,6 +119,8 @@ brew "node"
 brew "mongosh"
 # Open source relational database management system
 brew "mysql"
+# Fast, highly customisable system info script
+brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim", args: ["HEAD"]
 # Small build system for use with gyp or CMake
@@ -289,6 +287,8 @@ cask "signal"
 cask "slack"
 # Music streaming service
 cask "spotify"
+# Manage the data on children's Ravensburger tip toi audio pen
+cask "tiptoi-manager"
 # Virtual machines UI using QEMU
 cask "utm"
 # Open-source code editor
