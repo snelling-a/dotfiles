@@ -7,6 +7,11 @@ stty sane
 set -o vi
 bindkey -v
 
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '^X^E' edit-command-line
+bindkey -M vicmd 'v' edit-command-line
+
 setopt APPEND_HISTORY
 setopt AUTOCD
 setopt EXTENDED_HISTORY
