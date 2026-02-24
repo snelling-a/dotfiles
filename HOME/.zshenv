@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # vim:filetype=sh
-
+eval "$(/opt/homebrew/bin/brew shellenv)"
 export DO_NOT_TRACK=1
 
 export PATH="${HOME}/.local/bin:$PATH"
