@@ -44,14 +44,14 @@ brew "curl"
 # Secure runtime for JavaScript and TypeScript
 brew "deno"
 # Pack, ship and run any application as a lightweight container
-brew "docker", link: false
+brew "docker"
 # Isolated development environments using Docker
 brew "docker-compose"
 # Like neofetch, but much faster because written mostly in C
 brew "fastfetch"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
-# Play, record, convert, and stream audio and video
+# Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
 # Fast and simple Node.js version manager
 brew "fnm"
@@ -83,7 +83,7 @@ brew "gnupg"
 brew "go"
 # Kubernetes package manager
 brew "helm"
-# Tools and libraries to manipulate images in many formats
+# Tools and libraries to manipulate images in select formats
 brew "imagemagick"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
@@ -93,6 +93,8 @@ brew "kubernetes-cli"
 brew "lazygit"
 # Cross-platform TUI database management tool
 brew "lazysql"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.13"
 # General purpose TCP-IP emulator
 brew "libslirp"
 # Next-gen compiler infrastructure
@@ -220,7 +222,7 @@ cask "alacritty"
 # Application uninstaller
 cask "appcleaner"
 # Not so boring notch That Rocks 🎸🎶 
-cask "boring-notch"
+cask "theboredteam/boring-notch/boring-notch"
 # Web browser focusing on privacy
 cask "brave-browser"
 # OpenAI's official ChatGPT desktop app
@@ -316,7 +318,6 @@ vscode "dwenegar.vscode-luacheck"
 vscode "eamodio.gitlens"
 vscode "editorconfig.editorconfig"
 vscode "esbenp.prettier-vscode"
-vscode "github.copilot"
 vscode "github.copilot-chat"
 vscode "github.github-vscode-theme"
 vscode "github.remotehub"
