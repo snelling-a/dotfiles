@@ -1,7 +1,9 @@
 background-blur-radius = 21
 background-opacity = 0.8
 
-bold-is-bright = true
+selection-invert-fg-bg = true
+
+bold-color = bright
 
 clipboard-read = allow
 
@@ -25,5 +27,6 @@ theme = light:base16-default-light,dark:base16-default-dark
 unfocused-split-fill = 000000
 unfocused-split-opacity = 0.5
 
-keybind = super+ctrl+equal=equalize_splits
 keybind = shift+enter=text:\n
+keybind = super+ctrl+equal=equalize_splits
+keybind = super+shift+p=toggle_command_palette
