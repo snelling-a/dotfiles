@@ -31,7 +31,7 @@ brew update
 echo "Checking for outdated formulae..."
 if [[ -n "$(brew outdated --formula)" ]]; then
   echo "Upgrading formulae..."
-  brew upgrade --fetch-HEAD
+  brew upgrade --fetch-HEAD || true
 else
   echo "Formulae up to date."
 fi
@@ -63,21 +63,14 @@ else
   echo "Brewfile already up to date."
 fi
 
-echo "Updating Yazi + Neovim..."
+echo "Updating Yazi..."
 (
-  ya pkg upgrade >/dev/null 2>&1 &&
-    taplo fmt "$DOTFILES"/**/*.toml --config "$DOTFILES"/.taplo.toml &
-) &
-(
-  nvim --headless "+Lazy! sync" -c "qall!" >/dev/null 2>&1
+  cd "$DOTFILES" &&
+    ya pkg upgrade >/dev/null 2>&1 &&
+    taplo fmt --config "$DOTFILES"/.taplo.toml
 ) &
 wait
 
 git_commit_push "$DOTFILES" "$DOTFILES/config/yazi/package.toml" "(yazi): update packages"
-git_commit_push "$DOTFILES/config/nvim" "$DOTFILES/config/nvim/lazy-lock.json" ": update plugins"
-
-echo "Updating spellfile..."
-nvim --headless +'lua require("user.autocmd").sort_spellfile()' +qall! >/dev/null 2>&1
-git_commit_push "$DOTFILES/config/nvim" "$DOTFILES/config/nvim/spell" "(spell): update spellfile"
 
 printf "\nDone!\nHappy Hacking, %s 🚀\n" "$(whoami)"
