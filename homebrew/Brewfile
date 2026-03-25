@@ -102,6 +102,8 @@ brew "lsd"
 brew "lsix"
 # Powerful, lightweight programming language
 brew "lua"
+# Tool for linting and static analysis of Lua code
+brew "luacheck"
 # Just-In-Time Compiler (JIT) for the Lua programming language
 brew "luajit"
 # Package manager for the Lua programming language
@@ -144,6 +146,8 @@ brew "python-tk@3.11"
 brew "ruby-install"
 # Fast and accurate code counter with complexity and COCOMO estimates
 brew "scc"
+# 7-Zip is a file archiver with a high compression ratio
+brew "sevenzip"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
 # Cross-shell prompt for astronauts
