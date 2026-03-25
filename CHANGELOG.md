@@ -1,5 +1,43 @@
 # Changelog
 
+## [4.21.0](https://github.com/snelling-a/dotfiles/compare/v4.20.1...v4.21.0) (2026-03-25)
+
+
+### Features
+
+* **ghostty:** insert line keybind ([cbadc5d](https://github.com/snelling-a/dotfiles/commit/cbadc5ddcc5b76a38a64b1b1700b55970aadbf5f))
+* **git:** difftool ([1d3d270](https://github.com/snelling-a/dotfiles/commit/1d3d2703f23d088ef4ac6efd618689893e8fee75))
+* ignore claude files ([0484c18](https://github.com/snelling-a/dotfiles/commit/0484c187bcb6ccf9de51ce0427679c0065528296))
+* mkcd ([de132ab](https://github.com/snelling-a/dotfiles/commit/de132abd2ad70bedda5626261174d31ac1d31c79))
+* obsidian cli ([86e3be6](https://github.com/snelling-a/dotfiles/commit/86e3be6470c8c7d980497b2971ddcef9f761c361))
+* rewrite alias ([f2f7ee3](https://github.com/snelling-a/dotfiles/commit/f2f7ee34a830c4b6852a6f217fbc40a91bb172b3))
+* **sh:** brewclean ([bc45c64](https://github.com/snelling-a/dotfiles/commit/bc45c6434743a78861464f3093e37384ab8d68fc))
+* **sh:** enable edit-command-line ([82c1294](https://github.com/snelling-a/dotfiles/commit/82c1294519612d7570e6dda148ac8cf50b0de136))
+
+
+### Bug Fixes
+
+* brew fetch-HEAD ([ad3e6cd](https://github.com/snelling-a/dotfiles/commit/ad3e6cdd7b520066ad13b7d5d9f567e51af50538))
+* **brew:** don't commit brewfile ([dbecce6](https://github.com/snelling-a/dotfiles/commit/dbecce6131c06f0d9311d5f93dbcb5a22b0e413f))
+* **brew:** source brew shellenv ([529585b](https://github.com/snelling-a/dotfiles/commit/529585b56f171e45f38b088802316fffb2890c8e))
+* **brew:** uncomment commit logic ([635600a](https://github.com/snelling-a/dotfiles/commit/635600a1c185fd7dc120a5558104aff5f82f1d26))
+* **git:** config ft ([e519fb3](https://github.com/snelling-a/dotfiles/commit/e519fb3bfd8a664ad614666c62adc7f5556ff367))
+* global gitignore ([7684fef](https://github.com/snelling-a/dotfiles/commit/7684fefb88cd55ed825ffd36c78f16fa841b9346))
+* npm completions ([bd6cc59](https://github.com/snelling-a/dotfiles/commit/bd6cc599dc77981b0a6551d9c942ef00bbf64d07))
+* **nvim:** commit lazy-lock.json ([c22e575](https://github.com/snelling-a/dotfiles/commit/c22e575b25eaa0144032ab0b187c74a68fae2923))
+* **rg:** global ignore .git ([9b0c4d2](https://github.com/snelling-a/dotfiles/commit/9b0c4d2f2e3090c65bf88f5b80c9f17d86cce859))
+* **sh:** killport ([68f5143](https://github.com/snelling-a/dotfiles/commit/68f51436f8423c6e3606847703cf8b9bf6af576d))
+* **sh:** recursive globbing in quotes ([203ae59](https://github.com/snelling-a/dotfiles/commit/203ae59051fa4141301be9cfbff064d5b7de6fa6))
+* toml formatting ([f0b5c07](https://github.com/snelling-a/dotfiles/commit/f0b5c0742ef245f0170bae4f8bb85fa55be9af3f))
+
+
+### Performance Improvements
+
+* **brew:** cleanup ([cef8f5f](https://github.com/snelling-a/dotfiles/commit/cef8f5f5c3755f6bdc86c05d41348e48134ae95c))
+* **packages:** update brewup script ([f51c684](https://github.com/snelling-a/dotfiles/commit/f51c684e2111937730940877bf165bfd60e5d23e))
+* remove duplicated fnm eval ([632b117](https://github.com/snelling-a/dotfiles/commit/632b1179fe574645d9031b56e1ba95124fa5ce2d))
+* **sh:** path duplicates ([7a545ce](https://github.com/snelling-a/dotfiles/commit/7a545ce113b943d8d2b945612f8d95c57327626c))
+
 ## [4.20.1](https://github.com/snelling-a/dotfiles/compare/v4.20.0...v4.20.1) (2025-07-14)
 
 
