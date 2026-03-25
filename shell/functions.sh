@@ -13,3 +13,7 @@ list_env() {
 
 # pull gitignore template
 gi() { curl -sLw n "https://www.toptal.com/developers/gitignore/api/$*"; }
+
+mkcd() {
+  mkdir -p "$1" && cd "$1" || exit
+}
