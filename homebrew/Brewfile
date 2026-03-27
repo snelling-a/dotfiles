@@ -110,6 +110,8 @@ brew "luajit"
 brew "luarocks"
 # Utility for directing compilation
 brew "make"
+# Deep clean and optimize your Mac
+brew "mole"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim", args: ["HEAD"]
 # Small build system for use with gyp or CMake
