@@ -3,6 +3,8 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export DO_NOT_TRACK=1
 
+export TZ="UTC"
+
 export PATH="${HOME}/.local/bin:$PATH"
 
 export DOTFILES="$HOME/dotfiles"
