@@ -145,7 +145,6 @@
   "git.mergeEditor": true,
   "git.openRepositoryInParentFolders": "always",
   "github.gitProtocol": "ssh",
-  "gitlens.codeLens.enabled": false,
   "gitlens.currentLine.enabled": false,
   "gitlens.telemetry.enabled": false,
   "js/ts.inlayHints.enumMemberValues.enabled": true,
@@ -178,7 +177,6 @@
   ],
   "totalTypeScript.hideAllTips": false,
   "totalTypeScript.hideBasicTips": true,
-  "vscode-neovim.NVIM_APPNAME": "nvim/.worktrees/rewrite",
   "window.autoDetectColorScheme": true,
   "workbench.colorTheme": "Base16 Default Dark",
   "workbench.editorAssociations": {
