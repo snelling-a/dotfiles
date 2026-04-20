@@ -83,6 +83,12 @@ defaults write com.apple.touchbar.agent PresentationModeFnModes -dict \
 # Use F1, F2, etc. as standard function keys
 defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true
 
+# Swap Caps Lock and Control (all keyboards)
+defaults -currentHost write -g com.apple.keyboard.modifiermapping.0-0-0 -array \
+  '<dict><key>HIDKeyboardModifierMappingDst</key><integer>30064771129</integer><key>HIDKeyboardModifierMappingSrc</key><integer>30064771296</integer></dict>' \
+  '<dict><key>HIDKeyboardModifierMappingDst</key><integer>30064771300</integer><key>HIDKeyboardModifierMappingSrc</key><integer>30064771129</integer></dict>' \
+  '<dict><key>HIDKeyboardModifierMappingDst</key><integer>30064771129</integer><key>HIDKeyboardModifierMappingSrc</key><integer>30064771300</integer></dict>'
+
 # Increase sound quality for Bluetooth headphones/headsets
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
