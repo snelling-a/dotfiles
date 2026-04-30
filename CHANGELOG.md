@@ -1,5 +1,26 @@
 # Changelog
 
+## [4.22.0](https://github.com/snelling-a/dotfiles/compare/v4.21.0...v4.22.0) (2026-04-30)
+
+
+### Features
+
+* gh stats ([7d1afe5](https://github.com/snelling-a/dotfiles/commit/7d1afe5ce0478c39dbbbb10e01d8bb74ab76ddf8))
+* **macos:** automate caps lock / control swap ([91ad090](https://github.com/snelling-a/dotfiles/commit/91ad0904b1a3bdf8935b2d9647ece112f737aec6))
+* mole ([b62cbe7](https://github.com/snelling-a/dotfiles/commit/b62cbe7c5bdc8f8fc687525538fa3267d06cc3f0))
+* set tz ([9a46564](https://github.com/snelling-a/dotfiles/commit/9a46564ddeb96baeb62212228b88a26f37c2b80e))
+
+
+### Bug Fixes
+
+* ssh keys for install ([1ad8b01](https://github.com/snelling-a/dotfiles/commit/1ad8b0120b86b1a1100d3a019e7fccb449fcf789))
+* **yazi:** outputting temp dir ([61c08c0](https://github.com/snelling-a/dotfiles/commit/61c08c050fa944aa17b36f33531ee2fbe180ad42))
+
+
+### Reverts
+
+* **sh:** onefetch on cd ([ae443d7](https://github.com/snelling-a/dotfiles/commit/ae443d760da1430ea43e703213bbc59615093ca1))
+
 ## [4.21.0](https://github.com/snelling-a/dotfiles/compare/v4.20.1...v4.21.0) (2026-03-25)
 
 
