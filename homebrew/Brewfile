@@ -266,8 +266,6 @@ cask "signal"
 cask "slack"
 # Music streaming service
 cask "spotify"
-# Manage the data on children's Ravensburger tip toi audio pen
-cask "tiptoi-manager"
 # Virtual machines UI using QEMU
 cask "utm"
 # Open-source code editor
@@ -323,4 +321,3 @@ vscode "sumneko.lua"
 vscode "tanh.hjson-formatter"
 vscode "timonwong.shellcheck"
 vscode "yoavbls.pretty-ts-errors"
-go "github.com/noperator/jqfmt/cmd/jqfmt"
