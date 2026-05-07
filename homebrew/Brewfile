@@ -1,13 +1,17 @@
 tap "fsouza/prettierd"
 tap "hashicorp/tap"
 tap "homebrew/autoupdate"
-tap "homebrew/bundle"
-tap "homebrew/services"
 tap "oven-sh/bun"
 tap "sass/sass"
 tap "theboredteam/boring-notch"
 # Run your GitHub Actions locally
 brew "act"
+# YAML Parser
+brew "libyaml"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.13"
+# Microsoft Azure CLI 2.0
+brew "azure-cli"
 # GNU internationalization (i18n) and localization (l10n) library
 brew "gettext"
 # Bourne-Again SHell, a UNIX command interpreter
@@ -26,8 +30,6 @@ brew "chafa"
 brew "chruby"
 # Cross-platform make
 brew "cmake"
-# YAML Parser
-brew "libyaml"
 # Powerful, clean, object-oriented scripting language
 brew "ruby"
 # Dependency manager for Cocoa projects
@@ -88,8 +90,8 @@ brew "jq"
 brew "kubernetes-cli"
 # Simple terminal UI for git commands
 brew "lazygit"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.13"
+# Postgres C API library
+brew "libpq"
 # General purpose TCP-IP emulator
 brew "libslirp"
 # Next-gen compiler infrastructure
@@ -152,6 +154,8 @@ brew "scc"
 brew "sevenzip"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
+# SOcket CAT: netcat on steroids
+brew "socat"
 # Cross-shell prompt for astronauts
 brew "starship"
 # Very fast implementation of tldr in Rust
@@ -202,6 +206,8 @@ brew "zsh-history-substring-search"
 brew "zsh-syntax-highlighting"
 # ZSH plugin that reminds you to use existing aliases for commands you just typed
 brew "zsh-you-should-use"
+# Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
+brew "oven-sh/bun/bun"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Command-line interface for 1Password
@@ -220,6 +226,8 @@ cask "claude"
 cask "claude-code"
 # AI code review CLI
 cask "coderabbit"
+# Command-line agent for Cursor
+cask "cursor-cli"
 # Universal database tool and SQL client
 cask "dbeaver-community"
 # AI-powered translator
@@ -232,6 +240,7 @@ cask "docker-desktop"
 cask "duckduckgo"
 # Web browser
 cask "firefox"
+cask "font-iosevka-aile"
 cask "font-iosevka-etoile"
 cask "font-iosevka-nerd-font"
 cask "font-iosevka-ss15"
@@ -240,8 +249,8 @@ cask "font-symbols-only-nerd-font"
 cask "ghostty"
 # Web browser
 cask "google-chrome"
-# Interface for reading and syncing eBooks
-cask "kindle"
+# App to manage software development and track bugs
+cask "linear"
 # Software for Logitech devices
 cask "logi-options+"
 # Reverse proxy, secure introspectable tunnels to localhost
