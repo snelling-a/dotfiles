@@ -134,10 +134,10 @@ install_gh() {
 
 setup_ssh_keys() {
   local ssh_dir="$HOME/.ssh"
-  
+
   if [[ -f "$ssh_dir/id_ed25519" || -f "$ssh_dir/id_rsa" ]]; then
     print "SSH keys already exist"
-    
+
     # Try to add existing keys to ssh-agent
     if [[ -f "$ssh_dir/id_ed25519" ]]; then
       ssh-add "$ssh_dir/id_ed25519" 2>/dev/null || true
@@ -145,21 +145,21 @@ setup_ssh_keys() {
     if [[ -f "$ssh_dir/id_rsa" ]]; then
       ssh-add "$ssh_dir/id_rsa" 2>/dev/null || true
     fi
-    
+
     return
   fi
 
   print "SSH keys not found in ~/.ssh directory"
   print "Please retrieve your SSH private key from 1Password and place it in ~/.ssh/"
   print "Typically named id_ed25519 or id_rsa"
-  
+
   # Create .ssh directory if it doesn't exist
   mkdir -p "$ssh_dir"
   chmod 700 "$ssh_dir"
-  
+
   print "Once you've placed your SSH key file, press Enter to continue..."
   read -r
-  
+
   # Try to add the key to ssh-agent
   if [[ -f "$ssh_dir/id_ed25519" ]]; then
     ssh-add "$ssh_dir/id_ed25519"
@@ -299,7 +299,6 @@ main() {
   link_vimdir
   setup_vscode
   generate_zsh_completions
-  setup_fzf
   install_local
   check_for_backups
   setup_macos_defaults
