@@ -8,13 +8,11 @@ gui:
   nerdFontsVersion: "3"
   showBottomLine: false
   showIcons: true
+  sidePanelWidth: 0.2
   theme:
     selectedLineBgColor:
       - reverse
-keybinding:
-  universal:
-    optionMenu: '?'
-    optionMenu-alt1: '?'
+  wrapLinesInStagingView: false
 notARepository: quit
 os:
   editPreset: nvim-remote
