@@ -220,8 +220,6 @@ cask "alacritty"
 cask "theboredteam/boring-notch/boring-notch"
 # Web browser focusing on privacy
 cask "brave-browser"
-# Anthropic's official Claude AI desktop app
-cask "claude"
 # Terminal-based AI coding assistant
 cask "claude-code"
 # AI code review CLI
