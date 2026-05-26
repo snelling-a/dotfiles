@@ -289,6 +289,8 @@ cask "windscribe"
 cask "zen"
 # Video communication and virtual meeting platform
 cask "zoom"
+npm "corepack"
+npm "neovim"
 vscode "asvetliakov.vscode-neovim"
 vscode "betafcc.ts-reveal-types"
 vscode "bierner.markdown-mermaid"
