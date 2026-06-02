@@ -71,10 +71,10 @@
 *.sitx
 *.sqx
 *.swp
-*.tar.Z
 *.tar.bz2
 *.tar.gz
 *.tar.lzma
+*.tar.Z
 *.tbz2
 *.tgz
 *.tlz
@@ -103,23 +103,18 @@
 *.zz
 *coverage/
 *zcompdump*
-.AppleDB
-.AppleDesktop
-.AppleDouble
-.DS_*
-.DS_Store
-.DocumentRevisions-V100
-.LSOverride
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
 ._*
 ._zinit
 .apdisk
-.claude/
+.AppleDB
+.AppleDesktop
+.AppleDouble
+.claude/settings.local.json
 .com.apple.timemachine.donotpresent
+.DocumentRevisions-V100
 .docusaurus
+.DS_*
+.DS_Store
 .env
 .env.development.local
 .env.local
@@ -136,7 +131,11 @@
 .nyc_output
 .pnp.*
 .pnpm-debug.log*
+.Spotlight-V100
 .stylelintcache
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
 .vscode/*
 .worktrees/*
 .yarn-integrity
@@ -151,19 +150,18 @@
 .zsh_sessions
 /.idea/
 /.vscode/
-CLAUDE.md
-Icon
-Network Trash Folder
-Temporary Items
 build/
+Icon
 jspm_packages/
 lerna-debug.log*
 logs
+Network Trash Folder
 node_modules/
 npm-debug.log*
 pids
 postman.js
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+Temporary Items
 vim_tags*
 yarn-debug.log*
 yarn-error.log*
