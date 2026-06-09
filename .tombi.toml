@@ -1,0 +1,5 @@
+[format.rules]
+  group-blank-lines-limit         = 1
+  indent-sub-tables               = true
+  indent-table-key-value-pairs    = true
+  key-value-equals-sign-alignment = true

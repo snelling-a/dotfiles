@@ -4,15 +4,10 @@ on:
       - main
   pull_request:
 jobs:
-  TAPLO:
-    name: Taplo
+  TOMBI:
+    name: Tombi
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - uses: actions-rs/install@v0.1
-        with:
-          crate: taplo-cli
-          version: latest
-      - run: |
-          echo "Linting with Taplo"
-          taplo fmt --check
+      - uses: tombi-toml/setup-tombi@v1.1.2
+      - run: tombi lint
