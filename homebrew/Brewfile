@@ -1,9 +1,7 @@
-tap "fsouza/prettierd"
-tap "hashicorp/tap"
-tap "homebrew/autoupdate"
-tap "oven-sh/bun"
-tap "sass/sass"
-tap "theboredteam/boring-notch"
+tap "dmtrkovalenko/fff", "https://github.com/dmtrKovalenko/homebrew-fff"
+tap "modem-dev/tap"
+tap "oven-sh/bun", trusted: true
+tap "theboredteam/boring-notch", trusted: true
 # Run your GitHub Actions locally
 brew "act"
 # YAML Parser
@@ -31,7 +29,7 @@ brew "chruby"
 # Cross-platform make
 brew "cmake"
 # Powerful, clean, object-oriented scripting language
-brew "ruby"
+brew "ruby", link: false
 # Dependency manager for Cocoa projects
 brew "cocoapods"
 # GNU File, Shell, and Text utilities
@@ -43,9 +41,11 @@ brew "curl"
 # Secure runtime for JavaScript and TypeScript
 brew "deno"
 # Pack, ship and run any application as a lightweight container
-brew "docker"
+brew "docker", link: false
 # Isolated development environments using Docker
 brew "docker-compose"
+# Powerful, lightweight programming language
+brew "lua"
 # Like neofetch, but much faster because written mostly in C
 brew "fastfetch"
 # Simple, fast and user-friendly alternative to find
@@ -102,8 +102,6 @@ brew "llvm@17"
 brew "lsd"
 # Shows thumbnails in terminal using sixel graphics
 brew "lsix"
-# Powerful, lightweight programming language
-brew "lua"
 # Tool for linting and static analysis of Lua code
 brew "luacheck"
 # Just-In-Time Compiler (JIT) for the Lua programming language
@@ -172,6 +170,8 @@ brew "trash"
 brew "tree"
 # Language for application scale JavaScript development
 brew "typescript"
+# Language Server Protocol implementation for TypeScript wrapping tsserver
+brew "typescript-language-server"
 # Vi 'workalike' with many additional features
 brew "vim"
 # Simple terminal image viewer written in Rust
@@ -206,6 +206,10 @@ brew "zsh-history-substring-search"
 brew "zsh-syntax-highlighting"
 # ZSH plugin that reminds you to use existing aliases for commands you just typed
 brew "zsh-you-should-use"
+# Fast file search toolkit for AI agents (MCP server)
+brew "dmtrkovalenko/fff/fff-mcp", trusted: true
+# Desktop-inspired terminal diff viewer for agent-authored changesets
+brew "modem-dev/tap/hunk", trusted: true
 # Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
 brew "oven-sh/bun/bun"
 # Password manager that keeps all passwords secure behind one password
@@ -265,8 +269,6 @@ cask "postman"
 cask "rar"
 # Control your tools with a few keystrokes
 cask "raycast"
-# Tool for sending personal documents to Kindles from Macs
-cask "send-to-kindle"
 # Instant messaging application focusing on security
 cask "signal"
 # Team communication and collaboration software
@@ -289,7 +291,9 @@ cask "windscribe"
 cask "zen"
 # Video communication and virtual meeting platform
 cask "zoom"
+npm "@termdraw/app"
 npm "corepack"
+npm "defuddle"
 npm "neovim"
 vscode "asvetliakov.vscode-neovim"
 vscode "betafcc.ts-reveal-types"
