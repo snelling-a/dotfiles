@@ -1,5 +1,30 @@
 # Changelog
 
+## [4.22.0](https://github.com/snelling-a/dotfiles/compare/v4.21.0...v4.22.0) (2026-06-22)
+
+
+### Features
+
+* gh stats ([7d1afe5](https://github.com/snelling-a/dotfiles/commit/7d1afe5ce0478c39dbbbb10e01d8bb74ab76ddf8))
+* **macos:** automate caps lock / control swap ([91ad090](https://github.com/snelling-a/dotfiles/commit/91ad0904b1a3bdf8935b2d9647ece112f737aec6))
+* mole ([b62cbe7](https://github.com/snelling-a/dotfiles/commit/b62cbe7c5bdc8f8fc687525538fa3267d06cc3f0))
+* set tz ([9a46564](https://github.com/snelling-a/dotfiles/commit/9a46564ddeb96baeb62212228b88a26f37c2b80e))
+* taplo =&gt; tombi ([d2794c9](https://github.com/snelling-a/dotfiles/commit/d2794c94a9a35bcc54eab70241103d67213dc175))
+
+
+### Bug Fixes
+
+* **sh:** pam ([90d24fa](https://github.com/snelling-a/dotfiles/commit/90d24fac2505ca74c1826a5588f44655f3a3adfe))
+* ssh keys for install ([1ad8b01](https://github.com/snelling-a/dotfiles/commit/1ad8b0120b86b1a1100d3a019e7fccb449fcf789))
+* **yazi:** outputting temp dir ([61c08c0](https://github.com/snelling-a/dotfiles/commit/61c08c050fa944aa17b36f33531ee2fbe180ad42))
+
+
+### Reverts
+
+* onefetch on z ([bab6a72](https://github.com/snelling-a/dotfiles/commit/bab6a72aa5386680d6c80387e9bdd83ce56fb641))
+* **packages:** don't auto commit ([40976bb](https://github.com/snelling-a/dotfiles/commit/40976bbe8be967733855f7f67475380b405f5c77))
+* **sh:** onefetch on cd ([ae443d7](https://github.com/snelling-a/dotfiles/commit/ae443d760da1430ea43e703213bbc59615093ca1))
+
 ## [4.21.0](https://github.com/snelling-a/dotfiles/compare/v4.20.1...v4.21.0) (2026-03-25)
 
 
