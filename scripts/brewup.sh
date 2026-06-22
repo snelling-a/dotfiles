@@ -4,20 +4,6 @@ set -euo pipefail
 : "${DOTFILES:?DOTFILES env var not set}"
 : "${HOMEBREW_BUNDLE_FILE:?HOMEBREW_BUNDLE_FILE env var not set}"
 
-# @param dir directory of the git repo
-# @param target file or directory to add/commit/push
-# @param message commit message suffix
-git_commit_push() {
-  local dir="$1" target="$2" message="$3"
-  git -C "$dir" add "$target"
-  if ! git -C "$dir" diff --cached --quiet; then
-    git -C "$dir" commit -m "chore$message"
-    git -C "$dir" push
-  else
-    echo "Nothing to commit in $target"
-  fi
-}
-
 sudo -v
 while true; do
   sudo -n true
@@ -51,7 +37,7 @@ brew cleanup --prune=30 --scrub
 echo "Homebrew fully updated."
 
 TMP_BUNDLE=$(mktemp)
-brew bundle dump --force --describe --file="$TMP_BUNDLE"
+brew bundle dump --force --file="$TMP_BUNDLE"
 
 if ! cmp -s "$TMP_BUNDLE" "$HOMEBREW_BUNDLE_FILE"; then
   echo "Updating Brewfile..."
@@ -70,7 +56,5 @@ echo "Updating Yazi..."
     taplo fmt --config "$DOTFILES"/.taplo.toml
 ) &
 wait
-
-git_commit_push "$DOTFILES" "$DOTFILES/config/yazi/package.toml" "(yazi): update packages"
 
 printf "\nDone!\nHappy Hacking, %s 🚀\n" "$(whoami)"
