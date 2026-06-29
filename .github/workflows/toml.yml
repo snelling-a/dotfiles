@@ -9,5 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - uses: tombi-toml/setup-tombi@v1.1.3
+      - uses: tombi-toml/setup-tombi@v1.1.6
       - run: tombi lint
