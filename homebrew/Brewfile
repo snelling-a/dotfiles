@@ -1,13 +1,11 @@
 tap "dmtrkovalenko/fff", "https://github.com/dmtrKovalenko/homebrew-fff"
-tap "modem-dev/tap"
+tap "modem-dev/tap", trusted: true
 tap "oven-sh/bun", trusted: true
 tap "theboredteam/boring-notch", trusted: true
 # Run your GitHub Actions locally
 brew "act"
 # YAML Parser
 brew "libyaml"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.13"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
 # GNU internationalization (i18n) and localization (l10n) library
@@ -44,8 +42,8 @@ brew "deno"
 brew "docker", link: false
 # Isolated development environments using Docker
 brew "docker-compose"
-# Powerful, lightweight programming language
-brew "lua"
+# .NET Core
+brew "dotnet"
 # Like neofetch, but much faster because written mostly in C
 brew "fastfetch"
 # Simple, fast and user-friendly alternative to find
@@ -102,6 +100,8 @@ brew "llvm@17"
 brew "lsd"
 # Shows thumbnails in terminal using sixel graphics
 brew "lsix"
+# Powerful, lightweight programming language
+brew "lua"
 # Tool for linting and static analysis of Lua code
 brew "luacheck"
 # Just-In-Time Compiler (JIT) for the Lua programming language
@@ -144,6 +144,8 @@ brew "python@3.11"
 brew "python-gdbm@3.11"
 # Python interface to Tcl/Tk
 brew "python-tk@3.11"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.13"
 # Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
 brew "ruby-install"
 # Fast and accurate code counter with complexity and COCOMO estimates
@@ -160,6 +162,8 @@ brew "starship"
 brew "tealdeer"
 # User interface to the TELNET protocol
 brew "telnet"
+# OCR (Optical Character Recognition) engine
+brew "tesseract"
 # Terminal image and video viewer
 brew "timg"
 # Terminal multiplexer
