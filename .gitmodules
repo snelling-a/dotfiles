@@ -1,6 +1,3 @@
-[submodule "HOME/local"]
-	path = HOME/local
-	url = git@github.com:snelling-a/local_home.git
 [submodule "config/raycast"]
 	path = config/raycast
 	url = git@github.com:snelling-a/raycast.git
