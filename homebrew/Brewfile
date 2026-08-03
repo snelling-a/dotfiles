@@ -18,6 +18,8 @@ brew "bash-completion@2"
 brew "bat"
 # Yet another cross-platform graphical process/system monitor
 brew "bottom"
+# TIFF library and utilities
+brew "libtiff"
 # OpenType text shaping engine
 brew "harfbuzz"
 # Versatile and fast Unicode/ASCII/ANSI graphics renderer
@@ -27,7 +29,7 @@ brew "chruby"
 # Cross-platform make
 brew "cmake"
 # Powerful, clean, object-oriented scripting language
-brew "ruby", link: false
+brew "ruby"
 # Dependency manager for Cocoa projects
 brew "cocoapods"
 # GNU File, Shell, and Text utilities
@@ -146,6 +148,8 @@ brew "python-gdbm@3.11"
 brew "python-tk@3.11"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.13"
+# SVG rendering tool and library
+brew "resvg"
 # Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
 brew "ruby-install"
 # Fast and accurate code counter with complexity and COCOMO estimates
