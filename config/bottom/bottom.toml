@@ -1,7 +1,9 @@
 [flags]
   battery = true
   rate    = 500
-  tree    = true
+
+[processes]
+  default_tree = true
 
 [[row]]
   [[row.child]]
