@@ -7,7 +7,10 @@
   sort_by     = "natural"
 
 [plugin]
-  prepend_fetchers = [
+  prepend_previewers = [
+    { url = "*.md", run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s $t "$1"' },
+  ]
+  prepend_fetchers   = [
     { url = "*", run = "git", group = "git" },
     { url = "*/", run = "git", group = "git" },
   ]

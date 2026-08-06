@@ -23,5 +23,10 @@
   rev  = "b9598e6"
   hash = "ce259b12c503a33a18a861052fa582b7"
 
+[[plugin.deps]]
+  use  = "yazi-rs/plugins:piper"
+  rev  = "b9598e6"
+  hash = "f23ecc89ce0f9eeefdd4cea14e2a9ba7"
+
 [flavor]
   deps = []
