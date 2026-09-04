@@ -150,6 +150,8 @@ brew "python-tk@3.11"
 brew "python@3.13"
 # SVG rendering tool and library
 brew "resvg"
+# CLI proxy to minimize LLM token consumption
+brew "rtk"
 # Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
 brew "ruby-install"
 # Fast and accurate code counter with complexity and COCOMO estimates
