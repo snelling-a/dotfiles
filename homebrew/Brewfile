@@ -230,7 +230,7 @@ cask "1password-cli"
 cask "adguard"
 # GPU-accelerated terminal emulator
 cask "alacritty"
-# Not so boring notch That Rocks 🎸🎶 
+# Not so boring notch That Rocks
 cask "theboredteam/boring-notch/boring-notch"
 # Web browser focusing on privacy
 cask "brave-browser"
