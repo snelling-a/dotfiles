@@ -41,7 +41,7 @@ brew "curl"
 # Secure runtime for JavaScript and TypeScript
 brew "deno"
 # Pack, ship and run any application as a lightweight container
-brew "docker", link: false
+brew "docker"
 # Isolated development environments using Docker
 brew "docker-compose"
 # .NET Core
@@ -267,8 +267,6 @@ cask "linear"
 cask "logi-options+"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
-# App to write, plan, collaborate, and get organised
-cask "notion"
 # Simple application that will prevent iTunes or Apple Music from launching
 cask "notunes"
 # Knowledge base that works on top of a local folder of plain text Markdown files
@@ -302,6 +300,7 @@ cask "zen"
 # Video communication and virtual meeting platform
 cask "zoom"
 npm "@termdraw/app"
+npm "chrome-devtools-mcp"
 npm "corepack"
 npm "defuddle"
 npm "neovim"
