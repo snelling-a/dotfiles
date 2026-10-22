@@ -234,8 +234,8 @@ cask "alacritty"
 cask "theboredteam/boring-notch/boring-notch"
 # Web browser focusing on privacy
 cask "brave-browser"
-# Terminal-based AI coding assistant
-cask "claude-code"
+# Anthropic's official Claude AI desktop app
+cask "claude"
 # AI code review CLI
 cask "coderabbit"
 # Command-line agent for Cursor
@@ -299,6 +299,7 @@ cask "windscribe"
 cask "zen"
 # Video communication and virtual meeting platform
 cask "zoom"
+npm "@anthropic-ai/claude-code"
 npm "@termdraw/app"
 npm "chrome-devtools-mcp"
 npm "corepack"
