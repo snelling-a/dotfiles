@@ -5,8 +5,8 @@
 # parallel can cause all kinds of trouble.
 
 # For compilers to find curl you may need to set:
-export LDFLAGS="-L/usr/local/opt/curl/lib"
-export CPPFLAGS="-I/usr/local/opt/curl/include"
+export LDFLAGS="-L/${HOMEBREW_PREFIX}/opt/curl/lib"
+export CPPFLAGS="-I/${HOMEBREW_PREFIX}/opt/curl/include"
 
 # For pkg-config to find curl you may need to set:
-export PKG_CONFIG_PATH="/usr/local/opt/curl/lib/pkgconfig"
+export PKG_CONFIG_PATH="/${HOMEBREW_PREFIX}/opt/curl/lib/pkgconfig"
