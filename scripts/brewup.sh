@@ -54,9 +54,7 @@ fi
 echo "Updating Yazi..."
 (
   cd "$DOTFILES" &&
-    ya pkg upgrade >/dev/null 2>&1 &&
-    taplo fmt --config "$DOTFILES"/.taplo.toml
-) &
-wait
+    ya pkg upgrade >/dev/null 2>&1
+)
 
 printf "\nDone!\nHappy Hacking, %s 🚀\n" "$(whoami)"
