@@ -37,7 +37,9 @@ brew cleanup --prune=30 --scrub
 echo "Homebrew fully updated."
 
 TMP_BUNDLE=$(mktemp)
-brew bundle dump --force --file="$TMP_BUNDLE"
+# ~/.local/bin/cursor exits 1 without the Cursor IDE, so keep it off PATH for the dump
+DUMP_PATH=$(tr ':' '\n' <<<"$PATH" | grep -vx "$HOME/.local/bin" | paste -sd: -)
+PATH="$DUMP_PATH" brew bundle dump --force --file="$TMP_BUNDLE"
 
 if ! cmp -s "$TMP_BUNDLE" "$HOMEBREW_BUNDLE_FILE"; then
   echo "Updating Brewfile..."
